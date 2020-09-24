@@ -1,0 +1,3 @@
+Sitemap: http://www.apartmani-igalo.com/sitemap.xml
+User-Agent: *
+Disallow: /index.html

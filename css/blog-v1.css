@@ -1,0 +1,145 @@
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  color: #fc3c3c; }
+  a:hover {
+    text-decoration: none;
+    color: #fc3c3c; 
+}
+p{
+  line-height: 1.8;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #444444;
+}
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #282828;
+}
+h2{
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #282828;
+}
+#blog{
+  padding: 4em 0;
+}
+#blog img{
+  width: 100%;
+}
+.nav a{
+  font-weight: 800;
+  color:#333;
+}
+.nav ul a{
+  color:#a1b1c1;
+}
+.nav .logo{
+  padding-top: 31px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+}
+.nav .logo span{
+  font-weight: 100;
+}
+.nav ul{
+  list-style: none;
+  float: right;
+}
+
+.nav li{
+  float: left;
+  text-transform: uppercase;
+  padding: 35px 25px;
+  font-weight: 500;
+  -moz-transition: all .5s ease-in-out 0s;
+  -ms-transition: all .5s ease-in-out 0s;
+  -o-transition: all .5s ease-in-out 0s;
+  -webkit-transition: all .5s ease-in-out 0s; 
+  transition: all .5s ease-in-out 0s;
+}
+.nav a:hover{
+  color: #ffb600;
+}
+.footer {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  background-color: #1c1c1d;
+  border-top: 1px solid #151516;
+  color: white;
+  padding: 48px 0px;
+}
+.footer h3{
+  font-weight: 300;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+.footer_p1{
+  color: #a3a3a4;
+  line-height: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+.footer_tel{
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 19px;
+}
+.more-card{
+ background: white;
+    padding: 15px;
+    font-weight: 600;
+    border-left: 5px solid #ddd;
+    margin: 20px 0 20px 0;
+}
+.more-card p {
+  margin: 0px;
+  color: black;
+}
+.more-card img{
+  float: right;
+  width: 30px;
+}
+.list-title{
+  background-color: #f4e6de;
+  padding: 20px 5px;
+  margin-top: 20px;
+}
+.blog-list small{
+  display: block;
+}
+.blog-list p{
+  font-weight: 400;
+}
+#blog .heading-number{
+  font-weight: bold;
+    font-size: 22px;
+    line-height: 39px;
+    color: #fff;
+    background-color: #ff930e;
+    width: 37px;
+    height: 37px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 18px;
+}
+@media only screen and (max-width: 600px) {
+  .more-card img{
+    top: 10px;
+    position: relative;
+  }
+  h1{
+    font-size: 2rem;
+  }
+}
