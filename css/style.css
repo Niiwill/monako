@@ -3674,8 +3674,9 @@ input[type="button"].btn-block {
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px); }
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; 
+}
 
 .card-img-bottom {
   width: 100%;
@@ -7622,37 +7623,51 @@ textarea.form-control {
 .bg-primary {
   background: #fc3c3c !important; }
 
-.site-section {
-  padding: 5em 0; }
-
 .ftco-bg-dark {
   background: #3c312e; }
 
 .footer {
   font-size: 16px;
-  background-color: #1c1c1d;
-  border-top: 1px solid #151516;
+  background-color: #235784;
   color: white;
-  padding: 48px 0px;
 }
-.footer h3{
-  font-weight: 300;
-  color: white;
+.footer h2{
+  text-transform: none;
+  font-weight: 800;
+  font-family: 'Mulish', sans-serif;
+  color: #ffffff;
+  line-height: 1.182em;
   font-size: 22px;
-  letter-spacing: 0.5px;
+  font-style: normal;
 }
-.footer_p1{
-  color: #a3a3a4;
-  line-height: 12px;
-  font-size: 13px;
+.footer h3, .footer p{
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0.3px;
+  text-transform: none;
+  font-style: normal;
+  line-height: 1.45em;
 }
-.footer_tel{
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 19px;
+.footer p{
+  font-size: 16px;
+  line-height: 1.375em;
 }
+.footer ul{
+  display: block;
+  list-style: none;
+  padding:0;
+}
+.footer li{
+  display:inline;
+}
+.footer li a, .footer a{
+  color: white;
+}
+.footer li a:hover{
+  opacity: 0.8;
+}
+
 #map {
   height: 400px;
   width: 100%; }
@@ -8054,7 +8069,7 @@ textarea.form-control {
   margin-bottom: 30px; }
   .block-6 .icon {
     margin-right: 30px;
-    color: #1ab2e8; }
+    color: #235784; }
     .block-6 .icon span:before {
       font-size: 50px; }
     .block-6 .icon span.bg-after:after {
@@ -8607,17 +8622,15 @@ textarea.form-control {
         color: #fc3c3c;
         border-bottom: 2px solid #fc3c3c; }
 .recenzije{
-  background: url('../images/recenzije-bg.jpg');
+  background:  #f7fafd;
 }
-.recenzije h2{ 
-  color: white;
-   }
 .block-33 {
+    box-shadow: 0px 0px 30px 0px rgb(35 87 132 / 6%);
     margin-top: 30px;
     background-color: #fff;
     border-radius: 10px;
-    padding: 17px 30px;
-    height: 290px;
+    padding: 20px 25px;
+    min-height: 290px;
    }
   .block-33 .vcard .image {
     -webkit-box-flex: 0;
@@ -8762,11 +8775,6 @@ textarea.form-control {
     min-height: 150px !important;
     height: 25vh !important; }
 
-.location{
-  background: white;
-  padding: 60px 0px;
-  padding-bottom: 100px;
-}
 .google_map{
   height: 450px;;
 }
@@ -8786,26 +8794,31 @@ textarea.form-control {
   padding: 25px 30px;
 }
 .about{
-  padding: 40px 0px;
+  background-color: #F7FAFD;
 }
 .about img{
   width: 100%;
-  border: 20px solid white;
-  box-shadow:0 0 50px 0 rgba(0,0,0,.06);
-  -webkit-box-shadow:0 0 50px 0 rgba(0,0,0,.06);
+  border-radius: 2px;
+  /*border: 20px solid white;*/
+  /*box-shadow:0 0 50px 0 rgba(0,0,0,.06);*/
+  /*-webkit-box-shadow:0 0 50px 0 rgba(0,0,0,.06);*/
 }
-.about .viber{
-  margin-bottom: 15px;
+
+#viber{
+  display: none;
+  background-color: #7c509f;
+  justify-content: center;
+  align-items: center;
 }
-.about .viber a{
-  color: #292929;
+#viber a{
+  color: #fff;
   text-transform: capitalize;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   margin-right: 5px;
 }
-.about .viber img{
+#viber img{
   height: 40px;
   width: auto;
   border:0px;
@@ -8818,19 +8831,8 @@ textarea.form-control {
 .image img{
   border: 10px solid white;
 }
-.usluga{
-  padding: 2em 0 1em 0;
-}
-.amentities{
-  background: white;
-  padding-bottom: 40px;
-}
-.amentities-item{
-  padding-left: 40px;
-  padding-top: 25px;
-}
 .amentities-item span{
-  color: #2dcb21;
+  color: #235784;
   float: left;
   font-size: 22px;
 }
@@ -8841,18 +8843,16 @@ textarea.form-control {
   font-size: 15px;
   margin-left: 20px;
 }
-.smestaj{
-  padding-bottom: 70px;
-}
+
 .smestaj .card{
+  height: 100%;
   border: 0px;
-  border-radius: 0px;
-  box-shadow: 0px 0px 7.8px 5.2px rgba(0, 0, 0, 0.03);
-  -webkit-box-shadow: 0px 0px 7.8px 5.2px rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 0px rgb(35 87 132 / 5%);
+  -webkit-box-shadow: 0px 0px 20px 0px rgb(35 87 132 / 5%);
 }
 .smestaj .card-body{
-  height: 190px;
-  padding: 35px 40px;
+  padding: 30px;
 }
 .smestaj .card-body span{
   color: #aeaeae;
@@ -8861,77 +8861,155 @@ textarea.form-control {
   line-height: 24px;
   font-weight: 400;
 }
-.smestaj .card-body h2{
-  margin-top: 5px;
-  margin-bottom: 5px;
+.smestaj .card-body h4{
+  color: #2c3c4a;
+  font-family: 'Mulish', sans-serif;
   font-size: 22px;
-  min-height: 52px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: #232324;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1.182em;
   margin-bottom: 15px;
-  line-height: 1.2;
 }
-.smestaj .card-body a{
-  color: #001ceb;
+.smestaj .kapacitet{
+  font-family: 'Open Sans', sans-serif;
+  color: #2c3c4a;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.smestaj .kapacitet svg{
+  margin-right: 5px;
+  color:#235784;
+}
+.smestaj .card-body .details-button, .smestaj .banner .banner-button{
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  color: #235784;
   font-weight: 700;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
+  display: block;
+  transition: all .3s;
 }
-#delimiter{
-  margin: 0 auto;
-  background-color: #17d0ec;
-  margin-bottom: 40px;
-  width: 60px;
-  height: 2px;
+.smestaj .card-body .details-button{
+  margin-top: 20px;
 }
-.experience{
-  margin-bottom: 30px;
+
+.smestaj .card-body .details-button:hover{
+  transform: scale(1.05);
 }
-.about h2,.usluga h2, .experience h2, .experience h3, .gallery h2, .recenzije h2, .smestaj .naslov h2, .amentities h2, #story h2{
-  text-transform: capitalize;
-  text-align: center;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-  color: #292929;
+.smestaj .banner{
+  background: #235784;
+  padding: 50px 50px 40px 50px;
+  border-radius: 8px;
+}
+.smestaj .banner h2{
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.125em;
+}
+
+.smestaj .banner .banner-text{
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45em;
+}
+
+.smestaj .banner .banner-text.nested{
+  font-size: 16px;
+  padding: 10px 0px 0px 15px;
+  border-style: solid;
+  border-width: 0px 0px 0px 03px;
+}
+.smestaj .banner .banner-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #23578400;
+  border-radius: 8px 8px 8px 8px;
+  padding: 10px 18px;
+  transition: all .3s;
+}
+.smestaj .banner .banner-button:hover{
+  transform: scale(1.1);
+}
+
+
+
+.about h2,.usluga h2, .experience h2, .experience span, .gallery h2, .recenzije h2, .smestaj h2, #room-amenities h2, #story h2, .location h2, .location h4{
+  text-transform: none;
+  font-weight: 800;
+  font-family: 'Mulish', sans-serif;
+  color: #040b11;
+  line-height: 1em;
+  font-size: 40px;
+  font-style: normal;
+}
+.ocena{
+  display: flex;
+}
+.experience .box .ocena h2{
+  font-size: 52px;
+  margin-bottom: 0;
+}
+.experience .box .ocena span{
+  margin:05px 0px 0px 5px;
+  color: #2c3c4a;
+  font-size: 22px;
+}
+.experience .box p{
   margin-bottom: 15px;
-  line-height: 1.2;
+  color: #2c3c4a;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
-.about h2,.experience h2, .gallery h2,.recenzije h2, .smestaj .naslov h2, #story h2{
-  font-size: 36px;
-  padding: 50px 0px 0px 0px;
+.experience .box img{
+  max-height: 52px;
+  max-width:180px;
 }
 .about h2{
-  padding: 25px 0px 0px 0px;
-  text-align: left;
+  font-size: 52px;
+  margin-bottom: 40px;
 }
-.usluga h2{
-  font-size: 36px;
+.about .about-text{
+  padding: 015px 0px 15px 20px;
+  border-style: solid;
+  border-width: 0px 0px 0px 3px;
+  border-color: #235784;
+  color: #2C3C4A;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 1.45em;
 }
-.amentities h2{
-  text-align: left;
-  margin-left: 40px;
+
+.smestaj h2, .usluga h2{
+  margin-bottom: 30px;
 }
-.smestaj .naslov{
-  margin-bottom: 55px;
-}
-.recenzije h2{
-  color: white;
-}
+
 .recenzije h3{
   font-weight: 400;
   font-family: "Poppins", sans-serif;
+}
+.experience{
+  background-color: #F7FAFD;
 }
 .experience h3{
   font-weight: 400;
   margin-top: 30px;
 }
-.experience .box{
-  text-align: center;
-  padding-top: 30px;
-}
 .oi-star{
-  color: #fea116;
+  color: #F7AA00;
 }
 .fb{
   padding: 110px 0px;
@@ -8945,56 +9023,72 @@ textarea.form-control {
 .fb .heading strong{
   font-size: 47px;
 }
+.story-item{
+      transition: all .25s;
+  -webkit-box-shadow: 0 0px 20px 0 rgb(35 87 132 / 5%);
+    box-shadow: 0 0px 20px 0 rgb(35 87 132 / 5%);
+    border-radius: 8px;
+    height: 100%;
+}
+.story-item:hover{
+  -webkit-box-shadow: 0 5px 30px 0 rgb(35 87 132 / 10%);
+    box-shadow: 0 5px 30px 0 rgb(35 87 132 / 10%);
+}
+#story .story-item .details {
+  padding: 25px 25px 15px;
+}
 #story .story-item img{
-  width: 100%;
-  object-fit: cover;
-  height: 235px;
-  border-radius: 5px 5px 0px 0px;
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
 }
-#story .story-item{
-  margin-bottom: 30px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
-  box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.11);
-  border-radius: 5px;
-}
-#story .story-item .details{
-  padding: 25px;
-}
+
 #story .story-item .details h3{
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: "Poppins", sans-serif;
   line-height: 1.3;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 600;
 }
 #story .story-item .details h3 a{
-  font-size: 18px;
-  color: #524552;
+  font-family: 'Mulish', sans-serif;
+  color: #040b11;
+  font-weight: 800;
+  font-size: 22px;
+  font-style: normal;
+  line-height: 1.182em;
 }
 #story .story-item .details p{
-  font-family: 'Rubik', sans-serif;
-  color: #554955;
-  margin-bottom: 0;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.5em;
-  height: 6em;
-  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+  color:#2c3c4a;
+  font-weight: 400;
+  font-size: 17px;
+  font-style: normal;
+  line-height: 1.45em;
 }
 
-#story .story-item .details .button{
-    font-family: 'Rubik', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.4px;
-    background: #ff930e;
-    color: white;
-    padding: 5px 25px;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-top: 20px;
-    position: relative;
-    display: inline-block;
+.more-button{
+  min-width: 150px;
+  float: right;
+  background: #ddeaf6;
+  color: #235784;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #23578400;
+  border-radius: 8px 8px 8px 8px;
+  padding: 14px 20px 14px 20px;
+  color: #235784;
+  font-family: 'Mulish', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1em;
+  font-weight: 700;
+  transition-duration: .3s;
+  transition-property: transform;
+}
+.more-button:active, .more-button:focus, .more-button:hover{
+  transform: scale(1.1);
+
 }
 .new_heading{
   background-color: white;
@@ -9008,19 +9102,20 @@ textarea.form-control {
     width: 100%;
     height: 100%;
     display: block;
-    padding: 120px 100px;
+    padding: 80px 80px;
 }
 .new_heading span{
   font-family: Poppins,sans-serif;
   color: white;
-  font-size: 40px;
+  font-size: 25px;
+  background: coral;
+  padding: 0px 10px;
 }
 .new_heading h1{
   color: white;
-  font-size: 100px;
+  font-size: 45px;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 120px;
 }
 .nav a{
   color:#333;
@@ -9029,8 +9124,8 @@ textarea.form-control {
   color:#a1b1c1;
 }
 .nav .logo{
-  padding-top: 31px;
-  padding-bottom: 10px;
+  padding-top:20px;
+  padding-bottom:20px;
   font-weight: 500;
   font-size: 20px;
 }
@@ -9040,12 +9135,15 @@ textarea.form-control {
 .nav ul{
   list-style: none;
   float: right;
+  margin:0;
 }
 
 .nav li{
   float: left;
   text-transform: uppercase;
-  padding: 35px 25px;
+  padding-top:25px;
+  padding-bottom:20px;
+  padding-left: 20px;
   font-weight: 500;
   -moz-transition: all .5s ease-in-out 0s;
   -ms-transition: all .5s ease-in-out 0s;
@@ -9056,21 +9154,80 @@ textarea.form-control {
 .nav a:hover{
   color: #ffb600;
 }
-.location-icon{
-    float: left;
-    margin-right: 35px;
+.location{
+  background-color: #F7FAFD;
 }
+.location-icon{
+  padding: 20px;
+    color: white;
+    display: flex;
+    background-color: #235784;
+    border-radius: 8px;
+    align-content: center; 
+    justify-content: center;
+    transition: background 0.1s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.location-icon svg{
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.location h2{
+  margin: 0px 0px 15px 0px;
+}
+.location h4{
+  margin: 0px 0px 5px 0px;
+  font-size: 22px;
+  line-height: 1.182em;
+}
+.location h5, .location p{
+  color: #2c3c4a;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  font-style: normal;
+  line-height: 1.375em;
+  text-align: left;
+}
+.location p{
+  margin: 0 0 30px 0;
+  font-size: 18px;
+  line-height: 1.45em;
+}
+
 @media (max-width: 575.98px) {
+  #viber{
+    display: flex;
+  }
+  .smestaj .card-body {
+    padding: 20px;
+    }
+  .more-button{
+    margin: 15px 0;
+    float: none;
+  }
+  .usluga h2, .experience h2, .experience span, .gallery h2, .recenzije h2, .smestaj h2, #room-amenities h2, #story h2{
+    text-align: center;
+    font-size: 30px;
+  }
+  .about h2,.location h2{
+    font-size: 30px;
+  }
+  .smestaj .banner h2{
+    text-align: left;
+  }
 
   .new_heading {
     padding: 0px;
   }
   .new_heading .after {
+    background: unset;
     padding: 20px;
   }
   .new_heading h1 {
     line-height: normal;
-    font-size: 25px;
+    font-size: 0px;
     padding-top: 15px;
   }
   .new_heading span{
@@ -9078,11 +9235,25 @@ textarea.form-control {
   }
   .nav .logo{
     padding-top: 25px;
+    font-size: 18px;
   }
   .nav{
-    height: 80px !important;
+    padding-top: 40px;
   }
-
-}
+  #story .story-item img{
+    height: 200px;
+  }
+  .smestaj .banner {
+    border-radius: 0;
+  }
+  .footer, .experience{
+    text-align: center;
+  }
+  .experience .box {
+     margin: 25px 0;
+  }
+  .experience .box .ocena{
+    justify-content: center;
+  }
 
 }
