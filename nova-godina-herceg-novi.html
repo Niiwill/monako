@@ -252,18 +252,11 @@
             
             <div class="hero-image-container">
               <picture>
-                <source media="(max-width: 767px)" 
-                        srcset="images/docek-mobile.webp 400w, images/docek-mobile@2x.webp 800w" 
-                        type="image/webp">
-                <source media="(max-width: 767px)" 
-                        srcset="images/docek-mobile.jpg 400w, images/docek-mobile@2x.jpg 800w" 
-                        type="image/jpeg">
-                <source media="(min-width: 768px)" 
-                        srcset="images/docek.webp 800w, images/docek@2x.webp 1600w" 
-                        type="image/webp">
-                <source media="(min-width: 768px)" 
-                        srcset="images/docek.jpg 800w, images/docek@2x.jpg 1600w" 
-                        type="image/jpeg">
+                <!-- WebP version for all screens -->
+                <source srcset="images/docek.webp" type="image/webp">
+                <!-- JPEG fallback for all screens -->
+                <source srcset="images/docek.jpg" type="image/jpeg">
+                <!-- Default image fallback -->
                 <img src="images/docek.jpg" 
                      alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
                      class="figure-img img-fluid rounded" 
@@ -272,8 +265,8 @@
                      width="800" 
                      height="450"
                      style="width: 100%; height: 100%; object-fit: cover;"
-                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 750px, 800px">
-              </picture>
+                     sizes="100vw">
+            </picture>
             </div>
             <figcaption class="figure-caption text-center mt-2">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
 
