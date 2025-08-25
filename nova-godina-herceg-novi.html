@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sr" dir="ltr">
+<html lang="sr-RS" dir="ltr">
 
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,28 @@
     .hero-section{background:linear-gradient(135deg,#007bff,#17a2b8);color:white;padding:3rem 0}
     h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;margin:0 0 1rem}
     .container{max-width:1200px;margin:0 auto;padding:0 1rem}
-  </style>
+  
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@media (max-width: 575px) {
+  .hero-section h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .hero-section p {
+    text-align: center;
+  }
+  .cta-section .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+}
+
+</style>
   
   <!-- Preload Critical Resources -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -197,7 +218,7 @@
   <!-- Header with Navigation -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" aria-label="Glavna navigacija">
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="/" aria-label="Početna stranica">
           <strong>MONAKO</strong> | <span>APARTMANI</span>
         </a>
@@ -257,7 +278,7 @@
                 <!-- JPEG fallback for all screens -->
                 <source srcset="images/docek.jpg" type="image/jpeg">
                 <!-- Default image fallback -->
-                <img src="images/docek.jpg" 
+                <img src="images/docek.jpg" fetchpriority="high" loading="eager" 
                      alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
                      class="figure-img img-fluid rounded" 
                      loading="lazy" 
