@@ -46,8 +46,39 @@
   
   <!-- Fonts (already handled with preload above) -->
   
-  <!-- Bootstrap 5.3 with Integrity Check -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" media="print" onload="this.media='all'">
+  <!-- Inline Critical Bootstrap CSS (eliminates render-blocking) -->
+  <style>
+    /* Essential Bootstrap Grid & Utilities - Inline to eliminate blocking */
+    .container{max-width:1320px;margin:0 auto;padding:0 15px}
+    .row{display:flex;flex-wrap:wrap;margin:0 -15px}
+    .col-md-4,.col-md-6,.col-md-8,.col-lg-8{position:relative;padding:0 15px;flex:0 0 auto}
+    .col-lg-8{width:66.66666667%}.col-md-8{width:66.66666667%}.col-md-6{width:50%}.col-md-4{width:33.33333333%}
+    @media(max-width:991.98px){.col-lg-8{width:100%}}@media(max-width:767.98px){.col-md-8,.col-md-6,.col-md-4{width:100%}}
+    .d-flex{display:flex}.justify-content-center{justify-content:center}.align-items-center{align-items:center}
+    .text-center{text-align:center}.text-light{color:#f8f9fa}.mb-0{margin-bottom:0}.mb-3{margin-bottom:1rem}
+    .mb-4{margin-bottom:1.5rem}.my-4{margin:1.5rem 0}.my-5{margin:3rem 0}.py-5{padding:3rem 0}
+    .bg-light{background-color:#f8f9fa}.bg-dark{background-color:#212529}
+    .navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1rem 0}
+    .navbar-brand{margin-right:1rem;font-size:1.25rem;text-decoration:none;color:#000}
+    .navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background:0 0;border:1px solid transparent;border-radius:.375rem}
+    .navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}
+    .navbar-nav{display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}
+    .nav-item{margin-bottom:0}.nav-link{display:block;padding:.5rem 1rem;color:#000;text-decoration:none}
+    @media(min-width:768px){.navbar-nav{flex-direction:row}.navbar-collapse{display:flex!important;flex-basis:auto}}
+    .collapse:not(.show){display:none}
+    .card{position:relative;display:flex;flex-direction:column;min-width:0;background-color:#fff;border:1px solid rgba(0,0,0,.125);border-radius:.375rem}
+    .card-header{padding:.5rem 1rem;margin-bottom:0;background-color:rgba(0,0,0,.03);border-bottom:1px solid rgba(0,0,0,.125)}
+    .card-body{flex:1 1 auto;padding:1rem}.card-title{margin-bottom:.5rem}
+    .btn{display:inline-block;font-weight:400;line-height:1.5;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.375rem}
+    .btn-primary{color:#fff;background-color:#0d6efd;border-color:#0d6efd}
+    .btn-outline-primary{color:#0d6efd;border-color:#0d6efd;background-color:transparent}
+    .btn-lg{padding:.5rem 1rem;font-size:1.25rem;border-radius:.5rem}
+    .img-fluid{max-width:100%;height:auto}.rounded{border-radius:.375rem}
+    .shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)}
+    .visually-hidden-focusable:not(:focus):not(:focus-within){position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+  </style>
+  <!-- Load full Bootstrap asynchronously -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
   
   <!-- Open Graph -->
@@ -219,29 +250,32 @@
           <div class="content-section">
             <p class="lead">Herceg Novi, prelep grad na crnogorskom primorju, priprema nezaboravan doček Nove 2026. godine. U periodu od 31. decembra 2025. do 2. januara 2026. godine, centar grada – Trg Nikole Đurkovića – biće epicentar zabave, muzike i veselja.</p>
             
-            <picture class="figure w-100 my-4">
-              <source media="(max-width: 767px)" 
-                      srcset="images/docek-mobile.webp 400w, images/docek-mobile@2x.webp 800w" 
-                      type="image/webp">
-              <source media="(max-width: 767px)" 
-                      srcset="images/docek-mobile.jpg 400w, images/docek-mobile@2x.jpg 800w" 
-                      type="image/jpeg">
-              <source media="(min-width: 768px)" 
-                      srcset="images/docek.webp 800w, images/docek@2x.webp 1600w" 
-                      type="image/webp">
-              <source media="(min-width: 768px)" 
-                      srcset="images/docek.jpg 800w, images/docek@2x.jpg 1600w" 
-                      type="image/jpeg">
-              <img src="images/docek.jpg" 
-                   alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
-                   class="figure-img img-fluid rounded" 
-                   loading="lazy" 
-                   decoding="async"
-                   width="800" 
-                   height="450"
-                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 750px, 800px">
-              <figcaption class="figure-caption text-center mt-2">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
-            </picture>
+            <div class="hero-image-container">
+              <picture>
+                <source media="(max-width: 767px)" 
+                        srcset="images/docek-mobile.webp 400w, images/docek-mobile@2x.webp 800w" 
+                        type="image/webp">
+                <source media="(max-width: 767px)" 
+                        srcset="images/docek-mobile.jpg 400w, images/docek-mobile@2x.jpg 800w" 
+                        type="image/jpeg">
+                <source media="(min-width: 768px)" 
+                        srcset="images/docek.webp 800w, images/docek@2x.webp 1600w" 
+                        type="image/webp">
+                <source media="(min-width: 768px)" 
+                        srcset="images/docek.jpg 800w, images/docek@2x.jpg 1600w" 
+                        type="image/jpeg">
+                <img src="images/docek.jpg" 
+                     alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
+                     class="figure-img img-fluid rounded" 
+                     loading="lazy" 
+                     decoding="async"
+                     width="800" 
+                     height="450"
+                     style="width: 100%; height: 100%; object-fit: cover;"
+                     sizes="(max-width: 767px) 100vw, (max-width: 991px) 750px, 800px">
+              </picture>
+            </div>
+            <figcaption class="figure-caption text-center mt-2">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
 
             <section id="program" class="my-5">
               <h2 class="h3 mb-4">Program nastupa po danima</h2>
@@ -411,8 +445,51 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!-- Scripts - Optimized loading to prevent render blocking -->
+  <script>
+    // Inline critical JavaScript to prevent blocking
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load Bootstrap JS only when needed (after DOM ready)
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+      script.integrity = 'sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz';
+      script.crossOrigin = 'anonymous';
+      script.async = true;
+      document.body.appendChild(script);
+      
+      // Optimize font loading
+      if ('fonts' in document) {
+        document.fonts.load('1rem Inter').then(() => {
+          document.body.classList.add('fonts-loaded');
+        });
+      }
+    });
+    
+    // Intersection Observer for lazy loading improvements
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
+            }
+          }
+        });
+      });
+      
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+  </script>
+  
+  <!-- Fallback for browsers without JS -->
+  <noscript>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </noscript>
   
   <!-- Analytics (replace with your tracking ID) -->
   <script>
