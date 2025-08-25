@@ -3,30 +3,52 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#007bff">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
   <meta name="color-scheme" content="light dark">
+  <meta name="format-detection" content="telephone=no">
   
   <title>Herceg Novi Nova Godina 2026 | Program i Smještaj</title>
   
+  <!-- Critical Resource Hints for 2025 Performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Critical CSS Inline (above-the-fold styles) -->
+  <style>
+    /* Critical CSS for immediate rendering */
+    body{font-family:system-ui,-apple-system,sans-serif;margin:0;line-height:1.5}
+    .navbar{background:#f8f9fa;padding:1rem 0;box-shadow:0 2px 4px rgba(0,0,0,.1)}
+    .hero-section{background:linear-gradient(135deg,#007bff,#17a2b8);color:white;padding:3rem 0}
+    h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;margin:0 0 1rem}
+    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+  </style>
+  
   <!-- Preload Critical Resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style">
-  <link rel="preload" href="images/docek.jpg" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"></noscript>
+  <link rel="preload" href="images/docek.jpg" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="images/docek-mobile.jpg" as="image" media="(max-width: 767px)">
   
   <!-- SEO and Meta -->
   <meta name="description" content="Doček Nove 2026. u Herceg Novom – trodnevni muzički spektakl sa Harisom Džinovićem, Nedom Ukraden, Željkom Samardžićem i Vesnom Zmijanac. Rezervišite smještaj i uživajte u nezaboravnoj novogodišnjoj proslavi uz dječiji program i bogat zabavni sadržaj!">
   <meta name="keywords" content="Herceg Novi, Nova Godina 2026, doček Nove godine, Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna Zmijanac, Dženan Lončarević, Tropico band, smještaj, program, muzički spektakl, praznici, novogodišnja zabava, dječiji program">
   <link rel="canonical" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
   
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/monako-favicon.png">
-  <link rel="apple-touch-icon" href="images/monako-favicon.png">
+  <!-- Enhanced Favicons for 2025 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/monako-favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/monako-favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   
-  <!-- Modern Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fonts (already handled with preload above) -->
   
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- Bootstrap 5.3 with Integrity Check -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" media="print" onload="this.media='all'">
+  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
   
   <!-- Open Graph -->
   <meta property="og:title" content="Doček Nove 2026. u Herceg Novom | Program i Smještaj">
@@ -189,7 +211,7 @@
         <div class="col-lg-8">
           <header class="article-header">
             <div class="article-meta">
-              <time datetime="2025-08-25"></time>
+              <time datetime="2025-08-25">25. august 2025.</time> • 
               <span>Program događaja</span>
             </div>
           </header>
@@ -197,12 +219,29 @@
           <div class="content-section">
             <p class="lead">Herceg Novi, prelep grad na crnogorskom primorju, priprema nezaboravan doček Nove 2026. godine. U periodu od 31. decembra 2025. do 2. januara 2026. godine, centar grada – Trg Nikole Đurkovića – biće epicentar zabave, muzike i veselja.</p>
             
-            <figure class="figure w-100 my-4">
-              <img src="images/docek.jpg" alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave" 
-                   class="figure-img img-fluid rounded" loading="lazy" 
-                   width="800" height="450">
-              <figcaption class="figure-caption text-center">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
-            </figure>
+            <picture class="figure w-100 my-4">
+              <source media="(max-width: 767px)" 
+                      srcset="images/docek-mobile.webp 400w, images/docek-mobile@2x.webp 800w" 
+                      type="image/webp">
+              <source media="(max-width: 767px)" 
+                      srcset="images/docek-mobile.jpg 400w, images/docek-mobile@2x.jpg 800w" 
+                      type="image/jpeg">
+              <source media="(min-width: 768px)" 
+                      srcset="images/docek.webp 800w, images/docek@2x.webp 1600w" 
+                      type="image/webp">
+              <source media="(min-width: 768px)" 
+                      srcset="images/docek.jpg 800w, images/docek@2x.jpg 1600w" 
+                      type="image/jpeg">
+              <img src="images/docek.jpg" 
+                   alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
+                   class="figure-img img-fluid rounded" 
+                   loading="lazy" 
+                   decoding="async"
+                   width="800" 
+                   height="450"
+                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 750px, 800px">
+              <figcaption class="figure-caption text-center mt-2">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
+            </picture>
 
             <section id="program" class="my-5">
               <h2 class="h3 mb-4">Program nastupa po danima</h2>
@@ -286,11 +325,28 @@
             <h2 class="h3 mb-4">Rezervišite Svoj Smještaj na Vreme</h2>
             <p class="lead mb-4">Interesovanje za novogodišnji doček u Herceg Novom je ogromno, stoga vam savetujemo da na vreme rezervišete svoj smještaj.</p>
             
-            <figure class="figure w-100 my-4">
-              <img src="images/reklama-monako.jpg" alt="Monako apartmani Igalo Blatna plaza - luksuzni smještaj uz more" 
-                   class="figure-img img-fluid rounded" loading="lazy" 
-                   width="600" height="400">
-            </figure>
+            <picture class="figure w-100 my-4">
+              <source media="(max-width: 767px)" 
+                      srcset="images/reklama-monako-mobile.webp 400w, images/reklama-monako-mobile@2x.webp 800w" 
+                      type="image/webp">
+              <source media="(max-width: 767px)" 
+                      srcset="images/reklama-monako-mobile.jpg 400w, images/reklama-monako-mobile@2x.jpg 800w" 
+                      type="image/jpeg">
+              <source media="(min-width: 768px)" 
+                      srcset="images/reklama-monako.webp 600w, images/reklama-monako@2x.webp 1200w" 
+                      type="image/webp">
+              <source media="(min-width: 768px)" 
+                      srcset="images/reklama-monako.jpg 600w, images/reklama-monako@2x.jpg 1200w" 
+                      type="image/jpeg">
+              <img src="images/reklama-monako.jpg" 
+                   alt="Monako apartmani Igalo Blatna plaza - luksuzni smještaj uz more sa pogledom na Boku Kotorsku" 
+                   class="figure-img img-fluid rounded" 
+                   loading="lazy" 
+                   decoding="async"
+                   width="600" 
+                   height="400"
+                   sizes="(max-width: 767px) 100vw, (max-width: 991px) 600px, 600px">
+            </picture>
             
             <div class="social-embed mt-4">
               <div class="ratio ratio-16x9" style="max-width: 400px; margin: 0 auto;">
