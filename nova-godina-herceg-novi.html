@@ -303,7 +303,9 @@ footer .social-links a:hover {
             <div class="hero-image-container">
               <picture>
                 <!-- WebP version for all screens -->
-                <source srcset="images/docek.webp" type="image/webp">
+                <source srcset="images/docek-mobile.webp" type="image/webp" media="(max-width: 767px)">
+                <source srcset="images/docek.webp" type="image/webp" media="(min-width: 768px)">
+
                 <!-- JPEG fallback for all screens -->
                 <source srcset="images/docek.jpg" type="image/jpeg">
                 <!-- Default image fallback -->
