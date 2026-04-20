@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monthly Rental Igalo – Apartment by the Sea | €500 All Inclusive</title>
+<meta name="description" content="Monthly rental apartment in Igalo by the sea. €500 all inclusive – electricity, water, internet, utilities. 100m from the sea, balcony with sea view, ideal for digital nomads and remote workers. September–June.">
+<meta name="keywords" content="monthly rental Igalo, apartment Igalo monthly, long term rental Igalo, Herceg Novi monthly rental, digital nomad Igalo, work from home sea, apartment by sea Montenegro, remote work Montenegro">
+<link rel="canonical" href="https://www.yoursite.com/monthly-rental-igalo">
+<meta property="og:title" content="Monthly Rental Igalo – Apartment by the Sea | €500 All Inclusive">
+<meta property="og:description" content="Monthly rental apartment in Igalo. 100m from the sea, balcony, sea view. €500 all inclusive. Ideal for digital nomads.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Accommodation",
+  "name": "Apartment by the Sea – Monthly Rental Igalo",
+  "description": "Comfortable apartment for monthly rental in Igalo, Montenegro. 100 meters from the sea with a balcony and sea view. All costs included in the price.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Igalo",
+    "addressRegion": "Herceg Novi",
+    "addressCountry": "ME"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "500",
+    "priceCurrency": "EUR",
+    "description": "Monthly rental – all inclusive"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sea: #1a6b8a;
+    --sea-light: #e8f4f8;
+    --sea-mid: #4a9ab5;
+    --gold: #c49a3c;
+    --gold-light: #fdf6e8;
+    --dark: #1a1f2e;
+    --text: #2d3340;
+    --muted: #6b7280;
+    --light-bg: #f8fafb;
+    --white: #ffffff;
+    --border: #d4e6ed;
+    --radius: 12px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.8;
+    font-size: 17px;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0d3b52 0%, #1a6b8a 45%, #2d9bbf 100%);
+    color: white;
+    padding: 80px 20px 100px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 60px;
+    background: var(--white);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.9);
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero h1 span { color: #fde68a; }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 36px;
+    font-weight: 300;
+  }
+
+  .price-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+  }
+
+  .price-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--sea);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+
+  .features-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    background: var(--dark);
+    padding: 0;
+  }
+
+  .feat-item {
+    flex: 1 1 160px;
+    text-align: center;
+    padding: 20px 16px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .feat-item:last-child { border-right: none; }
+
+  .feat-icon { font-size: 22px; margin-bottom: 6px; }
+  .feat-label {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section {
+    padding: 70px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-tag {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--sea);
+    font-family: 'Source Serif 4', serif;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 700;
+    color: var(--dark);
+    line-height: 1.25;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 36px 0 14px;
+  }
+
+  h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--sea);
+    margin: 28px 0 10px;
+  }
+
+  p { margin-bottom: 18px; color: var(--text); }
+  strong { color: var(--dark); font-weight: 600; }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .info-card {
+    background: var(--sea-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+
+  .info-card .ic-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--sea);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .info-card .ic-label {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 24px 0;
+  }
+
+  .amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: var(--light-bg);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+
+  .amenity-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--sea);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  .highlight-box {
+    background: var(--gold-light);
+    border-left: 4px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+
+  .highlight-box p { color: var(--dark); margin: 0; font-size: 16px; }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+
+  .price-table th {
+    background: var(--sea);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .price-table td {
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  .price-table tr:nth-child(even) td { background: var(--light-bg); }
+  .price-table tr:hover td { background: var(--sea-light); }
+  .price-table .check { color: #16a34a; font-weight: 600; }
+  .price-table .cross { color: #dc2626; }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 18px 22px;
+    background: var(--light-bg);
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 22px;
+    color: var(--sea);
+    flex-shrink: 0;
+    transition: transform 0.3s;
+  }
+
+  .faq-q.open::after { transform: rotate(45deg); }
+
+  .faq-a {
+    padding: 0 22px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: white;
+  }
+  .faq-a.open {
+    max-height: 400px;
+    padding: 18px 22px;
+  }
+
+  .faq-a p { font-size: 15px; margin: 0; }
+
+  .testimonial {
+    background: var(--dark);
+    color: white;
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .testimonial::before {
+    content: '"';
+    position: absolute;
+    top: 10px; left: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: rgba(255,255,255,0.08);
+    line-height: 1;
+  }
+
+  .testimonial p {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-author {
+    color: rgba(255,255,255,0.55);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .contact-section {
+    background: linear-gradient(135deg, var(--dark) 0%, #1a6b8a 100%);
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+  }
+
+  .contact-section h2 { color: white; margin-bottom: 12px; }
+  .contact-section p { color: rgba(255,255,255,0.75); max-width: 500px; margin: 0 auto 32px; }
+
+  .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius);
+    padding: 20px 28px;
+    text-align: center;
+    flex: 1 1 180px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.2s;
+  }
+  .contact-card:hover { background: rgba(255,255,255,0.18); }
+  .contact-card .cc-icon { font-size: 26px; margin-bottom: 8px; }
+  .contact-card .cc-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .contact-card .cc-val { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; }
+
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--sea);
+    font-size: 16px;
+    flex: 1;
+  }
+
+  .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .nav-links a {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--sea); }
+
+  .nav-cta {
+    background: var(--sea);
+    color: white;
+    font-size: 13px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--dark); }
+
+  .breadcrumb {
+    padding: 12px 20px;
+    background: var(--light-bg);
+    font-size: 13px;
+    color: var(--muted);
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .breadcrumb a { color: var(--sea); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .location-block {
+    background: var(--sea-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin: 28px 0;
+  }
+
+  .loc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .loc-item { font-size: 14px; color: var(--text); }
+  .loc-item strong { display: block; color: var(--dark); margin-bottom: 2px; font-size: 15px; }
+
+  footer {
+    background: var(--dark);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+  @media(max-width: 600px) {
+    .hero { padding: 60px 16px 80px; }
+    .section { padding: 50px 0; }
+    .testimonial { padding: 28px 22px; }
+    .feat-item { flex: 1 1 140px; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <div class="nav-logo">Igalo Apartment</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#price">Pricing</a>
+    <a href="#location">Location</a>
+    <a href="#nomads">Digital Nomads</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="#contact" class="nav-cta">Send Inquiry</a>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="/">Home</a> › <a href="/rental">Rentals</a> › Monthly Rental Igalo
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Monthly Rental · Igalo · Montenegro</div>
+    <h1>Monthly Apartment Rental<br><span>in Igalo by the Sea</span></h1>
+    <p class="hero-sub">Work from home with a view of the Adriatic Sea. 100 meters from the beach, everything included in one price.</p>
+    <div class="price-pill">€500 / month</div>
+    <div class="price-note">ELECTRICITY · WATER · INTERNET · UTILITIES — ALL INCLUDED</div>
+    <a href="#contact" class="cta-btn">Check Availability →</a>
+  </div>
+</section>
+
+<!-- FEATURES BAR -->
+<div class="features-bar">
+  <div class="feat-item">
+    <div class="feat-icon">🌊</div>
+    <div class="feat-label">100m from the sea</div>
+  </div>
+  <div class="feat-item">
+    <div class="feat-icon">🏠</div>
+    <div class="feat-label">Balcony with sea view</div>
+  </div>
+  <div class="feat-item">
+    <div class="feat-icon">💻</div>
+    <div class="feat-label">Fast internet</div>
+  </div>
+  <div class="feat-item">
+    <div class="feat-icon">🔥</div>
+    <div class="feat-label">Heating included</div>
+  </div>
+  <div class="feat-item">
+    <div class="feat-icon">🚲</div>
+    <div class="feat-label">Free bicycle</div>
+  </div>
+  <div class="feat-item">
+    <div class="feat-icon">🅿️</div>
+    <div class="feat-label">Parking</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+<div class="container">
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section-tag">About the apartment</p>
+    <h2>Monthly Rental in Igalo — Everything You Need to Know</h2>
+
+    <p>If you're looking for a <strong>monthly rental in Igalo</strong>, our apartment offers the perfect blend of comfort, natural surroundings, and an affordable price. Located just <strong>100 meters from the shores of the Bay of Kotor</strong>, this apartment provides a unique living experience that simply cannot be found in any city flat.</p>
+
+    <p>The monthly rental is available <strong>from September to June</strong>, meaning you can enjoy the quiet, off-season period when Igalo is at its most beautiful — no tourists, no crowds, just clean air, a calm sea, and breathtaking sunsets.</p>
+
+    <div class="cards-grid">
+      <div class="info-card">
+        <div class="ic-num">100m</div>
+        <div class="ic-label">from the sea to the apartment</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-num">€500</div>
+        <div class="ic-label">per month, all inclusive</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-num">9</div>
+        <div class="ic-label">months available per year</div>
+      </div>
+      <div class="info-card">
+        <div class="ic-num">€0</div>
+        <div class="ic-label">hidden costs</div>
+      </div>
+    </div>
+
+    <h3>Apartment description</h3>
+    <p>The apartment is located in Igalo, a peaceful neighbourhood in the municipality of Herceg Novi. Spacious and functionally furnished, it is equipped with everything needed for a comfortable extended stay. The <strong>balcony with a direct sea view</strong> is one of the key highlights — morning coffee to the sound of the waves becomes a daily ritual, not a luxury.</p>
+
+    <p>The apartment is specially suited to people who <strong>work from home, freelancers and digital nomads</strong> who want to combine professional work with a healthier and more beautiful living environment. A fast, stable internet connection ensures uninterrupted work, while the surroundings inspire productivity.</p>
+
+    <div class="highlight-box">
+      <p>💡 <strong>Monthly rental in Igalo for €500</strong> includes: electricity, water, internet, utilities and heating. No surprises at the end of the month — just one fixed number and complete freedom to enjoy life.</p>
+    </div>
+
+    <h3>What is included in the price?</h3>
+    <p>One of the most common dilemmas when renting an apartment is <em>what the monthly rental actually costs</em> once all expenses are added up. With us, there is no dilemma:</p>
+
+    <div class="amenities-grid">
+      <div class="amenity-item"><div class="amenity-icon">⚡</div>Electricity</div>
+      <div class="amenity-item"><div class="amenity-icon">💧</div>Water & sewage</div>
+      <div class="amenity-item"><div class="amenity-icon">🌐</div>Fast internet (fiber)</div>
+      <div class="amenity-item"><div class="amenity-icon">🏘️</div>Utilities</div>
+      <div class="amenity-item"><div class="amenity-icon">🔥</div>Heating</div>
+      <div class="amenity-item"><div class="amenity-icon">🅿️</div>Parking space</div>
+      <div class="amenity-item"><div class="amenity-icon">🚲</div>Bicycle to use</div>
+      <div class="amenity-item"><div class="amenity-icon">🌅</div>Balcony with sea view</div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section class="section" id="price">
+    <p class="section-tag">Pricing & terms</p>
+    <h2>Transparent Monthly Rental Pricing</h2>
+
+    <p>The monthly rental price for the apartment in Igalo is <strong>€500 per month</strong>, with all costs included. This price applies exclusively to monthly rentals — the apartment is not available for shorter periods during the off-season.</p>
+
+    <table class="price-table" aria-label="Monthly rental cost breakdown table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Included?</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Rent</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Fixed monthly price</td>
+        </tr>
+        <tr>
+          <td><strong>Electricity</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Unlimited usage</td>
+        </tr>
+        <tr>
+          <td><strong>Water</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Unlimited usage</td>
+        </tr>
+        <tr>
+          <td><strong>Internet</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Fast fiber, stable signal</td>
+        </tr>
+        <tr>
+          <td><strong>Utilities</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Waste, maintenance</td>
+        </tr>
+        <tr>
+          <td><strong>Heating</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Included during winter months</td>
+        </tr>
+        <tr>
+          <td><strong>Parking</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>One dedicated parking space</td>
+        </tr>
+        <tr>
+          <td><strong>Bicycle</strong></td>
+          <td class="check">✔ Yes</td>
+          <td>Free to use</td>
+        </tr>
+        <tr>
+          <td><strong>Security deposit</strong></td>
+          <td class="cross">Separate</td>
+          <td>Agreed upon signing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Availability period</h3>
+    <p>The apartment is available for monthly rental from <strong>September to June</strong>. This period coincides with the so-called "green season" on the Montenegrin coast — when the climate is mild, tourists are few, and the prices of groceries and services are significantly lower than in summer.</p>
+
+    <div class="highlight-box">
+      <p>🗓️ <strong>Available:</strong> September, October, November, December, January, February, March, April, May, June. Minimum rental period: <strong>1 month</strong>. Option to extend the contract.</p>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section" id="location">
+    <p class="section-tag">Location</p>
+    <h2>Igalo — A Gem of the Bay of Kotor</h2>
+
+    <p>Igalo is a peaceful coastal settlement that forms part of the municipality of Herceg Novi, at the very entrance to the <strong>Bay of Kotor</strong> — a UNESCO-protected site and one of the most beautiful bays in the Mediterranean. Renting an apartment on a monthly basis in Igalo means becoming part of this special place without the time pressure typical of tourists.</p>
+
+    <p>When it comes to monthly rentals in the Herceg Novi region, Igalo stands out as the ideal location due to its combination of tranquillity, proximity to the sea, and easy access to all amenities.</p>
+
+    <div class="location-block">
+      <strong style="font-family: 'Playfair Display', serif; font-size: 17px; color: var(--dark);">What is close to the apartment?</strong>
+      <div class="loc-grid">
+        <div class="loc-item"><strong>100m</strong>from the sea and beach</div>
+        <div class="loc-item"><strong>5 min walk</strong>Institut Igalo (SPA)</div>
+        <div class="loc-item"><strong>5–10 min</strong>Herceg Novi town centre</div>
+        <div class="loc-item"><strong>Nearby</strong>Parks and walking paths</div>
+        <div class="loc-item"><strong>Nearby</strong>Gyms (indoor & outdoor)</div>
+        <div class="loc-item"><strong>Nearby</strong>Restaurants, cafés, shops</div>
+        <div class="loc-item"><strong>1.5h drive</strong>Tivat or Podgorica airport</div>
+        <div class="loc-item"><strong>Nearby</strong>Coastal cycling routes</div>
+      </div>
+    </div>
+
+    <h3>Why choose Igalo for a longer stay?</h3>
+    <p>Unlike Budva or Bar, Igalo and Herceg Novi have a distinct character — urban life without the crowds, cultural offerings, lush greenery and Mediterranean architecture. The town is proud of <strong>Institut Igalo</strong>, a renowned rehabilitation centre that attracts visitors from all over the world, giving the area an international feel even off-season.</p>
+
+    <p>The coastal walk from Igalo towards the old town of Herceg Novi is one of the most beautiful pedestrian routes on the Adriatic. The old town with its Venetian fortresses, flower-lined promenades and views over the bay — all of this is just a short walk from your apartment.</p>
+
+    <h4>Climate and weather off-season</h4>
+    <p>Herceg Novi is considered one of the <strong>sunniest places on the Adriatic</strong> — with around 240 sunny days per year. Off-season temperatures are mild (10–20°C in winter months), the sea is calm, and the town breathes authentic Mediterranean life without the tourist buzz. Perfect for those seeking a healthier pace of living.</p>
+  </section>
+
+  <!-- DIGITAL NOMADS -->
+  <section class="section" id="nomads">
+    <p class="section-tag">For digital nomads & remote workers</p>
+    <h2>Work From Home — With a View of the Sea</h2>
+
+    <p><strong>Digital nomads and freelancers</strong> are increasingly choosing the Montenegrin coast as their base for remote work. Monthly apartment rental in Igalo is becoming a popular choice for those who want to leave behind the urban daily grind without sacrificing professional comfort.</p>
+
+    <p>Here is exactly what you get when you choose a monthly rental in Igalo for remote work:</p>
+
+    <h4>Stable internet connection</h4>
+    <p>Connection speed and stability is one of the first questions every remote worker asks. Our apartment is equipped with a <strong>fiber internet connection</strong> that enables uninterrupted video calls, large file uploads, and work with cloud services without any dropouts. Internet costs are included in the monthly rental.</p>
+
+    <h4>A working environment built for productivity</h4>
+    <p>Research shows that <strong>working by the sea and in a natural environment increases productivity and reduces stress</strong>. When you look out from your balcony at the Bay of Kotor in the morning, the day starts differently. Focus comes naturally, and creativity flourishes in an environment that brings mental calm.</p>
+
+    <h4>Work-life balance in practice</h4>
+    <p>After the working day — a walk along the shore, a bicycle ride on the coastal paths, a morning workout outdoors, or relaxing at sunset. Igalo provides everything needed for a healthy balance between work and rest that so often goes missing in city life.</p>
+
+    <div class="testimonial">
+      <p>I decided to try a monthly rental in Igalo for one month — I ended up staying four. Work, sea, peace — I haven't found a better combination. The internet is excellent, the apartment is comfortable, and the sunset from the balcony makes every working day feel special.</p>
+      <div class="testimonial-author">— Remote developer, experience from the previous season</div>
+    </div>
+
+    <h4>A growing digital nomad community in the region</h4>
+    <p>Herceg Novi and the surrounding area has been attracting a growing number of <strong>remote workers and digital nomads from across Europe</strong> for several years. You will find coworking spaces, international cafés set up for laptop work, and a community of like-minded people — which eases the social side of the nomadic lifestyle.</p>
+
+    <h4>Cost of living in Igalo</h4>
+    <p>Beyond the affordable monthly rent, the everyday cost of living in Igalo and Herceg Novi is significantly lower compared to Slovenia, Croatia, or any Western European city. Cafés and restaurants are plentiful, and fresh produce is both high quality and affordable. Total monthly expenses for a comfortable life can be kept far lower than in Belgrade, Zagreb, or Ljubljana.</p>
+  </section>
+
+  <!-- DESTINATION -->
+  <section class="section">
+    <p class="section-tag">About the destination</p>
+    <h2>Igalo and Herceg Novi — A Destination for an Extended Stay</h2>
+
+    <p>When travellers think of Montenegro, the summer Riviera typically comes to mind — Budva, Sveti Stefan, Ulcinj. However, a <strong>monthly apartment rental in Igalo</strong> reveals a completely different Montenegro — the off-season one, authentic, peaceful and extraordinarily beautiful.</p>
+
+    <h3>Herceg Novi — the city of flowers and sun</h3>
+    <p>Herceg Novi (to which Igalo administratively belongs) carries the nickname "the city of sun and flowers" — and rightly so. Mimosa, bougainvillea and oleander line the streets and terraces for a good half of the year. The old town with its Venetian fortresses and windows overlooking the bay ranks among the <strong>most beautiful historic settings on the Adriatic</strong>.</p>
+
+    <p>For those who rent an apartment on a monthly basis, this becomes an everyday backdrop — not a destination you travel to, but a space in which you live.</p>
+
+    <h3>Institut Igalo — a world-renowned health centre</h3>
+    <p>Just five minutes' walk from the apartment stands the famous <strong>Special Hospital for Medical Rehabilitation "Institut Dr Simo Milošević"</strong> — better known simply as Institut Igalo. For decades it has attracted guests from all over the world thanks to its natural peloid mud and mineral-rich seawater. Residents of Igalo have the privilege of having this wellness resort literally around the corner.</p>
+
+    <h3>Nature and active lifestyle</h3>
+    <p>The surroundings of Herceg Novi are ideal for those who love an active way of life. <strong>Mount Orjen</strong> above the town is one of the greenest mountains in the Balkans, with numerous hiking trails and canyons. Along the coast, cycling and walking paths offer a daily dose of physical activity without leaving the municipality.</p>
+
+    <p>During the winter months — when monthly rentals are most sought after — the mountain sometimes offers snow, while the sea is barely an hour's drive away. This contrast of natural environments is unique to Igalo and the surrounding area.</p>
+
+    <h3>Transport and connections with the world</h3>
+    <p>Igalo is well connected with the rest of Montenegro and the Balkans. <strong>Tivat Airport</strong> is around an hour and a half's drive away, and <strong>Podgorica Airport</strong> is about two hours. Bus lines directly connect Herceg Novi with Dubrovnik (Croatia), Split, Sarajevo and Belgrade — which is practical for those who need to travel occasionally.</p>
+
+    <p>For getting around the municipality, the bicycle (included in the rental price) is the ideal mode of transport — everything is flat along the coast, and the distance between Igalo and Herceg Novi town centre is just two to three kilometres.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <p class="section-tag">Frequently asked questions</p>
+    <h2>FAQ — Monthly Rental in Igalo</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Is the €500 price really all inclusive?</div>
+      <div class="faq-a"><p>Yes, the price of €500 per month includes: rent, electricity, water, internet, utilities, heating and parking. There are no hidden costs or additional bills. The only thing paid separately is a security deposit upon check-in, which is returned upon check-out.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What is the minimum rental period?</div>
+      <div class="faq-a"><p>The minimum rental period is one month. The apartment is available from September to June. It is possible to extend the contract for several months by prior arrangement. Please note that the apartment is not available for shorter rentals (weekly or weekend stays).</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How fast is the internet in the apartment?</div>
+      <div class="faq-a"><p>The internet is a fiber connection — stable and reliable. The speed is sufficient for video calls (Zoom, Teams, Meet), streaming, uploading large files, and working with cloud services. Ideal for remote workers and digital nomads.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How close is the apartment to the sea?</div>
+      <div class="faq-a"><p>The apartment is exactly 100 meters from the sea — just a two-minute walk to the shore. From the balcony you can see the sea, which means the view is always present even while you are working from home.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Can a longer rental be arranged (several months)?</div>
+      <div class="faq-a"><p>Absolutely. Many tenants who come for a month end up staying longer. For rentals of three or more months, special terms can be arranged. Get in touch and we will discuss the details.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Is the apartment suitable for a couple or only for one person?</div>
+      <div class="faq-a"><p>The apartment is suitable for both a single person and a couple. If you are planning to arrive with a partner, please mention this in your inquiry so we can confirm all the details regarding capacity.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How does the included bicycle work?</div>
+      <div class="faq-a"><p>With the monthly rental, tenants receive use of a bicycle at no extra cost. The bicycle is ideal for riding along the coast, trips to the market or Herceg Novi town centre. A dedicated bicycle space is provided in the parking area.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">How do I arrange a viewing or inquire about booking?</div>
+      <div class="faq-a"><p>The easiest way is to contact us by phone, WhatsApp or email. We respond quickly — usually within a few hours. We can also arrange a video tour of the apartment if you are based abroad.</p></div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <p class="section-tag" style="color: rgba(255,255,255,0.5);">Contact</p>
+    <h2>Interested in a Monthly Rental in Igalo?</h2>
+    <p>Write to us — we respond quickly. We can also arrange a video tour of the apartment.</p>
+
+    <div class="contact-grid">
+      <a href="https://wa.me/382XXXXXXXX" class="contact-card">
+        <div class="cc-icon">📱</div>
+        <div class="cc-label">WhatsApp / Viber</div>
+        <div class="cc-val">Message us now</div>
+      </a>
+      <a href="tel:+382XXXXXXXX" class="contact-card">
+        <div class="cc-icon">📞</div>
+        <div class="cc-label">Phone</div>
+        <div class="cc-val">Give us a call</div>
+      </a>
+      <a href="mailto:igalo@example.com" class="contact-card">
+        <div class="cc-icon">✉️</div>
+        <div class="cc-label">Email</div>
+        <div class="cc-val">Send an inquiry</div>
+      </a>
+    </div>
+
+    <p style="margin-top: 32px; font-size: 14px; color: rgba(255,255,255,0.45);">
+      Apartment · Igalo, Herceg Novi · Montenegro · Available September–June
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Igalo Apartment. Monthly rental by the sea. | <a href="/privacy-policy">Privacy Policy</a></p>
+  <p style="margin-top: 6px;">Igalo, Herceg Novi, Montenegro</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const a = q.nextElementSibling;
+      const isOpen = q.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(openQ => {
+        openQ.classList.remove('open');
+        openQ.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        q.classList.add('open');
+        a.classList.add('open');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
