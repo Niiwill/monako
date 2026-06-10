@@ -804,17 +804,6 @@
     </nav>
   </header>
 
-  <!-- ══════════════════════════════════
-       BREADCRUMB
-  ══════════════════════════════════ -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-      <ol class="breadcrumb__list" role="list">
-        <li><a href="/">Početna</a></li>
-        <li><span aria-current="page">Blatna Plaža Igalo</span></li>
-      </ol>
-    </div>
-  </nav>
 
   <!-- ══════════════════════════════════
        MAIN CONTENT
@@ -905,6 +894,20 @@
               godine zvanično osnovala lječilište u Igalu – instituciju koja danas djeluje
               kao renomirani <strong>Institut Simo Milošević</strong>.
             </p>
+
+            <!-- Hero image — LCP element, eagerly loaded, explicit dimensions for CLS -->
+          <figure>
+            <img
+              src="images/baner2026.png.jpg"
+              alt="Apartmani Monako Igalo Banner"
+              width="1160"
+              height="508"
+              fetchpriority="high"
+              loading="eager"
+              decoding="sync"
+            >
+            <figcaption class="sr-only">Blatna plaža Igalo – lekoviti morski mulj</figcaption>
+          </figure>
 
             <h2>Šta posjetilac može da očekuje na plaži?</h2>
             <p>
