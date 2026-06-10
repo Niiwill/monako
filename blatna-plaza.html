@@ -544,14 +544,18 @@
     .gallery__item {
       border-radius: var(--radius-md);
       overflow: hidden;
-      aspect-ratio: 4/3;
       background: var(--c-sand);
+      width: 100%;
     }
     .gallery__item img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
+      display: block;
       transition: transform 400ms ease;
+    }
+    @media (min-width: 600px) {
+      .gallery__item { aspect-ratio: 4/3; }
+      .gallery__item img { height: 100%; object-fit: cover; }
     }
     .gallery__item:hover img { transform: scale(1.03); }
 
@@ -934,20 +938,6 @@
               godine zvanično osnovala lječilište u Igalu – instituciju koja danas djeluje
               kao renomirani <strong>Institut Simo Milošević</strong>.
             </p>
-
-            <!-- Hero image — LCP element, eagerly loaded, explicit dimensions for CLS -->
-            <figure class="hero__image-wrap">
-              <img
-                src="images/baner2026.png"
-                alt="Apartmani monako igalo baner"
-                width="1160"
-                height="508"
-                fetchpriority="high"
-                loading="eager"
-                decoding="sync"
-              >
-              <figcaption class="sr-only">Blatna plaža Igalo – lekoviti morski mulj</figcaption>
-            </figure>
 
             <h2>Šta posjetilac može da očekuje na plaži?</h2>
             <p>
