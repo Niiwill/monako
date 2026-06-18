@@ -1,275 +1,750 @@
 <!DOCTYPE html>
-<html lang="sr-RS" dir="ltr">
-
+<html lang="sr-Latn-ME">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
-  <meta name="color-scheme" content="light dark">
-  <meta name="format-detection" content="telephone=no">
-  
-  <title>HERCEG NOVI NOVA GODINA 2026 | PROGRAM I SMJEŠTAJ</title>
-  
-  <!-- Critical Resource Hints for 2025 Performance -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Critical CSS Inline (above-the-fold styles) -->
-  <style>
-    /* Critical CSS for immediate rendering */
-    body{font-family:system-ui,-apple-system,sans-serif;margin:0;line-height:1.5}
-    .navbar{background:#f8f9fa;padding:1rem 0;box-shadow:0 2px 4px rgba(0,0,0,.1)}
-    .hero-section{background:linear-gradient(135deg,#007bff,#17a2b8);color:white;padding:3rem 0}
-    h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:700;margin:0 0 1rem}
-    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
-  
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-@media (max-width: 575px) {
-  .hero-section h1 {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-  .hero-section p {
-    text-align: center;
-  }
-  .cta-section .btn {
-    display: block;
-    width: 100%;
-    margin-bottom: 0.75rem;
-  }
-}
-
-
-footer {
-  font-size: 0.95rem;
-}
-footer h3 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-footer p {
-  margin-bottom: 0.75rem;
-}
-footer .social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  transition: background 0.3s ease;
-}
-footer .social-links a:hover {
-  background: rgba(255,255,255,0.3);
-}
-@media (max-width: 575px) {
-  footer .col-md-6 {
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  footer .social-links {
-    justify-content: center;
-  }
-}
-
-</style>
-  
-  <!-- Preload Critical Resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"></noscript>
-  <link rel="preload" href="images/docek.jpg" as="image" media="(min-width: 768px)">
-  <link rel="preload" href="images/docek-mobile.jpg" as="image" media="(max-width: 767px)">
-  
-  <!-- SEO and Meta -->
-  <meta name="description" content="Doček Nove 2026. u Herceg Novom – trodnevni muzički spektakl sa Harisom Džinovićem, Nedom Ukraden, Željkom Samardžićem i Vesnom Zmijanac. Rezervišite smještaj i uživajte u nezaboravnoj novogodišnjoj proslavi uz dječiji program i bogat zabavni sadržaj!">
-  <meta name="keywords" content="Herceg Novi, Nova Godina 2026, doček Nove godine, Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna Zmijanac, Dženan Lončarević, Tropico band, smještaj, program, muzički spektakl, praznici, novogodišnja zabava, dječiji program">
+  <!-- ═══════════════════════════════════════════════
+       PRIMARY META — SEO
+  ═══════════════════════════════════════════════ -->
+  <title>Nova Godina 2026. u Herceg Novom – Program i Smještaj | Monako Igalo</title>
+  <meta name="description" content="Dočekajte Novu 2026. u Herceg Novom uz Harisa Džinovića, Nedu Ukraden, Željka Samardžića i Vesnu Zmijanac. Trodnevni muzički spektakl 31. dec – 2. jan. Rezervišite smještaj na vrijeme.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
-  
-  <!-- Enhanced Favicons for 2025 -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/monako-favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/monako-favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  
-  <!-- Fonts (already handled with preload above) -->
-  
-  <!-- Inline Critical Bootstrap CSS (eliminates render-blocking) -->
-  <style>
-    /* Essential Bootstrap Grid & Utilities - Inline to eliminate blocking */
-    .container{max-width:1320px;margin:0 auto;padding:0 15px}
-    .row{display:flex;flex-wrap:wrap;margin:0 -15px}
-    .col-md-4,.col-md-6,.col-md-8,.col-lg-8{position:relative;padding:0 15px;flex:0 0 auto}
-    .col-lg-8{width:66.66666667%}.col-md-8{width:66.66666667%}.col-md-6{width:50%}.col-md-4{width:33.33333333%}
-    @media(max-width:991.98px){.col-lg-8{width:100%}}@media(max-width:767.98px){.col-md-8,.col-md-6,.col-md-4{width:100%}}
-    .d-flex{display:flex}.justify-content-center{justify-content:center}.align-items-center{align-items:center}
-    .text-center{text-align:center}.text-light{color:#f8f9fa}.mb-0{margin-bottom:0}.mb-3{margin-bottom:1rem}
-    .mb-4{margin-bottom:1.5rem}.my-4{margin:1.5rem 0}.my-5{margin:3rem 0}.py-5{padding:3rem 0}
-    .bg-light{background-color:#f8f9fa}.bg-dark{background-color:#212529}
-    .navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:1rem 0}
-    .navbar-brand{margin-right:1rem;font-size:1.25rem;text-decoration:none;color:#000}
-    .navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background:0 0;border:1px solid transparent;border-radius:.375rem}
-    .navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}
-    .navbar-nav{display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}
-    .nav-item{margin-bottom:0}.nav-link{display:block;padding:.5rem 1rem;color:#000;text-decoration:none}
-    @media(min-width:768px){.navbar-nav{flex-direction:row}.navbar-collapse{display:flex!important;flex-basis:auto}}
-    .collapse:not(.show){display:none}
-    .card{position:relative;display:flex;flex-direction:column;min-width:0;background-color:#fff;border:1px solid rgba(0,0,0,.125);border-radius:.375rem}
-    .card-header{padding:.5rem 1rem;margin-bottom:0;background-color:rgba(0,0,0,.03);border-bottom:1px solid rgba(0,0,0,.125)}
-    .card-body{flex:1 1 auto;padding:1rem}.card-title{margin-bottom:.5rem}
-    .btn{display:inline-block;font-weight:400;line-height:1.5;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;border-radius:.375rem}
-    .btn-primary{color:#fff;background-color:#0d6efd;border-color:#0d6efd}
-    .btn-outline-primary{color:#0d6efd;border-color:#0d6efd;background-color:transparent}
-    .btn-lg{padding:.5rem 1rem;font-size:1.25rem;border-radius:.5rem}
-    .img-fluid{max-width:100%;height:auto}.rounded{border-radius:.375rem}
-    .shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)}
-    .visually-hidden-focusable:not(:focus):not(:focus-within){position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-  </style>
-  <!-- Load full Bootstrap asynchronously -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"></noscript>
-  
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Doček Nove 2026. u Herceg Novom | Program i Smještaj">
-  <meta property="og:description" content="Dočekajte Novu 2026. godinu u Herceg Novom uz nastupe Harisa Džinovića, Nede Ukraden, Željka Samardžića i Vesne Zmijanac. Rezervišite smještaj i uživajte u nezaboravnoj novogodišnjoj proslavi!">
-  <meta property="og:image" content="https://apartmani-igalo.com/images/docek.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nova Godina 2026. u Herceg Novom – Program i Smještaj">
+  <meta property="og:description" content="Trodnevni muzički spektakl u Herceg Novom 31. dec – 2. jan 2026. Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna Zmijanac. Rezervišite smještaj.">
   <meta property="og:url" content="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
-  <meta property="og:type" content="website">
   <meta property="og:site_name" content="Monako Apartmani Igalo">
-  
+  <meta property="og:image" content="https://apartmani-igalo.com/images/docek.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="sr_RS">
+  <meta property="article:published_time" content="2025-10-01T08:00:00+02:00">
+  <meta property="article:modified_time" content="2025-12-01T08:00:00+02:00">
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Doček Nove 2026. u Herceg Novom | Program i Smještaj">
-  <meta name="twitter:description" content="Proslavite Novu 2026. u Herceg Novom uz Harisa Džinovića, Nedu Ukraden, Željka Samardžića i Vesnu Zmijanac. Rezervišite smještaj i uživajte u prazničnom programu!">
+  <meta name="twitter:title" content="Nova Godina 2026. u Herceg Novom – Program i Smještaj">
+  <meta name="twitter:description" content="Trodnevni spektakl u Herceg Novom uz Harisa Džinovića, Nedu Ukraden i više. Rezervišite smještaj.">
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/docek.jpg">
-  
-  <!-- JSON-LD Structured Data -->
+
+  <!-- ═══════════════════════════════════════════════
+       PERFORMANCE — PRECONNECT / PRELOAD
+  ═══════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
+  </noscript>
+  <!-- LCP image preload — desktop -->
+  <link rel="preload" as="image" href="images/docek.jpg" fetchpriority="high"
+        media="(min-width: 640px)">
+  <!-- LCP image preload — mobile -->
+  <link rel="preload" as="image" href="images/docek-mobile.jpg" fetchpriority="high"
+        media="(max-width: 639px)">
+
+  <link rel="icon" href="images/monako-favicon.png" sizes="any">
+
+  <!-- ═══════════════════════════════════════════════
+       SCHEMA — JSON-LD
+  ═══════════════════════════════════════════════ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "Doček Nove 2026. godine u Herceg Novom",
-    "startDate": "2025-12-31",
-    "endDate": "2026-01-02",
-    "location": {
-      "@type": "Place",
-      "name": "Trg Nikole Đurkovića",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Herceg Novi",
-        "addressCountry": "ME"
-      }
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#event",
+      "name": "Doček Nove 2026. godine u Herceg Novom",
+      "description": "Trodnevni muzički spektakl sa vrhunskim regionalnim izvođačima na Trgu Nikole Đurkovića u Herceg Novom.",
+      "startDate": "2025-12-31T20:00:00+01:00",
+      "endDate": "2026-01-02T23:59:00+01:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "isAccessibleForFree": true,
+      "image": "https://apartmani-igalo.com/images/docek.jpg",
+      "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
+      "location": {
+        "@type": "Place",
+        "name": "Trg Nikole Đurkovića",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Herceg Novi",
+          "addressCountry": "ME"
+        }
+      },
+      "organizer": [
+        {"@type": "Organization", "name": "Opština Herceg Novi"},
+        {"@type": "Organization", "name": "Turistička organizacija Herceg Novi", "url": "https://www.novaunovi.me/"},
+        {"@type": "Organization", "name": "JUK Herceg Fest"}
+      ],
+      "performer": [
+        {"@type": "Person", "name": "Haris Džinović"},
+        {"@type": "Person", "name": "Neda Ukraden"},
+        {"@type": "Person", "name": "Željko Samardžić"},
+        {"@type": "Person", "name": "Vesna Zmijanac"},
+        {"@type": "Person", "name": "Dženan Lončarević"},
+        {"@type": "MusicGroup", "name": "Tropico Band"},
+        {"@type": "MusicGroup", "name": "Kamerni orkestar Herceg Novi"}
+      ]
     },
-    "description": "Trodnevni muzički spektakl sa vrhunskim regionalnim izvođačima",
-    "performer": [
-      {"@type": "Person", "name": "Haris Džinović"},
-      {"@type": "Person", "name": "Neda Ukraden"},
-      {"@type": "Person", "name": "Željko Samardžić"},
-      {"@type": "Person", "name": "Vesna Zmijanac"}
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#article",
+      "headline": "Nova Godina 2026. u Herceg Novom – Program i Smještaj",
+      "description": "Trodnevni muzički spektakl u Herceg Novom 31. dec – 2. jan 2026. sa Harisom Džinovićem, Nedom Ukraden, Željkom Samardžićem i Vesnom Zmijanac.",
+      "image": "https://apartmani-igalo.com/images/docek.jpg",
+      "datePublished": "2025-10-01T08:00:00+02:00",
+      "dateModified": "2025-12-01T08:00:00+02:00",
+      "inLanguage": "sr",
+      "author": {
+        "@type": "Organization",
+        "name": "Monako Apartmani Igalo",
+        "url": "https://apartmani-igalo.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Monako Apartmani Igalo",
+        "url": "https://apartmani-igalo.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://apartmani-igalo.com/images/monako-favicon.png"
+        }
+      },
+      "mainEntityOfPage": "https://apartmani-igalo.com/nova-godina-herceg-novi.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Kada je doček Nove 2026. u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Doček Nove 2026. u Herceg Novom odvija se u periodu od 31. decembra 2025. do 2. januara 2026. na Trgu Nikole Đurkovića u centru grada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ko nastupa na dočeku Nove 2026. u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na dočeku Nove 2026. u Herceg Novom nastupaju: 31. decembra — Haris Džinović i Neda Ukraden; 1. januara — Željko Samardžić i Vesna Zmijanac; 2. januara — Dženan Lončarević i Tropico Band. Prvog dana nova godine nastupa i Kamerni orkestar Herceg Novi ispred gradske Tore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Da li postoji dječiji program za doček 2026. u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, organizuje se posebna proslava dječije Nove godine uz bogat program posvećen najmlađima sa različitim aktivnostima i iznenađenjima."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdje rezervisati smještaj za doček Nove 2026. u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apartmani Monako u Igalu nalaze se samo 100 metara od Blatne plaže i nedaleko od centra Herceg Novog. Rezervacije na +382 67 558 240 ili email hotel-monako@hotmail.com. Preporučujemo da rezervišete što ranije jer je interesovanje ogromno."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://apartmani-igalo.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Vesti", "item": "https://apartmani-igalo.com/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "Nova Godina 2026. Herceg Novi", "item": "https://apartmani-igalo.com/nova-godina-herceg-novi.html"}
+      ]
+    }
+  ]
   </script>
-  
+
   <style>
+    /* ══════════════════════════════════════════════
+       DESIGN TOKENS — Adriatic palette (site-wide)
+    ══════════════════════════════════════════════ */
     :root {
-      --primary-color: #007bff;
-      --secondary-color: #6c757d;
-      --success-color: #28a745;
-      --info-color: #17a2b8;
-      --warning-color: #ffc107;
-      --danger-color: #dc3545;
-      --light-color: #f8f9fa;
-      --dark-color: #343a40;
+      --c-bg:        #FFFFFF;
+      --c-sand:      #EEF4FB;
+      --c-divider:   #D0DFF0;
+      --c-teal:      #0E5EA6;
+      --c-teal-dark: #094880;
+      --c-text:      #0F0F0F;
+      --c-muted:     #5A6475;
+      --c-star:      #E8A020;
+      --c-gold:      #E8A020;
+      /* NYE accent — deep midnight/festive */
+      --c-nye:       #1A0A3B;
+      --c-nye-mid:   #2D1B6B;
+
+      --ff-display: 'Fraunces', 'Fraunces-fallback', Georgia, serif;
+      --ff-body:    'Inter', 'Inter-fallback', system-ui, -apple-system, sans-serif;
+
+      --step--1: clamp(0.8rem,  0.77rem + 0.13vw, 0.875rem);
+      --step-0:  clamp(1rem,    0.95rem + 0.22vw, 1.125rem);
+      --step-1:  clamp(1.25rem, 1.17rem + 0.35vw, 1.5rem);
+      --step-2:  clamp(1.5rem,  1.37rem + 0.57vw, 1.875rem);
+      --step-3:  clamp(1.875rem,1.68rem + 0.87vw, 2.5rem);
+      --step-4:  clamp(2.5rem,  2.13rem + 1.52vw, 3.5rem);
+      --step-5:  clamp(3rem,    2.4rem  + 2.6vw,  5.5rem);
+
+      --sp-xs:  0.5rem;
+      --sp-sm:  1rem;
+      --sp-md:  2rem;
+      --sp-lg:  4rem;
+
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+
+      --max-wide: 1160px;
+      --shadow-card: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.07);
+      --trans: 200ms ease;
     }
-    
+
+    /* ── Fallback font metrics — zero FOUT CLS ─── */
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      size-adjust: 107%; ascent-override: 90%;
+      descent-override: 22%; line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Fraunces-fallback';
+      src: local('Georgia');
+      size-adjust: 115%; ascent-override: 88%;
+      descent-override: 20%; line-gap-override: 0%;
+    }
+
+    /* ── RESET ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; font-size: 100%; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: var(--dark-color);
+      background: var(--c-bg);
+      color: var(--c-text);
+      font-family: var(--ff-body);
+      font-size: var(--step-0);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      min-width: 0;
     }
-    
-    .navbar-brand {
-      font-weight: 600;
-      font-size: 1.5rem;
+    img, picture { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    ul, ol { list-style: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; }
+    :focus-visible {
+      outline: 2px solid var(--c-teal);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
     }
-    
-    .hero-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--info-color) 100%);
-      color: white;
-      padding: 4rem 0;
+
+    /* ── SKIP LINK ─────────────────────────────── */
+    .skip-link {
+      position: absolute; top: -100%; left: var(--sp-sm);
+      background: var(--c-teal); color: #fff;
+      padding: 0.5em 1em; border-radius: var(--radius-sm);
+      font-size: var(--step--1); font-weight: 600;
+      z-index: 9999; transition: top var(--trans);
     }
-    
-    .article-header {
-      margin-bottom: 2rem;
+    .skip-link:focus { top: var(--sp-sm); }
+
+    /* ── LAYOUT ────────────────────────────────── */
+    .container {
+      width: 100%; max-width: var(--max-wide);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
     }
-    
-    .article-meta {
-      color: var(--secondary-color);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
+    .section { padding-block: clamp(2.5rem, 6vw, 4rem); }
+    .section--sand { background: var(--c-sand); }
+    .section--dark { background: var(--c-nye); color: #fff; }
+    .section + .section,
+    .section--sand,
+    .section--dark { content-visibility: auto; contain-intrinsic-size: auto 600px; }
+
+    /* ── NAV ───────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--c-bg);
+      border-bottom: 1px solid var(--c-divider);
+      padding-block: 0.875rem;
+      min-height: 60px;
+      contain: layout style;
     }
-    
+    .nav__inner {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-sm); min-width: 0;
+    }
+    .nav__logo {
+      font-family: var(--ff-display);
+      font-size: var(--step-1); font-weight: 700;
+      letter-spacing: -0.02em; color: var(--c-text);
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .nav__logo span { color: var(--c-teal); }
+    .nav__links { display: flex; gap: var(--sp-md); align-items: center; }
+    .nav__text-link {
+      font-size: var(--step--1); font-weight: 500;
+      color: var(--c-muted); transition: color var(--trans);
+    }
+    .nav__text-link:hover, .nav__text-link:focus-visible { color: var(--c-teal); }
+    .nav__cta {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      background: var(--c-teal); color: #fff;
+      padding: 0.45em 1.1em; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: var(--step--1);
+      white-space: nowrap; flex-shrink: 0;
+      transition: background var(--trans), transform var(--trans);
+    }
+    .nav__cta:hover { background: var(--c-teal-dark); transform: translateY(-1px); }
+    @media (max-width: 540px) {
+      .nav__text-link { display: none; }
+      .nav__links { gap: 0; }
+    }
+
+    /* ── BREADCRUMB ────────────────────────────── */
+    .breadcrumb { padding-block: 0.75rem; border-bottom: 1px solid var(--c-divider); }
+    .breadcrumb__list {
+      display: flex; flex-wrap: wrap;
+      gap: 0.25em 0.5em;
+      font-size: var(--step--1); color: var(--c-muted); list-style: none;
+    }
+    .breadcrumb__list li + li::before { content: "/"; margin-right: 0.5em; }
+    .breadcrumb__list a { color: var(--c-teal); }
+    .breadcrumb__list a:hover { text-decoration: underline; }
+
+    /* ── ARTICLE HERO ──────────────────────────── */
+    .article-hero { padding-block: clamp(2.5rem, 6vw, 4rem); }
+    .article-hero__eyebrow {
+      display: inline-block;
+      font-size: var(--step--1); font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--c-teal); margin-bottom: var(--sp-sm);
+    }
+    .article-hero__title {
+      font-family: var(--ff-display);
+      font-size: var(--step-4);
+      font-weight: 700; line-height: 1.08;
+      letter-spacing: -0.03em;
+      max-width: 22ch; word-break: break-word;
+    }
+    .article-hero__title .highlight { position: relative; display: inline; }
+    .article-hero__title .highlight::after {
+      content: ''; position: absolute;
+      bottom: 0.05em; left: 0;
+      width: 100%; height: 0.07em;
+      background: var(--c-gold); border-radius: 2px;
+    }
+    .article-hero__meta {
+      display: flex; flex-wrap: wrap;
+      gap: 0.5em 1.5em; margin-top: var(--sp-sm);
+      font-size: var(--step--1); color: var(--c-muted); align-items: center;
+    }
+    .article-hero__meta-item { display: flex; align-items: center; gap: 0.4em; }
+    .article-hero__meta-item svg { color: var(--c-teal); flex-shrink: 0; }
+
+    /* ── HERO IMAGE ─────────────────────────────── */
+    .article-hero__image {
+      margin-top: var(--sp-md);
+      border-radius: var(--radius-lg);
+      overflow: hidden; background: var(--c-sand);
+    }
+    .article-hero__image img { width: 100%; height: auto; display: block; }
+    @media (min-width: 640px) {
+      .article-hero__image { aspect-ratio: 16/7; }
+      .article-hero__image img { height: 100%; object-fit: cover; }
+    }
+
+    /* ── TWO-COLUMN LAYOUT ─────────────────────── */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--sp-md) clamp(2rem, 4vw, 4rem);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .content-grid { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+
+    /* ── ARTICLE INTRO ─────────────────────────── */
+    .article__intro {
+      font-size: var(--step-1); color: var(--c-muted);
+      line-height: 1.65;
+      border-left: 3px solid var(--c-teal);
+      padding-left: var(--sp-md);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    /* ── PROGRAM CARDS ─────────────────────────── */
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: var(--sp-md);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
     .program-card {
-      border: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease-in-out;
-      margin-bottom: 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column;
+      transition: transform var(--trans), box-shadow var(--trans);
+      background: var(--c-bg);
+      border: 1px solid var(--c-divider);
     }
-    
     .program-card:hover {
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 24px rgba(0,0,0,.1);
     }
-    
-    .cta-section {
-      background-color: var(--light-color);
-      padding: 3rem 0;
+    .program-card__header {
+      padding: 1em 1.25em;
+      display: flex; flex-direction: column; gap: 0.2em;
     }
-    
-    .social-embed {
-      max-width: 100%;
-      height: auto;
+    .program-card__header--nye  { background: var(--c-nye); color: #fff; }
+    .program-card__header--jan1 { background: var(--c-teal); color: #fff; }
+    .program-card__header--jan2 { background: var(--c-teal-dark); color: #fff; }
+    .program-card__header--kids { background: var(--c-gold); color: #0F0F0F; }
+    .program-card__date {
+      font-family: var(--ff-display);
+      font-size: var(--step-1); font-weight: 700; line-height: 1.1;
     }
-    
+    .program-card__subtitle {
+      font-size: var(--step--1); opacity: 0.8; font-weight: 500;
+    }
+    .program-card__body { padding: 1.25em; flex: 1; }
+    .program-card__body p {
+      font-size: var(--step--1); line-height: 1.65; color: var(--c-text);
+    }
+    .program-card__body strong { font-weight: 600; }
+
+    /* ── PERFORMERS LIST ───────────────────────── */
+    .performers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+      margin-top: var(--sp-sm);
+    }
+    .performer {
+      display: flex; align-items: center; gap: 0.6em;
+      padding: 0.6em 0.9em;
+      background: var(--c-sand);
+      border: 1px solid var(--c-divider);
+      border-radius: var(--radius-md);
+      font-size: var(--step--1); font-weight: 600;
+    }
+    .performer svg { color: var(--c-teal); flex-shrink: 0; }
+
+    /* ── ARTICLE BODY ───────────────────────────── */
+    .article__body p {
+      color: var(--c-text); margin-bottom: 1.2em; line-height: 1.75;
+    }
+    .article__body p:last-child { margin-bottom: 0; }
+    .article__body a {
+      color: var(--c-teal); text-decoration: underline;
+      text-underline-offset: 3px; transition: color var(--trans);
+    }
+    .article__body a:hover { color: var(--c-teal-dark); }
+    .article__body strong { font-weight: 600; }
+    .article__body h2 {
+      font-family: var(--ff-display); font-size: var(--step-2);
+      font-weight: 700; line-height: 1.2; letter-spacing: -0.02em;
+      margin-bottom: 0.75em; margin-top: clamp(2rem, 4vw, 3rem);
+      color: var(--c-text);
+    }
+    .article__body h2:first-child { margin-top: 0; }
+
+    /* ── ORGANIZERS LIST ───────────────────────── */
+    .organizers { display: flex; flex-wrap: wrap; gap: 0.6em; margin-top: 0.75rem; }
+    .org-chip {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      background: var(--c-bg); border: 1.5px solid var(--c-divider);
+      border-radius: 20px; padding: 0.3em 0.9em;
+      font-size: var(--step--1); font-weight: 600; color: var(--c-muted);
+    }
+    .org-chip svg { color: var(--c-teal); }
+
+    /* ── SIDEBAR ───────────────────────────────── */
+    .sidebar { position: sticky; top: calc(60px + 1.5rem); }
+    @media (max-width: 900px) { .sidebar { position: static; } }
+    .sidebar__card {
+      background: var(--c-sand);
+      border: 1px solid var(--c-divider);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-md);
+    }
+    .sidebar__card + .sidebar__card { margin-top: var(--sp-md); }
+    .sidebar__eyebrow {
+      font-size: var(--step--1); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--c-muted); margin-bottom: 0.5em;
+    }
+    .sidebar__title {
+      font-family: var(--ff-display); font-size: var(--step-2);
+      font-weight: 700; line-height: 1.2; margin-bottom: 0.5em;
+    }
+    .sidebar__body {
+      font-size: var(--step--1); color: var(--c-muted);
+      margin-bottom: var(--sp-md); line-height: 1.6;
+    }
+    .btn {
+      display: inline-flex; justify-content: center;
+      align-items: center; gap: 0.4em;
+      background: var(--c-teal); color: #fff;
+      padding: 0.7em 1.5em; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: var(--step--1);
+      width: 100%;
+      transition: background var(--trans), transform var(--trans);
+    }
+    .btn:hover { background: var(--c-teal-dark); transform: translateY(-1px); }
+    .btn--tel {
+      display: block; font-size: var(--step-1); font-weight: 700;
+      color: var(--c-teal); margin-bottom: var(--sp-sm);
+      transition: color var(--trans);
+    }
+    .btn--tel:hover { color: var(--c-teal-dark); }
+
+    /* TOC */
+    .toc__title {
+      font-size: var(--step--1); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--c-muted); margin-bottom: 0.75em;
+    }
+    .toc__list { display: flex; flex-direction: column; }
+    .toc__item {
+      display: flex; align-items: center; gap: 0.5em;
+      padding-block: 0.5em;
+      border-bottom: 1px solid var(--c-divider);
+      font-size: var(--step--1); color: var(--c-text);
+      transition: color var(--trans); line-height: 1.3;
+    }
+    .toc__item:last-child { border-bottom: none; }
+    .toc__item:hover { color: var(--c-teal); }
+    .toc__dot {
+      flex-shrink: 0; width: 8px; height: 8px;
+      background: var(--c-teal); border-radius: 50%;
+    }
+
+    /* ── FAQ ───────────────────────────────────── */
+    .faq__item { border-bottom: 1px solid var(--c-divider); }
+    .faq__question {
+      width: 100%; display: flex; justify-content: space-between;
+      align-items: center; gap: var(--sp-sm);
+      padding-block: 1.1em; text-align: left;
+      font-weight: 600; font-size: var(--step-0); color: var(--c-text);
+      transition: color var(--trans);
+    }
+    .faq__question:hover { color: var(--c-teal); }
+    .faq__icon {
+      flex-shrink: 0; width: 20px; height: 20px;
+      border-radius: 50%; border: 1.5px solid var(--c-divider);
+      display: flex; align-items: center; justify-content: center;
+      transition: background var(--trans), border-color var(--trans);
+    }
+    .faq__question[aria-expanded="true"] .faq__icon {
+      background: var(--c-teal); border-color: var(--c-teal);
+    }
+    .faq__icon svg { transition: transform var(--trans); }
+    .faq__question[aria-expanded="true"] .faq__icon svg { transform: rotate(45deg); }
+    .faq__answer {
+      overflow: hidden; max-height: 0;
+      transition: max-height 350ms ease, padding 350ms ease;
+      font-size: var(--step-0); color: var(--c-muted);
+      padding-bottom: 0; line-height: 1.7;
+    }
+    .faq__answer.open { max-height: 500px; padding-bottom: 1.2em; }
+
+    /* ── BOOKING CTA STRIP ─────────────────────── */
+    .booking-strip {
+      background: var(--c-nye);
+      color: #fff;
+      padding-block: clamp(2.5rem, 6vw, 4rem);
+    }
+    .booking-strip__inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--sp-md);
+      align-items: center;
+    }
+    @media (max-width: 640px) {
+      .booking-strip__inner { grid-template-columns: 1fr; }
+    }
+    .booking-strip__eyebrow {
+      font-size: var(--step--1); font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      opacity: 0.6; margin-bottom: 0.4em;
+    }
+    .booking-strip__title {
+      font-family: var(--ff-display);
+      font-size: var(--step-3); font-weight: 700;
+      line-height: 1.15; letter-spacing: -0.02em;
+      margin-bottom: 0.5em;
+    }
+    .booking-strip__desc { font-size: var(--step-0); opacity: 0.75; max-width: 52ch; }
+    .booking-strip__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--sp-md); }
+    .btn-light {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      background: #fff; color: var(--c-nye);
+      padding: 0.7em 1.5em; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: var(--step-0);
+      transition: opacity var(--trans), transform var(--trans);
+      white-space: nowrap;
+    }
+    .btn-light:hover { opacity: 0.9; transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.4em;
+      background: transparent; color: #fff;
+      padding: 0.7em 1.5em; border-radius: var(--radius-sm);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      font-weight: 600; font-size: var(--step-0);
+      transition: border-color var(--trans), background var(--trans);
+      white-space: nowrap;
+    }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* ── RELATED CARDS ─────────────────────────── */
+    .related__grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-md); }
+    @media (min-width: 560px) { .related__grid { grid-template-columns: repeat(2, 1fr); } }
+    .related-card {
+      border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--c-divider); background: var(--c-bg);
+      box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column;
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 4px 24px rgba(0,0,0,.1); }
+    .related-card__img { width: 100%; height: auto; display: block; }
+    @media (min-width: 480px) {
+      .related-card__img-wrap { aspect-ratio: 16/9; overflow: hidden; }
+      .related-card__img { height: 100%; object-fit: cover; }
+    }
+    .related-card__body {
+      padding: var(--sp-md); flex: 1;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .related-card__title {
+      font-family: var(--ff-display); font-size: var(--step-1);
+      font-weight: 700; line-height: 1.25;
+      color: var(--c-text); transition: color var(--trans);
+    }
+    .related-card:hover .related-card__title { color: var(--c-teal); }
+    .related-card__excerpt { font-size: var(--step--1); color: var(--c-muted); flex: 1; }
+    .related-card__link {
+      display: inline-flex; align-items: center; gap: 0.3em;
+      font-size: var(--step--1); font-weight: 600; color: var(--c-teal);
+      margin-top: 0.5em; transition: gap var(--trans);
+    }
+    .related-card:hover .related-card__link { gap: 0.6em; }
+
+    /* ── SECTION LABELS ────────────────────────── */
+    .section-eyebrow {
+      display: inline-block; font-size: var(--step--1); font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--c-teal); margin-bottom: 0.5em;
+    }
+    .section-title {
+      font-family: var(--ff-display); font-size: var(--step-3);
+      font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;
+      margin-bottom: var(--sp-md);
+    }
+
+    /* ── FOOTER ────────────────────────────────── */
+    footer {
+      background: #061F3A;
+      color: rgba(255,255,255,0.7);
+      padding-block: clamp(2.5rem, 6vw, 4rem);
+    }
+    .footer__grid { display: grid; grid-template-columns: 1fr; gap: var(--sp-md); }
+    @media (min-width: 600px) {
+      .footer__grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    }
+    .footer__brand {
+      font-family: var(--ff-display); font-size: var(--step-2);
+      font-weight: 700; color: #fff; margin-bottom: 0.5em;
+    }
+    .footer__brand span { color: var(--c-teal); }
+    .footer__tagline { font-size: var(--step--1); line-height: 1.6; }
+    .footer__heading {
+      font-size: var(--step--1); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: #fff; margin-bottom: var(--sp-sm);
+    }
+    .footer__links { display: flex; flex-direction: column; gap: 0.5em; }
+    .footer__links a {
+      font-size: var(--step--1); color: rgba(255,255,255,0.6);
+      transition: color var(--trans);
+    }
+    .footer__links a:hover { color: #fff; }
+    .footer__tel { display: block; font-size: var(--step-1); font-weight: 700; color: #fff; margin-bottom: 0.3em; }
+    .footer__email { font-size: var(--step--1); color: rgba(255,255,255,0.6); transition: color var(--trans); }
+    .footer__email:hover { color: #fff; }
+    .footer__social { display: flex; gap: var(--sp-sm); margin-top: var(--sp-sm); }
+    .footer__social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7);
+      transition: background var(--trans), color var(--trans), border-color var(--trans);
+    }
+    .footer__social a:hover { background: var(--c-teal); color: #fff; border-color: var(--c-teal); }
+    .footer__bottom {
+      margin-top: var(--sp-md); padding-top: var(--sp-md);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: var(--step--1);
+      display: flex; flex-wrap: wrap; gap: var(--sp-sm); justify-content: space-between;
+    }
+    .footer__bottom a { color: rgba(255,255,255,0.5); }
+    .footer__bottom a:hover { color: #fff; }
+
+    /* ── UTILS ─────────────────────────────────── */
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0;
+      margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
     @media (prefers-reduced-motion: reduce) {
-      .program-card {
-        transition: none;
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
       }
     }
+    @media print { .nav, footer, .sidebar { display: none; } body { font-size: 12pt; } }
   </style>
 </head>
 
 <body>
-  <!-- Skip to main content for accessibility -->
-  <a href="#main-content" class="visually-hidden-focusable">Preskoči na glavni sadržaj</a>
-  
-  <!-- Header with Navigation -->
+  <a class="skip-link" href="#main">Preskoči na glavni sadržaj</a>
+
+  <!-- ══════════════════════════════════
+       NAV
+  ══════════════════════════════════ -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" aria-label="Glavna navigacija">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/" aria-label="Početna stranica">
-          <strong>MONAKO</strong> | <span>APARTMANI</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Otvori navigaciju">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/about.html">O Nama</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#program">Program</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#smjestaj">Smještaj</a>
+    <nav class="nav" aria-label="Glavna navigacija">
+      <div class="container">
+        <div class="nav__inner">
+          <a class="nav__logo" href="/" aria-label="Monako Apartmani Igalo – Početna">
+            MONAKO <span>IGALO</span>
+          </a>
+          <ul class="nav__links" role="list">
+            <li><a href="/about.html" class="nav__text-link">O nama</a></li>
+            <li><a href="/blog.html" class="nav__text-link">Vesti</a></li>
+            <li><a href="/blatna-plaza.html" class="nav__text-link">Blatna plaža</a></li>
+            <li>
+              <a class="nav__cta" href="tel:+38267558240" aria-label="Pozovite nas za rezervaciju">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Rezervišite
+              </a>
             </li>
           </ul>
         </div>
@@ -277,265 +752,509 @@ footer .social-links a:hover {
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
+  <!-- ══════════════════════════════════
+       BREADCRUMB
+  ══════════════════════════════════ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb__list" role="list">
+        <li><a href="/">Početna</a></li>
+        <li><a href="/blog.html">Vesti</a></li>
+        <li><span aria-current="page">Nova Godina 2026. Herceg Novi</span></li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ══════════════════════════════════
+         ARTICLE HERO
+    ══════════════════════════════════ -->
+    <div class="article-hero">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <h1 class="display-4 fw-bold mb-4">Doček Nove 2026. godine u Herceg Novom</h1>
-            <p class="lead">Trodnevni muzički spektakl sa vrhunskim izvođačima</p>
-          </div>
+        <span class="article-hero__eyebrow">Događaj · Herceg Novi · 31. dec – 2. jan</span>
+        <h1 class="article-hero__title">
+          Doček <span class="highlight">Nove 2026.</span> u Herceg Novom
+        </h1>
+        <div class="article-hero__meta">
+          <span class="article-hero__meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            31. decembar 2025. – 2. januar 2026.
+          </span>
+          <span class="article-hero__meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            Trg Nikole Đurkovića, Herceg Novi
+          </span>
+          <span class="article-hero__meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+            7 izvođača · Trodnevni spektakl · Besplatan ulaz
+          </span>
         </div>
+
+        <!-- LCP hero image — responsive, eagerly loaded -->
+        <figure class="article-hero__image">
+          <picture>
+            <source
+              media="(max-width: 639px)"
+              srcset="images/docek-mobile.webp" type="image/webp">
+            <source
+              media="(min-width: 640px)"
+              srcset="images/docek.webp" type="image/webp">
+            <img
+              src="images/docek.jpg"
+              alt="Doček Nove 2026. na Trgu Nikole Đurkovića u Herceg Novom — mnoštvo posjetilaca uz muziku i vatromet"
+              width="1160" height="508"
+              fetchpriority="high"
+              loading="eager"
+              decoding="sync"
+            >
+          </picture>
+          <figcaption class="sr-only">Doček Nove godine na Trgu Nikole Đurkovića, Herceg Novi</figcaption>
+        </figure>
       </div>
-    </section>
+    </div>
 
-    <!-- Article Content -->
-    <article class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          
+    <!-- ══════════════════════════════════
+         CONTENT + SIDEBAR
+    ══════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="content-grid">
 
-          <div class="content-section">
-            <p class="lead">Herceg Novi, prelep grad na crnogorskom primorju, priprema nezaboravan doček Nove 2026. godine. U periodu od 31. decembra 2025. do 2. januara 2026. godine, centar grada – Trg Nikole Đurkovića – biće epicentar zabave, muzike i veselja.</p>
-            
-            <div class="hero-image-container">
-              <picture>
-                <!-- WebP version for all screens -->
-                <source srcset="images/docek-mobile.webp" type="image/webp" media="(max-width: 767px)">
-                <source srcset="images/docek.webp" type="image/webp" media="(min-width: 768px)">
+          <!-- ── MAIN ── -->
+          <article>
 
-                <!-- JPEG fallback for all screens -->
-                <source srcset="images/docek.jpg" type="image/jpeg">
-                <!-- Default image fallback -->
-                <img src="images/docek.jpg" fetchpriority="high" loading="eager" 
-                     alt="Doček Nove godine 2026 u Herceg Novom - veliki trg pun ljudi koji slave uz muziku i vatromet" 
-                     class="figure-img img-fluid rounded" 
-                     loading="lazy" 
-                     decoding="async"
-                     width="800" 
-                     height="450"
-                     style="width: 100%; height: 100%; object-fit: cover;"
-                     sizes="100vw">
-            </picture>
-            </div>
-            <figcaption class="figure-caption text-center mt-2">Doček Nove godine na Trgu Nikole Đurkovića</figcaption>
+            <p class="article__intro">
+              Herceg Novi, predivni grad na crnogorskom primorju, priprema
+              <strong>nezaboravan doček Nove 2026. godine</strong>. U periodu od
+              31. decembra 2025. do 2. januara 2026., centar grada —
+              Trg Nikole Đurkovića — biće epicentar zabave, muzike i veselja.
+              Trodnevni muzički spektakl sa vrhunskim regionalnim izvođačima.
+            </p>
 
-            <section id="program" class="my-5">
-              <h2 class="h3 mb-4">Program nastupa po danima</h2>
-              
-              <!-- Program Cards -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="card program-card h-100">
-                    <div class="card-header bg-primary text-white">
-                      <h3 class="card-title h5 mb-0">31. decembar 2025.</h3>
-                      <small>Najluđa noć</small>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">U najluđoj noći, posetioce će zabavljati <strong>Haris Džinović</strong> i <strong>Neda Ukraden</strong>, čiji hitovi su nezaobilazni deo novogodišnjih proslava širom Balkana.</p>
-                    </div>
+            <!-- PROGRAM SECTION -->
+            <section id="program" aria-labelledby="program-heading">
+              <h2 id="program-heading" style="font-family:var(--ff-display);font-size:var(--step-3);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--sp-md)">
+                Program nastupa po danima
+              </h2>
+
+              <div class="program-grid">
+
+                <article class="program-card" aria-labelledby="card-nye">
+                  <div class="program-card__header program-card__header--nye">
+                    <h3 class="program-card__date" id="card-nye">31. decembar 2025.</h3>
+                    <span class="program-card__subtitle">Najluđa noć</span>
                   </div>
+                  <div class="program-card__body">
+                    <p>
+                      U najluđoj noći posjetioce zabavljaju <strong>Haris Džinović</strong>
+                      i <strong>Neda Ukraden</strong> — čiji hitovi su nezaobilazan dio
+                      novogodišnjih proslava širom Balkana.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="program-card" aria-labelledby="card-jan1">
+                  <div class="program-card__header program-card__header--jan1">
+                    <h3 class="program-card__date" id="card-jan1">1. januar 2026.</h3>
+                    <span class="program-card__subtitle">Dan za sve generacije</span>
+                  </div>
+                  <div class="program-card__body">
+                    <p>
+                      Nastupaju <strong>Željko Samardžić</strong> i
+                      <strong>Vesna Zmijanac</strong>. U podne,
+                      <strong>Kamerni orkestar Herceg Novi</strong> priređuje
+                      klasični koncert ispred gradske Tore.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="program-card" aria-labelledby="card-jan2">
+                  <div class="program-card__header program-card__header--jan2">
+                    <h3 class="program-card__date" id="card-jan2">2. januar 2026.</h3>
+                    <span class="program-card__subtitle">Veče za ljubitelje pop muzike</span>
+                  </div>
+                  <div class="program-card__body">
+                    <p>
+                      Savršen završetak trodnevne proslave donose
+                      <strong>Dženan Lončarević</strong> i
+                      <strong>Tropico Band</strong>.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="program-card" aria-labelledby="card-kids">
+                  <div class="program-card__header program-card__header--kids">
+                    <h3 class="program-card__date" id="card-kids">Dječiji program</h3>
+                    <span class="program-card__subtitle">Za najmlađe</span>
+                  </div>
+                  <div class="program-card__body">
+                    <p>
+                      Posebna proslava dječije Nove godine uz bogat program posvećen
+                      najmlađima sa različitim aktivnostima i iznenađenjima.
+                    </p>
+                  </div>
+                </article>
+
+              </div>
+            </section>
+
+            <!-- ALL PERFORMERS -->
+            <section id="izvodjaci" aria-labelledby="performers-heading"
+                     style="margin-top:clamp(2rem,4vw,3rem)">
+              <h2 id="performers-heading"
+                  style="font-family:var(--ff-display);font-size:var(--step-2);font-weight:700;letter-spacing:-0.02em;margin-bottom:0.75em">
+                Svi izvođači
+              </h2>
+              <div class="performers" role="list">
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Haris Džinović
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="card program-card h-100">
-                    <div class="card-header bg-success text-white">
-                      <h3 class="card-title h5 mb-0">1. januar 2026.</h3>
-                      <small>Dan za sve generacije</small>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">Prvog dana nove godine, nastupiće <strong>Željko Samardžić</strong> i <strong>Vesna Zmijanac</strong>. U podne, Kamerni orkestar Herceg Novi prireditće koncert ispred gradske Tore.</p>
-                    </div>
-                  </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Neda Ukraden
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="card program-card h-100">
-                    <div class="card-header bg-info text-white">
-                      <h3 class="card-title h5 mb-0">2. januar 2026.</h3>
-                      <small>Veče za ljubitelje pop muzike</small>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">Na završnom danu programa, nastupiće <strong>Dženan Lončarević</strong> i <strong>Tropico band</strong>, pružajući savršen završetak trodnevne proslave.</p>
-                    </div>
-                  </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Željko Samardžić
                 </div>
-                
-                <div class="col-md-6 mb-4">
-                  <div class="card program-card h-100">
-                    <div class="card-header bg-warning text-dark">
-                      <h3 class="card-title h5 mb-0">Dječiji program</h3>
-                      <small>Za najmlađe</small>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">Biće upriličena i proslava dječije Nove godine uz bogat program posvećen najmlađima sa različitim aktivnostima i iznenađenjima.</p>
-                    </div>
-                  </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Vesna Zmijanac
+                </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Dženan Lončarević
+                </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Tropico Band
+                </div>
+                <div class="performer" role="listitem">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  Kamerni orkestar Herceg Novi
                 </div>
               </div>
             </section>
 
-            <section class="my-5">
-              <h2 class="h3 mb-3">Herceg Novi – Idealno mesto za novogodišnji odmor</h2>
-              <p>Herceg Novi, smešten na obali Boke Kotorske, poznat je po svom mediteranskom šarmu, blago mediteranskoj klimi i bogatoj istoriji. Grad je domaćin brojnim manifestacijama tokom godine, a doček Nove godine je jedan od najposećenijih događaja.</p>
-            </section>
-
-            <section class="my-5">
-              <h2 class="h3 mb-3">Organizatori i pokrovitelji</h2>
-              <p>Program dočeka Nove 2026. godine u Herceg Novom organizuju:</p>
-              <ul class="list-unstyled">
-                <li>• Opština Herceg Novi</li>
-                <li>• Turistička organizacija Herceg Novi</li>
-                <li>• JUK Herceg Fest</li>
-              </ul>
-            </section>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- CTA Section -->
-    <section id="smjestaj" class="cta-section">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <h2 class="h3 mb-4">Rezervišite Svoj Smještaj na Vreme</h2>
-            <p class="lead mb-4">Interesovanje za novogodišnji doček u Herceg Novom je ogromno, stoga vam savetujemo da na vreme rezervišete svoj smještaj.</p>
-            
-            <picture class="figure w-100 my-4">
-                <!-- WebP version for all screens -->
-                <source media="(max-width: 767px)" srcset="images/reklama-monako-mobile.webp" type="image/webp">
-                <source srcset="images/reklama-monako.webp" type="image/webp">
-                <!-- JPEG fallback for all screens -->
-                <source srcset="images/reklama-monako.jpg" type="image/jpeg">
-                <!-- Default image fallback -->
-                <img src="images/reklama-monako.jpg" 
-                     alt="Monako apartmani Igalo Blatna plaza - luksuzni smještaj uz more sa pogledom na Boku Kotorsku" 
-                     class="figure-img img-fluid rounded" 
-                     loading="lazy" 
-                     decoding="async"
-                     width="600" 
-                     height="400"
-                     style="width: 100%; height: auto; object-fit: cover;"
-                     sizes="100vw">
-            </picture>
-
-            
-            <div class="social-embed mt-4">
-              <div class="ratio ratio-16x9" style="max-width: 400px; margin: 0 auto;">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fapartmanimonako&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
-                        title="Monako Apartmani Facebook stranica"
-                        style="border:none;overflow:hidden" 
-                        scrolling="no" 
-                        allowfullscreen="true" 
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-                </iframe>
+            <!-- ABOUT THE CITY -->
+            <section id="herceg-novi" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="city-heading">
+              <div class="article__body">
+                <h2 id="city-heading">Herceg Novi – Idealno mjesto za novogodišnji odmor</h2>
+                <p>
+                  Herceg Novi, smješten na obali Bokokotorskog zaliva, poznat je po svom
+                  mediteranskom šarmu, blagoj mediteranskoj klimi i bogatoj istoriji.
+                  Grad je domaćin brojnih manifestacija tokom cijele godine, a
+                  <strong>doček Nove godine</strong> je jedan od najposjećenijih događaja —
+                  svake godine privlači desetine hiljada posjetilaca iz cijele regije.
+                </p>
+                <p>
+                  Centar dešavanja je <strong>Trg Nikole Đurkovića</strong> — srce starog
+                  grada, okruženo istorijskim zidinama i fontanom. Atmosfera na trgu u
+                  novogodišnjoj noći je jedinstvena: vatromet iznad Bokokotorskog zaliva,
+                  muzika i more — sve na istom mjestu.
+                </p>
               </div>
+            </section>
+
+            <!-- ORGANIZERS -->
+            <section id="organizatori" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="org-heading">
+              <div class="article__body">
+                <h2 id="org-heading">Organizatori i pokrovitelji</h2>
+                <p>Program dočeka Nove 2026. u Herceg Novom organizuju:</p>
+              </div>
+              <div class="organizers">
+                <span class="org-chip">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                  Opština Herceg Novi
+                </span>
+                <a class="org-chip" href="https://www.novaunovi.me/" rel="noopener noreferrer" target="_blank"
+                   style="text-decoration:none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                  Turistička organizacija Herceg Novi ↗
+                </a>
+                <span class="org-chip">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                  JUK Herceg Fest
+                </span>
+              </div>
+            </section>
+
+            <!-- FAQ -->
+            <section style="margin-top:clamp(2.5rem,5vw,4rem)" aria-labelledby="faq-heading">
+              <span class="section-eyebrow">Pitanja i odgovori</span>
+              <h2 class="section-title" id="faq-heading" style="margin-bottom:var(--sp-sm)">
+                Česta pitanja o dočeku
+              </h2>
+              <div role="list">
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq1">
+                    Kada je doček Nove 2026. u Herceg Novom?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq1" role="region">
+                    Doček Nove 2026. u Herceg Novom odvija se od
+                    <strong>31. decembra 2025. do 2. januara 2026.</strong> na
+                    Trgu Nikole Đurkovića u centru grada. Ulaz je besplatan.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq2">
+                    Ko nastupa na dočeku Nove 2026. u Herceg Novom?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq2" role="region">
+                    <strong>31. dec:</strong> Haris Džinović i Neda Ukraden.<br>
+                    <strong>1. jan:</strong> Željko Samardžić, Vesna Zmijanac i Kamerni orkestar Herceg Novi.<br>
+                    <strong>2. jan:</strong> Dženan Lončarević i Tropico Band.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq3">
+                    Da li postoji dječiji program?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq3" role="region">
+                    Da, organizuje se posebna proslava dječije Nove godine uz bogat
+                    program posvećen najmlađima sa različitim aktivnostima i iznenađenjima.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq4">
+                    Gdje rezervisati smještaj za doček u Herceg Novom?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq4" role="region">
+                    <strong>Apartmani Monako</strong> u Igalu, 100 metara od Blatne plaže.
+                    Rezervacije na <a href="tel:+38267558240" style="color:var(--c-teal)">+382 67 558 240</a>
+                    ili <a href="mailto:hotel-monako@hotmail.com" style="color:var(--c-teal)">hotel-monako@hotmail.com</a>.
+                    Preporučujemo da rezervišete što ranije — kapaciteti se popune brzo.
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+          </article>
+
+          <!-- ── SIDEBAR ── -->
+          <aside class="sidebar" aria-label="Rezervacija i sadržaj članka">
+
+            <div class="sidebar__card">
+              <p class="sidebar__eyebrow">Smještaj za doček</p>
+              <h2 class="sidebar__title">Monako Apartmani</h2>
+              <p class="sidebar__body">
+                <strong>100 m od Blatne plaže</strong>, blizu centra Herceg Novog.
+                Interesovanje za novogodišnji doček je ogromno —
+                <strong>rezervišite na vrijeme</strong>.
+              </p>
+              <a class="btn--tel" href="tel:+38267558240">+382 67 558 240</a>
+              <a class="btn" href="mailto:hotel-monako@hotmail.com">
+                Pošaljite upit
+              </a>
             </div>
 
-            <p class="mt-4"><strong>Doček Nove Godine 2026. u Herceg Novom obećava nezaboravne trenutke, sjajnu muziku i vrhunski provod!</strong></p>
-            
-            <div class="mt-4">
-              <a href="https://www.novaunovi.me/" class="btn btn-primary btn-lg me-3" target="_blank" rel="noopener">
-                Više informacija
-              </a>
-              <a href="tel:+382675582240" class="btn btn-outline-primary btn-lg">
-                Pozovite nas
-              </a>
+            <div class="sidebar__card" style="margin-top:var(--sp-md)">
+              <p class="toc__title">Sadržaj članka</p>
+              <nav aria-label="Sadržaj članka">
+                <ol class="toc__list" role="list">
+                  <li><a class="toc__item" href="#program">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Program nastupa
+                  </a></li>
+                  <li><a class="toc__item" href="#izvodjaci">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Svi izvođači
+                  </a></li>
+                  <li><a class="toc__item" href="#herceg-novi">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Herceg Novi – grad dočeka
+                  </a></li>
+                  <li><a class="toc__item" href="#organizatori">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Organizatori
+                  </a></li>
+                </ol>
+              </nav>
             </div>
-          </div>
+
+          </aside>
         </div>
       </div>
     </section>
+
+    <!-- ══════════════════════════════════
+         BOOKING STRIP
+    ══════════════════════════════════ -->
+    <div class="booking-strip" id="smjestaj" aria-labelledby="booking-heading">
+      <div class="container">
+        <div class="booking-strip__inner">
+          <div>
+            <p class="booking-strip__eyebrow">Rezervacija</p>
+            <h2 class="booking-strip__title" id="booking-heading">
+              Rezervišite smještaj na vrijeme
+            </h2>
+            <p class="booking-strip__desc">
+              Interesovanje za novogodišnji doček u Herceg Novom je ogromno.
+              Apartmani Monako — 100 m od Blatne plaže, besplatan parking i WiFi.
+              Rezervišite direktno i uštedite na provizijama.
+            </p>
+            <div class="booking-strip__actions">
+              <a class="btn-light" href="tel:+38267558240">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                Pozovite: +382 67 558 240
+              </a>
+              <a class="btn-ghost" href="mailto:hotel-monako@hotmail.com">
+                Pošaljite upit e-mailom
+              </a>
+              <a class="btn-ghost" href="https://www.novaunovi.me/" rel="noopener noreferrer" target="_blank">
+                Više o događaju ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════
+         RELATED ARTICLES
+    ══════════════════════════════════ -->
+    <section class="section section--sand" aria-labelledby="related-heading">
+      <div class="container">
+        <span class="section-eyebrow">Čitajte dalje</span>
+        <h2 class="section-title" id="related-heading">Više o Herceg Novom i Igalu</h2>
+        <div class="related__grid">
+
+          <article class="related-card">
+            <div class="related-card__img-wrap">
+              <img class="related-card__img"
+                src="images/plaza-herceg-novi.jpg"
+                alt="Plaže u Herceg Novom i Igalu"
+                width="560" height="315"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="related-card__body">
+              <h3 class="related-card__title">
+                <a href="/vesti/plaze-herceg-novi.html">Top 8 Plaža u Herceg Novom i Igalu</a>
+              </h3>
+              <p class="related-card__excerpt">
+                Od Blatne plaže i Raffaella do kristalno čistih Žanjica — kompletan
+                vodič kroz 62 registrovane plaže opštine Herceg Novi.
+              </p>
+              <a class="related-card__link" href="/vesti/plaze-herceg-novi.html">
+                Pročitajte više
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="related-card">
+            <div class="related-card__img-wrap">
+              <img class="related-card__img"
+                src="images/blatna-plaza-igalo-1.jpg"
+                alt="Blatna plaža Igalo — lekovito blato"
+                width="560" height="315"
+                loading="lazy" decoding="async">
+            </div>
+            <div class="related-card__body">
+              <h3 class="related-card__title">
+                <a href="/blatna-plaza.html">Blatna Plaža Igalo — Lekovito Blato</a>
+              </h3>
+              <p class="related-card__excerpt">
+                Najveća plaža Herceg Novog (9.000 m²) poznata po radioaktivnom mulju
+                koji liječi reumatizam. Besplatna terapija, 100 m od naših apartmana.
+              </p>
+              <a class="related-card__link" href="/blatna-plaza.html">
+                Pročitajte više
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light py-5">
+  <!-- ══════════════════════════════════
+       FOOTER
+  ══════════════════════════════════ -->
+  <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h3 class="h5 mb-3">Kontaktirajte nas</h3>
-          <p class="mb-1">25 SATI DOSTUPNI</p>
-          <p class="h4 mb-0">
-            <a href="tel:+381675582240" class="text-light text-decoration-none">+381 67 558 240</a>
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">MONAKO <span>IGALO</span></p>
+          <p class="footer__tagline">
+            Privatni apartmani 100 m od Blatne plaže.<br>
+            Dubrovačka 1, Igalo, Crna Gora.
           </p>
         </div>
-        <div class="col-md-6">
-          <h3 class="h5 mb-3">Pratite nas</h3>
-          <p class="mb-3">SOCIAL MEDIA PROFILI</p>
-          <div class="d-flex gap-3 social-links">
-            <a href="https://www.instagram.com/apartmani.igalo" class="text-light" aria-label="Instagram profil">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
+        <div>
+          <p class="footer__heading">Brze veze</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/">Početna</a></li>
+            <li><a href="/about.html">O nama</a></li>
+            <li><a href="/blog.html">Vesti</a></li>
+            <li><a href="/blatna-plaza.html">Blatna plaža</a></li>
+            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novi</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Kontakt</p>
+          <a class="footer__tel" href="tel:+38267558240">+382 67 558 240</a>
+          <a class="footer__email" href="mailto:hotel-monako@hotmail.com">hotel-monako@hotmail.com</a>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/apartmani.igalo"
+               aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
-            <a href="https://www.facebook.com/apartmanimonako" class="text-light" aria-label="Facebook stranica">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
+            <a href="https://www.facebook.com/apartmanimonako"
+               aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
           </div>
         </div>
       </div>
-      <hr class="my-4">
-      <div class="text-center">
-        <p class="mb-0">&copy; 2025 Monako Apartmani Igalo. Sva prava zadržana.</p>
+      <div class="footer__bottom">
+        <span>© <span id="yr"></span> Monako Apartmani Igalo. Sva prava zadržana.</span>
+        <a href="/">Početna</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts - Optimized loading to prevent render blocking -->
   <script>
-    // Inline critical JavaScript to prevent blocking
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load Bootstrap JS only when needed (after DOM ready)
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-      script.integrity = 'sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz';
-      script.crossOrigin = 'anonymous';
-      script.async = true;
-      document.body.appendChild(script);
-      
-      // Optimize font loading
-      if ('fonts' in document) {
-        document.fonts.load('1rem Inter').then(() => {
-          document.body.classList.add('fonts-loaded');
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    document.querySelectorAll('.faq__question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq__question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          const a = document.getElementById(b.getAttribute('aria-controls'));
+          if (a) a.classList.remove('open');
         });
-      }
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          const answer = document.getElementById(btn.getAttribute('aria-controls'));
+          if (answer) answer.classList.add('open');
+        }
+      });
     });
-    
-    // Intersection Observer for lazy loading improvements
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
-      
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-  </script>
-  
-  <!-- Fallback for browsers without JS -->
-  <noscript>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </noscript>
-  
-  <!-- Analytics (replace with your tracking ID) -->
-  <script>
-    // Add your analytics code here
   </script>
 </body>
-
 </html>
