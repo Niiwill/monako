@@ -44,6 +44,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
+  <link rel="preload" as="image" href="images/kuca_spolja.webp" fetchpriority="high">
   <link rel="icon" href="/images/monako-favicon.svg" type="image/svg+xml">
 
   <!-- ═══════════════════════════════════════════════
@@ -214,11 +215,28 @@
 
     /* ── RESET ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+    /* ── Fallback font metrics — eliminates FOUT-driven CLS ─────── */
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      size-adjust: 107%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Fraunces-fallback';
+      src: local('Georgia');
+      size-adjust: 115%;
+      ascent-override: 88%;
+      descent-override: 20%;
+      line-gap-override: 0%;
+    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; font-size: 100%; }
     body {
       background: var(--c-bg);
       color: var(--c-text);
-      font-family: var(--ff-body);
+      font-family: 'Inter', 'Inter-fallback', system-ui, -apple-system, sans-serif;
       font-size: var(--step-0);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -260,6 +278,9 @@
     }
     .section { padding-block: clamp(2.5rem, 6vw, 4rem); }
     .section--sand { background: var(--c-sand); }
+    /* Skip first section (above fold) — apply to all others for paint deferral */
+    .section + .section,
+    .section--sand { content-visibility: auto; contain-intrinsic-size: auto 600px; }
 
     /* ── NAV ─────────────────────────────────────── */
     .nav {
@@ -269,6 +290,8 @@
       background: var(--c-bg);
       border-bottom: 1px solid var(--c-divider);
       padding-block: 0.875rem;
+      min-height: 60px;
+      contain: layout style;
     }
     .nav__inner {
       display: flex;
@@ -1409,7 +1432,10 @@
 
           <article class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
-            <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
+              <meta itemprop="name" content="Monako Apartmani Igalo">
+              <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+            </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica"
               itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
@@ -1428,7 +1454,10 @@
 
           <article class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
-            <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
+              <meta itemprop="name" content="Monako Apartmani Igalo">
+              <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+            </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica"
               itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
@@ -1448,7 +1477,10 @@
 
           <article class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
-            <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
+              <meta itemprop="name" content="Monako Apartmani Igalo">
+              <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+            </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica"
               itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
