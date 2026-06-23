@@ -25,7 +25,7 @@
 <link rel="alternate" hreflang="x-default" href="https://www.apartman-igalo.me/en/monthly-rental">
 
 <!-- ═══════════════════════════════════════════════
-     OPEN GRAPH — WhatsApp/Viber/Telegram previews
+     OPEN GRAPH — Viber/Telegram previews
 ═══════════════════════════════════════════════ -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sr_RS">
@@ -90,7 +90,7 @@
       },
       "sameAs": [
         "https://www.facebook.com/apartman.igalo",
-        "https://wa.me/38267558240"
+        "viber://chat?number=%2B38267558240"
       ]
     },
     {
@@ -549,11 +549,11 @@ a:focus-visible {
 }
 .nav-links a:hover { color: var(--clr-sea); }
 
-.nav-whatsapp {
+.nav-viber {
   display: inline-flex;
   align-items: center;
   gap: var(--sp-xs);
-  background: #25d366;
+  background: #7360f2;
   color: white !important;
   font-size: .8125rem;
   font-weight: 600;
@@ -564,8 +564,8 @@ a:focus-visible {
   transition: background .18s, transform .15s;
   flex-shrink: 0;
 }
-.nav-whatsapp:hover { background: #128c4e; transform: translateY(-1px); }
-.nav-whatsapp svg { flex-shrink: 0; }
+.nav-viber:hover { background: #5b4bc4; transform: translateY(-1px); }
+.nav-viber svg { flex-shrink: 0; }
 
 /* ── BREADCRUMB ─────────────────────────────────── */
 .breadcrumb-wrap {
@@ -1193,9 +1193,9 @@ strong { color: var(--clr-ink); font-weight: 600; }
   display: inline-flex;
   align-items: center;
   gap: var(--sp-xs);
-  background: rgba(37,211,102,.15);
-  border: 1px solid rgba(37,211,102,.3);
-  color: #7eeaa7;
+  background: rgba(115,96,242,.15);
+  border: 1px solid rgba(115,96,242,.3);
+  color: #c3b8ff;
   font-size: .78125rem;
   font-weight: 500;
   padding: 5px 14px;
@@ -1244,7 +1244,7 @@ strong { color: var(--clr-ink); font-weight: 600; }
 .site-footer a:hover { color: rgba(255,255,255,.72); text-decoration: underline; }
 
 /* ── STICKY WHATSAPP BUBBLE ─────────────────────── */
-.wa-float {
+.viber-float {
   position: fixed;
   inset-block-end: 24px;
   inset-inline-end: 24px;
@@ -1252,19 +1252,19 @@ strong { color: var(--clr-ink); font-weight: 600; }
   display: flex;
   align-items: center;
   gap: 10px;
-  background: #25d366;
+  background: #7360f2;
   color: white;
   text-decoration: none;
   border-radius: var(--r-pill);
   padding: 13px 20px 13px 16px;
-  box-shadow: 0 4px 24px rgba(37,211,102,.4);
+  box-shadow: 0 4px 24px rgba(115,96,242,.4);
   font-size: .875rem;
   font-weight: 600;
   transition: transform .18s, box-shadow .18s;
 }
-.wa-float:hover {
+.viber-float:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(37,211,102,.5);
+  box-shadow: 0 8px 32px rgba(115,96,242,.5);
   color: white;
 }
 
@@ -1399,8 +1399,8 @@ strong { color: var(--clr-ink); font-weight: 600; }
 
   .map-wrap { aspect-ratio: 4/3; }
 
-  .wa-float .wa-label { display: none; }
-  .wa-float { padding: 14px; border-radius: 50%; }
+  .viber-float .viber-label { display: none; }
+  .viber-float { padding: 14px; border-radius: 50%; }
 }
 
 @media (max-width: 480px) {
@@ -1447,15 +1447,15 @@ strong { color: var(--clr-ink); font-weight: 600; }
       <a href="#nomadi" role="listitem">Digitalni nomadi</a>
       <a href="#faq" role="listitem">FAQ</a>
     </div>
-    <a href="https://wa.me/38267558240?text=Zdravo%2C%20zanima%20me%20mesečni%20najam%20apartmana%20u%20Igalu.%20Molim%20vas%20informacije."
-       class="nav-whatsapp"
+    <a href="viber://chat?number=%2B38267558240"
+       class="nav-viber"
        target="_blank"
        rel="noopener noreferrer"
-       aria-label="Kontaktirajte nas na WhatsApp-u">
+       aria-label="Kontaktirajte nas na Viberu">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
-      WhatsApp
+      Viber
     </a>
   </div>
 </nav>
@@ -1492,12 +1492,12 @@ strong { color: var(--clr-ink); font-weight: 600; }
     </div>
     <div class="hero-price-note">struja · voda · WiFi · grejanje · parking · biciklo — sve uključeno</div>
     <div class="hero-ctas">
-      <a href="https://wa.me/38267558240?text=Zdravo%2C%20zanima%20me%20mesečni%20najam%20apartmana%20u%20Igalu.%20Molim%20vas%20informacije."
+      <a href="viber://chat?number=%2B38267558240"
          class="btn-primary"
          target="_blank"
          rel="noopener noreferrer">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Pošaljite upit na WhatsApp
+        Pošaljite upit na Viber
       </a>
       <a href="tel:+38267558240" class="btn-outline-white">📞 Pozovite nas</a>
     </div>
@@ -2020,7 +2020,7 @@ strong { color: var(--clr-ink); font-weight: 600; }
           <span class="faq-q__icon" aria-hidden="true">+</span>
         </button>
         <div class="faq-a" id="faq-a-17" role="region">
-          <p>Najbrže putem <strong>WhatsApp-a</strong> na +382 67 558 240 — odgovaramo unutar 2 sata. Možete i nazvati direktno ili poslati email na hotel-monako@hotmail.com. Za zainteresovane iz inostranstva nudimo <strong>video obilazak apartmana</strong> pre dolaska.</p>
+          <p>Najbrže putem <strong>Vibera</strong> na +382 67 558 240 — odgovaramo unutar 2 sata. Možete i nazvati direktno ili poslati email na hotel-monako@hotmail.com. Za zainteresovane iz inostranstva nudimo <strong>video obilazak apartmana</strong> pre dolaska.</p>
         </div>
       </li>
 
@@ -2042,14 +2042,14 @@ strong { color: var(--clr-ink); font-weight: 600; }
     </div>
 
     <div class="contact-cards" role="list">
-      <a href="https://wa.me/38267558240?text=Zdravo%2C%20zanima%20me%20mesečni%20najam%20apartmana%20u%20Igalu.%20Molim%20vas%20informacije%20o%20dostupnosti."
+      <a href="viber://chat?number=%2B38267558240"
          class="contact-card"
          role="listitem"
          target="_blank"
          rel="noopener noreferrer"
-         aria-label="Pišite nam na WhatsApp">
+         aria-label="Pišite nam na Viber">
         <div class="cc-icon">📱</div>
-        <div class="cc-label">WhatsApp / Viber</div>
+        <div class="cc-label">Viber</div>
         <div class="cc-val">Pišite odmah</div>
       </a>
       <a href="tel:+38267558240"
@@ -2104,15 +2104,15 @@ strong { color: var(--clr-ink); font-weight: 600; }
 <!-- ══════════════════════════════════════════════════
      FLOATING WHATSAPP BUTTON
 ══════════════════════════════════════════════════ -->
-<a href="https://wa.me/38267558240?text=Zdravo%2C%20zanima%20me%20mesečni%20najam%20apartmana%20u%20Igalu.%20Molim%20vas%20informacije."
-   class="wa-float"
+<a href="viber://chat?number=%2B38267558240"
+   class="viber-float"
    target="_blank"
    rel="noopener noreferrer"
-   aria-label="Kontaktirajte nas na WhatsApp-u">
+   aria-label="Kontaktirajte nas na Viberu">
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
   </svg>
-  <span class="wa-label">WhatsApp upit</span>
+  <span class="viber-label">Viber upit</span>
 </a>
 
 <!-- ══════════════════════════════════════════════════
