@@ -1,18 +1,158 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-<loc>http://apartmani-igalo.com/</loc>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>http://apartmani-igalo.com/about.html</loc>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>http://apartmani-igalo.com/blog.html</loc>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>http://apartmani-igalo.com/blatna-plaza.html</loc>
-<priority>1.00</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- ═══════════════════════════════════════
+       CORE PAGES
+  ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/about.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/about.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/blatna-plaza.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blatna-plaza.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/blog.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blog.html"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       RENTAL PAGES
+  ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/mesecni-najam-igalo.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/mesecni-najam-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/monthly-rental-igalo.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/mesecni-najam-igalo.html"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       BLOG / NEWS — SERBIAN
+  ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/plaze-herceg-novi.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/restorani-herceg-novi.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       BLOG / NEWS — ENGLISH
+  ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/beaches-herceg-novi.html</loc>
+    <lastmod>2026-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
+  </url>
+
+  <!-- ═══════════════════════════════════════
+       SEASONAL / EVENT PAGES
+  ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/praznik-mimoze-program.html</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/praznik-mimoze-program.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/nova-godina-herceg-novi.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html"/>
+  </url>
+
 </urlset>
