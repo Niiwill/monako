@@ -60,6 +60,7 @@
       "alternateName": ["Apartmani Monako Igalo", "Privatni smještaj Igalo", "Apartmani Igalo blizu plaže", "Studio apartmani Igalo"],
       "description": "Privatni apartmani u Igalu na samoj obali mora — 100 metara od Blatne plaže, nasuprot Instituta Dr Simo Milošević. Besplatan WiFi, parking i sobarica. Rezervišite direktno bez provizija. ☎ +382 67 558 240",
       "url": "https://apartmani-igalo.com/",
+      "dateModified": "2026-06-27",
       "telephone": "+38267558240",
       "email": "hotel-monako@hotmail.com",
       "priceRange": "€€",
@@ -69,6 +70,7 @@
           "name": "Studio Apartman – Niska sezona",
           "description": "Do 1. jula i od 1. septembra",
           "priceCurrency": "EUR",
+          "price": 40,
           "unitText": "noć"
         },
         {
@@ -76,6 +78,23 @@
           "name": "Studio Apartman – Visoka sezona",
           "description": "Juli i august",
           "priceCurrency": "EUR",
+          "price": 75,
+          "unitText": "noć"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "name": "Jednosoban Apartman – Niska sezona",
+          "description": "Do 1. jula i od 1. septembra",
+          "priceCurrency": "EUR",
+          "price": 55,
+          "unitText": "noć"
+        },
+        {
+          "@type": "UnitPriceSpecification",
+          "name": "Jednosoban Apartman – Visoka sezona",
+          "description": "Juli i august",
+          "priceCurrency": "EUR",
+          "price": 95,
           "unitText": "noć"
         }
       ],
@@ -334,6 +353,17 @@
     .section + .section,
     .section--sand { content-visibility: auto; contain-intrinsic-size: auto 600px; }
 
+    .direct-booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-md) clamp(2rem, 4vw, 4rem);
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .direct-booking-grid { grid-template-columns: 1fr !important; }
+    }
+
     /* ── NAV ─────────────────────────────────────── */
     .nav {
       position: sticky;
@@ -502,6 +532,7 @@
     }
     .hero__image img {
       width: 100%;
+      aspect-ratio: 580 / 435;
       height: auto;
       display: block;
     }
@@ -1206,7 +1237,7 @@
     ══════════════════════════════════ -->
     <section class="section section--sand" aria-labelledby="direktno-heading">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-md) clamp(2rem,4vw,4rem);align-items:center">
+        <div class="direct-booking-grid">
           <div style="min-width:0">
             <span class="section-eyebrow">Privatni smještaj Igalo · Cijene</span>
             <h2 class="section-title" id="direktno-heading" style="margin-bottom:0.75rem">
@@ -1260,13 +1291,13 @@
               <tbody>
                 <tr>
                   <td style="padding:0.6em 0;border-bottom:1px solid var(--c-divider)">Studio (2–4 os.)</td>
-                  <td style="padding:0.6em 0;border-bottom:1px solid var(--c-divider);font-weight:600;color:var(--c-teal)">Pitajte nas</td>
-                  <td style="padding:0.6em 0;border-bottom:1px solid var(--c-divider);font-weight:600;color:var(--c-teal)">Pitajte nas</td>
+                  <td style="padding:0.6em 0;border-bottom:1px solid var(--c-divider);font-weight:600;color:var(--c-teal)">40–55€</td>
+                  <td style="padding:0.6em 0;border-bottom:1px solid var(--c-divider);font-weight:600;color:var(--c-teal)">70–90€</td>
                 </tr>
                 <tr>
                   <td style="padding:0.6em 0">Jednosoban (4–5 os.)</td>
-                  <td style="padding:0.6em 0;font-weight:600;color:var(--c-teal)">Pitajte nas</td>
-                  <td style="padding:0.6em 0;font-weight:600;color:var(--c-teal)">Pitajte nas</td>
+                  <td style="padding:0.6em 0;font-weight:600;color:var(--c-teal)">55–70€</td>
+                  <td style="padding:0.6em 0;font-weight:600;color:var(--c-teal)">90–120€</td>
                 </tr>
               </tbody>
             </table>
