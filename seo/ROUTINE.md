@@ -23,31 +23,23 @@ produce a report as your only output. The PR diff is the report.
 
 ---
 
-## Step 1 — Fetch data (last 28 days)
+## Step 1 — Read this week's data
 
-Credentials: read the GSC service-account JSON from whichever the environment
-provides — check `$GSC_SERVICE_ACCOUNT_JSON` (raw JSON string) first, then
-`$GSC_SERVICE_ACCOUNT_FILE` (a file path) second. If neither is set, stop and
-say so instead of guessing — do not proceed without real data.
+Data collection is handled separately by `.github/workflows/gsc-weekly-fetch.yml`,
+a scheduled GitHub Action that runs earlier the same day, pulls the last
+28 days from the Search Console API (`sc-domain:apartmani-igalo.com`) via
+`seo/scripts/fetch_gsc_report.py`, and commits it to
+`seo/reports/YYYY-MM-DD.json` on `master`. This session does not need GSC
+credentials at all — just read the most recent file in `seo/reports/`.
 
-Property: `sc-domain:apartmani-igalo.com`
+If today's dated file isn't there yet (the Action may not have run, or the
+Trigger fired before it finished), use the most recent file that exists and
+say so in the changelog entry — do not attempt to call the GSC API
+yourself from this session.
 
-Use the Search Console API (`searchconsole` v1, `searchanalytics.query`,
-scope `webmasters.readonly`) via a Python venv (`google-auth`,
-`google-api-python-client` — install into a fresh venv if not already
-present; the system `cryptography` package conflicts with pip-installed
-`cffi`, so always use `python3 -m venv --system-site-packages` and install
-inside it, not into system Python).
-
-Pull at minimum:
-- `dimensions: ["query"]`, rowLimit 1000 — full query list
-- `dimensions: ["page"]`, rowLimit 250 — full page list
-- `dimensions: ["query", "page"]`, rowLimit 1000 — query-to-page mapping (needed to spot cannibalization)
-
-Date range: last 28 full days ending 3 days ago (GSC data has a reporting lag).
-
-Save the raw pull as `seo/reports/YYYY-MM-DD.json` (today's date), including
-all three dimension pulls in one file.
+Each file contains three pulls under `pulls`: `query`, `page`, and
+`query+page` (the last one is the query-to-page mapping, needed to spot
+cannibalization).
 
 ## Step 2 — Establish continuity with past runs
 

@@ -1,0 +1,40 @@
+name: Weekly GSC Data Fetch
+
+on:
+  schedule:
+    # Monday 06:23 UTC — off the :00/:30 mark to avoid the top-of-hour pile-up.
+    - cron: "23 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-gsc-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-auth google-api-python-client
+
+      - name: Fetch Search Console data
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+        run: python seo/scripts/fetch_gsc_report.py
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seo/reports/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(seo): weekly GSC data snapshot $(date -u +%F)"
+            git push
+          fi
