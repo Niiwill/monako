@@ -60,17 +60,18 @@
       "alternateName": ["Apartmani Monako Igalo", "Privatni smještaj Igalo", "Apartmani Igalo blizu plaže", "Studio apartmani Igalo"],
       "description": "Privatni apartmani u Igalu na samoj obali mora — 100 metara od Blatne plaže, nasuprot Instituta Dr Simo Milošević. Besplatan WiFi, parking i sobarica. Rezervišite direktno bez provizija. ☎ +382 67 558 240",
       "url": "https://apartmani-igalo.com/",
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-07-04",
       "telephone": "+38267558240",
       "email": "hotel-monako@hotmail.com",
-      "priceRange": "€€",
+      "priceRange": "35€–80€",
       "priceSpecification": [
         {
           "@type": "UnitPriceSpecification",
-          "name": "Studio Apartman – Niska sezona",
+          "name": "Studio Apartman – Van sezone",
           "description": "Do 1. jula i od 1. septembra",
           "priceCurrency": "EUR",
-          "price": 40,
+          "minPrice": 35,
+          "maxPrice": 50,
           "unitText": "noć"
         },
         {
@@ -78,15 +79,17 @@
           "name": "Studio Apartman – Visoka sezona",
           "description": "Juli i august",
           "priceCurrency": "EUR",
-          "price": 75,
+          "minPrice": 50,
+          "maxPrice": 60,
           "unitText": "noć"
         },
         {
           "@type": "UnitPriceSpecification",
-          "name": "Jednosoban Apartman – Niska sezona",
+          "name": "Jednosoban Apartman – Van sezone",
           "description": "Do 1. jula i od 1. septembra",
           "priceCurrency": "EUR",
-          "price": 55,
+          "minPrice": 50,
+          "maxPrice": 60,
           "unitText": "noć"
         },
         {
@@ -94,7 +97,8 @@
           "name": "Jednosoban Apartman – Visoka sezona",
           "description": "Juli i august",
           "priceCurrency": "EUR",
-          "price": 95,
+          "minPrice": 60,
+          "maxPrice": 80,
           "unitText": "noć"
         }
       ],
@@ -141,7 +145,7 @@
         "ratingValue": "4.9",
         "bestRating": "5",
         "worstRating": "1",
-        "reviewCount": "128"
+        "reviewCount": "71"
       },
       "hasMap": "https://www.google.com/maps?q=Apartmani+Igalo+smjestaj+MONAKO",
       "containsPlace": [
@@ -177,10 +181,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Koliko su apartmani Monako udaljeni od plaže?",
+          "name": "Koliko su apartmani udaljeni od plaže?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Apartmani Monako nalaze se samo 100 metara od Blatne plaže – manje od 2 minute hoda. Apartmani su na samoj obali mora u Igalu, nasuprot Instituta Dr Simo Milošević."
+            "text": "Apartmani Monako nalaze se samo 100 metara od Blatne plaže — manje od 2 minute hoda. Do plaže Igalo je oko 900 metara."
           }
         },
         {
@@ -188,7 +192,7 @@
           "name": "Da li je parking besplatan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da, parking ispred objekta je potpuno besplatan za sve goste apartmana Monako."
+            "text": "Da, parking ispred objekta je potpuno besplatan za sve goste."
           }
         },
         {
@@ -196,7 +200,7 @@
           "name": "Koje tipove smještaja nudite?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nudimo studio apartmane za 2–4 osobe i apartmane sa odvojenom spavaćom sobom za 4–5 osoba. Svi apartmani su blizu plaže, imaju balkon, čajnu kuhinju, klima uređaj i besplatan parking."
+            "text": "Nudimo studio apartmane za 2–4 osobe i apartmane sa odvojenom spavaćom sobom za 4–5 osoba. Svi apartmani imaju balkon, čajnu kuhinju, klima uređaj i besplatan parking."
           }
         },
         {
@@ -204,7 +208,15 @@
           "name": "Koliko koštaju apartmani u Igalu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Naše cijene su stabilne već 15 godina i iste su kao i kod smještaja koji su mnogo udaljeniji od mora. Posebno povoljne cijene vrijede do 1. jula i od 1. septembra. Za tačne cijene pozovite nas na +382 67 558 240 ili pošaljite upit na hotel-monako@hotmail.com."
+            "text": "Studio apartman (2–4 osobe) košta 35–50 € za noć van sezone, odnosno 50–60 € u julu i avgustu. Jednosoban apartman (4–5 osoba) košta 50–60 € van sezone i 60–80 € u julu i avgustu. Za tačnu cijenu za vaš termin pozovite +382 67 558 240."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Da li su cijene niže van sezone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, posebno povoljne cijene su do 1. jula i od 1. septembra. Naše cijene su stabilne već 15 godina i iste su kao i kod smještaja koji su mnogo udaljeniji od mora."
           }
         },
         {
@@ -217,18 +229,10 @@
         },
         {
           "@type": "Question",
-          "name": "Šta je uključeno u cijenu apartmana?",
+          "name": "Šta je uključeno u cijenu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "U cijenu su uključeni besplatan WiFi, satelitska TV, klima uređaj, parking, peškiri, posteljina i usluga sobarice. U prizemlju objekta nalazi se IDEA market."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Zašto rezervisati direktno umjesto preko Booking.com?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Direktnom rezervacijom izbjegavate provizije booking platformi. Cijene su iste, a uz direktnu rezervaciju na +382 67 558 240 dobijate personalizovani prijem i mogućnost dogovora oko dolaska i odlaska."
+            "text": "U cijenu su uključeni: besplatan WiFi, satelitska TV, klima uređaj, parking, peškiri, posteljina, sobarica i upotreba čajne kuhinje. U prizemlju objekta nalazi se IDEA market."
           }
         },
         {
@@ -236,7 +240,7 @@
           "name": "Koliko je Igalo udaljeno od Herceg Novog?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Centar Igala je oko 3–4 km od Starog grada Herceg Novog. Uz more ih povezuje šetalište Pet Danica — prijatna šetnja od oko 40 minuta, dok vožnja autom ili taksijem traje 5–10 minuta. Redovne autobuske linije saobraćaju tokom cijele godine."
+            "text": "Centar Igala je oko 3–4 km od Starog grada Herceg Novog. Uz more ih povezuje šetalište Pet Danica — prijatna šetnja od oko 40 minuta, dok vožnja autom ili taksijem traje 5–10 minuta."
           }
         }
       ]
@@ -1130,6 +1134,7 @@
           </a>
           <ul class="nav__links" role="list">
             <li><a href="/about.html" class="nav__text-link">O nama</a></li>
+            <li><a href="#cjenovnik" class="nav__text-link">Cjenovnik</a></li>
             <li><a href="/blog.html" class="nav__text-link">Vesti</a></li>
             <li><a href="/blatna-plaza.html" class="nav__text-link">Blatna plaža</a></li>
             <li><a href="/mesecni-najam-igalo.html" class="nav__text-link">Mesečni najam</a></li>
@@ -1251,7 +1256,7 @@
     <!-- ══════════════════════════════════
          DIREKTNA REZERVACIJA CTA
     ══════════════════════════════════ -->
-    <section class="section section--sand" aria-labelledby="direktno-heading">
+    <section class="section section--sand" id="cjenovnik" style="scroll-margin-top:70px" aria-labelledby="direktno-heading">
       <div class="container">
         <div class="direct-booking-grid">
           <div style="min-width:0">
@@ -1295,7 +1300,7 @@
             </div>
           </div>
           <div style="background:var(--c-bg);border:1px solid var(--c-divider);border-radius:var(--radius-lg);padding:var(--sp-md);min-width:0">
-            <p style="font-size:var(--step--1);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-muted);margin-bottom:var(--sp-sm)">Cijene smještaja · Igalo</p>
+            <h3 style="font-size:var(--step--1);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-muted);margin-bottom:var(--sp-sm)">Cjenovnik — cijene smještaja · Igalo</h3>
             <table style="width:100%;border-collapse:collapse;font-size:var(--step--1)" aria-label="Orijentacione cijene apartmana po sezoni">
               <thead>
                 <tr>
@@ -1735,6 +1740,22 @@
               Nudimo <strong>studio apartmane</strong> za 2–4 osobe i
               <strong>apartmane sa odvojenom spavaćom sobom</strong> za 4–5 osoba. Svi apartmani
               imaju balkon, čajnu kuhinju, klima uređaj i besplatan parking.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq8">
+              Koliko koštaju apartmani u Igalu?
+              <span class="faq__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer" id="faq8" role="region">
+              Studio apartman (2–4 osobe) košta <strong>35–50 €</strong> za noć van sezone,
+              odnosno <strong>50–60 €</strong> u julu i avgustu. Jednosoban apartman (4–5 osoba)
+              košta <strong>50–60 €</strong> van sezone i <strong>60–80 €</strong> u julu i
+              avgustu. Pogledajte <a href="#cjenovnik" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">cjenovnik</a> —
+              za tačnu cijenu za vaš termin pozovite <a href="tel:+38267558240" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">+382 67 558 240</a>.
             </div>
           </div>
 
