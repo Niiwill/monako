@@ -236,9 +236,9 @@
     .article-hero__meta{display:flex;flex-wrap:wrap;gap:0.5em 1.5em;margin-top:var(--sp-sm);font-size:var(--step--1);color:var(--c-muted);align-items:center}
     .article-hero__meta-item{display:flex;align-items:center;gap:0.4em}
     .article-hero__meta-item svg{color:var(--c-mimosa);flex-shrink:0}
-    .article-hero__image{margin-top:var(--sp-md);border-radius:var(--radius-lg);overflow:hidden;background:var(--c-sand)}
-    .article-hero__image img{width:100%;height:auto;display:block}
-    @media(min-width:640px){.article-hero__image{aspect-ratio:16/7}.article-hero__image img{height:100%;object-fit:cover}}
+    .article-hero__image{margin-top:var(--sp-md);border-radius:var(--radius-lg);overflow:hidden;background:var(--c-sand);aspect-ratio:12/7}
+    .article-hero__image img{width:100%;height:100%;display:block;object-fit:cover}
+    @media(min-width:640px){.article-hero__image{aspect-ratio:16/7}}
 
     .content-grid{display:grid;grid-template-columns:1fr 300px;gap:var(--sp-md) clamp(2rem,4vw,4rem);align-items:start}
     @media(max-width:900px){.content-grid{grid-template-columns:1fr}.sidebar{order:-1}}
@@ -429,12 +429,12 @@
 
         <figure class="article-hero__image">
           <picture>
-            <source media="(max-width: 640px)" srcset="images/mob-mimoza.webp" type="image/webp">
-            <source srcset="images/mimoza.webp" type="image/webp">
+            <source media="(max-width: 640px)" srcset="images/mob-mimoza.webp" type="image/webp" width="384" height="224">
+            <source srcset="images/mimoza.webp" type="image/webp" width="800" height="600">
             <img
               src="images/mimoza.jpg"
               alt="Mimosa Festival in Herceg Novi, Montenegro — yellow mimosa blossoms along the riviera"
-              width="1160" height="508"
+              width="800" height="600"
               fetchpriority="high" loading="eager" decoding="sync"
             >
           </picture>
