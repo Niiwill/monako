@@ -34,21 +34,22 @@
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE — PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
+  <!-- LCP image preload FIRST — so it wins bandwidth over fonts (matches <picture> WebP source) -->
+  <link rel="preload" as="image" href="images/docek.webp" type="image/webp" fetchpriority="high"
+        media="(min-width: 640px)">
+  <link rel="preload" as="image" href="images/docek-mobile.webp" type="image/webp" fetchpriority="high"
+        media="(max-width: 639px)">
+
+  <!-- Fonts: preconnect + load at LOW priority (media=print swap) so they don't compete with the LCP image.
+       Text renders immediately via the size-adjust fallback fonts; the webfonts swap in when ready. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   </noscript>
-  <!-- LCP image preload — desktop (matches <picture> WebP source) -->
-  <link rel="preload" as="image" href="images/docek.webp" type="image/webp" fetchpriority="high"
-        media="(min-width: 640px)">
-  <!-- LCP image preload — mobile (matches <picture> WebP source) -->
-  <link rel="preload" as="image" href="images/docek-mobile.webp" type="image/webp" fetchpriority="high"
-        media="(max-width: 639px)">
 
   <link rel="icon" href="images/monako-favicon.png" sizes="any">
 
