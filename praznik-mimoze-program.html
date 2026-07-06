@@ -305,6 +305,7 @@
     @media(min-width:640px){.article-hero__image{aspect-ratio:16/7}}
 
     .content-grid{display:grid;grid-template-columns:1fr 300px;gap:var(--sp-md) clamp(2rem,4vw,4rem);align-items:start}
+    .content-grid>*{min-width:0}
     @media(max-width:900px){.content-grid{grid-template-columns:1fr}.sidebar{order:-1}}
     .article__intro{font-size:var(--step-1);color:var(--c-muted);line-height:1.65;border-left:3px solid var(--c-mimosa);padding-left:var(--sp-md);margin-bottom:clamp(2rem,4vw,3rem)}
 
