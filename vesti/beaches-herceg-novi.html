@@ -31,13 +31,13 @@
   <meta name="twitter:description" content="8 best beaches near Herceg Novi and Igalo with practical prices and travel tips for 2026.">
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/plaza-herceg-novi.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"></noscript>
-
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
   <link rel="preload" as="image" href="../images/plaza-herceg-novi.webp" imagesrcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w" imagesizes="(min-width: 1182px) 1064px, 90vw" type="image/webp" fetchpriority="high">
+
+  <link rel="preload" href="/fonts/fraunces-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/fraunces-normal-300-serbian.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-serbian.woff2" as="font" type="font/woff2" crossorigin>
 
   <script type="application/ld+json">
   [
@@ -111,6 +111,17 @@
       --radius-sm:4px;--radius-md:8px;--radius-lg:16px;
       --max-wide:1160px;--shadow-card:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.07);--trans:200ms ease;
     }
+    /* ── Self-hosted fonts — font-display:optional (no FOUT, no CLS) ─────── */
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
     @font-face{font-family:'Fraunces-fallback';src:local('Georgia');size-adjust:115%;ascent-override:88%;descent-override:20%;line-gap-override:0%}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
