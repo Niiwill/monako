@@ -54,7 +54,11 @@
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   </noscript>
-  <link rel="preload" as="image" href="../images/plaza-herceg-novi.jpg" fetchpriority="high">
+  <link rel="preload" as="image"
+        href="../images/plaza-herceg-novi-650.webp"
+        imagesrcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w"
+        imagesizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
+        fetchpriority="high">
 
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
 
@@ -746,7 +750,12 @@
         <!-- LCP image — eagerly loaded, preloaded in head -->
         <figure class="article-hero__image">
           <img
-            src="../images/plaza-herceg-novi.jpg"
+            src="../images/plaza-herceg-novi-650.webp"
+            srcset="
+              ../images/plaza-herceg-novi-650.webp 650w,
+              ../images/plaza-herceg-novi.webp     960w
+            "
+            sizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
             alt="Panoramski pogled na obalu Herceg Novog sa kristalno plavim Jadranskim morem i zelenim brdima"
             width="1160" height="508"
             fetchpriority="high"
@@ -1286,7 +1295,7 @@
           <article class="related-card">
             <div class="related-card__img-wrap">
               <img class="related-card__img"
-                src="../images/plaza-herceg-novi.jpg"
+                src="../images/plaza-herceg-novi-650.webp"
                 alt="Plaže Herceg Novi — vodič"
                 width="560" height="315" loading="lazy" decoding="async">
             </div>
