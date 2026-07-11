@@ -13,7 +13,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
@@ -37,7 +37,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/blog.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blog.html"/>
@@ -80,11 +80,19 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/restorani-herceg-novi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/restorani-igalo.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-igalo.html"/>
   </url>
 
   <url>
@@ -97,7 +105,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
