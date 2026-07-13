@@ -835,7 +835,10 @@
 
   <!-- Page-specific styles (tables + route cards), reuses site tokens -->
   <style>
-    .tbl-wrap { overflow-x: auto; margin: 0 0 1.4em; }
+    /* grid children must be allowed to shrink below content width,
+       otherwise wide tables push the page past the viewport on mobile */
+    .article__grid > * { min-width: 0; }
+    .tbl-wrap { overflow-x: auto; max-width: 100%; margin: 0 0 1.4em; }
     table.info-tbl { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
     table.info-tbl caption { text-align: left; font-weight: 600; padding-bottom: .5em; color: var(--c-muted); font-size: var(--step--1); }
     table.info-tbl th, table.info-tbl td { border: 1px solid var(--c-divider); padding: .6em .8em; text-align: left; vertical-align: top; }
@@ -852,6 +855,26 @@
     .rule-box { background: #FDF6EC; border-left: 4px solid var(--c-star); border-radius: var(--radius-sm); padding: 1em 1.2em; margin: 0 0 1.4em; }
     .rule-box ul { margin: .5em 0 0 1.2em; list-style: disc; }
     .rule-box li { margin-bottom: .35em; }
+    /* Mobile: stack each table row into a labelled card instead of
+       forcing a sideways-scrolling table */
+    @media (max-width: 640px) {
+      table.info-tbl thead { display: none; }
+      table.info-tbl, table.info-tbl tbody, table.info-tbl tr, table.info-tbl td { display: block; width: 100%; }
+      table.info-tbl tr { border: 1px solid var(--c-divider); border-radius: var(--radius-md); margin-bottom: .8em; overflow: hidden; }
+      table.info-tbl tbody tr:nth-child(even) { background: transparent; }
+      table.info-tbl td { border: none; border-top: 1px solid var(--c-divider); padding: .55em .9em; }
+      table.info-tbl td:first-child { border-top: none; background: var(--c-sand); font-weight: 600; }
+      table.info-tbl td:not(:first-child)[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--c-muted);
+        margin-bottom: .1em;
+      }
+    }
     .article__body h3 { font-family: var(--ff-display); font-size: var(--step-1); font-weight: 700; margin: 1.4em 0 .5em; }
     .article__body ul.plain { margin: 0 0 1.2em 1.5em; list-style: disc; }
     .article__body ul.plain li { margin-bottom: .4em; }
@@ -995,24 +1018,24 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong>Rent a Bike Herceg Novi</strong></td>
-                    <td>Bike rental and guided cycling tours of the Bay of Kotor, Mount Orjen and Luštica</td>
-                    <td><a href="tel:+38269530869">+382 69 530 869</a> · <a class="ext" href="https://www.facebook.com/rentabikehercegnovi/" rel="noopener noreferrer" target="_blank">Facebook page</a></td>
+                    <td data-label="Provider"><strong>Rent a Bike Herceg Novi</strong></td>
+                    <td data-label="What they offer">Bike rental and guided cycling tours of the Bay of Kotor, Mount Orjen and Luštica</td>
+                    <td data-label="Contact / info"><a href="tel:+38269530869">+382 69 530 869</a> · <a class="ext" href="https://www.facebook.com/rentabikehercegnovi/" rel="noopener noreferrer" target="_blank">Facebook page</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Boka Outdoor Adventure</strong></td>
-                    <td>Electric bikes (e-bikes) and outdoor equipment</td>
-                    <td><a class="ext" href="https://bokaoutdooradventure.me/rentals/" rel="noopener noreferrer" target="_blank">bokaoutdooradventure.me</a></td>
+                    <td data-label="Provider"><strong>Boka Outdoor Adventure</strong></td>
+                    <td data-label="What they offer">Electric bikes (e-bikes) and outdoor equipment</td>
+                    <td data-label="Contact / info"><a class="ext" href="https://bokaoutdooradventure.me/rentals/" rel="noopener noreferrer" target="_blank">bokaoutdooradventure.me</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Fiore Tours</strong></td>
-                    <td>Trekking and e-trekking bikes — travel agency in Herceg Novi</td>
-                    <td><a class="ext" href="https://fiore-tours.com/en/rent-a-bike/" rel="noopener noreferrer" target="_blank">fiore-tours.com</a></td>
+                    <td data-label="Provider"><strong>Fiore Tours</strong></td>
+                    <td data-label="What they offer">Trekking and e-trekking bikes — travel agency in Herceg Novi</td>
+                    <td data-label="Contact / info"><a class="ext" href="https://fiore-tours.com/en/rent-a-bike/" rel="noopener noreferrer" target="_blank">fiore-tours.com</a></td>
                   </tr>
                   <tr>
-                    <td><strong>iNTravel Montenegro</strong></td>
-                    <td>Bikes and scooters — travel agency in Herceg Novi</td>
-                    <td><a class="ext" href="https://www.intravelmontenegro.net/" rel="noopener noreferrer" target="_blank">intravelmontenegro.net</a></td>
+                    <td data-label="Provider"><strong>iNTravel Montenegro</strong></td>
+                    <td data-label="What they offer">Bikes and scooters — travel agency in Herceg Novi</td>
+                    <td data-label="Contact / info"><a class="ext" href="https://www.intravelmontenegro.net/" rel="noopener noreferrer" target="_blank">intravelmontenegro.net</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -1039,10 +1062,10 @@
                   <tr><th>Bike type</th><th>Best for</th><th>Terrain</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>City bike</strong></td><td>Promenade rides, trips to the beach and shops</td><td>Flat coast Igalo–Meljine</td></tr>
-                  <tr><td><strong>Trekking bike</strong></td><td>Longer coastal tours, recreational riders</td><td>Coastal road to Bijela, Sutorina valley</td></tr>
-                  <tr><td><strong>Electric bike (e-bike)</strong></td><td>Hilly backdrop, sweat-free riding, older riders</td><td>Climbs to Savina and the villages above town</td></tr>
-                  <tr><td><strong>Kids' bike</strong></td><td>Children and family rides on the promenade</td><td>Pet Danica promenade, quiet Igalo streets</td></tr>
+                  <tr><td data-label="Bike type"><strong>City bike</strong></td><td data-label="Best for">Promenade rides, trips to the beach and shops</td><td data-label="Terrain">Flat coast Igalo–Meljine</td></tr>
+                  <tr><td data-label="Bike type"><strong>Trekking bike</strong></td><td data-label="Best for">Longer coastal tours, recreational riders</td><td data-label="Terrain">Coastal road to Bijela, Sutorina valley</td></tr>
+                  <tr><td data-label="Bike type"><strong>Electric bike (e-bike)</strong></td><td data-label="Best for">Hilly backdrop, sweat-free riding, older riders</td><td data-label="Terrain">Climbs to Savina and the villages above town</td></tr>
+                  <tr><td data-label="Bike type"><strong>Kids' bike</strong></td><td data-label="Best for">Children and family rides on the promenade</td><td data-label="Terrain">Pet Danica promenade, quiet Igalo streets</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1187,11 +1210,11 @@
                   <tr><th>Route</th><th>Distance</th><th>Riding time</th><th>Difficulty</th><th>Ideal for</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Pet Danica promenade (Igalo–Zelenika)</td><td>≈ 7–8 km</td><td>30–40 min</td><td>Easy</td><td>Families, beginners</td></tr>
-                  <tr><td>Igalo–Njivice</td><td>≈ 5 km</td><td>20–25 min</td><td>Easy</td><td>Quiet rides, children</td></tr>
-                  <tr><td>Igalo–Kamenari (coast)</td><td>≈ 20 km</td><td>1 h 15 – 1 h 30</td><td>Moderate</td><td>Recreational riders, serious rides</td></tr>
-                  <tr><td>Savina and the hills above town</td><td>5–15 km</td><td>30–90 min</td><td>Hard</td><td>E-bikes, fit riders</td></tr>
-                  <tr><td>Half-day loop (below)</td><td>15–20 km</td><td>3–5 h with breaks</td><td>Easy–moderate</td><td>A full taste of the bay</td></tr>
+                  <tr><td data-label="Route">Pet Danica promenade (Igalo–Zelenika)</td><td data-label="Distance">≈ 7–8 km</td><td data-label="Riding time">30–40 min</td><td data-label="Difficulty">Easy</td><td data-label="Ideal for">Families, beginners</td></tr>
+                  <tr><td data-label="Route">Igalo–Njivice</td><td data-label="Distance">≈ 5 km</td><td data-label="Riding time">20–25 min</td><td data-label="Difficulty">Easy</td><td data-label="Ideal for">Quiet rides, children</td></tr>
+                  <tr><td data-label="Route">Igalo–Kamenari (coast)</td><td data-label="Distance">≈ 20 km</td><td data-label="Riding time">1 h 15 – 1 h 30</td><td data-label="Difficulty">Moderate</td><td data-label="Ideal for">Recreational riders, serious rides</td></tr>
+                  <tr><td data-label="Route">Savina and the hills above town</td><td data-label="Distance">5–15 km</td><td data-label="Riding time">30–90 min</td><td data-label="Difficulty">Hard</td><td data-label="Ideal for">E-bikes, fit riders</td></tr>
+                  <tr><td data-label="Route">Half-day loop (below)</td><td data-label="Distance">15–20 km</td><td data-label="Riding time">3–5 h with breaks</td><td data-label="Difficulty">Easy–moderate</td><td data-label="Ideal for">A full taste of the bay</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1207,16 +1230,16 @@
                   <tr><th>Destination</th><th>Distance</th><th>Time by bike</th><th>Difficulty</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Herceg Novi centre (Škver)</td><td>≈ 4 km</td><td>≈ 15 min</td><td>Easy</td></tr>
-                  <tr><td>Njivice beach</td><td>≈ 5 km</td><td>≈ 20 min</td><td>Easy</td></tr>
-                  <tr><td>Savina Monastery</td><td>≈ 5 km</td><td>≈ 25 min</td><td>Climb at the end</td></tr>
-                  <tr><td>Meljine</td><td>≈ 7 km</td><td>≈ 25–30 min</td><td>Easy</td></tr>
-                  <tr><td>Zelenika</td><td>≈ 8 km</td><td>≈ 30–35 min</td><td>Easy</td></tr>
-                  <tr><td>Kumbor / Portonovi</td><td>≈ 10 km</td><td>≈ 40–45 min</td><td>Easy–moderate</td></tr>
-                  <tr><td>Đenovići</td><td>≈ 12 km</td><td>≈ 50 min</td><td>Moderate</td></tr>
-                  <tr><td>Baošići</td><td>≈ 14 km</td><td>≈ 1 h</td><td>Moderate</td></tr>
-                  <tr><td>Bijela</td><td>≈ 16 km</td><td>≈ 1 h 10 min</td><td>Moderate</td></tr>
-                  <tr><td>Kamenari (ferry)</td><td>≈ 20 km</td><td>≈ 1 h 30 min</td><td>Moderate</td></tr>
+                  <tr><td data-label="Destination">Herceg Novi centre (Škver)</td><td data-label="Distance">≈ 4 km</td><td data-label="Time by bike">≈ 15 min</td><td data-label="Difficulty">Easy</td></tr>
+                  <tr><td data-label="Destination">Njivice beach</td><td data-label="Distance">≈ 5 km</td><td data-label="Time by bike">≈ 20 min</td><td data-label="Difficulty">Easy</td></tr>
+                  <tr><td data-label="Destination">Savina Monastery</td><td data-label="Distance">≈ 5 km</td><td data-label="Time by bike">≈ 25 min</td><td data-label="Difficulty">Climb at the end</td></tr>
+                  <tr><td data-label="Destination">Meljine</td><td data-label="Distance">≈ 7 km</td><td data-label="Time by bike">≈ 25–30 min</td><td data-label="Difficulty">Easy</td></tr>
+                  <tr><td data-label="Destination">Zelenika</td><td data-label="Distance">≈ 8 km</td><td data-label="Time by bike">≈ 30–35 min</td><td data-label="Difficulty">Easy</td></tr>
+                  <tr><td data-label="Destination">Kumbor / Portonovi</td><td data-label="Distance">≈ 10 km</td><td data-label="Time by bike">≈ 40–45 min</td><td data-label="Difficulty">Easy–moderate</td></tr>
+                  <tr><td data-label="Destination">Đenovići</td><td data-label="Distance">≈ 12 km</td><td data-label="Time by bike">≈ 50 min</td><td data-label="Difficulty">Moderate</td></tr>
+                  <tr><td data-label="Destination">Baošići</td><td data-label="Distance">≈ 14 km</td><td data-label="Time by bike">≈ 1 h</td><td data-label="Difficulty">Moderate</td></tr>
+                  <tr><td data-label="Destination">Bijela</td><td data-label="Distance">≈ 16 km</td><td data-label="Time by bike">≈ 1 h 10 min</td><td data-label="Difficulty">Moderate</td></tr>
+                  <tr><td data-label="Destination">Kamenari (ferry)</td><td data-label="Distance">≈ 20 km</td><td data-label="Time by bike">≈ 1 h 30 min</td><td data-label="Difficulty">Moderate</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1289,12 +1312,12 @@
                   <tr><th>Period</th><th>Pros</th><th>What to expect</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>April – May</strong></td><td>Ideal temperatures (15–24 °C), an empty promenade with no time restrictions, the riviera in bloom</td><td>Occasional rain — pack a light jacket</td></tr>
-                  <tr><td><strong>June</strong></td><td>Warm sea, long days, crowds still bearable</td><td>The promenade ban (7 pm–1 am) starts on 1 June</td></tr>
-                  <tr><td><strong>July – August</strong></td><td>Warmest sea, everything along the routes open</td><td>Heat and peak season — ride 6–9 am; the promenade is crowded and the 7 pm–1 am ban applies</td></tr>
-                  <tr><td><strong>September</strong></td><td>The best month: warm sea, fewer visitors, milder temperatures</td><td>The promenade ban applies until 30 September</td></tr>
-                  <tr><td><strong>October</strong></td><td>Quiet, warm enough to ride, no promenade restrictions</td><td>Shorter days — bring lights</td></tr>
-                  <tr><td><strong>November – March</strong></td><td>Mild winter, sunny days great for recreational rides, an empty town</td><td>Rainy spells; some rentals work shorter hours — check ahead</td></tr>
+                  <tr><td data-label="Period"><strong>April – May</strong></td><td data-label="Pros">Ideal temperatures (15–24 °C), an empty promenade with no time restrictions, the riviera in bloom</td><td data-label="What to expect">Occasional rain — pack a light jacket</td></tr>
+                  <tr><td data-label="Period"><strong>June</strong></td><td data-label="Pros">Warm sea, long days, crowds still bearable</td><td data-label="What to expect">The promenade ban (7 pm–1 am) starts on 1 June</td></tr>
+                  <tr><td data-label="Period"><strong>July – August</strong></td><td data-label="Pros">Warmest sea, everything along the routes open</td><td data-label="What to expect">Heat and peak season — ride 6–9 am; the promenade is crowded and the 7 pm–1 am ban applies</td></tr>
+                  <tr><td data-label="Period"><strong>September</strong></td><td data-label="Pros">The best month: warm sea, fewer visitors, milder temperatures</td><td data-label="What to expect">The promenade ban applies until 30 September</td></tr>
+                  <tr><td data-label="Period"><strong>October</strong></td><td data-label="Pros">Quiet, warm enough to ride, no promenade restrictions</td><td data-label="What to expect">Shorter days — bring lights</td></tr>
+                  <tr><td data-label="Period"><strong>November – March</strong></td><td data-label="Pros">Mild winter, sunny days great for recreational rides, an empty town</td><td data-label="What to expect">Rainy spells; some rentals work shorter hours — check ahead</td></tr>
                 </tbody>
               </table>
             </div>
