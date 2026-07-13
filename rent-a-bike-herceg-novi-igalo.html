@@ -47,7 +47,7 @@
 
   <!-- Favicon -->
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
-  <link rel="preload" as="image" href="images/pet-danica.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="images/pet-danica-650.webp" imagesrcset="images/pet-danica-420.webp 420w, images/pet-danica-650.webp 650w, images/pet-danica.webp 697w" imagesizes="(max-width: 760px) 90vw, 650px" fetchpriority="high">
 
   <!-- ═══════════════════════════════════════════════
        SCHEMA MARKUP — JSON-LD
@@ -936,10 +936,12 @@
         <!-- Hero image — LCP element, eagerly loaded, explicit dimensions for CLS -->
         <figure class="hero__image-wrap">
           <img
-            src="images/pet-danica.webp"
+            src="images/pet-danica-650.webp"
+            srcset="images/pet-danica-420.webp 420w, images/pet-danica-650.webp 650w, images/pet-danica.webp 697w"
+            sizes="(max-width: 760px) 90vw, 650px"
             alt="Pet Danica seaside promenade between Igalo and Herceg Novi — a flat coastal path perfect for daytime cycling"
-            width="697"
-            height="465"
+            width="650"
+            height="434"
             fetchpriority="high"
             loading="eager"
             decoding="sync"
@@ -1325,7 +1327,7 @@
         <div class="gallery__grid">
           <figure class="gallery__item">
             <img
-              src="images/plaza-herceg-novi.webp"
+              src="images/plaza-herceg-novi-650.webp"
               alt="Herceg Novi coastline along the Pet Danica promenade — cycling route past beaches and swimming spots"
               width="560"
               height="420"
@@ -1335,7 +1337,7 @@
           </figure>
           <figure class="gallery__item">
             <img
-              src="images/plaza-topla.webp"
+              src="images/plaza-topla-700.webp"
               alt="Topla Beach on the coastal cycling route between Igalo and the centre of Herceg Novi"
               width="560"
               height="420"
