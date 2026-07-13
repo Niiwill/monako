@@ -835,7 +835,10 @@
 
   <!-- Page-specific styles (tables + route cards), reuses site tokens -->
   <style>
-    .tbl-wrap { overflow-x: auto; margin: 0 0 1.4em; }
+    /* grid children must be allowed to shrink below content width,
+       otherwise wide tables push the page past the viewport on mobile */
+    .article__grid > * { min-width: 0; }
+    .tbl-wrap { overflow-x: auto; max-width: 100%; margin: 0 0 1.4em; }
     table.info-tbl { width: 100%; border-collapse: collapse; font-size: var(--step--1); }
     table.info-tbl caption { text-align: left; font-weight: 600; padding-bottom: .5em; color: var(--c-muted); font-size: var(--step--1); }
     table.info-tbl th, table.info-tbl td { border: 1px solid var(--c-divider); padding: .6em .8em; text-align: left; vertical-align: top; }
@@ -852,6 +855,26 @@
     .rule-box { background: #FDF6EC; border-left: 4px solid var(--c-star); border-radius: var(--radius-sm); padding: 1em 1.2em; margin: 0 0 1.4em; }
     .rule-box ul { margin: .5em 0 0 1.2em; list-style: disc; }
     .rule-box li { margin-bottom: .35em; }
+    /* Mobile: stack each table row into a labelled card instead of
+       forcing a sideways-scrolling table */
+    @media (max-width: 640px) {
+      table.info-tbl thead { display: none; }
+      table.info-tbl, table.info-tbl tbody, table.info-tbl tr, table.info-tbl td { display: block; width: 100%; }
+      table.info-tbl tr { border: 1px solid var(--c-divider); border-radius: var(--radius-md); margin-bottom: .8em; overflow: hidden; }
+      table.info-tbl tbody tr:nth-child(even) { background: transparent; }
+      table.info-tbl td { border: none; border-top: 1px solid var(--c-divider); padding: .55em .9em; }
+      table.info-tbl td:first-child { border-top: none; background: var(--c-sand); font-weight: 600; }
+      table.info-tbl td:not(:first-child)[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--c-muted);
+        margin-bottom: .1em;
+      }
+    }
     .article__body h3 { font-family: var(--ff-display); font-size: var(--step-1); font-weight: 700; margin: 1.4em 0 .5em; }
     .article__body ul.plain { margin: 0 0 1.2em 1.5em; list-style: disc; }
     .article__body ul.plain li { margin-bottom: .4em; }
@@ -994,24 +1017,24 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong>Rent a Bike Herceg Novi</strong></td>
-                    <td>Bicikli i vođene biciklističke ture po Boki, Orjenu i Luštici</td>
-                    <td><a href="tel:+38269530869">+382 69 530 869</a> · <a class="ext" href="https://www.facebook.com/rentabikehercegnovi/" rel="noopener noreferrer" target="_blank">Facebook stranica</a></td>
+                    <td data-label="Iznajmljivač"><strong>Rent a Bike Herceg Novi</strong></td>
+                    <td data-label="Ponuda">Bicikli i vođene biciklističke ture po Boki, Orjenu i Luštici</td>
+                    <td data-label="Kontakt / informacije"><a href="tel:+38269530869">+382 69 530 869</a> · <a class="ext" href="https://www.facebook.com/rentabikehercegnovi/" rel="noopener noreferrer" target="_blank">Facebook stranica</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Boka Outdoor Adventure</strong></td>
-                    <td>Električni bicikli (e-bike) i outdoor oprema</td>
-                    <td><a class="ext" href="https://bokaoutdooradventure.me/rentals/" rel="noopener noreferrer" target="_blank">bokaoutdooradventure.me</a></td>
+                    <td data-label="Iznajmljivač"><strong>Boka Outdoor Adventure</strong></td>
+                    <td data-label="Ponuda">Električni bicikli (e-bike) i outdoor oprema</td>
+                    <td data-label="Kontakt / informacije"><a class="ext" href="https://bokaoutdooradventure.me/rentals/" rel="noopener noreferrer" target="_blank">bokaoutdooradventure.me</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Fiore Tours</strong></td>
-                    <td>Trekking i e-trekking bicikli — turistička agencija u Herceg Novom</td>
-                    <td><a class="ext" href="https://fiore-tours.com/en/rent-a-bike/" rel="noopener noreferrer" target="_blank">fiore-tours.com</a></td>
+                    <td data-label="Iznajmljivač"><strong>Fiore Tours</strong></td>
+                    <td data-label="Ponuda">Trekking i e-trekking bicikli — turistička agencija u Herceg Novom</td>
+                    <td data-label="Kontakt / informacije"><a class="ext" href="https://fiore-tours.com/en/rent-a-bike/" rel="noopener noreferrer" target="_blank">fiore-tours.com</a></td>
                   </tr>
                   <tr>
-                    <td><strong>iNTravel Montenegro</strong></td>
-                    <td>Bicikli i skuteri — agencija u Herceg Novom</td>
-                    <td><a class="ext" href="https://www.intravelmontenegro.net/" rel="noopener noreferrer" target="_blank">intravelmontenegro.net</a></td>
+                    <td data-label="Iznajmljivač"><strong>iNTravel Montenegro</strong></td>
+                    <td data-label="Ponuda">Bicikli i skuteri — agencija u Herceg Novom</td>
+                    <td data-label="Kontakt / informacije"><a class="ext" href="https://www.intravelmontenegro.net/" rel="noopener noreferrer" target="_blank">intravelmontenegro.net</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -1037,10 +1060,10 @@
                   <tr><th>Tip bicikla</th><th>Za koga je idealan</th><th>Teren</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>Gradski bicikl</strong></td><td>Šetnje po promenadi, vožnja do plaže i prodavnice</td><td>Ravno priobalje Igalo–Meljine</td></tr>
-                  <tr><td><strong>Trekking bicikl</strong></td><td>Duže obalne ture, rekreativci</td><td>Obalni put do Bijele, Sutorinsko polje</td></tr>
-                  <tr><td><strong>Električni bicikl (e-bike)</strong></td><td>Brdovito zaleđe, vožnja bez znojenja, stariji vozači</td><td>Usponi ka Savini i selima iznad grada</td></tr>
-                  <tr><td><strong>Dječiji bicikl</strong></td><td>Djeca i porodične vožnje šetalištem</td><td>Šetalište Pet Danica, mirne ulice Igala</td></tr>
+                  <tr><td data-label="Tip bicikla"><strong>Gradski bicikl</strong></td><td data-label="Za koga je idealan">Šetnje po promenadi, vožnja do plaže i prodavnice</td><td data-label="Teren">Ravno priobalje Igalo–Meljine</td></tr>
+                  <tr><td data-label="Tip bicikla"><strong>Trekking bicikl</strong></td><td data-label="Za koga je idealan">Duže obalne ture, rekreativci</td><td data-label="Teren">Obalni put do Bijele, Sutorinsko polje</td></tr>
+                  <tr><td data-label="Tip bicikla"><strong>Električni bicikl (e-bike)</strong></td><td data-label="Za koga je idealan">Brdovito zaleđe, vožnja bez znojenja, stariji vozači</td><td data-label="Teren">Usponi ka Savini i selima iznad grada</td></tr>
+                  <tr><td data-label="Tip bicikla"><strong>Dječiji bicikl</strong></td><td data-label="Za koga je idealan">Djeca i porodične vožnje šetalištem</td><td data-label="Teren">Šetalište Pet Danica, mirne ulice Igala</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1180,11 +1203,11 @@
                   <tr><th>Ruta</th><th>Dužina</th><th>Vrijeme vožnje</th><th>Težina</th><th>Idealna za</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Šetalište Pet Danica (Igalo–Zelenika)</td><td>≈ 7–8 km</td><td>30–40 min</td><td>Lako</td><td>Porodice, početnike</td></tr>
-                  <tr><td>Igalo–Njivice</td><td>≈ 5 km</td><td>20–25 min</td><td>Lako</td><td>Mirnu vožnju, djecu</td></tr>
-                  <tr><td>Igalo–Kamenari (obala)</td><td>≈ 20 km</td><td>1 h 15 – 1 h 30</td><td>Srednje</td><td>Rekreativce, ozbiljniju vožnju</td></tr>
-                  <tr><td>Savina i zaleđe grada</td><td>5–15 km</td><td>30–90 min</td><td>Zahtjevno</td><td>E-bike, kondiciono spremne</td></tr>
-                  <tr><td>Poludnevna kružna tura (dolje)</td><td>15–20 km</td><td>3–5 h sa pauzama</td><td>Lako–srednje</td><td>Cjelodnevni doživljaj Boke</td></tr>
+                  <tr><td data-label="Ruta">Šetalište Pet Danica (Igalo–Zelenika)</td><td data-label="Dužina">≈ 7–8 km</td><td data-label="Vrijeme vožnje">30–40 min</td><td data-label="Težina">Lako</td><td data-label="Idealna za">Porodice, početnike</td></tr>
+                  <tr><td data-label="Ruta">Igalo–Njivice</td><td data-label="Dužina">≈ 5 km</td><td data-label="Vrijeme vožnje">20–25 min</td><td data-label="Težina">Lako</td><td data-label="Idealna za">Mirnu vožnju, djecu</td></tr>
+                  <tr><td data-label="Ruta">Igalo–Kamenari (obala)</td><td data-label="Dužina">≈ 20 km</td><td data-label="Vrijeme vožnje">1 h 15 – 1 h 30</td><td data-label="Težina">Srednje</td><td data-label="Idealna za">Rekreativce, ozbiljniju vožnju</td></tr>
+                  <tr><td data-label="Ruta">Savina i zaleđe grada</td><td data-label="Dužina">5–15 km</td><td data-label="Vrijeme vožnje">30–90 min</td><td data-label="Težina">Zahtjevno</td><td data-label="Idealna za">E-bike, kondiciono spremne</td></tr>
+                  <tr><td data-label="Ruta">Poludnevna kružna tura (dolje)</td><td data-label="Dužina">15–20 km</td><td data-label="Vrijeme vožnje">3–5 h sa pauzama</td><td data-label="Težina">Lako–srednje</td><td data-label="Idealna za">Cjelodnevni doživljaj Boke</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1200,16 +1223,16 @@
                   <tr><th>Destinacija</th><th>Udaljenost</th><th>Vrijeme biciklom</th><th>Težina</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Centar Herceg Novog (Škver)</td><td>≈ 4 km</td><td>≈ 15 min</td><td>Lako</td></tr>
-                  <tr><td>Plaža Njivice</td><td>≈ 5 km</td><td>≈ 20 min</td><td>Lako</td></tr>
-                  <tr><td>Manastir Savina</td><td>≈ 5 km</td><td>≈ 25 min</td><td>Uspon na kraju</td></tr>
-                  <tr><td>Meljine</td><td>≈ 7 km</td><td>≈ 25–30 min</td><td>Lako</td></tr>
-                  <tr><td>Zelenika</td><td>≈ 8 km</td><td>≈ 30–35 min</td><td>Lako</td></tr>
-                  <tr><td>Kumbor / Portonovi</td><td>≈ 10 km</td><td>≈ 40–45 min</td><td>Lako–srednje</td></tr>
-                  <tr><td>Đenovići</td><td>≈ 12 km</td><td>≈ 50 min</td><td>Srednje</td></tr>
-                  <tr><td>Baošići</td><td>≈ 14 km</td><td>≈ 1 h</td><td>Srednje</td></tr>
-                  <tr><td>Bijela</td><td>≈ 16 km</td><td>≈ 1 h 10 min</td><td>Srednje</td></tr>
-                  <tr><td>Kamenari (trajekt)</td><td>≈ 20 km</td><td>≈ 1 h 30 min</td><td>Srednje</td></tr>
+                  <tr><td data-label="Destinacija">Centar Herceg Novog (Škver)</td><td data-label="Udaljenost">≈ 4 km</td><td data-label="Vrijeme biciklom">≈ 15 min</td><td data-label="Težina">Lako</td></tr>
+                  <tr><td data-label="Destinacija">Plaža Njivice</td><td data-label="Udaljenost">≈ 5 km</td><td data-label="Vrijeme biciklom">≈ 20 min</td><td data-label="Težina">Lako</td></tr>
+                  <tr><td data-label="Destinacija">Manastir Savina</td><td data-label="Udaljenost">≈ 5 km</td><td data-label="Vrijeme biciklom">≈ 25 min</td><td data-label="Težina">Uspon na kraju</td></tr>
+                  <tr><td data-label="Destinacija">Meljine</td><td data-label="Udaljenost">≈ 7 km</td><td data-label="Vrijeme biciklom">≈ 25–30 min</td><td data-label="Težina">Lako</td></tr>
+                  <tr><td data-label="Destinacija">Zelenika</td><td data-label="Udaljenost">≈ 8 km</td><td data-label="Vrijeme biciklom">≈ 30–35 min</td><td data-label="Težina">Lako</td></tr>
+                  <tr><td data-label="Destinacija">Kumbor / Portonovi</td><td data-label="Udaljenost">≈ 10 km</td><td data-label="Vrijeme biciklom">≈ 40–45 min</td><td data-label="Težina">Lako–srednje</td></tr>
+                  <tr><td data-label="Destinacija">Đenovići</td><td data-label="Udaljenost">≈ 12 km</td><td data-label="Vrijeme biciklom">≈ 50 min</td><td data-label="Težina">Srednje</td></tr>
+                  <tr><td data-label="Destinacija">Baošići</td><td data-label="Udaljenost">≈ 14 km</td><td data-label="Vrijeme biciklom">≈ 1 h</td><td data-label="Težina">Srednje</td></tr>
+                  <tr><td data-label="Destinacija">Bijela</td><td data-label="Udaljenost">≈ 16 km</td><td data-label="Vrijeme biciklom">≈ 1 h 10 min</td><td data-label="Težina">Srednje</td></tr>
+                  <tr><td data-label="Destinacija">Kamenari (trajekt)</td><td data-label="Udaljenost">≈ 20 km</td><td data-label="Vrijeme biciklom">≈ 1 h 30 min</td><td data-label="Težina">Srednje</td></tr>
                 </tbody>
               </table>
             </div>
@@ -1282,12 +1305,12 @@
                   <tr><th>Period</th><th>Prednosti</th><th>Na šta računati</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td><strong>April – maj</strong></td><td>Idealne temperature (15–24 °C), prazna promenada bez vremenskih ograničenja, procvjetala rivijera</td><td>Povremena kiša — ponesite laganu jaknu</td></tr>
-                  <tr><td><strong>Jun</strong></td><td>Toplo more, dugi dani, gužva još podnošljiva</td><td>Od 1. juna počinje zabrana na šetalištu 19–01 h</td></tr>
-                  <tr><td><strong>Jul – avgust</strong></td><td>More najtoplije, najviše sadržaja uz rute</td><td>Vrućina i špic sezone — vozite 6–9 h ujutru; na promenadi gužva i zabrana 19–01 h</td></tr>
-                  <tr><td><strong>Septembar</strong></td><td>Najbolji mjesec: toplo more, manje gostiju, blaže temperature</td><td>Zabrana na šetalištu važi do 30. septembra</td></tr>
-                  <tr><td><strong>Oktobar</strong></td><td>Mirno, toplo za vožnju, promenada bez ograničenja</td><td>Kraći dani — ponesite svjetla</td></tr>
-                  <tr><td><strong>Novembar – mart</strong></td><td>Blaga zima, sunčani dani idealni za rekreativce, prazan grad</td><td>Kišni periodi; dio iznajmljivača radi skraćeno — provjerite unaprijed</td></tr>
+                  <tr><td data-label="Period"><strong>April – maj</strong></td><td data-label="Prednosti">Idealne temperature (15–24 °C), prazna promenada bez vremenskih ograničenja, procvjetala rivijera</td><td data-label="Na šta računati">Povremena kiša — ponesite laganu jaknu</td></tr>
+                  <tr><td data-label="Period"><strong>Jun</strong></td><td data-label="Prednosti">Toplo more, dugi dani, gužva još podnošljiva</td><td data-label="Na šta računati">Od 1. juna počinje zabrana na šetalištu 19–01 h</td></tr>
+                  <tr><td data-label="Period"><strong>Jul – avgust</strong></td><td data-label="Prednosti">More najtoplije, najviše sadržaja uz rute</td><td data-label="Na šta računati">Vrućina i špic sezone — vozite 6–9 h ujutru; na promenadi gužva i zabrana 19–01 h</td></tr>
+                  <tr><td data-label="Period"><strong>Septembar</strong></td><td data-label="Prednosti">Najbolji mjesec: toplo more, manje gostiju, blaže temperature</td><td data-label="Na šta računati">Zabrana na šetalištu važi do 30. septembra</td></tr>
+                  <tr><td data-label="Period"><strong>Oktobar</strong></td><td data-label="Prednosti">Mirno, toplo za vožnju, promenada bez ograničenja</td><td data-label="Na šta računati">Kraći dani — ponesite svjetla</td></tr>
+                  <tr><td data-label="Period"><strong>Novembar – mart</strong></td><td data-label="Prednosti">Blaga zima, sunčani dani idealni za rekreativce, prazan grad</td><td data-label="Na šta računati">Kišni periodi; dio iznajmljivača radi skraćeno — provjerite unaprijed</td></tr>
                 </tbody>
               </table>
             </div>
