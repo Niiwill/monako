@@ -37,7 +37,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/blog.html</loc>
-    <lastmod>2026-07-11</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blog.html"/>
@@ -46,6 +46,24 @@
   <!-- ═══════════════════════════════════════
        RENTAL PAGES
   ═══════════════════════════════════════ -->
+
+  <url>
+    <loc>https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
+  </url>
 
   <url>
     <loc>https://apartmani-igalo.com/mesecni-najam-igalo.html</loc>
@@ -71,7 +89,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/plaze-herceg-novi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
@@ -97,7 +115,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html"/>
@@ -127,7 +145,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/beaches-herceg-novi.html</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
