@@ -11,7 +11,7 @@
   "ctr": 0.0649,
   "position": 5.66
  },
- "notes": "DECISION DAY: CTR experiment on money queries CLOSED as capped — no flip by day 14; cause identified as Google self-serving review policy (LocalBusiness subtypes ineligible for own-site stars since 2019), NOT slow rendering. Markup stays (entity value). Deploy #1 verdict: POSITION SUCCESS (igalo apartmani 3.4->2.7, cluster re-rated, clicks +66% since Jul 4), CTR lever moves off-site (GBP reviews; category corrected to holiday apartment rental) + future title/meta copy test. Homepage visible-content freeze LIFTED for copy test as next deploy. Beaches/blatna stay frozen (performing). Jul 17 Fri: 291 clicks. La Bamba unmerged day 8.",
+ "notes": "DECISION DAY: CTR experiment on money queries CLOSED as capped — no flip by day 14; cause identified as Google self-serving review policy (LocalBusiness subtypes ineligible for own-site stars since 2019), NOT slow rendering. Markup stays (entity value). Deploy #1 verdict: POSITION SUCCESS (igalo apartmani 3.4->2.7, cluster re-rated, clicks +66% since Jul 4), CTR lever moves off-site (GBP reviews; category corrected to holiday apartment rental) + future title/meta copy test. Homepage visible-content freeze LIFTED for copy test as next deploy. Beaches/blatna stay frozen (performing). Jul 17 Fri: 291 clicks. La Bamba unmerged day 8. UPDATE Jul 20: deploy #3 merged (see deploys).",
  "deploys": [
   {
    "date": "2026-07-05",
@@ -20,6 +20,14 @@
   {
    "date": "2026-07-11",
    "desc": "restorani-igalo page, 10-razloga refresh, schema consolidation (PR 39)"
+  },
+  {
+   "date": "2026-07-16",
+   "desc": "PR 51 (semrush site audit fixes) + PR 52: homepage schema type LodgingBusiness -> VacationRental (merged evening Jul 16; discovered retroactively Jul 20)"
+  },
+  {
+   "date": "2026-07-20",
+   "desc": "DEPLOY 3: PR 54 homepage title/meta CTR test (new title \"Apartmani Igalo Monako – Direktno od Vlasnika, Bez Provizije\"; meta leads with direct-owner, keeps 4.9, DROPS €40 price anchor - spec deviation) + La Bamba section on restorani-igalo (6 mentions) + PR 53 CSS-only AdSense overflow fix on beach page. CTR measurement window Jul 20 - Aug 3; baselines: igalo apartmani 0.8%, apartmani igalo 2.1%"
   }
  ],
  "daily": [
