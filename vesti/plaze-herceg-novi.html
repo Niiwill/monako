@@ -801,6 +801,12 @@
       body { font-size: 12pt; }
     }
   
+    /* ── ADSENSE GUARD — auto-ads inject fixed-width <ins> units at runtime;
+         cap them (and the columns they land in) so the article can never
+         stretch past the viewport on mobile ── */
+    .content-grid > * { min-width: 0; }
+    ins.adsbygoogle { max-width: 100% !important; overflow: hidden; }
+
     /* ── A11Y: contrast + minimum tap-target sizing ── */
     .footer__brand span { color: #4AA3EA; }
     .footer__links a, .footer__email, .footer__bottom a,
