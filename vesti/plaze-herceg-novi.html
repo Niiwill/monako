@@ -805,7 +805,22 @@
          cap them (and the columns they land in) so the article can never
          stretch past the viewport on mobile ── */
     .content-grid > * { min-width: 0; }
-    ins.adsbygoogle { max-width: 100% !important; overflow: hidden; }
+    ins.adsbygoogle {
+      display: block !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    /* Google wraps each auto-injected unit in this container — cap it too, or a
+       fixed-width ad iframe inside it pushes the layout past the viewport. */
+    .google-auto-placed {
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      overflow: hidden;
+    }
+    ins.adsbygoogle iframe,
+    .google-auto-placed iframe { max-width: 100% !important; }
 
     /* ── A11Y: contrast + minimum tap-target sizing ── */
     .footer__brand span { color: #4AA3EA; }
