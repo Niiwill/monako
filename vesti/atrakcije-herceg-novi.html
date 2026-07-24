@@ -36,9 +36,7 @@
   ═══════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
@@ -101,11 +99,11 @@
         {"@type": "ListItem", "position": 10, "item": {"@type": "TouristAttraction", "name": "Plava Špilja"}},
         {"@type": "ListItem", "position": 11, "item": {"@type": "TouristAttraction", "name": "Rose — najstarija luka Boke"}},
         {"@type": "ListItem", "position": 12, "item": {"@type": "TouristAttraction", "name": "Perast i Gospa od Škrpjela"}},
-        {"@type": "ListItem", "position": 13, "item": {"@type": "Restaurant", "name": "Ribarsko Selo", "url": "http://ribarskoselo.com/"}},
-        {"@type": "ListItem", "position": 14, "item": {"@type": "Restaurant", "name": "Verige 65", "url": "https://verige65.com/"}},
-        {"@type": "ListItem", "position": 15, "item": {"@type": "Restaurant", "name": "Gradska Kafana", "url": "https://www.gradskakafana.me/en"}},
-        {"@type": "ListItem", "position": 16, "item": {"@type": "Restaurant", "name": "Restoran Kantula"}},
-        {"@type": "ListItem", "position": 17, "item": {"@type": "Restaurant", "name": "Admiral Cafe i Restoran"}}
+        {"@type": "ListItem", "position": 13, "item": {"@type": "Restaurant", "name": "Ribarsko Selo", "url": "http://ribarskoselo.com/", "address": {"@type": "PostalAddress", "addressLocality": "Žanjice, Luštica", "addressRegion": "Herceg Novi", "addressCountry": "ME"}}},
+        {"@type": "ListItem", "position": 14, "item": {"@type": "Restaurant", "name": "Verige 65", "url": "https://verige65.com/", "address": {"@type": "PostalAddress", "addressLocality": "Kostanjica", "addressRegion": "Boka Kotorska", "addressCountry": "ME"}}},
+        {"@type": "ListItem", "position": 15, "item": {"@type": "Restaurant", "name": "Gradska Kafana", "url": "https://www.gradskakafana.me/en", "address": {"@type": "PostalAddress", "addressLocality": "Herceg Novi", "addressCountry": "ME"}}},
+        {"@type": "ListItem", "position": 16, "item": {"@type": "Restaurant", "name": "Restoran Kantula", "address": {"@type": "PostalAddress", "addressLocality": "Herceg Novi", "addressCountry": "ME"}}},
+        {"@type": "ListItem", "position": 17, "item": {"@type": "Restaurant", "name": "Admiral Cafe i Restoran", "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressRegion": "Herceg Novi", "addressCountry": "ME"}}}
       ]
     },
     {
@@ -418,6 +416,14 @@
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
     @media print { .nav, footer, .sidebar { display: none; } body { font-size: 12pt; } }
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
 </head>
 
@@ -525,7 +531,11 @@
                 <p>
                   Tu je i otvoreni bazen vaterpolo kluba Jadran — klub koji je odavno postao suštinski
                   element identiteta Herceg Novog. Bazen se, zahvaljujući blagoj klimi, može koristiti
-                  <strong>sedam do osam mjeseci godišnje</strong>. Ukratko: Škver je srce i duša grada.
+                  <strong>sedam do osam mjeseci godišnje</strong>. Ukratko: Škver je srce i duša grada —
+                  a krajem decembra centar iznad njega postaje pozornica za
+                  <a href="/nova-godina-herceg-novi.html">doček Nove godine u Herceg Novom</a>,
+                  dok već sredinom februara grad preuzima
+                  <a href="/praznik-mimoze-program.html">Praznik mimoze — najveći zimski festival u Crnoj Gori</a>.
                 </p>
               </div>
               <figure class="attraction__image-single">
@@ -788,7 +798,9 @@
                 </p>
                 <div class="highlight-box">
                   <strong>Savjet:</strong> Apartmani Monako u Igalu su na samom početku Šetališta
-                  Pet Danica — do centra Herceg Novog možete doći ugodnom šetnjom od 45 minuta.
+                  Pet Danica — do centra Herceg Novog možete doći ugodnom šetnjom od 45 minuta,
+                  a biciklom za desetak minuta. Pogledajte naš vodič za
+                  <a href="/iznajmljivanje-bicikla-herceg-novi-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">iznajmljivanje bicikla u Herceg Novom i Igalu</a>.
                 </div>
               </div>
               <figure class="attraction__image-single">

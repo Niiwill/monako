@@ -35,9 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Fraunces (display) + Inter (body) — loaded non-blocking -->
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
@@ -55,7 +53,7 @@
   [
     {
       "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
+      "@type": "VacationRental",
       "@id": "https://apartmani-igalo.com/#business",
       "name": "Monako Apartmani Igalo",
       "description": "Apartmani smješteni 100 metara od Blatne plaže u Igalu. Besplatan WiFi i parking.",
@@ -96,6 +94,7 @@
       "@type": "TouristAttraction",
       "@id": "https://apartmani-igalo.com/blatna-plaza.html#attraction",
       "name": "Blatna Plaža Igalo",
+      "alternateName": "Plaža Stara Banja Igalo",
       "description": "Najveća plaža opštine Herceg Novi (9.000 m²) poznata po lekovitom radioaktivnom mulju koji liječi reumatizam i bolesti lokomotornog sistema.",
       "url": "https://apartmani-igalo.com/blatna-plaza.html",
       "image": "https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp",
@@ -134,6 +133,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Da, upotreba lekovitog blata na Blatnoj plaži je potpuno besplatna za sve posjetioce. Možete iznajmiti ležaljke i suncobrane uz naknadu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Da li su Blatna plaža i plaža Stara Banja ista plaža?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, Stara Banja je drugo, starije ime Blatne plaže u Igalu — mještani i danas tako zovu plažu i njeno zaleđe. Naziv potiče od stare banje, kupališnog lječilišta iz prve polovine XX vijeka u kojem se igaljsko blato koristilo u terapijske svrhe prije osnivanja današnjeg Instituta Simo Milošević 1949. godine."
           }
         },
         {
@@ -459,6 +466,7 @@
     }
     @media (max-width: 900px) {
       .article__grid { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
     }
     .article__body h2 {
       font-family: var(--ff-display);
@@ -847,6 +855,14 @@
       .nav, .map-wrap, footer { display: none; }
       body { font-size: 12pt; }
     }
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
 </head>
 
@@ -866,6 +882,7 @@
           </a>
           <ul class="nav__links" role="list">
             <li><a href="/about.html" class="nav__text-link">O nama</a></li>
+            <li><a href="/#cjenovnik" class="nav__text-link">Cjenovnik</a></li>
             <li><a href="/blog.html" class="nav__text-link">Vesti</a></li>
             <li>
               <a class="nav__cta" href="tel:+38267558240" aria-label="Pozovite nas">
@@ -981,6 +998,23 @@
               kao renomirani <strong>Institut Simo Milošević</strong>.
             </p>
 
+            <h2>Plaža Stara Banja — drugo ime Blatne plaže</h2>
+            <p>
+              Ako ste u pretrazi naišli na naziv <strong>plaža Stara Banja u Igalu</strong>,
+              riječ je upravo o Blatnoj plaži — to su dva imena za istu plažu. Mještani i
+              stariji gosti plažu i njeno zaleđe i danas zovu Stara Banja, po staroj banji —
+              kupališnom lječilištu iz prve polovine XX vijeka u kojem se igaljsko blato
+              koristilo u terapijske svrhe i prije nego što je 1949. osnovano današnje
+              lječilište, Institut Simo Milošević.
+            </p>
+            <p>
+              Za posjetioce to praktično znači: sve što važi za Blatnu plažu — besplatan ulaz,
+              lekovito blato, plićak pogodan za djecu — važi i za Staru Banju. Tražite li
+              <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">smeštaj
+              kod Stare Banje u Igalu</a>, apartmani Monako nalaze se svega 100 metara od plaže,
+              na adresi Dubrovačka 1.
+            </p>
+
             <h2>Šta posjetilac može da očekuje na plaži?</h2>
             <p>
               Plaža je pješčana i polako se uranja, prikladna za porodice s djecom.
@@ -995,7 +1029,10 @@
             </ul>
             <p>
               Terapija blatom je <strong>besplatna i dostupna svima</strong> — jedino trebate
-              doći s kupačim kostimom i spremnošću da se malo prljate.
+              doći s kupačim kostimom i spremnošću da se malo prljate. A ako želite biti na
+              samom izvoru terapije, naši
+              <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">apartmani
+              u Igalu</a> udaljeni su svega 100 metara od plaže.
             </p>
 
             <h2>Igalo kao centar zdravstvenog turizma</h2>
@@ -1007,8 +1044,15 @@
               igalsko blato kao dio certifikovanih tretmana. Pacijenti koji dolaze na
               višenedeljne terapije često traže smještaj na duži period — za njih nudimo
               <a href="/mesecni-najam-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">mesečni
-              najam apartmana u Igalu (izdavanje stana od 500€, sve uključeno)</a>,
+              najam apartmana u Igalu, Herceg Novi (izdavanje stana od 500€, sve uključeno)</a>,
               svega 5 minuta hoda od Instituta.
+            </p>
+            <p>
+              Zanimljivost: upravo u Institutu se svakog februara održava izložba
+              cvijeća <a href="/praznik-mimoze-program.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Praznika
+              mimoze</a> — najstarijeg festivala na crnogorskom primorju, čija se
+              glavna pozornica nalazi na platou ispred hotela Igalo, nekoliko
+              minuta hoda od Blatne plaže.
             </p>
           </article>
 
@@ -1150,6 +1194,22 @@
           </div>
 
           <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq6">
+              Da li su Blatna plaža i plaža Stara Banja ista plaža?
+              <span class="faq__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+              </span>
+            </button>
+            <div class="faq__answer" id="faq6" role="region">
+              Da, <strong>Stara Banja</strong> je drugo, starije ime Blatne plaže u Igalu —
+              mještani i danas tako zovu plažu i njeno zaleđe. Naziv potiče od stare banje,
+              kupališnog lječilišta iz prve polovine XX vijeka u kojem se igaljsko blato
+              koristilo u terapijske svrhe prije osnivanja današnjeg Instituta Simo Milošević
+              1949. godine.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
             <button class="faq__question" aria-expanded="false" aria-controls="faq3">
               Gdje se tačno nalazi Blatna plaža?
               <span class="faq__icon" aria-hidden="true">
@@ -1202,11 +1262,18 @@
         <h2 class="reviews__heading" id="reviews-heading">Recenzije gostiju</h2>
         <div class="reviews__grid" role="list">
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
               <meta itemprop="name" content="Monako Apartmani Igalo">
               <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Dubrovačka 1">
+                <meta itemprop="addressLocality" content="Igalo">
+                <meta itemprop="addressRegion" content="Herceg Novi">
+                <meta itemprop="postalCode" content="85347">
+                <meta itemprop="addressCountry" content="ME">
+              </div>
             </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
@@ -1220,13 +1287,20 @@
             <p class="review-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">Boban Šundić</span>
             </p>
-          </article>
+          </div>
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
               <meta itemprop="name" content="Monako Apartmani Igalo">
               <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Dubrovačka 1">
+                <meta itemprop="addressLocality" content="Igalo">
+                <meta itemprop="addressRegion" content="Herceg Novi">
+                <meta itemprop="postalCode" content="85347">
+                <meta itemprop="addressCountry" content="ME">
+              </div>
             </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
@@ -1240,13 +1314,20 @@
             <p class="review-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">Jovana</span>
             </p>
-          </article>
+          </div>
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LodgingBusiness" style="display:none">
               <meta itemprop="name" content="Monako Apartmani Igalo">
               <meta itemprop="image" content="https://apartmani-igalo.com/images/kuca_spolja.webp">
+              <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <meta itemprop="streetAddress" content="Dubrovačka 1">
+                <meta itemprop="addressLocality" content="Igalo">
+                <meta itemprop="addressRegion" content="Herceg Novi">
+                <meta itemprop="postalCode" content="85347">
+                <meta itemprop="addressCountry" content="ME">
+              </div>
             </div>
             <div class="review-card__stars" aria-label="5 od 5 zvjezdica" itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
               <meta itemprop="ratingValue" content="5">
@@ -1261,7 +1342,7 @@
             <p class="review-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">Elizabeth Charles</span>
             </p>
-          </article>
+          </div>
 
         </div>
       </div>

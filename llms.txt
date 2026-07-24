@@ -1,0 +1,34 @@
+# Monako Apartmani Igalo
+
+> Family-run apartments in Igalo, Herceg Novi, Montenegro — 100 m from the beach and the Igalo Institute. Seasonal holiday rentals and all-inclusive monthly rentals (Sept–June), rented directly by the owner. Address: Dubrovačka 1, Igalo 85347, Montenegro. Contact: hotel-monako@hotmail.com, +382 67 558 240.
+
+Site content is in Serbian (Latin script) with selected pages available in English.
+
+## Main pages
+
+- [Apartmani Igalo — Monako](https://apartmani-igalo.com/): homepage — apartments, amenities, guest reviews, contact (Serbian)
+- [About](https://apartmani-igalo.com/about.html): about the apartments and the hosts
+- [Monthly rental in Igalo](https://apartmani-igalo.com/monthly-rental-igalo.html): long-term apartment rental, €500/month all-inclusive (English)
+- [Mjesečni najam u Igalu](https://apartmani-igalo.com/mesecni-najam-igalo.html): dugoročni najam apartmana (Serbian)
+- [Blatna plaža Igalo](https://apartmani-igalo.com/blatna-plaza.html): the therapeutic mud beach in Igalo
+- [Rent a bike Herceg Novi & Igalo](https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html): bicycle rental (English)
+- [Iznajmljivanje bicikla](https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html): iznajmljivanje bicikla (Serbian)
+
+## Guides and news
+
+- [Blog](https://apartmani-igalo.com/blog.html): all articles
+- [Plaže u Herceg Novom i Igalu](https://apartmani-igalo.com/vesti/plaze-herceg-novi.html): beach guide (Serbian)
+- [Beaches of Herceg Novi](https://apartmani-igalo.com/vesti/beaches-herceg-novi.html): beach guide (English)
+- [Restorani Herceg Novi](https://apartmani-igalo.com/vesti/restorani-herceg-novi.html): restaurant guide (Serbian)
+- [Restaurants in Herceg Novi](https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html): restaurant guide (English)
+- [Restorani Igalo](https://apartmani-igalo.com/vesti/restorani-igalo.html): Igalo restaurant guide (Serbian)
+- [Atrakcije Herceg Novi](https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html): attractions guide (Serbian)
+- [10 razloga da posjetite Igalo](https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html): why visit Igalo (Serbian)
+- [10 reasons to travel to Herceg Novi](https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html): why visit Herceg Novi (English)
+- [Mimosa Festival Herceg Novi](https://apartmani-igalo.com/mimosa-festival-herceg-novi.html): festival guide (English)
+- [Praznik mimoze — program](https://apartmani-igalo.com/praznik-mimoze-program.html): program praznika mimoze (Serbian)
+- [Nova godina u Herceg Novom](https://apartmani-igalo.com/nova-godina-herceg-novi.html): New Year in Herceg Novi (Serbian)
+
+## Optional
+
+- [Sitemap](https://apartmani-igalo.com/sitemap.xml): full list of pages

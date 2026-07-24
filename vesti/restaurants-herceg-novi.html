@@ -27,7 +27,7 @@
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/restorani/holiday1.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"></noscript>
   <link rel="preload" as="image" href="../images/restorani/holiday1.jpg" fetchpriority="high">
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
@@ -239,6 +239,14 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
     @media print{.nav,footer,.sidebar{display:none}body{font-size:12pt}}
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
 </head>
 <body>
@@ -316,7 +324,7 @@
         <div class="content-grid">
           <article>
             <p class="article__intro">
-              Herceg Novi sits at the entrance to the Bay of Kotor — one of the most beautiful bays in the Mediterranean. Its restaurant scene matches the scenery: whether you want <strong>fresh fish pulled from the sea that morning</strong>, a traditional Montenegrin konoba, fine dining above the bay or a simple pizza with a view, you'll find it here. These are the 8 restaurants you shouldn't miss.
+              Herceg Novi sits at the entrance to the Bay of Kotor — one of the most beautiful bays in the Mediterranean. Its restaurant scene matches the scenery: whether you want <strong>fresh fish pulled from the sea that morning</strong>, a traditional Montenegrin konoba, fine dining above the bay or a simple pizza with a view, you'll find it here. These are the 8 restaurants you shouldn't miss. Local tip: the best seafood season is actually winter — especially February, when the whole riviera celebrates the <a href="/mimosa-festival-herceg-novi.html">Mimosa Festival</a> with fish-and-wine feasts.
             </p>
 
             <!-- 1 -->

@@ -34,9 +34,7 @@
   ═══════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
@@ -51,7 +49,7 @@
   [
     {
       "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
+      "@type": "VacationRental",
       "@id": "https://apartmani-igalo.com/#business",
       "name": "Monako Apartmani Igalo",
       "alternateName": "Apartmani Monako Igalo",
@@ -618,6 +616,14 @@
       }
     }
     @media print { .nav, footer { display: none; } body { font-size: 12pt; } }
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
 </head>
 
@@ -778,7 +784,10 @@
               Svakodnevno čišćenje soba, mijenjanje peškira i posteljine dio su
               našeg standardnog servisa. Igalo je turistička metropola — plodovi
               mora, lekovito blato, šetnica, restorani i izleti dostupni su na
-              korak od vaše vrate.
+              korak od vaše vrate. A Igalo živi i zimi: svakog februara plato na
+              5 minuta hoda od naših apartmana postaje glavna pozornica
+              <a href="/praznik-mimoze-program.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Praznika
+              mimoze</a>, koji iz prve ruke pratimo od samih početaka rada.
             </p>
             <p>
               Naša obaveza je da gostima pružimo kvalitetnu uslugu i sve vrste
@@ -988,7 +997,7 @@
 
         <div class="reviews-grid" role="list">
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
             <div class="review-card__header">
@@ -1017,9 +1026,9 @@
               Tek smo jedan dan ovdje i oduševljeni smo gostoprimstvom i higijenom u apartmanu.
               U prizemlju Idea minimarket, a plaža na 60 metara. Odnos cijena–usluga je 10+.
             </blockquote>
-          </article>
+          </div>
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
             <div class="review-card__header">
@@ -1049,9 +1058,9 @@
               opremljeni i uz izuzetno ljubazne domaćine učiniće vas sretnim i zadovoljnim
               tokom boravka.
             </blockquote>
-          </article>
+          </div>
 
-          <article class="review-card" role="listitem"
+          <div class="review-card" role="listitem"
             itemscope itemtype="https://schema.org/Review">
             <meta itemprop="itemReviewed" content="Monako Apartmani Igalo">
             <div class="review-card__header">
@@ -1081,7 +1090,7 @@
               kind and helpful. Herceg Novi is just a few minutes away by bus or a pleasant
               walk along the pier.
             </blockquote>
-          </article>
+          </div>
 
         </div>
       </div>

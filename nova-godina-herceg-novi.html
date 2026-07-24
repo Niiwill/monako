@@ -7,15 +7,15 @@
   <!-- ═══════════════════════════════════════════════
        PRIMARY META — SEO
   ═══════════════════════════════════════════════ -->
-  <title>Nova Godina 2027. u Herceg Novom – Program i Smještaj | Monako Igalo</title>
-  <meta name="description" content="Dočekajte Novu 2027. u Herceg Novom uz Harisa Džinovića, Nedu Ukraden, Željka Samardžića i Vesnu Zmijanac. Trodnevni muzički spektakl 31. dec – 2. jan. Rezervišite smještaj na vrijeme.">
+  <title>Nova Godina u Herceg Novom 2027 — Program, Satnica i Smještaj</title>
+  <meta name="description" content="Doček Nove 2027. u Herceg Novom: program i satnica čim budu objavljeni, vatromet na Trgu Nikole Đurkovića, doček u restoranima i smještaj 100 m od plaže.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Nova Godina 2027. u Herceg Novom – Program i Smještaj">
-  <meta property="og:description" content="Trodnevni muzički spektakl u Herceg Novom 31. dec – 2. jan 2027. Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna Zmijanac. Rezervišite smještaj.">
+  <meta property="og:title" content="Nova Godina u Herceg Novom 2027 — Program, Satnica i Smještaj">
+  <meta property="og:description" content="Doček Nove 2027. u Herceg Novom: program i satnica čim budu objavljeni, vatromet na Trgu Nikole Đurkovića, doček u restoranima i smještaj 100 m od plaže.">
   <meta property="og:url" content="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
   <meta property="og:site_name" content="Monako Apartmani Igalo">
   <meta property="og:image" content="https://apartmani-igalo.com/images/docek.jpg">
@@ -23,32 +23,33 @@
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="sr_RS">
   <meta property="article:published_time" content="2025-10-01T08:00:00+02:00">
-  <meta property="article:modified_time" content="2025-12-01T08:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-04T08:00:00+02:00">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nova Godina 2027. u Herceg Novom – Program i Smještaj">
-  <meta name="twitter:description" content="Trodnevni spektakl u Herceg Novom uz Harisa Džinovića, Nedu Ukraden i više. Rezervišite smještaj.">
+  <meta name="twitter:title" content="Nova Godina u Herceg Novom 2027 — Program, Satnica i Smještaj">
+  <meta name="twitter:description" content="Program i satnica dočeka Nove 2027. u Herceg Novom čim budu objavljeni, vatromet na Trgu i smještaj 100 m od plaže.">
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/docek.jpg">
 
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE — PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
+  <!-- LCP image preload FIRST — so it wins bandwidth over fonts (matches <picture> WebP source) -->
+  <link rel="preload" as="image" href="images/docek.webp" type="image/webp" fetchpriority="high"
+        media="(min-width: 640px)">
+  <link rel="preload" as="image" href="images/docek-mobile.webp" type="image/webp" fetchpriority="high"
+        media="(max-width: 639px)">
+
+  <!-- Fonts: preconnect + load at LOW priority (media=print swap) so they don't compete with the LCP image.
+       Text renders immediately via the size-adjust fallback fonts; the webfonts swap in when ready. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   </noscript>
-  <!-- LCP image preload — desktop -->
-  <link rel="preload" as="image" href="images/docek.jpg" fetchpriority="high"
-        media="(min-width: 640px)">
-  <!-- LCP image preload — mobile -->
-  <link rel="preload" as="image" href="images/docek-mobile.jpg" fetchpriority="high"
-        media="(max-width: 639px)">
 
   <link rel="icon" href="images/monako-favicon.png" sizes="any">
 
@@ -59,61 +60,13 @@
   [
     {
       "@context": "https://schema.org",
-      "@type": "Event",
-      "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#event",
-      "name": "Doček Nove 2027. godine u Herceg Novom",
-      "description": "Trodnevni muzički spektakl sa vrhunskim regionalnim izvođačima na Trgu Nikole Đurkovića u Herceg Novom.",
-      "startDate": "2026-12-31T20:00:00+01:00",
-      "endDate": "2027-01-02T23:59:00+01:00",
-      "eventStatus": "https://schema.org/EventScheduled",
-      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-      "isAccessibleForFree": true,
-      "image": [
-        "https://apartmani-igalo.com/images/docek.jpg",
-        "https://apartmani-igalo.com/images/docek-mobile.jpg"
-      ],
-      "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "validFrom": "2025-10-01T08:00:00+02:00"
-      },
-      "location": {
-        "@type": "Place",
-        "name": "Trg Nikole Đurkovića",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Herceg Novi",
-          "addressCountry": "ME"
-        }
-      },
-      "organizer": [
-        {"@type": "Organization", "name": "Opština Herceg Novi", "url": "https://apartmani-igalo.com/"},
-        {"@type": "Organization", "name": "Turistička organizacija Herceg Novi", "url": "https://www.novaunovi.me/"},
-        {"@type": "Organization", "name": "JUK Herceg Fest", "url": "https://apartmani-igalo.com/"}
-      ],
-      "performer": [
-        {"@type": "Person", "name": "Haris Džinović"},
-        {"@type": "Person", "name": "Neda Ukraden"},
-        {"@type": "Person", "name": "Željko Samardžić"},
-        {"@type": "Person", "name": "Vesna Zmijanac"},
-        {"@type": "Person", "name": "Dženan Lončarević"},
-        {"@type": "MusicGroup", "name": "Tropico Band"},
-        {"@type": "MusicGroup", "name": "Kamerni orkestar Herceg Novi"}
-      ]
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "Article",
       "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#article",
-      "headline": "Nova Godina 2027. u Herceg Novom – Program i Smještaj",
-      "description": "Trodnevni muzički spektakl u Herceg Novom 31. dec – 2. jan 2027. sa Harisom Džinovićem, Nedom Ukraden, Željkom Samardžićem i Vesnom Zmijanac.",
+      "headline": "Nova Godina u Herceg Novom 2027 — Program, Satnica i Smještaj",
+      "description": "Vodič za doček Nove 2027. godine u Herceg Novom: kada se objavljuje program, satnica i lokacija proslave na Trgu Nikole Đurkovića, vatromet, doček u restoranima i smještaj.",
       "image": "https://apartmani-igalo.com/images/docek.jpg",
       "datePublished": "2025-10-01T08:00:00+02:00",
-      "dateModified": "2025-12-01T08:00:00+02:00",
+      "dateModified": "2026-07-04T08:00:00+02:00",
       "inLanguage": "sr",
       "author": {
         "@type": "Organization",
@@ -140,7 +93,7 @@
           "name": "Kada je doček Nove 2027. u Herceg Novom?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Doček Nove 2027. u Herceg Novom odvija se u periodu od 31. decembra 2026. do 2. januara 2027. na Trgu Nikole Đurkovića u centru grada."
+            "text": "Novogodišnja noć je 31. decembra 2026. Herceg Novi tradicionalno organizuje višednevnu proslavu na Trgu Nikole Đurkovića — prošle godine program je trajao od 28. decembra do 2. januara. Zvanični program za doček 2027. još nije objavljen; očekuje se tokom avgusta, a ova stranica se ažurira istog dana."
           }
         },
         {
@@ -148,26 +101,74 @@
           "name": "Ko nastupa na dočeku Nove 2027. u Herceg Novom?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Na dočeku Nove 2027. u Herceg Novom nastupaju: 31. decembra — Haris Džinović i Neda Ukraden; 1. januara — Željko Samardžić i Vesna Zmijanac; 2. januara — Dženan Lončarević i Tropico Band. Prvog dana nova godine nastupa i Kamerni orkestar Herceg Novi ispred gradske Tore."
+            "text": "Izvođači za doček Nove 2027. još nisu objavljeni. Za doček 2026. nastupali su Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna Zmijanac, Dženan Lončarević i Tropico Band, pa se i za 2027. očekuju regionalne zvijezde sličnog ranga."
           }
         },
         {
           "@type": "Question",
-          "name": "Da li postoji dječiji program za doček 2027. u Herceg Novom?",
+          "name": "Da li je ulaz na doček u Herceg Novom besplatan?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da, organizuje se posebna proslava dječije Nove godine uz bogat program posvećen najmlađima sa različitim aktivnostima i iznenađenjima."
+            "text": "Da, proslava na Trgu Nikole Đurkovića je tradicionalno otvorenog tipa i besplatna za sve posjetioce."
           }
         },
         {
           "@type": "Question",
-          "name": "Gdje rezervisati smještaj za doček Nove 2027. u Herceg Novom?",
+          "name": "U koliko sati počinje program u novogodišnjoj noći?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Apartmani Monako u Igalu nalaze se samo 100 metara od Blatne plaže i nedaleko od centra Herceg Novog. Rezervacije na +382 67 558 240 ili email hotel-monako@hotmail.com. Preporučujemo da rezervišete što ranije jer je interesovanje ogromno."
+            "text": "Tačna satnica se objavljuje uz zvanični program. Prethodnih godina koncerti na trgu počinjali su u večernjim satima, a vatromet je u ponoć. Satnicu za 2027. objavićemo ovdje čim bude poznata."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Da li postoji dječiji program za doček u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, grad tradicionalno organizuje dječiju Novu godinu. Za doček 2026. dječiji program održan je 28. decembra na platou ispred zgrade Opštine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdje parkirati za doček Nove godine u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "U novogodišnjoj noći centar grada je izuzetno gužvast, a parking mjesta oko Trga Nikole Đurkovića brzo se popune. Praktično rješenje je smještaj u Igalu — do trga se stiže šetnjom uz more Šetalištem Pet Danica za oko 30 minuta ili taksijem za nekoliko minuta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kakvo je vrijeme u Herceg Novom za Novu godinu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zima u Herceg Novom je blaga i mediteranska. Krajem decembra dnevne temperature su najčešće između 8 i 14 °C, pa je proslava na otvorenom sasvim ugodna uz jaknu. Moguća je kiša, a upravo u to vrijeme počinje cvjetati i mimoza."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Gdje rezervisati smještaj za doček Nove godine u Herceg Novom?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Apartmani Monako u Igalu nalaze se 100 metara od Blatne plaže i nedaleko od centra Herceg Novog. Rezervacije na +382 67 558 240 ili email hotel-monako@hotmail.com. Preporučujemo rezervaciju što ranije jer se kapaciteti za novogodišnje praznike brzo popune."
           }
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VacationRental",
+      "@id": "https://apartmani-igalo.com/#lodging",
+      "name": "Monako Apartmani Igalo",
+      "url": "https://apartmani-igalo.com/",
+      "image": "https://apartmani-igalo.com/images/docek.jpg",
+      "telephone": "+38267558240",
+      "email": "hotel-monako@hotmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dubrovačka 1",
+        "addressLocality": "Igalo, Herceg Novi",
+        "addressCountry": "ME"
+      }
     },
     {
       "@context": "https://schema.org",
@@ -175,7 +176,7 @@
       "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://apartmani-igalo.com/"},
         {"@type": "ListItem", "position": 2, "name": "Vesti", "item": "https://apartmani-igalo.com/blog.html"},
-        {"@type": "ListItem", "position": 3, "name": "Nova Godina 2027. Herceg Novi", "item": "https://apartmani-igalo.com/nova-godina-herceg-novi.html"}
+        {"@type": "ListItem", "position": 3, "name": "Nova godina u Herceg Novom", "item": "https://apartmani-igalo.com/nova-godina-herceg-novi.html"}
       ]
     }
   ]
@@ -333,7 +334,7 @@
       font-size: var(--step--1); color: var(--c-muted); list-style: none;
     }
     .breadcrumb__list li + li::before { content: "/"; margin-right: 0.5em; }
-    .breadcrumb__list a { color: var(--c-teal); }
+    .breadcrumb__list a { color: var(--c-teal); display: inline-flex; align-items: center; min-height: 24px; }
     .breadcrumb__list a:hover { text-decoration: underline; }
 
     /* ── ARTICLE HERO ──────────────────────────── */
@@ -684,7 +685,7 @@
       font-family: var(--ff-display); font-size: var(--step-2);
       font-weight: 700; color: #fff; margin-bottom: 0.5em;
     }
-    .footer__brand span { color: var(--c-teal); }
+    .footer__brand span { color: #4AA3EA; }
     .footer__tagline { font-size: var(--step--1); line-height: 1.6; }
     .footer__heading {
       font-size: var(--step--1); font-weight: 600;
@@ -695,10 +696,14 @@
     .footer__links a {
       font-size: var(--step--1); color: rgba(255,255,255,0.6);
       transition: color var(--trans);
+      display: inline-flex; align-items: center; min-height: 24px;
     }
     .footer__links a:hover { color: #fff; }
     .footer__tel { display: block; font-size: var(--step-1); font-weight: 700; color: #fff; margin-bottom: 0.3em; }
-    .footer__email { font-size: var(--step--1); color: rgba(255,255,255,0.6); transition: color var(--trans); }
+    .footer__email {
+      font-size: var(--step--1); color: rgba(255,255,255,0.6); transition: color var(--trans);
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
     .footer__email:hover { color: #fff; }
     .footer__social { display: flex; gap: var(--sp-sm); margin-top: var(--sp-sm); }
     .footer__social a {
@@ -714,7 +719,7 @@
       font-size: var(--step--1);
       display: flex; flex-wrap: wrap; gap: var(--sp-sm); justify-content: space-between;
     }
-    .footer__bottom a { color: rgba(255,255,255,0.5); }
+    .footer__bottom a { color: rgba(255,255,255,0.5); display: inline-flex; align-items: center; min-height: 24px; }
     .footer__bottom a:hover { color: #fff; }
 
     /* ── UTILS ─────────────────────────────────── */
@@ -771,7 +776,7 @@
       <ol class="breadcrumb__list" role="list">
         <li><a href="/">Početna</a></li>
         <li><a href="/blog.html">Vesti</a></li>
-        <li><span aria-current="page">Nova Godina 2027. Herceg Novi</span></li>
+        <li><span aria-current="page">Nova godina u Herceg Novom</span></li>
       </ol>
     </div>
   </nav>
@@ -783,14 +788,14 @@
     ══════════════════════════════════ -->
     <div class="article-hero">
       <div class="container">
-        <span class="article-hero__eyebrow">Događaj · Herceg Novi · 31. dec – 2. jan</span>
+        <span class="article-hero__eyebrow">Događaj · Herceg Novi · Novogodišnji praznici · Ažurirano 4. jula 2026.</span>
         <h1 class="article-hero__title">
-          Doček <span class="highlight">Nove 2027.</span> u Herceg Novom
+          Nova godina u <span class="highlight">Herceg Novom</span> 2027.
         </h1>
         <div class="article-hero__meta">
           <span class="article-hero__meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            31. decembar 2026. – 2. januar 2027.
+            Novogodišnja noć: 31. decembar 2026.
           </span>
           <span class="article-hero__meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
@@ -798,7 +803,7 @@
           </span>
           <span class="article-hero__meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-            7 izvođača · Trodnevni spektakl · Besplatan ulaz
+            Koncerti na trgu · Vatromet · Besplatan ulaz
           </span>
         </div>
 
@@ -807,14 +812,16 @@
           <picture>
             <source
               media="(max-width: 639px)"
-              srcset="images/docek-mobile.webp" type="image/webp">
+              srcset="images/docek-mobile.webp" type="image/webp"
+              width="680" height="850">
             <source
               media="(min-width: 640px)"
-              srcset="images/docek.webp" type="image/webp">
+              srcset="images/docek.webp" type="image/webp"
+              width="1080" height="1350">
             <img
               src="images/docek.jpg"
-              alt="Doček Nove 2027. na Trgu Nikole Đurkovića u Herceg Novom — mnoštvo posjetilaca uz muziku i vatromet"
-              width="1160" height="508"
+              alt="Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom — mnoštvo posjetilaca uz muziku i vatromet"
+              width="1080" height="1350"
               fetchpriority="high"
               loading="eager"
               decoding="sync"
@@ -836,24 +843,55 @@
           <article>
 
             <p class="article__intro">
-              Herceg Novi, predivni grad na crnogorskom primorju, priprema
-              <strong>nezaboravan doček Nove 2027. godine</strong>. U periodu od
-              31. decembra 2026. do 2. januara 2027., centar grada —
-              Trg Nikole Đurkovića — biće epicentar zabave, muzike i veselja.
-              Trodnevni muzički spektakl sa vrhunskim regionalnim izvođačima.
+              <strong>Herceg Novi i Nova godina 2027.</strong> — jedan od
+              najpopularnijih dočeka na crnogorskom primorju, na otvorenom uz
+              more i vatromet nad Bokom.
+              Planirate <strong>doček Nove 2027. godine u Herceg Novom</strong>?
+              Na ovoj stranici objavljujemo program i satnicu <strong>istog dana
+              kada ih organizatori zvanično saopšte</strong> — po tradiciji, to je
+              tokom avgusta. Do tada, ovdje je sve što treba da znate: kako izgleda
+              proslava na Trgu Nikole Đurkovića, gdje se dočekuje u restoranima,
+              kako do centra u novogodišnjoj noći i gdje rezervisati smještaj.
             </p>
 
             <!-- PROGRAM SECTION -->
             <section id="program" aria-labelledby="program-heading">
               <h2 id="program-heading" style="font-family:var(--ff-display);font-size:var(--step-3);font-weight:700;letter-spacing:-0.02em;margin-bottom:var(--sp-md)">
-                Program nastupa po danima
+                Program dočeka Nove 2027. godine
               </h2>
+
+              <div style="background:var(--c-sand);border:1px solid var(--c-divider);border-radius:var(--radius-lg);padding:var(--sp-md);margin-bottom:clamp(2rem,4vw,3rem)">
+                <p style="margin-bottom:0.75em">
+                  <strong>Zvanični program za doček 2027. još nije objavljen.</strong>
+                  Opština Herceg Novi i JUK Herceg Fest izvođače po pravilu saopštavaju
+                  tokom avgusta — prošle godine program je objavljen 1. avgusta.
+                  Ovu stranicu ažuriramo istog dana kada program bude poznat.
+                </p>
+                <p style="margin-bottom:0">
+                  Želite da vas obavijestimo?
+                  <a href="mailto:hotel-monako@hotmail.com?subject=Javite%20mi%20program%20do%C4%8Deka%202027.%20u%20Herceg%20Novom"
+                     style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">
+                    Pošaljite nam poruku</a> i javićemo vam čim lineup bude objavljen.
+                </p>
+              </div>
+
+              <h2 id="docek-2026" style="font-family:var(--ff-display);font-size:var(--step-2);font-weight:700;letter-spacing:-0.02em;margin-bottom:0.5em">
+                Kako je izgledao doček Nove 2026. godine
+              </h2>
+              <p style="margin-bottom:var(--sp-md);color:var(--c-muted)">
+                Najbolja najava onoga što vas čeka je prošlogodišnja proslava: pet
+                prazničnih dana, šest regionalnih zvijezda i <strong>skoro 10.000
+                ljudi na gradskom trgu</strong> u novogodišnjoj noći. Prije glavnog
+                programa održani su dječija Nova godina (28. decembra), veče Rada
+                Šerbedžije u Dvorani Park (29. decembra) i nastupi domaćih bendova
+                (30. decembra).
+              </p>
 
               <div class="program-grid">
 
                 <article class="program-card" aria-labelledby="card-nye">
                   <div class="program-card__header program-card__header--nye">
-                    <h3 class="program-card__date" id="card-nye">31. decembar 2026.</h3>
+                    <h3 class="program-card__date" id="card-nye">31. decembar 2025.</h3>
                     <span class="program-card__subtitle">Najluđa noć</span>
                   </div>
                   <div class="program-card__body">
@@ -867,7 +905,7 @@
 
                 <article class="program-card" aria-labelledby="card-jan1">
                   <div class="program-card__header program-card__header--jan1">
-                    <h3 class="program-card__date" id="card-jan1">1. januar 2027.</h3>
+                    <h3 class="program-card__date" id="card-jan1">1. januar 2026.</h3>
                     <span class="program-card__subtitle">Dan za sve generacije</span>
                   </div>
                   <div class="program-card__body">
@@ -882,7 +920,7 @@
 
                 <article class="program-card" aria-labelledby="card-jan2">
                   <div class="program-card__header program-card__header--jan2">
-                    <h3 class="program-card__date" id="card-jan2">2. januar 2027.</h3>
+                    <h3 class="program-card__date" id="card-jan2">2. januar 2026.</h3>
                     <span class="program-card__subtitle">Veče za ljubitelje pop muzike</span>
                   </div>
                   <div class="program-card__body">
@@ -896,13 +934,13 @@
 
                 <article class="program-card" aria-labelledby="card-kids">
                   <div class="program-card__header program-card__header--kids">
-                    <h3 class="program-card__date" id="card-kids">Dječiji program</h3>
-                    <span class="program-card__subtitle">Za najmlađe</span>
+                    <h3 class="program-card__date" id="card-kids">28. decembar 2025.</h3>
+                    <span class="program-card__subtitle">Dječija Nova godina</span>
                   </div>
                   <div class="program-card__body">
                     <p>
-                      Posebna proslava dječije Nove godine uz bogat program posvećen
-                      najmlađima sa različitim aktivnostima i iznenađenjima.
+                      Posebna proslava dječije Nove godine na platou ispred zgrade
+                      Opštine — nastupi za najmlađe, horovi i iznenađenja od 10 do 13 časova.
                     </p>
                   </div>
                 </article>
@@ -915,8 +953,12 @@
                      style="margin-top:clamp(2rem,4vw,3rem)">
               <h2 id="performers-heading"
                   style="font-family:var(--ff-display);font-size:var(--step-2);font-weight:700;letter-spacing:-0.02em;margin-bottom:0.75em">
-                Svi izvođači
+                Izvođači na dočeku 2026. godine
               </h2>
+              <p style="margin-bottom:var(--sp-sm);color:var(--c-muted)">
+                Lineup za 2027. objavićemo ovdje čim bude poznat. Ovako je izgledala
+                prošlogodišnja postava:
+              </p>
               <div class="performers" role="list">
                 <div class="performer" role="listitem">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
@@ -970,27 +1012,115 @@
               </div>
             </section>
 
+            <!-- SATNICA & LOKACIJA -->
+            <section id="satnica" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="satnica-heading">
+              <div class="article__body">
+                <h2 id="satnica-heading">Satnica i lokacija proslave</h2>
+                <p>
+                  Centralna proslava održava se na <strong>Trgu Nikole Đurkovića</strong>,
+                  glavnom gradskom trgu odmah ispod Starog grada. Tačna satnica za doček
+                  2027. biće objavljena uz zvanični program, a prethodnih godina raspored
+                  je izgledao ovako: dnevni i dječiji sadržaji u prijepodnevnim satima,
+                  koncerti na trgu od večernjih sati, <strong>vatromet u ponoć</strong>,
+                  a nastupi su se nastavljali i 1. i 2. januara. Prvog dana nove godine
+                  tradicionalno u podne nastupa Kamerni orkestar Herceg Novi ispred
+                  gradske Tore.
+                </p>
+              </div>
+            </section>
+
+            <!-- VATROMET -->
+            <section id="vatromet" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="vatromet-heading">
+              <div class="article__body">
+                <h2 id="vatromet-heading">Vatromet nad Bokom</h2>
+                <p>
+                  Trenutak zbog kojeg se dolazi u Herceg Novi: u ponoć nebo iznad
+                  ulaza u Bokokotorski zaliv obasja vatromet, a pogled sa trga i sa
+                  Šetališta Pet Danica pruža se preko otvorenog mora. Ako želite
+                  mirniji doživljaj, vatromet se odlično vidi i sa šetališta u Igalu —
+                  daleko od najveće gužve, uz more.
+                </p>
+              </div>
+            </section>
+
+            <!-- DOČEK U RESTORANIMA -->
+            <section id="restorani" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="restorani-heading">
+              <div class="article__body">
+                <h2 id="restorani-heading">Doček u hotelima i restoranima</h2>
+                <p>
+                  Pored proslave na otvorenom, brojni hotelski i gradski restorani
+                  organizuju <strong>svečane novogodišnje večere</strong> sa muzikom
+                  uživo — od konoba na obali do restorana u Starom gradu. Mjesta se
+                  rezervišu tokom novembra i decembra, pa se raspitajte na vrijeme.
+                  Za pregled najboljih lokala pogledajte naš vodič:
+                  <a href="/vesti/restorani-herceg-novi.html">Top 9 restorana u
+                  Herceg Novom i Igalu</a>.
+                </p>
+              </div>
+            </section>
+
+            <!-- KAKO DOĆI & PARKING -->
+            <section id="kako-doci" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="kako-doci-heading">
+              <div class="article__body">
+                <h2 id="kako-doci-heading">Kako doći i gdje parkirati u novogodišnjoj noći</h2>
+                <p>
+                  U novogodišnjoj noći centar Herceg Novog je najgužvija tačka
+                  rivijere — parking mjesta oko trga popune se rano, a saobraćaj u
+                  užem centru je otežan. Najpraktičnija kombinacija: smjestite se u
+                  <strong>Igalu</strong> i do trga dođite pješke
+                  <strong>Šetalištem Pet Danica</strong> (ugodna šetnja uz more,
+                  oko 30 minuta) ili taksijem za nekoliko minuta. Povratak šetalištem
+                  poslije ponoći, uz vatromet nad zalivom, mnogima bude najljepši dio večeri.
+                </p>
+              </div>
+            </section>
+
+            <!-- VRIJEME -->
+            <section id="vrijeme" style="margin-top:clamp(2rem,4vw,3rem)"
+                     aria-labelledby="vrijeme-heading">
+              <div class="article__body">
+                <h2 id="vrijeme-heading">Kakvo je vrijeme za Novu godinu?</h2>
+                <p>
+                  Herceg Novi ima jednu od najblažih zima na Jadranu. Krajem decembra
+                  dnevne temperature najčešće se kreću <strong>između 8 i 14 °C</strong>,
+                  pa doček na otvorenom uz jaknu i šal sasvim prija. Kiša je moguća,
+                  ali sniježne novogodišnje noći ovdje praktično ne postoje — a već
+                  početkom januara duž rivijere počinje da cvjeta mimoza, uvod u
+                  <a href="/praznik-mimoze-program.html">Praznik mimoze</a>.
+                </p>
+              </div>
+            </section>
+
             <!-- ORGANIZERS -->
             <section id="organizatori" style="margin-top:clamp(2rem,4vw,3rem)"
                      aria-labelledby="org-heading">
               <div class="article__body">
                 <h2 id="org-heading">Organizatori i pokrovitelji</h2>
-                <p>Program dočeka Nove 2027. u Herceg Novom organizuju:</p>
+                <p>
+                  Novogodišnji program u Herceg Novom tradicionalno organizuju gradske
+                  institucije, a zvanične najave objavljuju se na njihovim sajtovima:
+                </p>
               </div>
               <div class="organizers">
-                <span class="org-chip">
+                <a class="org-chip" href="https://www.hercegnovi.me/" rel="noopener noreferrer" target="_blank"
+                   style="text-decoration:none">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                  Opština Herceg Novi
-                </span>
+                  Opština Herceg Novi ↗
+                </a>
                 <a class="org-chip" href="https://www.novaunovi.me/" rel="noopener noreferrer" target="_blank"
                    style="text-decoration:none">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
                   Turistička organizacija Herceg Novi ↗
                 </a>
-                <span class="org-chip">
+                <a class="org-chip" href="https://www.hercegfest.me/" rel="noopener noreferrer" target="_blank"
+                   style="text-decoration:none">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
-                  JUK Herceg Fest
-                </span>
+                  JUK Herceg Fest ↗
+                </a>
               </div>
             </section>
 
@@ -1010,9 +1140,10 @@
                     </span>
                   </button>
                   <div class="faq__answer" id="faq1" role="region">
-                    Doček Nove 2027. u Herceg Novom odvija se od
-                    <strong>31. decembra 2026. do 2. januara 2027.</strong> na
-                    Trgu Nikole Đurkovića u centru grada. Ulaz je besplatan.
+                    Novogodišnja noć je <strong>31. decembra 2026.</strong> Herceg Novi
+                    tradicionalno organizuje višednevnu proslavu na Trgu Nikole Đurkovića —
+                    prošle godine od 28. decembra do 2. januara. Zvanični program za 2027.
+                    očekuje se tokom avgusta, a ovdje ga objavljujemo istog dana.
                   </div>
                 </div>
 
@@ -1024,9 +1155,10 @@
                     </span>
                   </button>
                   <div class="faq__answer" id="faq2" role="region">
-                    <strong>31. dec:</strong> Haris Džinović i Neda Ukraden.<br>
-                    <strong>1. jan:</strong> Željko Samardžić, Vesna Zmijanac i Kamerni orkestar Herceg Novi.<br>
-                    <strong>2. jan:</strong> Dženan Lončarević i Tropico Band.
+                    Izvođači za 2027. <strong>još nisu objavljeni</strong>. Prošle godine
+                    nastupali su Haris Džinović, Neda Ukraden, Željko Samardžić, Vesna
+                    Zmijanac, Dženan Lončarević i Tropico Band — pa se i ove godine
+                    očekuju regionalne zvijezde sličnog ranga.
                   </div>
                 </div>
 
@@ -1038,8 +1170,9 @@
                     </span>
                   </button>
                   <div class="faq__answer" id="faq3" role="region">
-                    Da, organizuje se posebna proslava dječije Nove godine uz bogat
-                    program posvećen najmlađima sa različitim aktivnostima i iznenađenjima.
+                    Da, grad tradicionalno organizuje dječiju Novu godinu. Za doček 2026.
+                    dječiji program održan je 28. decembra na platou ispred zgrade Opštine,
+                    od 10 do 13 časova.
                   </div>
                 </div>
 
@@ -1058,6 +1191,62 @@
                   </div>
                 </div>
 
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq5">
+                    Da li je ulaz na doček besplatan?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq5" role="region">
+                    Da — proslava na Trgu Nikole Đurkovića je otvorenog tipa i
+                    <strong>besplatna za sve posjetioce</strong>.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq6">
+                    U koliko sati počinje program u novogodišnjoj noći?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq6" role="region">
+                    Tačna satnica objavljuje se uz zvanični program. Prethodnih godina
+                    koncerti na trgu počinjali su u večernjim satima, a
+                    <strong>vatromet je u ponoć</strong>. Satnicu za 2027. objavićemo
+                    ovdje čim bude poznata.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq7">
+                    Gdje parkirati u novogodišnjoj noći?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq7" role="region">
+                    Parking oko trga popuni se rano, a centar je izuzetno gužvast.
+                    Praktičnije je smjestiti se u Igalu i do trga doći pješke
+                    Šetalištem Pet Danica (oko 30 minuta uz more) ili taksijem.
+                  </div>
+                </div>
+
+                <div class="faq__item" role="listitem">
+                  <button class="faq__question" aria-expanded="false" aria-controls="faq8">
+                    Kakvo je vrijeme u Herceg Novom za Novu godinu?
+                    <span class="faq__icon" aria-hidden="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                    </span>
+                  </button>
+                  <div class="faq__answer" id="faq8" role="region">
+                    Blago i mediteransko — krajem decembra dnevne temperature su
+                    najčešće <strong>između 8 i 14 °C</strong>. Moguća je kiša, ali je
+                    doček na otvorenom uz jaknu sasvim ugodan.
+                  </div>
+                </div>
+
               </div>
             </section>
 
@@ -1066,6 +1255,13 @@
           <!-- ── SIDEBAR ── -->
           <aside class="sidebar" aria-label="Rezervacija i sadržaj članka">
 
+            <div class="sidebar__card" style="text-align:center;background:var(--c-nye);border-color:var(--c-nye);color:#fff">
+              <p class="sidebar__eyebrow" style="color:rgba(255,255,255,0.6)">Do dočeka 2027. preostalo je</p>
+              <p style="font-family:var(--ff-display);font-size:var(--step-3);font-weight:700;line-height:1.1">
+                <span id="countdown-days">–</span> dana
+              </p>
+            </div>
+
             <div class="sidebar__card">
               <p class="sidebar__eyebrow">Smještaj za doček</p>
               <h2 class="sidebar__title">Monako Apartmani</h2>
@@ -1073,6 +1269,9 @@
                 <strong>100 m od Blatne plaže</strong>, blizu centra Herceg Novog.
                 Interesovanje za novogodišnji doček je ogromno —
                 <strong>rezervišite na vrijeme</strong>.
+                Ostajete duže od praznika? Tu je i
+                <a href="/mesecni-najam-igalo.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">izdavanje
+                stana u Herceg Novom (Igalo) — mjesečni najam 500€ sve uključeno</a>.
               </p>
               <a class="btn--tel" href="tel:+38267558240">+382 67 558 240</a>
               <a class="btn" href="mailto:hotel-monako@hotmail.com">
@@ -1086,15 +1285,31 @@
                 <ol class="toc__list" role="list">
                   <li><a class="toc__item" href="#program">
                     <span class="toc__dot" aria-hidden="true"></span>
-                    Program nastupa
+                    Program dočeka 2027.
                   </a></li>
-                  <li><a class="toc__item" href="#izvodjaci">
+                  <li><a class="toc__item" href="#docek-2026">
                     <span class="toc__dot" aria-hidden="true"></span>
-                    Svi izvođači
+                    Kako je bilo 2026.
                   </a></li>
-                  <li><a class="toc__item" href="#herceg-novi">
+                  <li><a class="toc__item" href="#satnica">
                     <span class="toc__dot" aria-hidden="true"></span>
-                    Herceg Novi – grad dočeka
+                    Satnica i lokacija
+                  </a></li>
+                  <li><a class="toc__item" href="#vatromet">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Vatromet nad Bokom
+                  </a></li>
+                  <li><a class="toc__item" href="#restorani">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Doček u restoranima
+                  </a></li>
+                  <li><a class="toc__item" href="#kako-doci">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Kako doći i parking
+                  </a></li>
+                  <li><a class="toc__item" href="#vrijeme">
+                    <span class="toc__dot" aria-hidden="true"></span>
+                    Vrijeme za Novu godinu
                   </a></li>
                   <li><a class="toc__item" href="#organizatori">
                     <span class="toc__dot" aria-hidden="true"></span>
@@ -1151,7 +1366,7 @@
         <h2 class="section-title" id="related-heading">Više o Herceg Novom i Igalu</h2>
         <div class="related__grid">
 
-          <article class="related-card">
+          <a class="related-card" href="/vesti/plaze-herceg-novi.html">
             <div class="related-card__img-wrap">
               <img class="related-card__img"
                 src="images/plaza-herceg-novi.jpg"
@@ -1160,42 +1375,38 @@
                 loading="lazy" decoding="async">
             </div>
             <div class="related-card__body">
-              <h3 class="related-card__title">
-                <a href="/vesti/plaze-herceg-novi.html">Top 9 Plaža u Herceg Novom i Igalu</a>
-              </h3>
+              <h3 class="related-card__title">Top 9 Plaža u Herceg Novom i Igalu</h3>
               <p class="related-card__excerpt">
                 Od Blatne plaže i Raffaella do kristalno čistih Žanjica — kompletan
                 vodič kroz 62 registrovane plaže opštine Herceg Novi.
               </p>
-              <a class="related-card__link" href="/vesti/plaze-herceg-novi.html">
+              <span class="related-card__link">
                 Pročitajte više
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-              </a>
+              </span>
             </div>
-          </article>
+          </a>
 
-          <article class="related-card">
+          <a class="related-card" href="/blatna-plaza.html">
             <div class="related-card__img-wrap">
               <img class="related-card__img"
-                src="images/blatna-plaza-igalo-1.jpg"
+                src="images/blatna-plaza-igalo-1.webp"
                 alt="Blatna plaža Igalo — lekovito blato"
                 width="560" height="315"
                 loading="lazy" decoding="async">
             </div>
             <div class="related-card__body">
-              <h3 class="related-card__title">
-                <a href="/blatna-plaza.html">Blatna Plaža Igalo — Lekovito Blato</a>
-              </h3>
+              <h3 class="related-card__title">Blatna Plaža Igalo — Lekovito Blato</h3>
               <p class="related-card__excerpt">
                 Najveća plaža Herceg Novog (9.000 m²) poznata po radioaktivnom mulju
                 koji liječi reumatizam. Besplatna terapija, 100 m od naših apartmana.
               </p>
-              <a class="related-card__link" href="/blatna-plaza.html">
+              <span class="related-card__link">
                 Pročitajte više
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-              </a>
+              </span>
             </div>
-          </article>
+          </a>
 
         </div>
       </div>
@@ -1251,6 +1462,14 @@
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
+    (function () {
+      var el = document.getElementById('countdown-days');
+      if (el) {
+        var nye = new Date('2027-01-01T00:00:00+01:00');
+        var days = Math.max(0, Math.ceil((nye - Date.now()) / 86400000));
+        el.textContent = days;
+      }
+    })();
     document.querySelectorAll('.faq__question').forEach(btn => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';

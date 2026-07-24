@@ -28,7 +28,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="sr_RS">
   <meta property="article:published_time" content="2024-05-01T08:00:00+02:00">
-  <meta property="article:modified_time" content="2026-07-02T08:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-04T08:00:00+02:00">
   <meta property="article:author" content="Monako Apartmani Igalo">
 
   <!-- Twitter Card -->
@@ -40,15 +40,15 @@
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE — PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
-  </noscript>
+  <link rel="preload" as="image"
+        href="../images/plaza-herceg-novi-650.webp"
+        imagesrcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w"
+        imagesizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
+        fetchpriority="high">
+  <link rel="preload" href="/fonts/fraunces-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/fraunces-normal-300-serbian.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-serbian.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
 
@@ -65,7 +65,7 @@
       "description": "Otkrijte 9 najljepših plaža u Herceg Novom i Igalu: Blatna plaža, Raffaello, Žanjice, Topla, plaža Instituta i više.",
       "image": "https://apartmani-igalo.com/images/plaza-herceg-novi.jpg",
       "datePublished": "2024-05-01T08:00:00+02:00",
-      "dateModified": "2026-07-02T08:00:00+02:00",
+      "dateModified": "2026-07-04T08:00:00+02:00",
       "author": {
         "@type": "Organization",
         "name": "Monako Apartmani Igalo",
@@ -144,7 +144,7 @@
           "name": "Koliko je Igalo udaljeno od Herceg Novog?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Centar Igala je oko 3–4 km od Starog grada Herceg Novog. Uz more ih povezuje šetalište Pet Danica — šetnja traje oko 40 minuta, a vožnja autom ili taksijem 5–10 minuta."
+            "text": "Centar Igala je oko 3–4 km od Starog grada Herceg Novog. Uz more ih povezuje šetalište Pet Danica — šetnja traje oko 40 minuta, a vožnja autom ili taksijem 5–10 minuta. Ravna promenada idealna je i za bicikl."
           }
         }
       ]
@@ -192,8 +192,8 @@
       --c-muted:     #5A6475;
       --c-star:      #E8A020;
 
-      --ff-display: 'Fraunces', Georgia, serif;
-      --ff-body:    'Inter', system-ui, -apple-system, sans-serif;
+      --ff-display: 'Fraunces', 'Fraunces-fallback', Georgia, serif;
+      --ff-body:    'Inter', 'Inter-fallback', system-ui, -apple-system, sans-serif;
 
       --step--1: clamp(0.8rem,  0.77rem + 0.13vw, 0.875rem);
       --step-0:  clamp(1rem,    0.95rem + 0.22vw, 1.125rem);
@@ -221,6 +221,17 @@
 
     /* ── RESET ─────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── Self-hosted fonts — font-display:optional (no FOUT, no CLS) ─────── */
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     /* ── Fallback font metrics — eliminates FOUT-driven CLS ─────── */
     @font-face {
       font-family: 'Inter-fallback';
@@ -789,7 +800,38 @@
       .nav, footer, .sidebar { display: none; }
       body { font-size: 12pt; }
     }
+  
+    /* ── ADSENSE GUARD — auto-ads inject fixed-width <ins> units at runtime;
+         cap them (and the columns they land in) so the article can never
+         stretch past the viewport on mobile ── */
+    .content-grid > * { min-width: 0; }
+    ins.adsbygoogle {
+      display: block !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    /* Google wraps each auto-injected unit in this container — cap it too, or a
+       fixed-width ad iframe inside it pushes the layout past the viewport. */
+    .google-auto-placed {
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      overflow: hidden;
+    }
+    ins.adsbygoogle iframe,
+    .google-auto-placed iframe { max-width: 100% !important; }
+
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -807,6 +849,7 @@
           </a>
           <ul class="nav__links" role="list">
             <li><a href="/about.html" class="nav__text-link">O nama</a></li>
+            <li><a href="/#cjenovnik" class="nav__text-link">Cjenovnik</a></li>
             <li><a href="/blog.html" class="nav__text-link">Vesti</a></li>
             <li><a href="/blatna-plaza.html" class="nav__text-link">Blatna plaža</a></li>
             <li>
@@ -863,7 +906,12 @@
         <!-- Hero image — LCP, eagerly loaded -->
         <figure class="article-hero__image">
           <img
-            src="../images/plaza-herceg-novi.jpg"
+            src="../images/plaza-herceg-novi-650.webp"
+            srcset="
+              ../images/plaza-herceg-novi-650.webp 650w,
+              ../images/plaza-herceg-novi.webp     960w
+            "
+            sizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
             alt="Panoramski pogled na plaže u Herceg Novom sa kristalno plavim Jadranskim morem"
             width="1160"
             height="508"
@@ -905,6 +953,25 @@
                 voda Žanjica.
               </p>
             </div>
+
+            <!-- ── BOOKING CTA (top) ── -->
+            <aside style="background:var(--c-sand);border:1px solid var(--c-divider);border-radius:var(--radius-lg);padding:clamp(1.25rem,3vw,1.75rem);margin-block:var(--sp-md)"
+                   aria-label="Smještaj u Igalu blizu plaža">
+              <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-muted);margin-bottom:0.5em">
+                Smještaj uz plažu · od 35 € za noć
+              </p>
+              <p style="font-size:var(--step--1);line-height:1.6;margin-bottom:1em">
+                Tražite <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">smještaj u Igalu</a> blizu
+                ovih plaža? Apartmani Monako su <strong>100 m od Blatne plaže</strong> —
+                besplatan parking i WiFi, cijene od <strong>35 € za noć</strong> van sezone.
+                <a href="/#cjenovnik" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Pogledajte cjenovnik</a>.
+              </p>
+              <a href="tel:+38267558240"
+                 style="display:inline-flex;align-items:center;gap:0.4em;background:var(--c-teal);color:#fff;padding:0.6em 1.2em;border-radius:var(--radius-sm);font-weight:600;font-size:var(--step--1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +382 67 558 240
+              </a>
+            </aside>
 
             <!-- ── BEACH 1 ── -->
             <article class="beach" id="blatna-plaza" aria-labelledby="beach1-title">
@@ -951,7 +1018,12 @@
               </div>
               <figure class="beach__image">
                 <img
-                  src="../images/blatna-plaza.jpg"
+                  src="../images/blatna-plaza-650.webp"
+                  srcset="
+                    ../images/blatna-plaza-650.webp 650w,
+                    ../images/blatna-plaza.webp     730w
+                  "
+                  sizes="(max-width: 900px) calc(100vw - 4rem), 716px"
                   alt="Blatna plaža Igalo — lekoviti morski mulj i Bokokotorski zaliv"
                   width="760"
                   height="428"
@@ -1002,7 +1074,12 @@
               </div>
               <figure class="beach__image">
                 <img
-                  src="../images/kruso.jpg"
+                  src="../images/kruso-650.webp"
+                  srcset="
+                    ../images/kruso-650.webp 650w,
+                    ../images/kruso.webp     1024w
+                  "
+                  sizes="(max-width: 900px) calc(100vw - 4rem), 716px"
                   alt="Plaža Raffaello (Topla) u Herceg Novom — pješčana plaža sa suncobranima"
                   width="760"
                   height="428"
@@ -1043,6 +1120,25 @@
                 </div>
               </div>
             </article>
+
+            <!-- ── BOOKING CTA (after Igalo beaches) ── -->
+            <aside style="background:var(--c-sand);border:1px solid var(--c-divider);border-radius:var(--radius-lg);padding:clamp(1.25rem,3vw,1.75rem);margin-bottom:clamp(2.5rem,5vw,3.5rem)"
+                   aria-label="Apartmani u Igalu blizu plaža">
+              <p style="font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--c-muted);margin-bottom:0.5em">
+                Ljetovanje na igalskim plažama
+              </p>
+              <p style="font-size:var(--step--1);line-height:1.6;margin-bottom:1em">
+                Blatna plaža, Raffaello i La Bamba su na igalskoj strani obale — naši
+                <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">apartmani u Igalu</a>
+                nalaze se na nekoliko minuta hoda od sve tri, već od <strong>35 € za noć</strong>.
+                Rezervišite direktno, bez provizija platformi.
+              </p>
+              <a href="tel:+38267558240"
+                 style="display:inline-flex;align-items:center;gap:0.4em;background:var(--c-teal);color:#fff;padding:0.6em 1.2em;border-radius:var(--radius-sm);font-weight:600;font-size:var(--step--1)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                +382 67 558 240
+              </a>
+            </aside>
 
             <!-- ── BEACH 4 ── -->
             <article class="beach" id="zanjice" aria-labelledby="beach4-title">
@@ -1189,7 +1285,9 @@
                 <p>
                   Plaža je javna i besplatna, ali relativno mala. Kupanje na Žalu doživljava
                   se kao neka vrsta privilegije — prepuštate se moru dok vas okružuju vjekovi
-                  istorije. Obavezno se makar jednom zaputite ovamo.
+                  istorije. Obavezno se makar jednom zaputite ovamo. A ako u grad stižete
+                  zimi, šetalište je najljepše kada rivijeru ožute
+                  <a href="/praznik-mimoze-program.html">dani mimoze u februaru</a>.
                 </p>
               </div>
               <figure class="beach__image">
@@ -1413,7 +1511,9 @@
                   <div class="faq__answer" id="faq7" role="region">
                     Oko <strong>3–4 km</strong>. Uz more ih povezuje šetalište
                     <strong>Pet Danica</strong> — šetnja traje oko 40 minuta, a vožnja
-                    autom ili taksijem 5–10 minuta.
+                    autom ili taksijem 5–10 minuta. Ravna promenada idealna je i za
+                    bicikl — pogledajte
+                    <a href="/iznajmljivanje-bicikla-herceg-novi-igalo.html">iznajmljivanje bicikla u Herceg Novom i Igalu</a>.
                   </div>
                 </div>
               </div>
@@ -1473,7 +1573,7 @@
             <div class="related-card__img-wrap">
               <img
                 class="related-card__img"
-                src="../images/blatna-plaza-igalo-1.jpg"
+                src="../images/blatna-plaza-igalo-1.webp"
                 alt="Blatna plaža Igalo — lekovito blato"
                 width="560"
                 height="315"

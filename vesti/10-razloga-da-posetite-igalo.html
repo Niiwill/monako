@@ -24,7 +24,7 @@
   <meta property="og:locale" content="sr_RS">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="article:published_time" content="2024-04-01T08:00:00+02:00">
-  <meta property="article:modified_time" content="2026-05-01T08:00:00+02:00">
+  <meta property="article:modified_time" content="2026-07-11T08:00:00+02:00">
   <meta property="article:author" content="Monako Apartmani Igalo">
   <meta property="article:section" content="Turistički vodič">
   <meta property="article:tag" content="Herceg Novi">
@@ -45,16 +45,15 @@
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE — PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
-        onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
-  </noscript>
-  <link rel="preload" as="image" href="../images/plaza-herceg-novi.jpg" fetchpriority="high">
+  <link rel="preload" as="image"
+        href="../images/plaza-herceg-novi-650.webp"
+        imagesrcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w"
+        imagesizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
+        fetchpriority="high">
+  <link rel="preload" href="/fonts/fraunces-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/fraunces-normal-300-serbian.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-serbian.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
 
@@ -71,7 +70,7 @@
       "description": "Otkrijte 10 razloga zašto Igalo i Herceg Novi trebaju biti vaša sljedeća odmorna destinacija.",
       "image": "https://apartmani-igalo.com/images/plaza-herceg-novi.jpg",
       "datePublished": "2024-04-01T08:00:00+02:00",
-      "dateModified": "2026-05-01T08:00:00+02:00",
+      "dateModified": "2026-07-11T08:00:00+02:00",
       "inLanguage": "sr",
       "author": {
         "@type": "Organization",
@@ -202,6 +201,18 @@
       --shadow-card: 0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.07);
       --trans: 200ms ease;
     }
+
+    /* ── Self-hosted fonts — font-display:optional (no FOUT, no CLS) ─────── */
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
     /* ── Fallback font metrics — zero FOUT CLS ── */
     @font-face {
@@ -660,6 +671,14 @@
       }
     }
     @media print { .nav, footer, .sidebar { display: none; } body { font-size: 12pt; } }
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
 </head>
 
@@ -719,7 +738,7 @@
         <div class="article-hero__meta">
           <span class="article-hero__meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            Ažurirano: maj 2026.
+            Ažurirano: jul 2026.
           </span>
           <span class="article-hero__meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -738,7 +757,12 @@
         <!-- LCP image — eagerly loaded, preloaded in head -->
         <figure class="article-hero__image">
           <img
-            src="../images/plaza-herceg-novi.jpg"
+            src="../images/plaza-herceg-novi-650.webp"
+            srcset="
+              ../images/plaza-herceg-novi-650.webp 650w,
+              ../images/plaza-herceg-novi.webp     960w
+            "
+            sizes="(max-width: 1160px) calc(100vw - 4rem), 1114px"
             alt="Panoramski pogled na obalu Herceg Novog sa kristalno plavim Jadranskim morem i zelenim brdima"
             width="1160" height="508"
             fetchpriority="high"
@@ -827,7 +851,10 @@
                   Ako preferirate manje gužve i svježije temperature, <strong>pred- i
                   posezoni</strong> (maj–juni i septembar–oktobar) nude 15–22 °C, toplo
                   more i znatno mirniji ambijent. Zima je blaga na 10–12 °C — savršena
-                  za šetnju bedemima starog grada.
+                  za šetnju bedemima starog grada. Baš zbog te blage zime mimoza ovdje
+                  cvjeta usred februara, kada cijeli grad slavi
+                  <a href="/praznik-mimoze-program.html">Praznik mimoze — festival po
+                  kojem je Herceg Novi poznat u cijelom regionu</a>.
                 </p>
                 <table class="climate-table" aria-label="Pregled klime u Igalu po sezonama">
                   <thead>
@@ -914,7 +941,7 @@
                   <strong>100 m od vrata</strong>. Besplatna blato-terapija na dohvat
                   ruke, svaki dan boravka. Dolazite na dužu terapiju ili zimovanje?
                   Tu je i <a href="/mesecni-najam-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">mesečni
-                  najam apartmana u Igalu — izdavanje stana od 500€ sve uključeno</a>.
+                  najam apartmana u Igalu, Herceg Novi — izdavanje stana od 500€ sve uključeno</a>.
                 </div>
               </div>
               <figure class="reason__image">
@@ -937,16 +964,21 @@
                 <p>
                   Crnogorska kuhinja crpi inspiraciju i s jadranske obale i iz balkanskog
                   zaleđa, što rezultira stolom koji je istovremeno jednostavan i duboko
-                  zadovoljavajući. Duž bedemsata Herceg Novog naći ćete ribe ulovljene
-                  tog jutra — <strong>lubin, oradu, lignje i hobotničku salatu</strong>
-                  — poslužene s domaćim maslinovim uljem i lokalnim bijelim vinom.
+                  zadovoljavajući. Duž šetališta od Igala do Herceg Novog naći ćete ribe
+                  ulovljene tog jutra — <strong>lubin, oradu, lignje i hobotničku
+                  salatu</strong> — poslužene s domaćim maslinovim uljem i lokalnim
+                  bijelim vinom.
                 </p>
                 <p>
                   Obavezno probajte <strong>njeguški pršut</strong> (sušeno meso sa
                   planine Lovćen), lokalne sireve i <em>kačamak</em> — srdačno jelo od
                   kukuruznog brašna s puterom i kajmakom. Obrok u restoranu počinje od
                   svega <strong>6 €</strong>, tako da svakodnevna večera ne opterećuje
-                  budžet.
+                  budžet. Gdje tačno sjesti? Pripremili smo vodič lokalca kroz
+                  <a href="/vesti/restorani-igalo.html">restorane u Igalu</a> — uz
+                  šetalište i Blatnu plažu — kao i širi pregled
+                  <a href="/vesti/restorani-herceg-novi.html">restorana u Herceg
+                  Novom</a>.
                 </p>
                 <div class="fact-chips">
                   <span class="fact-chip">Obrok od 6 €</span>
@@ -1038,10 +1070,10 @@
                   <span class="fact-chip">Ulaz u tvrđavu: 3 €</span>
                 </div>
                 <p>
-                  Smještaj u <strong>Monako Apartmanima</strong> — 100 m od plaže,
-                  besplatan parking i WiFi — cijenovno je konkurentan opcijama koje
-                  su daleko udaljenije od mora.
-                  <a href="/">Rezervišite direktno</a> i uštedite na provizijama
+                  Smještaj u <strong>Monako Apartmanima</strong> — naši
+                  <a href="/">apartmani u Igalu</a> su 100 m od plaže, uz besplatan
+                  parking i WiFi — cijenovno je konkurentan opcijama koje su daleko
+                  udaljenije od mora. Rezervišite direktno i uštedite na provizijama
                   booking platformi.
                 </p>
               </div>
@@ -1252,7 +1284,7 @@
           <article class="related-card">
             <div class="related-card__img-wrap">
               <img class="related-card__img"
-                src="../images/blatna-plaza-igalo-1.jpg"
+                src="../images/blatna-plaza-igalo-1.webp"
                 alt="Blatna plaža Igalo — lekovito blato"
                 width="560" height="315" loading="lazy" decoding="async">
             </div>
@@ -1275,7 +1307,7 @@
           <article class="related-card">
             <div class="related-card__img-wrap">
               <img class="related-card__img"
-                src="../images/plaza-herceg-novi.jpg"
+                src="../images/plaza-herceg-novi-650.webp"
                 alt="Plaže Herceg Novi — vodič"
                 width="560" height="315" loading="lazy" decoding="async">
             </div>

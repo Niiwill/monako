@@ -31,13 +31,13 @@
   <meta name="twitter:description" content="8 best beaches near Herceg Novi and Igalo with practical prices and travel tips for 2026.">
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/plaza-herceg-novi.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap"></noscript>
-
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
-  <link rel="preload" as="image" href="../images/plaza-herceg-novi.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="../images/plaza-herceg-novi.webp" imagesrcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w" imagesizes="(min-width: 1182px) 1064px, 90vw" type="image/webp" fetchpriority="high">
+
+  <link rel="preload" href="/fonts/fraunces-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/fraunces-normal-300-serbian.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-normal-400-serbian.woff2" as="font" type="font/woff2" crossorigin>
 
   <script type="application/ld+json">
   [
@@ -111,6 +111,17 @@
       --radius-sm:4px;--radius-md:8px;--radius-lg:16px;
       --max-wide:1160px;--shadow-card:0 1px 3px rgba(0,0,0,.06),0 4px 16px rgba(0,0,0,.07);--trans:200ms ease;
     }
+    /* ── Self-hosted fonts — font-display:optional (no FOUT, no CLS) ─────── */
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:optional;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
+    @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
     @font-face{font-family:'Fraunces-fallback';src:local('Georgia');size-adjust:115%;ascent-override:88%;descent-override:20%;line-gap-override:0%}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -257,7 +268,17 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
     @media print{.nav,footer,.sidebar{display:none}body{font-size:12pt}}
+  
+    /* ── A11Y: contrast + minimum tap-target sizing ── */
+    .footer__brand span { color: #4AA3EA; }
+    .footer__links a, .footer__email, .footer__bottom a,
+    .breadcrumb__list a, .related-card__link, .blog-card__link,
+    .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
+      display: inline-flex; align-items: center; min-height: 24px;
+    }
   </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
+     crossorigin="anonymous"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -324,7 +345,10 @@
           </span>
         </div>
         <figure class="article-hero__image">
-          <img src="../images/plaza-herceg-novi.jpg" alt="Panoramic view of beaches in Herceg Novi with crystal-clear Adriatic water" width="1160" height="508" fetchpriority="high" loading="eager" decoding="sync">
+          <picture>
+            <source type="image/webp" srcset="../images/plaza-herceg-novi-650.webp 650w, ../images/plaza-herceg-novi.webp 960w" sizes="(min-width: 1182px) 1064px, 90vw">
+            <img src="../images/plaza-herceg-novi.jpg" alt="Panoramic view of beaches in Herceg Novi with crystal-clear Adriatic water" width="1160" height="508" fetchpriority="high" loading="eager" decoding="sync">
+          </picture>
           <figcaption class="sr-only">Beaches of Herceg Novi and Igalo, Montenegro</figcaption>
         </figure>
       </div>
@@ -349,7 +373,9 @@
                 has <strong>25 km of coastline</strong> and <strong>62 registered
                 beaches</strong> — one of the reasons it's one of the most popular resort
                 areas in Montenegro. From small, hidden coves among the rocks to large
-                organised beaches with sunbeds and umbrellas.
+                organised beaches with sunbeds and umbrellas. Many of them are easiest
+                to reach along the flat seaside promenade — see our guide to
+                <a href="/rent-a-bike-herceg-novi-igalo.html">renting a bike in Herceg Novi and Igalo</a>.
               </p>
               <p>
                 In the summer months (July, August) the town gets around
@@ -398,7 +424,10 @@
                 </div>
               </div>
               <figure class="beach__image">
-                <img src="../images/blatna-plaza.jpg" alt="Blatna Plaža Igalo — therapeutic sea mud beach on the Bay of Kotor" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/blatna-plaza-700.webp 700w, ../images/blatna-plaza.webp 730w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/blatna-plaza.jpg" alt="Blatna Plaža Igalo — therapeutic sea mud beach on the Bay of Kotor" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <p style="margin-top:1em;font-size:var(--step--1);color:var(--c-muted)">
                 Monako Apartments are <strong>100 metres</strong> from this beach.
@@ -433,7 +462,10 @@
                 </div>
               </div>
               <figure class="beach__image">
-                <img src="../images/kruso.jpg" alt="Raffaello Beach (Topla) in Herceg Novi — sandy beach with sun umbrellas" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/kruso-700.webp 700w, ../images/kruso.webp 1024w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/kruso.jpg" alt="Raffaello Beach (Topla) in Herceg Novi — sandy beach with sun umbrellas" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </article>
 
@@ -500,7 +532,10 @@
                 </div>
               </div>
               <figure class="beach__image">
-                <img src="../images/zanjice.jpg" alt="Žanjice Beach on the Luštica peninsula — pebble beach with crystal-clear water" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/zanjice-700.webp 700w, ../images/zanjice.webp 1280w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/zanjice.jpg" alt="Žanjice Beach on the Luštica peninsula — pebble beach with crystal-clear water" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </article>
 
@@ -528,7 +563,10 @@
                 </div>
               </div>
               <figure class="beach__image">
-                <img src="../images/plaza-topla.jpg" alt="Topla Beach in Herceg Novi — city beach with full infrastructure" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/plaza-topla-700.webp 700w, ../images/plaza-topla.webp 799w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/plaza-topla.jpg" alt="Topla Beach in Herceg Novi — city beach with full infrastructure" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </article>
 
@@ -555,7 +593,10 @@
                 </p>
               </div>
               <figure class="beach__image">
-                <img src="../images/plaza-tunel.jpg" alt="Beach Near the Tunnel in Herceg Novi — small intimate rocky beach favoured by locals" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/plaza-tunel-700.webp 700w, ../images/plaza-tunel.webp 799w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/plaza-tunel.jpg" alt="Beach Near the Tunnel in Herceg Novi — small intimate rocky beach favoured by locals" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </article>
 
@@ -580,11 +621,17 @@
                   The beach is public and free, though relatively small. Swimming
                   at Žalo feels like something of a privilege — you're immersed in
                   the sea while surrounded by centuries of history. Worth a visit
-                  at least once during your stay.
+                  at least once during your stay. And if you come in winter, the
+                  promenade is at its prettiest in February, when the riviera turns
+                  yellow for the <a href="/mimosa-festival-herceg-novi.html">Mimosa
+                  Festival</a>.
                 </p>
               </div>
               <figure class="beach__image">
-                <img src="../images/zalo.jpg" alt="Žalo Beach in Herceg Novi — in front of Forte Mare fortress and the historic centre" width="760" height="428" loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp" srcset="../images/zalo-700.webp 700w, ../images/zalo.webp 730w" sizes="(min-width: 901px) 700px, 90vw">
+                  <img src="../images/zalo.jpg" alt="Žalo Beach in Herceg Novi — in front of Forte Mare fortress and the historic centre" width="760" height="428" loading="lazy" decoding="async">
+                </picture>
               </figure>
             </article>
 
@@ -753,7 +800,7 @@
         <h2 class="section-title" id="related-heading">More Guides for Herceg Novi and Igalo</h2>
         <div class="related__grid">
           <article class="related-card">
-            <div class="related-card__img-wrap"><img class="related-card__img" src="../images/restorani/holiday1.jpg" alt="Best restaurants in Herceg Novi" width="560" height="315" loading="lazy" decoding="async"></div>
+            <div class="related-card__img-wrap"><picture><source type="image/webp" srcset="../images/restorani/holiday1-700.webp 700w, ../images/restorani/holiday1.webp 730w" sizes="(min-width: 560px) 45vw, 90vw"><img class="related-card__img" src="../images/restorani/holiday1.jpg" alt="Best restaurants in Herceg Novi" width="560" height="315" loading="lazy" decoding="async"></picture></div>
             <div class="related-card__body">
               <h3 class="related-card__title"><a href="/vesti/restaurants-herceg-novi.html">Best 8 Restaurants in Herceg Novi & Igalo</a></h3>
               <p class="related-card__excerpt">From clifftop dining at Holiday Lounge Bar to fresh-caught seafood at Ribarsko Selo — the 8 restaurants you shouldn't miss.</p>
