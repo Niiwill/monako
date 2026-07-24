@@ -1,0 +1,1964 @@
+{
+ "fetched": "2026-07-25",
+ "property": "sc-domain:apartmani-igalo.com",
+ "window": {
+  "start": "2026-06-26",
+  "end": "2026-07-22",
+  "days": 27,
+  "note": "Jul 23 not yet processed"
+ },
+ "totals_web": {
+  "clicks": 5864,
+  "impressions": 91361,
+  "ctr": 0.0642,
+  "position": 5.54
+ },
+ "notes": "DEPLOY 4 (this session): 10-razloga title/meta rewritten for \"igalo\" query (6,905 impr, 1.9% CTR, pos 6.9 = largest non-homepage CTR gap, ~187 missed clicks); restorani-herceg-novi meta trimmed 170->136 chars to stop SERP truncation (10,466 impr, 2.43% CTR). Deploy-#3 homepage test left untouched (day 4/14). Content gap logged: \"restoran maslina igalo\" 136 impr pos 8.7 — no such restaurant on site, needs owner verification before writing.",
+ "deploys": [
+  {
+   "date": "2026-07-05",
+   "desc": "schema+pricing+CTAs+internal links (PRs 6-13)"
+  },
+  {
+   "date": "2026-07-11",
+   "desc": "restorani-igalo page, 10-razloga refresh, schema consolidation (PR 39)"
+  },
+  {
+   "date": "2026-07-16",
+   "desc": "PR 51 site-audit fixes + PR 52 schema type -> VacationRental"
+  },
+  {
+   "date": "2026-07-20",
+   "desc": "DEPLOY 3: homepage title/meta CTR test + La Bamba. Measurement Jul 20 - Aug 3."
+  },
+  {
+   "date": "2026-07-25",
+   "desc": "DEPLOY 4: 10-razloga title/meta (target \"igalo\"); restorani-hn meta length fix."
+  }
+ ],
+ "baselines_deploy4": {
+  "igalo": {
+   "impressions": 6905,
+   "ctr": 0.019,
+   "position": 6.9,
+   "page": "/vesti/10-razloga-da-posetite-igalo.html"
+  },
+  "page_10razloga": {
+   "impressions": 11060,
+   "ctr": 0.0273,
+   "position": 6.9
+  },
+  "page_restorani_hn": {
+   "impressions": 10466,
+   "ctr": 0.0243,
+   "position": 6.8
+  }
+ },
+ "daily": [
+  {
+   "date": "2026-06-26",
+   "clicks": 115,
+   "impressions": 1956,
+   "ctr": 0.0588,
+   "position": 6.0
+  },
+  {
+   "date": "2026-06-27",
+   "clicks": 133,
+   "impressions": 1889,
+   "ctr": 0.0704,
+   "position": 6.0
+  },
+  {
+   "date": "2026-06-28",
+   "clicks": 126,
+   "impressions": 2201,
+   "ctr": 0.0572,
+   "position": 5.7
+  },
+  {
+   "date": "2026-06-29",
+   "clicks": 130,
+   "impressions": 1947,
+   "ctr": 0.0668,
+   "position": 5.8
+  },
+  {
+   "date": "2026-06-30",
+   "clicks": 119,
+   "impressions": 1933,
+   "ctr": 0.0616,
+   "position": 6.3
+  },
+  {
+   "date": "2026-07-01",
+   "clicks": 102,
+   "impressions": 1898,
+   "ctr": 0.0537,
+   "position": 7.8
+  },
+  {
+   "date": "2026-07-02",
+   "clicks": 115,
+   "impressions": 1737,
+   "ctr": 0.0662,
+   "position": 5.8
+  },
+  {
+   "date": "2026-07-03",
+   "clicks": 125,
+   "impressions": 1832,
+   "ctr": 0.0682,
+   "position": 5.9
+  },
+  {
+   "date": "2026-07-04",
+   "clicks": 117,
+   "impressions": 1959,
+   "ctr": 0.0597,
+   "position": 5.7
+  },
+  {
+   "date": "2026-07-05",
+   "clicks": 141,
+   "impressions": 2289,
+   "ctr": 0.0616,
+   "position": 5.8
+  },
+  {
+   "date": "2026-07-06",
+   "clicks": 148,
+   "impressions": 2219,
+   "ctr": 0.0667,
+   "position": 5.5
+  },
+  {
+   "date": "2026-07-07",
+   "clicks": 255,
+   "impressions": 3690,
+   "ctr": 0.0691,
+   "position": 5.4
+  },
+  {
+   "date": "2026-07-08",
+   "clicks": 290,
+   "impressions": 4052,
+   "ctr": 0.0716,
+   "position": 5.4
+  },
+  {
+   "date": "2026-07-09",
+   "clicks": 254,
+   "impressions": 3918,
+   "ctr": 0.0648,
+   "position": 5.2
+  },
+  {
+   "date": "2026-07-10",
+   "clicks": 237,
+   "impressions": 3839,
+   "ctr": 0.0617,
+   "position": 5.2
+  },
+  {
+   "date": "2026-07-11",
+   "clicks": 271,
+   "impressions": 3881,
+   "ctr": 0.0698,
+   "position": 5.1
+  },
+  {
+   "date": "2026-07-12",
+   "clicks": 329,
+   "impressions": 4878,
+   "ctr": 0.0674,
+   "position": 5.3
+  },
+  {
+   "date": "2026-07-13",
+   "clicks": 273,
+   "impressions": 4154,
+   "ctr": 0.0657,
+   "position": 5.4
+  },
+  {
+   "date": "2026-07-14",
+   "clicks": 271,
+   "impressions": 4371,
+   "ctr": 0.062,
+   "position": 5.5
+  },
+  {
+   "date": "2026-07-15",
+   "clicks": 288,
+   "impressions": 4208,
+   "ctr": 0.0684,
+   "position": 5.8
+  },
+  {
+   "date": "2026-07-16",
+   "clicks": 235,
+   "impressions": 4113,
+   "ctr": 0.0571,
+   "position": 5.3
+  },
+  {
+   "date": "2026-07-17",
+   "clicks": 291,
+   "impressions": 4491,
+   "ctr": 0.0648,
+   "position": 5.2
+  },
+  {
+   "date": "2026-07-18",
+   "clicks": 278,
+   "impressions": 4236,
+   "ctr": 0.0656,
+   "position": 5.3
+  },
+  {
+   "date": "2026-07-19",
+   "clicks": 334,
+   "impressions": 5435,
+   "ctr": 0.0615,
+   "position": 5.5
+  },
+  {
+   "date": "2026-07-20",
+   "clicks": 305,
+   "impressions": 4690,
+   "ctr": 0.065,
+   "position": 5.2
+  },
+  {
+   "date": "2026-07-21",
+   "clicks": 296,
+   "impressions": 4922,
+   "ctr": 0.0601,
+   "position": 5.4
+  },
+  {
+   "date": "2026-07-22",
+   "clicks": 286,
+   "impressions": 4623,
+   "ctr": 0.0619,
+   "position": 5.6
+  }
+ ],
+ "queries": [
+  {
+   "query": "plaze herceg novi",
+   "clicks": 314,
+   "impressions": 964,
+   "ctr": 0.3257,
+   "position": 2.2
+  },
+  {
+   "query": "herceg novi plaze",
+   "clicks": 305,
+   "impressions": 2911,
+   "ctr": 0.1048,
+   "position": 3.0
+  },
+  {
+   "query": "igalo plaze",
+   "clicks": 205,
+   "impressions": 1907,
+   "ctr": 0.1075,
+   "position": 1.8
+  },
+  {
+   "query": "igalo",
+   "clicks": 140,
+   "impressions": 8185,
+   "ctr": 0.0171,
+   "position": 7.2
+  },
+  {
+   "query": "plaže u herceg novom",
+   "clicks": 101,
+   "impressions": 344,
+   "ctr": 0.2936,
+   "position": 2.6
+  },
+  {
+   "query": "blatna plaza igalo",
+   "clicks": 87,
+   "impressions": 733,
+   "ctr": 0.1187,
+   "position": 4.5
+  },
+  {
+   "query": "herceg novi plaže",
+   "clicks": 84,
+   "impressions": 247,
+   "ctr": 0.3401,
+   "position": 2.2
+  },
+  {
+   "query": "apartmani monako igalo",
+   "clicks": 79,
+   "impressions": 384,
+   "ctr": 0.2057,
+   "position": 1.1
+  },
+  {
+   "query": "plaze u herceg novom",
+   "clicks": 57,
+   "impressions": 238,
+   "ctr": 0.2395,
+   "position": 2.3
+  },
+  {
+   "query": "igalo plaza",
+   "clicks": 56,
+   "impressions": 821,
+   "ctr": 0.0682,
+   "position": 1.8
+  },
+  {
+   "query": "herceg novi plaza",
+   "clicks": 53,
+   "impressions": 644,
+   "ctr": 0.0823,
+   "position": 2.7
+  },
+  {
+   "query": "plaze u igalu",
+   "clicks": 52,
+   "impressions": 140,
+   "ctr": 0.3714,
+   "position": 2.2
+  },
+  {
+   "query": "plaze igalo",
+   "clicks": 46,
+   "impressions": 252,
+   "ctr": 0.1825,
+   "position": 2
+  },
+  {
+   "query": "plaže herceg novi",
+   "clicks": 44,
+   "impressions": 158,
+   "ctr": 0.2785,
+   "position": 2.6
+  },
+  {
+   "query": "igalo plaže",
+   "clicks": 42,
+   "impressions": 173,
+   "ctr": 0.2428,
+   "position": 1.6
+  },
+  {
+   "query": "igalo plaze iskustva",
+   "clicks": 40,
+   "impressions": 265,
+   "ctr": 0.1509,
+   "position": 3.9
+  },
+  {
+   "query": "plaža herceg novi",
+   "clicks": 40,
+   "impressions": 246,
+   "ctr": 0.1626,
+   "position": 2.1
+  },
+  {
+   "query": "plaže u igalu",
+   "clicks": 40,
+   "impressions": 124,
+   "ctr": 0.3226,
+   "position": 1.3
+  },
+  {
+   "query": "monako apartmani igalo",
+   "clicks": 36,
+   "impressions": 171,
+   "ctr": 0.2105,
+   "position": 1.0
+  },
+  {
+   "query": "plaza herceg novi",
+   "clicks": 35,
+   "impressions": 280,
+   "ctr": 0.125,
+   "position": 3.0
+  },
+  {
+   "query": "igalo apartmani",
+   "clicks": 34,
+   "impressions": 3257,
+   "ctr": 0.0104,
+   "position": 2.9
+  },
+  {
+   "query": "najlepse plaze u herceg novom",
+   "clicks": 34,
+   "impressions": 68,
+   "ctr": 0.5,
+   "position": 2
+  },
+  {
+   "query": "apartmani igalo",
+   "clicks": 33,
+   "impressions": 1791,
+   "ctr": 0.0184,
+   "position": 4.6
+  },
+  {
+   "query": "herceg novi plaze iskustva",
+   "clicks": 33,
+   "impressions": 249,
+   "ctr": 0.1325,
+   "position": 2.9
+  },
+  {
+   "query": "plaza igalo",
+   "clicks": 33,
+   "impressions": 399,
+   "ctr": 0.0827,
+   "position": 5.6
+  },
+  {
+   "query": "apartmani monako igalo цене",
+   "clicks": 31,
+   "impressions": 113,
+   "ctr": 0.2743,
+   "position": 1.5
+  },
+  {
+   "query": "blatna plaza igalo smestaj cene",
+   "clicks": 29,
+   "impressions": 289,
+   "ctr": 0.1003,
+   "position": 2.5
+  },
+  {
+   "query": "monako igalo",
+   "clicks": 28,
+   "impressions": 130,
+   "ctr": 0.2154,
+   "position": 1.1
+  },
+  {
+   "query": "najbolje plaze u herceg novom",
+   "clicks": 27,
+   "impressions": 53,
+   "ctr": 0.5094,
+   "position": 1.5
+  },
+  {
+   "query": "najbolje plaze herceg novi",
+   "clicks": 26,
+   "impressions": 65,
+   "ctr": 0.4,
+   "position": 1.7
+  },
+  {
+   "query": "igalo blatna plaza",
+   "clicks": 23,
+   "impressions": 119,
+   "ctr": 0.1933,
+   "position": 1.3
+  },
+  {
+   "query": "plaže igalo",
+   "clicks": 23,
+   "impressions": 81,
+   "ctr": 0.284,
+   "position": 1.8
+  },
+  {
+   "query": "apartmani igalo blizu plaze",
+   "clicks": 22,
+   "impressions": 920,
+   "ctr": 0.0239,
+   "position": 7.6
+  },
+  {
+   "query": "plaze igalo herceg novi",
+   "clicks": 22,
+   "impressions": 64,
+   "ctr": 0.3438,
+   "position": 1.3
+  },
+  {
+   "query": "herceg novi plaže slike",
+   "clicks": 21,
+   "impressions": 129,
+   "ctr": 0.1628,
+   "position": 2.3
+  },
+  {
+   "query": "najbolja plaza u herceg novom",
+   "clicks": 21,
+   "impressions": 51,
+   "ctr": 0.4118,
+   "position": 1.8
+  },
+  {
+   "query": "blatna plaza igalo smestaj",
+   "clicks": 18,
+   "impressions": 169,
+   "ctr": 0.1065,
+   "position": 1.9
+  },
+  {
+   "query": "najlepse plaze herceg novi",
+   "clicks": 18,
+   "impressions": 73,
+   "ctr": 0.2466,
+   "position": 2.8
+  },
+  {
+   "query": "plaza u igalu",
+   "clicks": 18,
+   "impressions": 50,
+   "ctr": 0.36,
+   "position": 1.2
+  },
+  {
+   "query": "herceg novi najlepse plaze",
+   "clicks": 16,
+   "impressions": 38,
+   "ctr": 0.4211,
+   "position": 1.7
+  },
+  {
+   "query": "najljepse plaze u herceg novom",
+   "clicks": 16,
+   "impressions": 33,
+   "ctr": 0.4848,
+   "position": 2.2
+  },
+  {
+   "query": "plaza igalo slike",
+   "clicks": 16,
+   "impressions": 259,
+   "ctr": 0.0618,
+   "position": 1.2
+  },
+  {
+   "query": "plaza topla herceg novi",
+   "clicks": 16,
+   "impressions": 219,
+   "ctr": 0.0731,
+   "position": 2.4
+  },
+  {
+   "query": "apartman monako igalo",
+   "clicks": 15,
+   "impressions": 77,
+   "ctr": 0.1948,
+   "position": 1.2
+  },
+  {
+   "query": "herceg novi",
+   "clicks": 15,
+   "impressions": 1030,
+   "ctr": 0.0146,
+   "position": 15.6
+  },
+  {
+   "query": "herceg novi najbolje plaze",
+   "clicks": 14,
+   "impressions": 33,
+   "ctr": 0.4242,
+   "position": 2.3
+  },
+  {
+   "query": "igalo blato plaza",
+   "clicks": 14,
+   "impressions": 49,
+   "ctr": 0.2857,
+   "position": 1.3
+  },
+  {
+   "query": "najljepsa plaza u herceg novom",
+   "clicks": 14,
+   "impressions": 26,
+   "ctr": 0.5385,
+   "position": 1.8
+  },
+  {
+   "query": "plaza u herceg novom",
+   "clicks": 14,
+   "impressions": 48,
+   "ctr": 0.2917,
+   "position": 2.3
+  },
+  {
+   "query": "najlepsa plaza u herceg novom",
+   "clicks": 13,
+   "impressions": 26,
+   "ctr": 0.5,
+   "position": 1.5
+  },
+  {
+   "query": "plaze oko herceg novog",
+   "clicks": 13,
+   "impressions": 42,
+   "ctr": 0.3095,
+   "position": 2.3
+  },
+  {
+   "query": "plaža igalo",
+   "clicks": 13,
+   "impressions": 111,
+   "ctr": 0.1171,
+   "position": 2.3
+  },
+  {
+   "query": "restorani herceg novi",
+   "clicks": 13,
+   "impressions": 355,
+   "ctr": 0.0366,
+   "position": 5.3
+  },
+  {
+   "query": "šta videti u herceg novom",
+   "clicks": 13,
+   "impressions": 55,
+   "ctr": 0.2364,
+   "position": 4.1
+  },
+  {
+   "query": "herceg novi sta videti",
+   "clicks": 12,
+   "impressions": 82,
+   "ctr": 0.1463,
+   "position": 4.4
+  },
+  {
+   "query": "igalo plaza blato",
+   "clicks": 12,
+   "impressions": 78,
+   "ctr": 0.1538,
+   "position": 1.5
+  },
+  {
+   "query": "pescane plaze u herceg novom",
+   "clicks": 12,
+   "impressions": 55,
+   "ctr": 0.2182,
+   "position": 2.6
+  },
+  {
+   "query": "igalo blato",
+   "clicks": 11,
+   "impressions": 132,
+   "ctr": 0.0833,
+   "position": 4.5
+  },
+  {
+   "query": "igalo iskustva",
+   "clicks": 11,
+   "impressions": 128,
+   "ctr": 0.0859,
+   "position": 4.4
+  },
+  {
+   "query": "igalo plaža",
+   "clicks": 11,
+   "impressions": 90,
+   "ctr": 0.1222,
+   "position": 1.9
+  },
+  {
+   "query": "pescane plaze herceg novi",
+   "clicks": 11,
+   "impressions": 26,
+   "ctr": 0.4231,
+   "position": 1.7
+  },
+  {
+   "query": "sta obici u herceg novom",
+   "clicks": 11,
+   "impressions": 78,
+   "ctr": 0.141,
+   "position": 4.4
+  },
+  {
+   "query": "blatna plaza igalo mapa",
+   "clicks": 10,
+   "impressions": 80,
+   "ctr": 0.125,
+   "position": 1.2
+  },
+  {
+   "query": "herceg novi stari grad",
+   "clicks": 10,
+   "impressions": 362,
+   "ctr": 0.0276,
+   "position": 5.0
+  },
+  {
+   "query": "igalo lekovito blato",
+   "clicks": 10,
+   "impressions": 73,
+   "ctr": 0.137,
+   "position": 3.9
+  },
+  {
+   "query": "kakve su plaze u herceg novom",
+   "clicks": 10,
+   "impressions": 35,
+   "ctr": 0.2857,
+   "position": 1.9
+  },
+  {
+   "query": "monako apartmani (igalo smjestaj) слике",
+   "clicks": 10,
+   "impressions": 74,
+   "ctr": 0.1351,
+   "position": 1.1
+  },
+  {
+   "query": "herceg novi plaža",
+   "clicks": 9,
+   "impressions": 85,
+   "ctr": 0.1059,
+   "position": 2.7
+  },
+  {
+   "query": "herceg novi znamenitosti",
+   "clicks": 9,
+   "impressions": 108,
+   "ctr": 0.0833,
+   "position": 5.2
+  },
+  {
+   "query": "igalo pescana plaza",
+   "clicks": 9,
+   "impressions": 33,
+   "ctr": 0.2727,
+   "position": 1.0
+  },
+  {
+   "query": "igalo slike",
+   "clicks": 9,
+   "impressions": 150,
+   "ctr": 0.06,
+   "position": 1.2
+  },
+  {
+   "query": "pescana plaza herceg novi",
+   "clicks": 9,
+   "impressions": 57,
+   "ctr": 0.1579,
+   "position": 2.7
+  },
+  {
+   "query": "apartmani monaco igalo",
+   "clicks": 8,
+   "impressions": 22,
+   "ctr": 0.3636,
+   "position": 1.0
+  },
+  {
+   "query": "blato u igalu",
+   "clicks": 8,
+   "impressions": 52,
+   "ctr": 0.1538,
+   "position": 3.2
+  },
+  {
+   "query": "herceg novi restorani",
+   "clicks": 8,
+   "impressions": 382,
+   "ctr": 0.0209,
+   "position": 5.8
+  },
+  {
+   "query": "igalo stara banja smestaj",
+   "clicks": 8,
+   "impressions": 35,
+   "ctr": 0.2286,
+   "position": 3.3
+  },
+  {
+   "query": "plaze blizu herceg novog",
+   "clicks": 8,
+   "impressions": 21,
+   "ctr": 0.381,
+   "position": 2.3
+  },
+  {
+   "query": "plaze u igalu slike",
+   "clicks": 8,
+   "impressions": 42,
+   "ctr": 0.1905,
+   "position": 1.6
+  },
+  {
+   "query": "blatna plaža igalo",
+   "clicks": 7,
+   "impressions": 80,
+   "ctr": 0.0875,
+   "position": 1.9
+  },
+  {
+   "query": "igalo apartmani na samoj plazi",
+   "clicks": 7,
+   "impressions": 390,
+   "ctr": 0.0179,
+   "position": 7.6
+  },
+  {
+   "query": "igalo beach",
+   "clicks": 7,
+   "impressions": 210,
+   "ctr": 0.0333,
+   "position": 3.9
+  },
+  {
+   "query": "igalo smjestaj",
+   "clicks": 7,
+   "impressions": 501,
+   "ctr": 0.014,
+   "position": 8.2
+  },
+  {
+   "query": "lekovito blato igalo",
+   "clicks": 7,
+   "impressions": 50,
+   "ctr": 0.14,
+   "position": 3.7
+  },
+  {
+   "query": "plaza postenja igalo",
+   "clicks": 7,
+   "impressions": 84,
+   "ctr": 0.0833,
+   "position": 2.6
+  },
+  {
+   "query": "plaze u blizini herceg novog",
+   "clicks": 7,
+   "impressions": 15,
+   "ctr": 0.4667,
+   "position": 1.1
+  },
+  {
+   "query": "plaža",
+   "clicks": 7,
+   "impressions": 335,
+   "ctr": 0.0209,
+   "position": 9.4
+  },
+  {
+   "query": "privatni smještaj igalo",
+   "clicks": 7,
+   "impressions": 343,
+   "ctr": 0.0204,
+   "position": 7.7
+  },
+  {
+   "query": "restorani igalo",
+   "clicks": 7,
+   "impressions": 138,
+   "ctr": 0.0507,
+   "position": 3.5
+  },
+  {
+   "query": "skrivene plaze herceg novi",
+   "clicks": 7,
+   "impressions": 16,
+   "ctr": 0.4375,
+   "position": 2.2
+  },
+  {
+   "query": "stari grad herceg novi",
+   "clicks": 7,
+   "impressions": 326,
+   "ctr": 0.0215,
+   "position": 5.8
+  },
+  {
+   "query": "divlje plaze herceg novi",
+   "clicks": 6,
+   "impressions": 19,
+   "ctr": 0.3158,
+   "position": 3.4
+  },
+  {
+   "query": "gde jesti u herceg novom",
+   "clicks": 6,
+   "impressions": 32,
+   "ctr": 0.1875,
+   "position": 4.9
+  },
+  {
+   "query": "gradska plaza herceg novi",
+   "clicks": 6,
+   "impressions": 35,
+   "ctr": 0.1714,
+   "position": 3.9
+  },
+  {
+   "query": "herceg novi izleti",
+   "clicks": 6,
+   "impressions": 52,
+   "ctr": 0.1154,
+   "position": 6.5
+  },
+  {
+   "query": "herceg novi pescane plaze",
+   "clicks": 6,
+   "impressions": 29,
+   "ctr": 0.2069,
+   "position": 2.6
+  },
+  {
+   "query": "igalo plaže slike",
+   "clicks": 6,
+   "impressions": 47,
+   "ctr": 0.1277,
+   "position": 1.1
+  },
+  {
+   "query": "igalo smestaj uz more",
+   "clicks": 6,
+   "impressions": 121,
+   "ctr": 0.0496,
+   "position": 8.9
+  },
+  {
+   "query": "monako apartmani (igalo smjestaj)",
+   "clicks": 6,
+   "impressions": 26,
+   "ctr": 0.2308,
+   "position": 1
+  },
+  {
+   "query": "najlepse plaze oko herceg novog",
+   "clicks": 6,
+   "impressions": 29,
+   "ctr": 0.2069,
+   "position": 2.1
+  },
+  {
+   "query": "pescana plaza igalo",
+   "clicks": 6,
+   "impressions": 38,
+   "ctr": 0.1579,
+   "position": 1.4
+  },
+  {
+   "query": "plaze u okolini herceg novog",
+   "clicks": 6,
+   "impressions": 12,
+   "ctr": 0.5,
+   "position": 1.2
+  },
+  {
+   "query": "praznik mimoze",
+   "clicks": 6,
+   "impressions": 26,
+   "ctr": 0.2308,
+   "position": 6.7
+  },
+  {
+   "query": "restorani igalo crna gora",
+   "clicks": 6,
+   "impressions": 20,
+   "ctr": 0.3,
+   "position": 3
+  },
+  {
+   "query": "stara banja igalo",
+   "clicks": 6,
+   "impressions": 130,
+   "ctr": 0.0462,
+   "position": 3.0
+  },
+  {
+   "query": "apartmani igalo stara banja",
+   "clicks": 5,
+   "impressions": 23,
+   "ctr": 0.2174,
+   "position": 6.1
+  },
+  {
+   "query": "apartments monako igalo",
+   "clicks": 5,
+   "impressions": 21,
+   "ctr": 0.2381,
+   "position": 1.6
+  },
+  {
+   "query": "blato igalo",
+   "clicks": 5,
+   "impressions": 34,
+   "ctr": 0.1471,
+   "position": 3.8
+  },
+  {
+   "query": "herceg novi beach",
+   "clicks": 5,
+   "impressions": 206,
+   "ctr": 0.0243,
+   "position": 7.6
+  },
+  {
+   "query": "herceg novi restoran",
+   "clicks": 5,
+   "impressions": 58,
+   "ctr": 0.0862,
+   "position": 5.2
+  },
+  {
+   "query": "igalo restorani",
+   "clicks": 5,
+   "impressions": 167,
+   "ctr": 0.0299,
+   "position": 4.3
+  },
+  {
+   "query": "kakve su plaze u igalu",
+   "clicks": 5,
+   "impressions": 24,
+   "ctr": 0.2083,
+   "position": 1.2
+  },
+  {
+   "query": "lekovito blato u igalu",
+   "clicks": 5,
+   "impressions": 27,
+   "ctr": 0.1852,
+   "position": 3.1
+  },
+  {
+   "query": "pjescana plaza herceg novi",
+   "clicks": 5,
+   "impressions": 31,
+   "ctr": 0.1613,
+   "position": 2.2
+  },
+  {
+   "query": "plaza igalo herceg novi",
+   "clicks": 5,
+   "impressions": 47,
+   "ctr": 0.1064,
+   "position": 2.4
+  },
+  {
+   "query": "plaza stara banja igalo",
+   "clicks": 5,
+   "impressions": 111,
+   "ctr": 0.045,
+   "position": 2.5
+  },
+  {
+   "query": "privatni smestaj igalo i cene",
+   "clicks": 5,
+   "impressions": 68,
+   "ctr": 0.0735,
+   "position": 6.7
+  },
+  {
+   "query": "privatni smještaj igalo слике",
+   "clicks": 5,
+   "impressions": 101,
+   "ctr": 0.0495,
+   "position": 8.6
+  },
+  {
+   "query": "restoran herceg novi",
+   "clicks": 5,
+   "impressions": 135,
+   "ctr": 0.037,
+   "position": 5.6
+  },
+  {
+   "query": "smjestaj igalo sa cijenama",
+   "clicks": 5,
+   "impressions": 276,
+   "ctr": 0.0181,
+   "position": 8.8
+  },
+  {
+   "query": "sta posetiti u herceg novom",
+   "clicks": 5,
+   "impressions": 41,
+   "ctr": 0.122,
+   "position": 3.8
+  },
+  {
+   "query": "sta posjetiti u herceg novom",
+   "clicks": 5,
+   "impressions": 15,
+   "ctr": 0.3333,
+   "position": 3.2
+  },
+  {
+   "query": "apartmani igalo cijene",
+   "clicks": 4,
+   "impressions": 113,
+   "ctr": 0.0354,
+   "position": 5.5
+  },
+  {
+   "query": "blatna plaza",
+   "clicks": 4,
+   "impressions": 61,
+   "ctr": 0.0656,
+   "position": 1.5
+  },
+  {
+   "query": "dani mimoze 2027",
+   "clicks": 4,
+   "impressions": 8,
+   "ctr": 0.5,
+   "position": 1.6
+  },
+  {
+   "query": "igalo crna gora",
+   "clicks": 4,
+   "impressions": 302,
+   "ctr": 0.0132,
+   "position": 8.7
+  },
+  {
+   "query": "igalo herceg novi udaljenost",
+   "clicks": 4,
+   "impressions": 95,
+   "ctr": 0.0421,
+   "position": 6.3
+  },
+  {
+   "query": "igalo restorani cene",
+   "clicks": 4,
+   "impressions": 47,
+   "ctr": 0.0851,
+   "position": 5.7
+  },
+  {
+   "query": "ljekovito blato igalo",
+   "clicks": 4,
+   "impressions": 31,
+   "ctr": 0.129,
+   "position": 4.5
+  },
+  {
+   "query": "plaza topla",
+   "clicks": 4,
+   "impressions": 46,
+   "ctr": 0.087,
+   "position": 2.7
+  },
+  {
+   "query": "plaza zalo herceg novi",
+   "clicks": 4,
+   "impressions": 84,
+   "ctr": 0.0476,
+   "position": 6.2
+  },
+  {
+   "query": "plaža poštenja igalo",
+   "clicks": 4,
+   "impressions": 36,
+   "ctr": 0.1111,
+   "position": 3.9
+  },
+  {
+   "query": "plaža topla",
+   "clicks": 4,
+   "impressions": 73,
+   "ctr": 0.0548,
+   "position": 3.2
+  },
+  {
+   "query": "apartman kod milutina igalo",
+   "clicks": 3,
+   "impressions": 32,
+   "ctr": 0.0938,
+   "position": 6.6
+  },
+  {
+   "query": "herceg novi centar",
+   "clicks": 3,
+   "impressions": 143,
+   "ctr": 0.021,
+   "position": 3.9
+  },
+  {
+   "query": "herceg novi gradska plaza",
+   "clicks": 3,
+   "impressions": 11,
+   "ctr": 0.2727,
+   "position": 2.9
+  },
+  {
+   "query": "herceg novi plaza rafaelo",
+   "clicks": 3,
+   "impressions": 43,
+   "ctr": 0.0698,
+   "position": 2.0
+  },
+  {
+   "query": "herceg novi plaza slike",
+   "clicks": 3,
+   "impressions": 16,
+   "ctr": 0.1875,
+   "position": 2
+  },
+  {
+   "query": "herceg novi plaze za decu",
+   "clicks": 3,
+   "impressions": 26,
+   "ctr": 0.1154,
+   "position": 3.1
+  },
+  {
+   "query": "herceg novi plaże",
+   "clicks": 3,
+   "impressions": 96,
+   "ctr": 0.0312,
+   "position": 2.1
+  },
+  {
+   "query": "herceg novi slike grada",
+   "clicks": 3,
+   "impressions": 35,
+   "ctr": 0.0857,
+   "position": 1.3
+  },
+  {
+   "query": "herceg novi sta obici",
+   "clicks": 3,
+   "impressions": 40,
+   "ctr": 0.075,
+   "position": 4.3
+  },
+  {
+   "query": "igalo beach montenegro",
+   "clicks": 3,
+   "impressions": 60,
+   "ctr": 0.05,
+   "position": 7.1
+  },
+  {
+   "query": "igalo herceg novi",
+   "clicks": 3,
+   "impressions": 299,
+   "ctr": 0.01,
+   "position": 8.8
+  },
+  {
+   "query": "igalo plaza slike",
+   "clicks": 3,
+   "impressions": 90,
+   "ctr": 0.0333,
+   "position": 1.4
+  },
+  {
+   "query": "igalo restaurants",
+   "clicks": 3,
+   "impressions": 62,
+   "ctr": 0.0484,
+   "position": 7.4
+  },
+  {
+   "query": "igalo smestaj na obali",
+   "clicks": 3,
+   "impressions": 66,
+   "ctr": 0.0455,
+   "position": 8.6
+  },
+  {
+   "query": "igalo stara banja",
+   "clicks": 3,
+   "impressions": 34,
+   "ctr": 0.0882,
+   "position": 2.7
+  },
+  {
+   "query": "izleti iz herceg novog",
+   "clicks": 3,
+   "impressions": 19,
+   "ctr": 0.1579,
+   "position": 10.7
+  },
+  {
+   "query": "nudisticka plaza igalo",
+   "clicks": 3,
+   "impressions": 33,
+   "ctr": 0.0909,
+   "position": 3.5
+  },
+  {
+   "query": "plaza postenja herceg novi",
+   "clicks": 3,
+   "impressions": 29,
+   "ctr": 0.1034,
+   "position": 2.2
+  },
+  {
+   "query": "plaža \"stara banja\"",
+   "clicks": 3,
+   "impressions": 25,
+   "ctr": 0.12,
+   "position": 3.2
+  },
+  {
+   "query": "plaža stara banja",
+   "clicks": 3,
+   "impressions": 18,
+   "ctr": 0.1667,
+   "position": 1
+  },
+  {
+   "query": "restoran maslina igalo",
+   "clicks": 3,
+   "impressions": 136,
+   "ctr": 0.0221,
+   "position": 8.7
+  },
+  {
+   "query": "smestaj igalo",
+   "clicks": 3,
+   "impressions": 117,
+   "ctr": 0.0256,
+   "position": 7.2
+  },
+  {
+   "query": "smjestaj igalo",
+   "clicks": 3,
+   "impressions": 357,
+   "ctr": 0.0084,
+   "position": 6.9
+  },
+  {
+   "query": "smještaj igalo crna gora",
+   "clicks": 3,
+   "impressions": 108,
+   "ctr": 0.0278,
+   "position": 8.4
+  },
+  {
+   "query": "topla plaza herceg novi",
+   "clicks": 3,
+   "impressions": 47,
+   "ctr": 0.0638,
+   "position": 2.1
+  },
+  {
+   "query": "udaljenost herceg novi igalo",
+   "clicks": 3,
+   "impressions": 28,
+   "ctr": 0.1071,
+   "position": 6.6
+  },
+  {
+   "query": "плажа",
+   "clicks": 3,
+   "impressions": 151,
+   "ctr": 0.0199,
+   "position": 9.9
+  },
+  {
+   "query": "apartman igalo",
+   "clicks": 2,
+   "impressions": 113,
+   "ctr": 0.0177,
+   "position": 6.1
+  },
+  {
+   "query": "apartmani igalo izdavanje",
+   "clicks": 2,
+   "impressions": 158,
+   "ctr": 0.0127,
+   "position": 7.6
+  },
+  {
+   "query": "bebi plaza herceg novi",
+   "clicks": 2,
+   "impressions": 8,
+   "ctr": 0.25,
+   "position": 1.2
+  },
+  {
+   "query": "blatna plaza herceg novi",
+   "clicks": 2,
+   "impressions": 16,
+   "ctr": 0.125,
+   "position": 1.8
+  },
+  {
+   "query": "crna gora igalo",
+   "clicks": 2,
+   "impressions": 57,
+   "ctr": 0.0351,
+   "position": 10.4
+  },
+  {
+   "query": "docek nove godine 2027",
+   "clicks": 2,
+   "impressions": 3,
+   "ctr": 0.6667,
+   "position": 4.3
+  },
+  {
+   "query": "dvokrevetne sobe igalo",
+   "clicks": 2,
+   "impressions": 2,
+   "ctr": 1,
+   "position": 8.5
+  },
+  {
+   "query": "herceg novi hrana",
+   "clicks": 2,
+   "impressions": 29,
+   "ctr": 0.069,
+   "position": 4.6
+  },
+  {
+   "query": "herceg novi igalo",
+   "clicks": 2,
+   "impressions": 199,
+   "ctr": 0.0101,
+   "position": 10.9
+  },
+  {
+   "query": "herceg novi mesta",
+   "clicks": 2,
+   "impressions": 15,
+   "ctr": 0.1333,
+   "position": 3.3
+  },
+  {
+   "query": "herceg novi slike plaza",
+   "clicks": 2,
+   "impressions": 35,
+   "ctr": 0.0571,
+   "position": 2.2
+  },
+  {
+   "query": "herceg novi zanimljivosti",
+   "clicks": 2,
+   "impressions": 10,
+   "ctr": 0.2,
+   "position": 2.2
+  },
+  {
+   "query": "igalo apartmani monako",
+   "clicks": 2,
+   "impressions": 28,
+   "ctr": 0.0714,
+   "position": 1.1
+  },
+  {
+   "query": "igalo herceg novi km",
+   "clicks": 2,
+   "impressions": 160,
+   "ctr": 0.0125,
+   "position": 7.2
+  },
+  {
+   "query": "igalo koncerti 2026",
+   "clicks": 2,
+   "impressions": 63,
+   "ctr": 0.0317,
+   "position": 7.5
+  },
+  {
+   "query": "igalo montenegro",
+   "clicks": 2,
+   "impressions": 657,
+   "ctr": 0.003,
+   "position": 10.0
+  },
+  {
+   "query": "igalo plaze slike",
+   "clicks": 2,
+   "impressions": 20,
+   "ctr": 0.1,
+   "position": 1.4
+  },
+  {
+   "query": "igalo restoran",
+   "clicks": 2,
+   "impressions": 32,
+   "ctr": 0.0625,
+   "position": 3.9
+  },
+  {
+   "query": "igalo smestaj",
+   "clicks": 2,
+   "impressions": 273,
+   "ctr": 0.0073,
+   "position": 7.9
+  },
+  {
+   "query": "igalo smjestaj uz more",
+   "clicks": 2,
+   "impressions": 43,
+   "ctr": 0.0465,
+   "position": 6.8
+  },
+  {
+   "query": "igalo vesti",
+   "clicks": 2,
+   "impressions": 15,
+   "ctr": 0.1333,
+   "position": 8.3
+  },
+  {
+   "query": "igalu",
+   "clicks": 2,
+   "impressions": 62,
+   "ctr": 0.0323,
+   "position": 1.5
+  },
+  {
+   "query": "izleti herceg novi",
+   "clicks": 2,
+   "impressions": 28,
+   "ctr": 0.0714,
+   "position": 6.5
+  },
+  {
+   "query": "la bamba herceg novi",
+   "clicks": 2,
+   "impressions": 111,
+   "ctr": 0.018,
+   "position": 8.3
+  },
+  {
+   "query": "la bamba igalo cenovnik",
+   "clicks": 2,
+   "impressions": 78,
+   "ctr": 0.0256,
+   "position": 6.7
+  },
+  {
+   "query": "monako",
+   "clicks": 2,
+   "impressions": 2,
+   "ctr": 1,
+   "position": 2
+  },
+  {
+   "query": "plaza instituta dr simo milosevic",
+   "clicks": 2,
+   "impressions": 43,
+   "ctr": 0.0465,
+   "position": 6.1
+  },
+  {
+   "query": "plaza mimoza herceg novi",
+   "clicks": 2,
+   "impressions": 37,
+   "ctr": 0.0541,
+   "position": 5.8
+  },
+  {
+   "query": "plaza miriste herceg novi",
+   "clicks": 2,
+   "impressions": 19,
+   "ctr": 0.1053,
+   "position": 6.6
+  },
+  {
+   "query": "plaza rafaelo herceg novi iskustva",
+   "clicks": 2,
+   "impressions": 30,
+   "ctr": 0.0667,
+   "position": 4.3
+  },
+  {
+   "query": "plaza raffaelo herceg novi",
+   "clicks": 2,
+   "impressions": 10,
+   "ctr": 0.2,
+   "position": 6.3
+  },
+  {
+   "query": "plaze",
+   "clicks": 2,
+   "impressions": 23,
+   "ctr": 0.087,
+   "position": 4.7
+  },
+  {
+   "query": "plaze u herceg novi",
+   "clicks": 2,
+   "impressions": 6,
+   "ctr": 0.3333,
+   "position": 2
+  },
+  {
+   "query": "plaża igalo",
+   "clicks": 2,
+   "impressions": 14,
+   "ctr": 0.1429,
+   "position": 3.8
+  },
+  {
+   "query": "plaža \"stara banja\" слике",
+   "clicks": 2,
+   "impressions": 27,
+   "ctr": 0.0741,
+   "position": 3.5
+  },
+  {
+   "query": "plaža instituta dr simo milošević",
+   "clicks": 2,
+   "impressions": 41,
+   "ctr": 0.0488,
+   "position": 5.9
+  },
+  {
+   "query": "plaža stara banja слике",
+   "clicks": 2,
+   "impressions": 31,
+   "ctr": 0.0645,
+   "position": 2.3
+  },
+  {
+   "query": "plaža žalo herceg novi",
+   "clicks": 2,
+   "impressions": 49,
+   "ctr": 0.0408,
+   "position": 7.7
+  },
+  {
+   "query": "plaža žanjice",
+   "clicks": 2,
+   "impressions": 23,
+   "ctr": 0.087,
+   "position": 7.8
+  },
+  {
+   "query": "savina plaza herceg novi",
+   "clicks": 2,
+   "impressions": 9,
+   "ctr": 0.2222,
+   "position": 5.7
+  },
+  {
+   "query": "setaliste igalo herceg novi",
+   "clicks": 2,
+   "impressions": 11,
+   "ctr": 0.1818,
+   "position": 5.4
+  }
+ ],
+ "pages": [
+  {
+   "page": "https://apartmani-igalo.com/vesti/plaze-herceg-novi.html",
+   "clicks": 3636,
+   "impressions": 35488,
+   "ctr": 0.1025,
+   "position": 4.8
+  },
+  {
+   "page": "https://apartmani-igalo.com/",
+   "clicks": 690,
+   "impressions": 18544,
+   "ctr": 0.0372,
+   "position": 5.6
+  },
+  {
+   "page": "https://apartmani-igalo.com/blatna-plaza.html",
+   "clicks": 532,
+   "impressions": 10040,
+   "ctr": 0.053,
+   "position": 3.9
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html",
+   "clicks": 302,
+   "impressions": 11060,
+   "ctr": 0.0273,
+   "position": 6.9
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html",
+   "clicks": 269,
+   "impressions": 5403,
+   "ctr": 0.0498,
+   "position": 8.6
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restorani-herceg-novi.html",
+   "clicks": 254,
+   "impressions": 10466,
+   "ctr": 0.0243,
+   "position": 6.8
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/beaches-herceg-novi.html",
+   "clicks": 97,
+   "impressions": 3521,
+   "ctr": 0.0275,
+   "position": 6.6
+  },
+  {
+   "page": "https://apartmani-igalo.com/praznik-mimoze-program.html",
+   "clicks": 27,
+   "impressions": 832,
+   "ctr": 0.0325,
+   "position": 7.0
+  },
+  {
+   "page": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
+   "clicks": 25,
+   "impressions": 533,
+   "ctr": 0.0469,
+   "position": 8.3
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html",
+   "clicks": 23,
+   "impressions": 1459,
+   "ctr": 0.0158,
+   "position": 8.2
+  },
+  {
+   "page": "https://apartmani-igalo.com/mesecni-najam-igalo.html",
+   "clicks": 8,
+   "impressions": 98,
+   "ctr": 0.0816,
+   "position": 7.6
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html",
+   "clicks": 7,
+   "impressions": 1129,
+   "ctr": 0.0062,
+   "position": 11.2
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restorani-igalo.html",
+   "clicks": 7,
+   "impressions": 233,
+   "ctr": 0.03,
+   "position": 7.9
+  },
+  {
+   "page": "https://apartmani-igalo.com/mimosa-festival-herceg-novi.html",
+   "clicks": 4,
+   "impressions": 81,
+   "ctr": 0.0494,
+   "position": 5.2
+  },
+  {
+   "page": "https://apartmani-igalo.com/blog.html",
+   "clicks": 2,
+   "impressions": 88,
+   "ctr": 0.0227,
+   "position": 8.6
+  },
+  {
+   "page": "https://apartmani-igalo.com/monthly-rental-igalo.html",
+   "clicks": 0,
+   "impressions": 15,
+   "ctr": 0,
+   "position": 4.8
+  }
+ ],
+ "devices": [
+  {
+   "device": "MOBILE",
+   "clicks": 5386,
+   "impressions": 82796,
+   "ctr": 0.0651,
+   "position": 5.3
+  },
+  {
+   "device": "DESKTOP",
+   "clicks": 457,
+   "impressions": 8279,
+   "ctr": 0.0552,
+   "position": 8.1
+  },
+  {
+   "device": "TABLET",
+   "clicks": 21,
+   "impressions": 286,
+   "ctr": 0.0734,
+   "position": 4.7
+  }
+ ],
+ "countries": [
+  {
+   "country": "srb",
+   "clicks": 2375,
+   "impressions": 31621,
+   "ctr": 0.0751,
+   "position": 4.5
+  },
+  {
+   "country": "mne",
+   "clicks": 1612,
+   "impressions": 25322,
+   "ctr": 0.0637,
+   "position": 6.0
+  },
+  {
+   "country": "bih",
+   "clicks": 1483,
+   "impressions": 23855,
+   "ctr": 0.0622,
+   "position": 5.7
+  },
+  {
+   "country": "hrv",
+   "clicks": 80,
+   "impressions": 1876,
+   "ctr": 0.0426,
+   "position": 6.7
+  },
+  {
+   "country": "deu",
+   "clicks": 68,
+   "impressions": 1590,
+   "ctr": 0.0428,
+   "position": 5.7
+  },
+  {
+   "country": "mkd",
+   "clicks": 40,
+   "impressions": 562,
+   "ctr": 0.0712,
+   "position": 5.8
+  },
+  {
+   "country": "aut",
+   "clicks": 35,
+   "impressions": 956,
+   "ctr": 0.0366,
+   "position": 4.3
+  },
+  {
+   "country": "che",
+   "clicks": 27,
+   "impressions": 336,
+   "ctr": 0.0804,
+   "position": 8.7
+  },
+  {
+   "country": "xkk",
+   "clicks": 22,
+   "impressions": 291,
+   "ctr": 0.0756,
+   "position": 5.1
+  },
+  {
+   "country": "svn",
+   "clicks": 18,
+   "impressions": 527,
+   "ctr": 0.0342,
+   "position": 4.9
+  },
+  {
+   "country": "grc",
+   "clicks": 12,
+   "impressions": 213,
+   "ctr": 0.0563,
+   "position": 5.5
+  },
+  {
+   "country": "swe",
+   "clicks": 10,
+   "impressions": 335,
+   "ctr": 0.0299,
+   "position": 7.5
+  },
+  {
+   "country": "can",
+   "clicks": 8,
+   "impressions": 108,
+   "ctr": 0.0741,
+   "position": 7.3
+  },
+  {
+   "country": "hun",
+   "clicks": 8,
+   "impressions": 231,
+   "ctr": 0.0346,
+   "position": 7.8
+  },
+  {
+   "country": "fra",
+   "clicks": 7,
+   "impressions": 247,
+   "ctr": 0.0283,
+   "position": 7.3
+  },
+  {
+   "country": "ita",
+   "clicks": 6,
+   "impressions": 247,
+   "ctr": 0.0243,
+   "position": 7.6
+  },
+  {
+   "country": "nor",
+   "clicks": 6,
+   "impressions": 188,
+   "ctr": 0.0319,
+   "position": 7.5
+  },
+  {
+   "country": "pol",
+   "clicks": 6,
+   "impressions": 394,
+   "ctr": 0.0152,
+   "position": 8.1
+  },
+  {
+   "country": "usa",
+   "clicks": 5,
+   "impressions": 291,
+   "ctr": 0.0172,
+   "position": 11.8
+  },
+  {
+   "country": "dnk",
+   "clicks": 4,
+   "impressions": 94,
+   "ctr": 0.0426,
+   "position": 5.0
+  },
+  {
+   "country": "nld",
+   "clicks": 4,
+   "impressions": 437,
+   "ctr": 0.0092,
+   "position": 8.7
+  },
+  {
+   "country": "svk",
+   "clicks": 4,
+   "impressions": 103,
+   "ctr": 0.0388,
+   "position": 5.3
+  },
+  {
+   "country": "aus",
+   "clicks": 3,
+   "impressions": 37,
+   "ctr": 0.0811,
+   "position": 9.8
+  },
+  {
+   "country": "gbr",
+   "clicks": 3,
+   "impressions": 350,
+   "ctr": 0.0086,
+   "position": 9.7
+  },
+  {
+   "country": "alb",
+   "clicks": 2,
+   "impressions": 75,
+   "ctr": 0.0267,
+   "position": 7.6
+  }
+ ]
+}
