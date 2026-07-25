@@ -12,6 +12,56 @@ in the Green section.
 
 ---
 
+## Implementation status — updated 2026-07-25
+
+Everything in this report that is a **website change** has been implemented on branch
+`claude/website-gbp-audit-kjiwtb`. Items marked **GBP dashboard** cannot be done from the
+repository and are the remaining work.
+
+| # | Issue | Status |
+|---|---|---|
+| C1 | Contradicting founding dates | **Fixed** — 2000 adopted everywhere (matches GBP + `foundingDate`) |
+| C2 | Self-serving `aggregateRating`/`review` in JSON-LD | **Fixed** — removed from all 10 `#business` nodes |
+| C2b | Same violation in *microdata* (found during implementation) | **Fixed** — stripped from `blatna-plaza.html` and `about.html` |
+| C3 | Conflicting 4.9/24 rating pool on `Apartment` nodes | **Fixed** — markup removed, visible copy reconciled to the real 71 Google reviews |
+| C4 | EN 10-reasons page disconnected | **Fixed** — rebuilt to full parity |
+| M1 | GBP description empty | **GBP dashboard** — draft copy in the M1 section below |
+| M2 | `VacationRental` schema type | **Fixed** — now `LodgingBusiness` on all 13 nodes |
+| M3 | Contradictory GBP agency categories | **GBP dashboard** |
+| M4 | WhatsApp / chat channels | **GBP dashboard** — site already publishes `wa.me/38267558240` |
+| M5 | No English homepage or About | **Fixed** — added `/en/` and `/en/about.html` |
+| M6 | Inconsistent brand name in titles | **Fixed** — all 19 titles standardised + `alternateName` added |
+| M7 | `hotel-monako@hotmail.com` | **Deferred by decision** — kept, to avoid breaking a live address |
+| G1 | Empty GBP fields / amenity attributes | **GBP dashboard** |
+| G2 | `starRating` missing | **Fixed** — `3` added (matches "tri zvjezdice") |
+| G3 | `knowsLanguage` missing | **Fixed** — `sr, en, ru, de` added |
+| G4 | `priceRange` | **Deliberately not added** — seasonal prices are genuinely on request |
+| G5 | `checkinTime`/`checkoutTime` | **Deliberately not added** — no fixed published times exist |
+| G6 | `addressRegion` inconsistency | **No change — this finding was over-stated.** The business node and the `TouristAttraction` describe *different entities*, so differing address granularity is not a conflict. Leaving the business nodes without `addressRegion` keeps the exact match with GBP's empty Administrative area, which matters more. |
+| G7 | hreflang granularity (`sr` vs `sr-Latn`) | **No change** — current tags are valid and reciprocal; not worth the regression risk |
+| G8 | UTM on the GBP website URL | **No change needed** — standard practice, canonical resolves it |
+| G9 | Video on GBP/YouTube | **GBP dashboard** |
+| G10 | Dedicated contact page | **Deferred by decision** |
+
+### Verification performed
+
+- All 21 HTML files: JSON-LD parses, tags balanced, no `aggregateRating`, no `VacationRental`,
+  no stale date claims, no broken local links or missing images.
+- All 13 `#business` nodes are byte-identical on type, name, phone, address and founding date.
+- hreflang confirmed reciprocal across all 9 language pairs.
+- `sitemap.xml` validates as XML; 21 URLs including the two new English pages.
+- New and modified pages rendered in Chromium: no JS errors, content and layout intact.
+
+### Remaining work — GBP dashboard only
+
+1. **Add the business description** (M1) — draft in the M1 section below.
+2. **Remove the two agency categories** (M3): *Apartment rental agency*, *Vacation home rental agency*.
+3. **Set the WhatsApp field** to `https://wa.me/38267558240` and pick a primary chat (M4).
+4. **Set amenity attributes** matching the eight the site lists, plus store code and labels (G1).
+5. Optionally publish the walkthrough video on the profile / linked YouTube channel (G9).
+
+---
+
 ## Reference: GBP export values
 
 | GBP field | Value |
