@@ -820,6 +820,20 @@
       transition: background var(--trans), color var(--trans);
     }
     .gallery__more:hover { background: var(--c-teal); color: #fff; }
+    @media (max-width: 600px) {
+      .gallery__more.view-all {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: var(--step-0);
+        padding: 0.9em 1.1em;
+        min-height: 48px;
+        border-radius: var(--radius-md);
+        background: var(--c-teal);
+        color: #fff;
+        box-shadow: var(--shadow-card);
+      }
+    }
 
     /* ── REVIEWS ─────────────────────────────────── */
     .reviews__grid {
