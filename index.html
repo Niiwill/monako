@@ -42,6 +42,11 @@
   <link rel="preload" as="image" href="images/kuca_spolja.webp" imagesrcset="images/kuca_spolja-640.webp 640w, images/kuca_spolja-700.webp 700w, images/kuca_spolja-1000.webp 1000w, images/kuca_spolja.webp 1403w" imagesizes="(max-width: 760px) 90vw, 500px" fetchpriority="high">
   <link rel="icon" href="/images/monako-favicon.svg" type="image/svg+xml">
 
+  <!-- The mobile video's poster and source are both attached by JS, so with
+       scripting off there is nothing to show — hide it rather than leave an
+       empty box. -->
+  <noscript><style>.video-section { display: none !important; }</style></noscript>
+
   <!-- ═══════════════════════════════════════════════
        SCHEMA — JSON-LD
   ═══════════════════════════════════════════════ -->
@@ -221,6 +226,24 @@
           }
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "@id": "https://apartmani-igalo.com/#video",
+      "name": "Video obilazak apartmana Monako Igalo",
+      "description": "Kratak video obilazak apartmana Monako u Igalu — interijer, čajna kuhinja i balkon s pogledom na more, 100 metara od Blatne plaže.",
+      "thumbnailUrl": ["https://apartmani-igalo.com/images/apartmani-igalo-video-poster.webp"],
+      "contentUrl": "https://apartmani-igalo.com/video/apartmani-igalo-mobile.mp4",
+      "encodingFormat": "video/mp4",
+      "width": 960,
+      "height": 540,
+      "duration": "PT13S",
+      "uploadDate": "2026-07-25",
+      "inLanguage": "sr-Latn-ME",
+      "isFamilyFriendly": true,
+      "publisher": {"@id": "https://apartmani-igalo.com/#business"},
+      "about": {"@id": "https://apartmani-igalo.com/#business"}
     },
     {
       "@context": "https://schema.org",
@@ -598,6 +621,57 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
+
+    /* ── VIDEO (mobile only) ─────────────────────── */
+    /* Hidden above 760px — the same breakpoint where .hero__grid stacks.
+       display:none also means the IntersectionObserver never fires on
+       desktop, so the video bytes are never requested there. */
+    .video-section { display: none; }
+    @media (max-width: 760px) {
+      .video-section { display: block; }
+    }
+    .video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;   /* space reserved up-front → zero CLS */
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--c-text);
+      box-shadow: var(--shadow-card);
+    }
+    .video-wrap video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .video-wrap__controls {
+      position: absolute;
+      right: 0.65rem;
+      bottom: 0.65rem;
+      display: flex;
+      gap: 0.4rem;
+    }
+    .video-wrap__btn {
+      width: 44px;   /* WCAG 2.5.5 tap target */
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(15, 15, 15, 0.55);
+      color: #fff;
+      cursor: pointer;
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      transition: background var(--trans);
+    }
+    .video-wrap__btn:hover { background: rgba(15, 15, 15, 0.75); }
+    .video-wrap__btn svg { pointer-events: none; }
+    /* Each button holds both icons; the wrapper's state picks one. */
+    .video-wrap[data-playing="true"] .i-play,
+    .video-wrap[data-playing="false"] .i-pause,
+    .video-wrap[data-muted="true"] .i-sound,
+    .video-wrap[data-muted="false"] .i-muted { display: none; }
 
     /* ── SECTION HEADINGS ────────────────────────── */
     .section-eyebrow {
@@ -1291,6 +1365,62 @@
         </dl>
       </div>
     </div>
+
+    <!-- ══════════════════════════════════
+         VIDEO — mobile only
+         Placed after the ratings bar and directly before the booking CTA:
+         below the initial mobile viewport (so it can never become the LCP
+         element), and it lands at the point where social proof hands off
+         to the conversion ask.
+
+         Performance notes:
+         - No src/<source> in the markup — the file is in data-src, so the
+           initial page load requests zero video bytes.
+         - JS injects the source and plays only once the section scrolls
+           into view, and only after the load event (see script at page end).
+         - aspect-ratio on .video-wrap reserves the box → no layout shift.
+         - poster is a 23 KB WebP, so the frame paints instantly.
+         - muted + playsinline + loop = autoplay allowed on iOS and Android.
+    ══════════════════════════════════ -->
+    <section class="section video-section" aria-labelledby="video-heading">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-eyebrow">Video</span>
+            <h2 class="section-title" id="video-heading">Provirite u naše apartmane</h2>
+          </div>
+        </div>
+
+        <div class="video-wrap" data-playing="false" data-muted="true">
+          <video
+            id="apartman-video"
+            data-poster="images/apartmani-igalo-video-poster.webp"
+            data-src="video/apartmani-igalo-mobile.mp4"
+            width="960"
+            height="540"
+            muted
+            loop
+            playsinline
+            preload="none"
+            disablepictureinpicture
+            aria-label="Video obilazak apartmana Monako u Igalu — interijer i pogled na more s balkona"
+          ></video>
+
+          <div class="video-wrap__controls">
+            <button class="video-wrap__btn" type="button"
+                    data-video-toggle aria-controls="apartman-video" aria-label="Pusti video">
+              <svg class="i-play" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="i-pause" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+            </button>
+            <button class="video-wrap__btn" type="button"
+                    data-video-mute aria-controls="apartman-video" aria-label="Uključi zvuk">
+              <svg class="i-muted" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H3v6h3l5 4V5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M17 9l4 6m0-6l-4 6"/></svg>
+              <svg class="i-sound" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H3v6h3l5 4V5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15.5 8.5a5 5 0 010 7M18 6a8 8 0 010 12"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ══════════════════════════════════
          DIREKTNA REZERVACIJA CTA
@@ -2094,6 +2224,110 @@
         }
       });
     });
+
+    /* ── Mobile video: deferred load + autoplay in view ──────────────
+       Nothing is fetched until the section is near the viewport AND the
+       load event has fired, so the video costs 0 bytes and 0 main-thread
+       time during initial page load. Playback pauses off-screen to save
+       battery and keep the main thread free (INP). */
+    (function () {
+      const wrap = document.querySelector('.video-wrap');
+      if (!wrap || !('IntersectionObserver' in window)) return;
+
+      const video = wrap.querySelector('video');
+      const toggleBtn = wrap.querySelector('[data-video-toggle]');
+      const muteBtn = wrap.querySelector('[data-video-mute]');
+
+      const conn = navigator.connection;
+      // Respect Data Saver, 2G, and users who ask for less motion: keep the
+      // poster and wait for an explicit tap instead of auto-loading.
+      const holdBack =
+        !!(conn && (conn.saveData || /2g/.test(conn.effectiveType || ''))) ||
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Poster is attached here rather than in the markup, so a desktop
+      // visitor (section hidden) never downloads it either.
+      let posterSet = false;
+      function showPoster() {
+        if (posterSet) return;
+        posterSet = true;
+        video.poster = video.dataset.poster;
+      }
+
+      let loaded = false;
+      function ensureLoaded() {
+        showPoster();
+        if (loaded) return;
+        loaded = true;
+        const source = document.createElement('source');
+        source.src = video.dataset.src;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+        video.load();
+      }
+
+      function play() {
+        ensureLoaded();
+        const p = video.play();
+        if (p) p.catch(function () { /* autoplay blocked — poster stays */ });
+      }
+
+      // Keep button state in sync with the element, whichever caused the change.
+      video.addEventListener('play', function () {
+        wrap.dataset.playing = 'true';
+        toggleBtn.setAttribute('aria-label', 'Pauziraj video');
+      });
+      video.addEventListener('pause', function () {
+        wrap.dataset.playing = 'false';
+        toggleBtn.setAttribute('aria-label', 'Pusti video');
+      });
+      // If the file cannot be fetched or decoded, fall back to the poster with
+      // a play icon rather than leaving a pause icon over a static frame.
+      // Capture phase: a failing <source> fires 'error' on itself, not the
+      // <video>, and the event does not bubble.
+      video.addEventListener('error', function () {
+        wrap.dataset.playing = 'false';
+        toggleBtn.setAttribute('aria-label', 'Pusti video');
+      }, true);
+      video.addEventListener('volumechange', function () {
+        wrap.dataset.muted = video.muted ? 'true' : 'false';
+        muteBtn.setAttribute('aria-label', video.muted ? 'Uključi zvuk' : 'Isključi zvuk');
+      });
+
+      toggleBtn.addEventListener('click', function () {
+        if (video.paused) play(); else video.pause();
+      });
+      muteBtn.addEventListener('click', function () {
+        ensureLoaded();
+        video.muted = !video.muted;
+      });
+
+      function observe() {
+        // rootMargin starts the fetch just before the section is visible,
+        // so the first frames are ready by the time it is on screen.
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              // On Data Saver / reduced motion the 23 KB poster still loads,
+              // so there is a real preview behind the play button — only the
+              // 805 KB video waits for a tap.
+              showPoster();
+              if (!holdBack) play();
+            } else if (!video.paused) {
+              video.pause();
+            }
+          });
+        }, { rootMargin: '200px 0px' }).observe(wrap);
+      }
+
+      function start() {
+        if ('requestIdleCallback' in window) requestIdleCallback(observe, { timeout: 2000 });
+        else setTimeout(observe, 200);
+      }
+
+      if (document.readyState === 'complete') start();
+      else window.addEventListener('load', start, { once: true });
+    })();
   </script>
 
 </body>
