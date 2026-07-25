@@ -38,16 +38,25 @@ and services (Section 3).
 Three different word orders for one entity. Google resolves entities by matching the GBP
 name against the name on the website, and mismatches weaken that link.
 
-**Fix:** standardise on **`Apartmani Monako Igalo`** everywhere. Make the schema `name`
-match the GBP name byte-for-byte, and move the other variants into `alternateName`
-(the schema already has an `alternateName` array — keep them there).
+**Resolved:** standardised on **`Apartmani Igalo Monako`** across the whole site (applied —
+see 5.1). This variant leads with the exact `apartmani Igalo` phrase, which is the stronger
+form for the goal query; the earlier suggestion of `Apartmani Monako Igalo` buried the geo
+term behind the brand word and lost phrase adjacency.
 
-> **Risk note, stated plainly:** the geo-modifier "Igalo" is only compliant if it appears on
-> your physical signage. It is a real ranking help and it is what everyone in the market
-> does, but a competitor can file a redressal to strip it. Defend it by uploading an
-> exterior photo where the sign is legible. If the sign says only "MONAKO", the safe name is
-> `Apartmani Monako` — and you recover the lost keyword through categories and services,
-> which carry more weight than the name anyway.
+**Still open — the GBP-side name.** The site now says `Apartmani Igalo Monako`; the profile
+still says `Igalo Apartmani Monako`. Note the gain from aligning them is modest: the current
+GBP name *already* contains both keywords adjacently, just reversed, and Google's local
+matching is largely token-based rather than strict-phrase. This is exact-order polish, not a
+missing-keyword fix.
+
+> **Risk note, stated plainly:** the owner confirms the physical sign reads **"Apartmani
+> Monako"** — no "Igalo". A geo-modifier absent from signage is the exact case a competitor
+> redressal can strip, and name edits trigger a review period. The website carries no such
+> risk (it is your own property, and no guideline governs it), which is why the site was
+> aligned first and the profile left alone. If the GBP name is changed later, upload an
+> exterior photo and expect a pending-review window. The safer path is to leave the profile
+> name as-is and take the keyword through categories, services and the description, which
+> together outweigh name word-order.
 
 ### 1.4 Street name spelling does not match the site or the postal record
 GBP has `Dubrovacka 1`; the site has `Dubrovačka 1`. Set GBP to **`Dubrovačka 1`** (with
@@ -235,8 +244,12 @@ arriving — this is the decision rule to apply for a lodging profile in Montene
 ### 5.1 Fix the website↔profile entity link (`index.html`)
 These are code changes on this repo, none of them applied yet:
 
-- **`name` mismatch** (line 59): schema says `Monako Apartmani Igalo`, GBP says
-  `Igalo Apartmani Monako`. Make them identical.
+- ~~**`name` mismatch** (line 59)~~ — **DONE.** The site declared the business under four
+  different names (`Monako Apartmani Igalo`, `Apartmani Monako Igalo`, `Monako Apartments
+  Igalo`, plus two page titles used as `og:site_name`). All identity fields across 19 files
+  now read `Apartmani Igalo Monako`; the signage name `Apartmani Monako` and the previous
+  names were added to `alternateName` so the entity history stays declared. Prose mentions
+  and third-party business names in the guide pages were deliberately left alone.
 - **`sameAs` is incomplete** (lines 85–88): it lists only Facebook and Instagram. Your GBP
   carries a YouTube channel too. Add YouTube **and your Google Maps place URL** —
   `sameAs` pointing back at the Maps listing is the strongest entity-consolidation signal
