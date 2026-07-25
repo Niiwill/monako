@@ -54,6 +54,7 @@
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
   </url>
 
   <url>
@@ -63,6 +64,7 @@
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
   </url>
 
   <url>
@@ -72,6 +74,7 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/mesecni-najam-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
   </url>
 
   <url>
@@ -81,6 +84,7 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/mesecni-najam-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -94,6 +98,7 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
   </url>
 
   <url>
@@ -103,6 +108,7 @@
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
   </url>
 
   <url>
@@ -128,6 +134,7 @@
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -141,6 +148,7 @@
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
   </url>
 
   <url>
@@ -150,6 +158,7 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
   </url>
 
   <url>
@@ -159,6 +168,7 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -172,6 +182,7 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/praznik-mimoze-program.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
   </url>
 
   <url>
@@ -181,6 +192,7 @@
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/praznik-mimoze-program.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
   </url>
 
   <url>
