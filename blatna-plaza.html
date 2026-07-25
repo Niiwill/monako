@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══════════════════════════════════════════════
-       PRIMARY META — SEO
+       PRIMARY META - SEO
   ═══════════════════════════════════════════════ -->
   <title>Blatna Plaža Igalo – Lekovito Blato, Plaža i Apartmani | Monako Igalo</title>
   <meta name="description" content="Blatna plaža u Igalu je najveća plaža Herceg Novog (9.000 m²) poznata po lekovitom radioaktivnom mulju koji liječi reumatizam. Apartmani Monako su samo 100 m od plaže.">
@@ -30,11 +30,11 @@
   <meta name="twitter:image" content="https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp">
 
   <!-- ═══════════════════════════════════════════════
-       PERFORMANCE — PRECONNECT / PRELOAD
+       PERFORMANCE - PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fraunces (display) + Inter (body) — loaded non-blocking -->
+  <!-- Fraunces (display) + Inter (body) - loaded non-blocking -->
   <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap">
   <noscript>
     <link rel="stylesheet"
@@ -44,10 +44,9 @@
   <!-- Favicon -->
   <link rel="icon" href="/images/monako-favicon.png" sizes="any">
   <link rel="preload" as="image" href="images/blatna-plaza-igalo-1.webp" fetchpriority="high">
-  <link rel="icon" href="/images/monako-favicon.svg" type="image/svg+xml">
 
   <!-- ═══════════════════════════════════════════════
-       SCHEMA MARKUP — JSON-LD
+       SCHEMA MARKUP - JSON-LD
   ═══════════════════════════════════════════════ -->
   <script type="application/ld+json">
   [
@@ -125,7 +124,7 @@
           "name": "Koje bolesti liječi blato u Igalu?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Lekovito blato u Igalu tradicionalno se koristi za ublažavanje reumatizma, artritisa i degenerativnih oboljenja lokomotornog sistema (zglobova, kičme i mišića). Blagotvorno djeluje i na kožu. Za ozbiljnija stanja preporučuje se konsultacija s ljekarom — stručne terapije blatom nudi i obližnji Institut Dr Simo Milošević."
+            "text": "Lekovito blato u Igalu tradicionalno se koristi za ublažavanje reumatizma, artritisa i degenerativnih oboljenja lokomotornog sistema (zglobova, kičme i mišića). Blagotvorno djeluje i na kožu. Za ozbiljnija stanja preporučuje se konsultacija s ljekarom - stručne terapije blatom nudi i obližnji Institut Dr Simo Milošević."
           }
         },
         {
@@ -141,7 +140,7 @@
           "name": "Da li su Blatna plaža i plaža Stara Banja ista plaža?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da, Stara Banja je drugo, starije ime Blatne plaže u Igalu — mještani i danas tako zovu plažu i njeno zaleđe. Naziv potiče od stare banje, kupališnog lječilišta iz prve polovine XX vijeka u kojem se igaljsko blato koristilo u terapijske svrhe prije osnivanja današnjeg Instituta Simo Milošević 1949. godine."
+            "text": "Da, Stara Banja je drugo, starije ime Blatne plaže u Igalu - mještani i danas tako zovu plažu i njeno zaleđe. Naziv potiče od stare banje, kupališnog lječilišta iz prve polovine XX vijeka u kojem se igaljsko blato koristilo u terapijske svrhe prije osnivanja današnjeg Instituta Simo Milošević 1949. godine."
           }
         },
         {
@@ -174,7 +173,7 @@
   </script>
 
   <!-- ═══════════════════════════════════════════════
-       STYLES — SINGLE EMBEDDED STYLESHEET
+       STYLES - SINGLE EMBEDDED STYLESHEET
        (zero render-blocking external CSS)
   ═══════════════════════════════════════════════ -->
   <style>
@@ -219,7 +218,7 @@
 
     /* ── RESET ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    /* ── Fallback font metrics — eliminates FOUT-driven CLS ─────── */
+    /* ── Fallback font metrics - eliminates FOUT-driven CLS ─────── */
     @font-face {
       font-family: 'Inter-fallback';
       src: local('Arial');
@@ -878,20 +877,25 @@
     <nav class="nav" aria-label="Glavna navigacija">
       <div class="container">
         <div class="nav__inner">
-          <a class="nav__logo" href="/" aria-label="Monako Apartmani Igalo – Početna">
+          <a class="nav__logo" href="/" aria-label="Monako Apartmani Igalo - Početna">
             MONAKO <span>IGALO</span>
           </a>
-          <ul class="nav__links" role="list">
+          <ul class="nav__links" id="nav-menu" role="list">
             <li><a href="/about.html" class="nav__text-link">O nama</a></li>
             <li><a href="/#cjenovnik" class="nav__text-link">Cjenovnik</a></li>
             <li><a href="/blog.html" class="nav__text-link">Vesti</a></li>
-            <li>
-              <a class="nav__cta" href="tel:+38267558240" aria-label="Pozovite nas">
+          </ul>
+          <div class="nav__actions">
+            <a class="nav__cta" href="tel:+38267558240" aria-label="Pozovite nas">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 Rezervišite
               </a>
-            </li>
-          </ul>
+            <button class="nav__toggle" type="button"
+                    aria-expanded="false" aria-controls="nav-menu" aria-label="Otvori meni">
+              <svg class="i-open" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+              <svg class="i-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -922,7 +926,7 @@
           <span class="highlight">Blatna Plaža</span><br>Igalo
         </h1>
         <p class="hero__desc">
-          Najveća plaža opštine Herceg Novi – 9.000 m² lekovitog morskog mulja koji
+          Najveća plaža opštine Herceg Novi - 9.000 m² lekovitog morskog mulja koji
           liječi reumatizam i bolesti lokomotornog sistema.
           Besplatna terapija, otvorena cijele godine.
         </p>
@@ -941,7 +945,7 @@
           </li>
         </ul>
 
-        <!-- Hero image — LCP element, eagerly loaded, explicit dimensions for CLS -->
+        <!-- Hero image - LCP element, eagerly loaded, explicit dimensions for CLS -->
         <figure class="hero__image-wrap">
           <img
             src="images/blatna-plaza-igalo-1.webp"
@@ -952,7 +956,7 @@
             loading="eager"
             decoding="sync"
           >
-          <figcaption class="sr-only">Blatna plaža Igalo – lekoviti morski mulj</figcaption>
+          <figcaption class="sr-only">Blatna plaža Igalo - lekoviti morski mulj</figcaption>
         </figure>
       </div>
     </section>
@@ -969,20 +973,20 @@
 
             <h2>Šta je Blatna plaža?</h2>
             <p>
-              Blatna plaža – poznata i kao <strong>Stara Banja</strong> – nalazi se na kraju
+              Blatna plaža - poznata i kao <strong>Stara Banja</strong> - nalazi se na kraju
               šetališta u Igalu, naslonjena na ušće reke Sutorine u Bokokotorski zaliv.
               Sa površinom od <strong>9.000 m²</strong>, najveća je plaža u opštini Herceg Novi
               i jedina u Crnoj Gori poznata po lekovitom radioaktivnom morskom mulju.
             </p>
             <p>
-              Posebnost plaže je njen pijesak – zapravo fini morski mulj bogat mineralima –
+              Posebnost plaže je njen pijesak - zapravo fini morski mulj bogat mineralima -
               koji posjetioce dolazi po besplatnu spa terapiju direktno na obali. Meštani i
               turisti ovdje liječe <strong>reumatizam, artritis</strong> i ostala oboljenja
               lokomotornog sistema jednostavnim nanošenjem blata na kozu i kratkim sušenjem
               na suncu.
             </p>
 
-            <h2>Naučna potvrda lekovitosti – istorija od 1930.</h2>
+            <h2>Naučna potvrda lekovitosti - istorija od 1930.</h2>
             <p>
               Lekovitost igaljskog blata nije samo narodna medicina. Opsežna laboratorijska
               ispitivanja koja je 1930. godine provelo čuveno francusko lječilište
@@ -995,22 +999,22 @@
               Nakon Drugog svjetskog rata, na inicijativu <strong>Mirka J. Stijepčića</strong>
               i uz angažovanje dr. Svetozara Živojnovića, realizovani su dugo odlagani planovi
               osnivanja lječilišta. Vlada Crne Gore je <strong>1. novembra 1949.</strong>
-              godine zvanično osnovala lječilište u Igalu – instituciju koja danas djeluje
+              godine zvanično osnovala lječilište u Igalu - instituciju koja danas djeluje
               kao renomirani <strong>Institut Simo Milošević</strong>.
             </p>
 
-            <h2>Plaža Stara Banja — drugo ime Blatne plaže</h2>
+            <h2>Plaža Stara Banja - drugo ime Blatne plaže</h2>
             <p>
               Ako ste u pretrazi naišli na naziv <strong>plaža Stara Banja u Igalu</strong>,
-              riječ je upravo o Blatnoj plaži — to su dva imena za istu plažu. Mještani i
-              stariji gosti plažu i njeno zaleđe i danas zovu Stara Banja, po staroj banji —
+              riječ je upravo o Blatnoj plaži - to su dva imena za istu plažu. Mještani i
+              stariji gosti plažu i njeno zaleđe i danas zovu Stara Banja, po staroj banji -
               kupališnom lječilištu iz prve polovine XX vijeka u kojem se igaljsko blato
               koristilo u terapijske svrhe i prije nego što je 1949. osnovano današnje
               lječilište, Institut Simo Milošević.
             </p>
             <p>
-              Za posjetioce to praktično znači: sve što važi za Blatnu plažu — besplatan ulaz,
-              lekovito blato, plićak pogodan za djecu — važi i za Staru Banju. Tražite li
+              Za posjetioce to praktično znači: sve što važi za Blatnu plažu - besplatan ulaz,
+              lekovito blato, plićak pogodan za djecu - važi i za Staru Banju. Tražite li
               <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">smeštaj
               kod Stare Banje u Igalu</a>, apartmani Monako nalaze se svega 100 metara od plaže,
               na adresi Dubrovačka 1.
@@ -1029,7 +1033,7 @@
               <li>Titova vila i Institut Simo Milošević</li>
             </ul>
             <p>
-              Terapija blatom je <strong>besplatna i dostupna svima</strong> — jedino trebate
+              Terapija blatom je <strong>besplatna i dostupna svima</strong> - jedino trebate
               doći s kupačim kostimom i spremnošću da se malo prljate. A ako želite biti na
               samom izvoru terapije, naši
               <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">apartmani
@@ -1043,7 +1047,7 @@
               grad privlači posjetioce koji traže prirodnu rehabilitaciju i odmor istovremeno.
               Institut Simo Milošević nudi i formalne medicinske programe koji uključuju
               igalsko blato kao dio certifikovanih tretmana. Pacijenti koji dolaze na
-              višenedeljne terapije često traže smještaj na duži period — za njih nudimo
+              višenedeljne terapije često traže smještaj na duži period - za njih nudimo
               <a href="/mesecni-najam-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">mesečni
               najam apartmana u Igalu, Herceg Novi (izdavanje stana od 500€, sve uključeno)</a>,
               svega 5 minuta hoda od Instituta.
@@ -1051,7 +1055,7 @@
             <p>
               Zanimljivost: upravo u Institutu se svakog februara održava izložba
               cvijeća <a href="/praznik-mimoze-program.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Praznika
-              mimoze</a> — najstarijeg festivala na crnogorskom primorju, čija se
+              mimoze</a> - najstarijeg festivala na crnogorskom primorju, čija se
               glavna pozornica nalazi na platou ispred hotela Igalo, nekoliko
               minuta hoda od Blatne plaže.
             </p>
@@ -1138,7 +1142,7 @@
           <figure class="gallery__item">
             <img
               src="images/blatna-plaza-igalo-2.jpg"
-              alt="Blatna plaža u Igalu – pogled prema moru sa lekovitim muljem u prvom planu"
+              alt="Blatna plaža u Igalu - pogled prema moru sa lekovitim muljem u prvom planu"
               width="560"
               height="420"
               loading="lazy"
@@ -1148,7 +1152,7 @@
           <figure class="gallery__item">
             <img
               src="images/blatna-plaza-igalo-1.webp"
-              alt="Blatna plaža Igalo – turisti uživaju u lekovitoj terapiji blatom"
+              alt="Blatna plaža Igalo - turisti uživaju u lekovitoj terapiji blatom"
               width="560"
               height="420"
               loading="lazy"
@@ -1202,7 +1206,7 @@
               </span>
             </button>
             <div class="faq__answer" id="faq6" role="region">
-              Da, <strong>Stara Banja</strong> je drugo, starije ime Blatne plaže u Igalu —
+              Da, <strong>Stara Banja</strong> je drugo, starije ime Blatne plaže u Igalu -
               mještani i danas tako zovu plažu i njeno zaleđe. Naziv potiče od stare banje,
               kupališnog lječilišta iz prve polovine XX vijeka u kojem se igaljsko blato
               koristilo u terapijske svrhe prije osnivanja današnjeg Instituta Simo Milošević
@@ -1232,7 +1236,7 @@
             </button>
             <div class="faq__answer" id="faq4" role="region">
               Apartmani Monako na adresi Dubrovačka 1, Igalo, nalaze se samo <strong>100 metara</strong>
-              od Blatne plaže — pješice manje od 2 minute. U prizemlju zgrade nalazi se
+              od Blatne plaže - pješice manje od 2 minute. U prizemlju zgrade nalazi se
               minimarket za svakodnevne namirnice.
             </div>
           </div>
@@ -1248,7 +1252,7 @@
               Lekovito blato u Igalu tradicionalno se koristi za ublažavanje
               <strong>reumatizma, artritisa i degenerativnih oboljenja lokomotornog
               sistema</strong> (zglobova, kičme i mišića), a blagotvorno djeluje i na kožu.
-              Za ozbiljnija stanja preporučuje se konsultacija s ljekarom — stručne terapije
+              Za ozbiljnija stanja preporučuje se konsultacija s ljekarom - stručne terapije
               blatom nudi i obližnji Institut Dr Simo Milošević.
             </div>
           </div>
@@ -1283,7 +1287,7 @@
             </div>
             <blockquote class="review-card__quote" itemprop="reviewBody">
               Tek smo jedan dan ovdje i oduševljeni smo gostoprimstvom i higijenom u apartmanu.
-              U prizemlju Idea minimarket, a plaža na 60 metara. Odnos cijena–usluga je 10+.
+              U prizemlju Idea minimarket, a plaža na 60 metara. Odnos cijena-usluga je 10+.
             </blockquote>
             <p class="review-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">Boban Šundić</span>
@@ -1336,7 +1340,7 @@
               ★★★★★
             </div>
             <blockquote class="review-card__quote" itemprop="reviewBody">
-              Great apartment and very clean! Tatjana and her family are wonderful hosts —
+              Great apartment and very clean! Tatjana and her family are wonderful hosts -
               very kind and helpful. Herceg Novi is just a few minutes away by bus or a
               pleasant walk along the pier.
             </blockquote>
@@ -1380,7 +1384,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               <div>
                 <strong>Radno vrijeme</strong>
-                Ponedjeljak – Nedjelja, 24/7
+                Ponedjeljak - Nedjelja, 24/7
               </div>
             </div>
           </div>
@@ -1449,7 +1453,7 @@
     // Dynamic copyright year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // FAQ accordion — keyboard accessible
+    // FAQ accordion - keyboard accessible
     document.querySelectorAll('.faq__question').forEach(btn => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
@@ -1470,6 +1474,199 @@
   </script>
 
   <!-- sr-only utility (needed for figcaption) -->
-  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* ══════════════════════════════════════════════════════════════
+       2026 UI REFRESH - appended last so it overrides this page's base
+       rules without rewriting them. Mirrors index.html.
+    ══════════════════════════════════════════════════════════════ */
+    :root {
+      /* SHAPE LOCK - sm = interactive, md = small containers, lg = cards */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --sp-ml: 3rem;
+      --sp-xl: 5.5rem;
+      --sp-section:       clamp(3.5rem, 7vw, 6rem);
+      --sp-section-tight: clamp(2.5rem, 5vw, 3.5rem);
+      /* Shadows carry the page's blue hue rather than neutral black. */
+      --shadow-card:       0 1px 3px rgba(9,45,80,.07), 0 4px 16px rgba(9,45,80,.08);
+      --shadow-card-hover: 0 8px 28px rgba(9,45,80,.14);
+    }
+    .section { padding-block: var(--sp-section); }
+    .section--tight { padding-block: var(--sp-section-tight); }
+
+    /* Sticky on every page, so the phone CTA stays reachable and the mobile
+       panel has a positioned ancestor to anchor to. */
+    .nav { position: sticky; top: 0; z-index: 100; }
+    .nav__actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
+    .nav__cta:active, .btn-primary:active, .btn-secondary:active { transform: scale(0.98); }
+    .nav__toggle {
+      display: none; width: 44px; height: 44px; place-items: center;
+      border-radius: var(--radius-sm); color: var(--c-text);
+      border: 1px solid var(--c-divider); background: none; cursor: pointer;
+      transition: background var(--trans), border-color var(--trans);
+    }
+    .nav__toggle:hover { background: var(--c-sand); border-color: var(--c-teal); }
+    .nav__toggle:active { transform: scale(0.97); }
+    .nav__toggle .i-close { display: none; }
+    .nav[data-open="true"] .nav__toggle .i-close { display: block; }
+    .nav[data-open="true"] .nav__toggle .i-open  { display: none; }
+
+    /* Below 860px the text destinations live behind the menu button. They
+       used to be display:none with no replacement. */
+    @media (max-width: 860px) {
+      .nav__toggle { display: grid; }
+      .nav__links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        display: none; flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--c-bg); border-bottom: 1px solid var(--c-divider);
+        box-shadow: var(--shadow-card);
+        padding-inline: clamp(1.25rem, 5vw, 3rem);
+        padding-block: var(--sp-xs) var(--sp-sm);
+      }
+      .nav[data-open="true"] .nav__links { display: flex; }
+      /* Specificity deliberately raised: several pages carry a
+         `.nav__links .nav__text-link { display:none }` rule that would
+         otherwise outrank this and leave the open panel empty. */
+      .nav .nav__links .nav__text-link {
+        display: flex; align-items: center; min-height: 48px;
+        font-size: var(--step-0); color: var(--c-text);
+        border-bottom: 1px solid var(--c-divider);
+      }
+      .nav .nav__links li:last-child .nav__text-link { border-bottom: 0; }
+    }
+    @media (max-width: 430px) {
+      .nav__inner { gap: 0.5rem; }
+      .nav__cta { padding: 0.5em 0.7em; }
+      .nav__logo { font-size: var(--step-0); }
+    }
+
+    /* ── STICKY CALL BAR (mobile) ────────────────── */
+    .callbar {
+      position: fixed; z-index: 90; left: 0; right: 0; bottom: 0;
+      display: none; gap: 0.5rem;
+      padding: 0.6rem clamp(0.75rem, 4vw, 1.25rem);
+      padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
+      background: rgba(255,255,255,0.92);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-top: 1px solid var(--c-divider);
+      transform: translateY(110%);
+      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .callbar[data-show="true"] { transform: none; }
+    .callbar__btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 0.4em; min-height: 48px; border-radius: var(--radius-sm);
+      font-weight: 600; font-size: var(--step--1); white-space: nowrap;
+      transition: background var(--trans), transform var(--trans);
+    }
+    .callbar__btn--call  { flex: 2 1 0; background: var(--c-teal); color: #fff; }
+    .callbar__btn--call:hover { background: var(--c-teal-dark); }
+    .callbar__btn--viber { flex: 1 1 0; background: #6B57F1; color: #fff; }
+    .callbar__btn--viber:hover { background: #5d4bd6; }
+    .callbar__btn:active { transform: scale(0.98); }
+    @media (max-width: 760px) {
+      .callbar { display: flex; }
+      body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media print { .callbar { display: none !important; } }
+
+    /* ── SCROLL REVEAL ───────────────────────────── */
+    @supports (animation-timeline: view()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .reveal {
+          animation: reveal-in linear both;
+          animation-timeline: view();
+          animation-range: entry 8% cover 26%;
+        }
+      }
+    }
+    @keyframes reveal-in {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <!-- STICKY CALL BAR - mobile only -->
+  <div class="callbar" data-show="false" aria-label="Brzi kontakt">
+    <a class="callbar__btn callbar__btn--call" href="tel:+38267558240">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      Pozovite nas
+    </a>
+    <a class="callbar__btn callbar__btn--viber" href="viber://chat?number=%2B38267558240" aria-label="Pišite nam na Viber">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.398.002C9.473.028 5.331.344 3.014 2.467 1.294 4.177.693 6.698.623 9.82c-.06 3.11-.13 8.95 5.5 10.541v2.42s-.038.97.602 1.17c.79.25 1.24-.499 1.99-1.299l1.4-1.58c3.85.32 6.8-.419 7.14-.529.78-.25 5.181-.811 5.901-6.652.74-6.031-.36-9.831-2.34-11.551l-.01-.002c-.6-.55-3-2.3-8.37-2.32 0 0-.396-.025-1.038-.016zm.067 1.697c.545-.003.88.02.88.02 4.542.01 6.719 1.412 7.229 1.871 1.67 1.44 2.53 4.65 1.91 9.68v.001c-.6 4.87-4.17 5.18-4.83 5.39-.28.09-2.88.74-6.153.53 0 0-2.439 2.941-3.199 3.701-.12.12-.26.17-.35.15-.13-.03-.16-.18-.16-.4l.02-4.019c-4.771-1.32-4.491-6.302-4.441-8.902.06-2.6.55-4.732 2-6.172 1.957-1.77 5.475-2.01 7.096-2.06.011 0 .011 0 .011 0v.001c-.045.001-.075.001-.115.001a5.34 5.34 0 0 0 .022-.001z"/></svg>
+      Viber upit
+    </a>
+  </div>
+
+  <script>
+    /* Mobile menu. Below 860px these five destinations were display:none
+       with no replacement, so they were unreachable on a phone. */
+    (function () {
+      var nav = document.querySelector('.nav');
+      var btn = nav && nav.querySelector('.nav__toggle');
+      if (!nav || !btn) return;
+      function setOpen(open) {
+        nav.dataset.open = open ? 'true' : 'false';
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+      }
+      setOpen(false);
+      btn.addEventListener('click', function () { setOpen(nav.dataset.open !== 'true'); });
+      nav.querySelectorAll('.nav__text-link').forEach(function (a) {
+        a.addEventListener('click', function () { setOpen(false); });
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.dataset.open === 'true') { setOpen(false); btn.focus(); }
+      });
+      document.addEventListener('click', function (e) {
+        if (nav.dataset.open === 'true' && !nav.contains(e.target)) setOpen(false);
+      });
+      var mq = window.matchMedia('(min-width: 861px)');
+      var onChange = function (e) { if (e.matches) setOpen(false); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange); else mq.addListener(onChange);
+    })();
+
+    /* Sticky call bar. Hidden while a hero CTA is still on screen so the same
+       action is never offered twice; shown immediately on pages without one. */
+    (function () {
+      var bar = document.querySelector('.callbar');
+      if (!bar) return;
+      /* Two conditions, no scroll listener.
+         1) The user has moved past the first screen, so the bar never
+            covers the opening view.
+         2) No in-content phone CTA is visible, so the bar is never a
+            second copy of a control already on screen.
+         A 1px sentinel below the fold supplies (1). Every in-content tel:
+         link is observed for (2) - watching only the first one missed
+         pages that repeat the CTA further down. */
+      if (!('IntersectionObserver' in window)) { bar.dataset.show = 'true'; return; }
+
+      var passedFold = false, visibleCtas = 0;
+      function sync() { bar.dataset.show = (passedFold && visibleCtas === 0) ? 'true' : 'false'; }
+
+      var sentinel = document.createElement('div');
+      sentinel.setAttribute('aria-hidden', 'true');
+      sentinel.style.cssText = 'position:absolute;top:70vh;left:0;width:1px;height:1px;pointer-events:none';
+      document.body.appendChild(sentinel);
+      new IntersectionObserver(function (e) {
+        passedFold = e[0].boundingClientRect.top < 0;
+        sync();
+      }).observe(sentinel);
+
+      var ctaObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var was = entry.target.dataset.cbVisible === '1';
+          if (entry.isIntersecting && !was) { entry.target.dataset.cbVisible = '1'; visibleCtas++; }
+          else if (!entry.isIntersecting && was) { entry.target.dataset.cbVisible = '0'; visibleCtas--; }
+        });
+        sync();
+      }, { rootMargin: '0px 0px -15% 0px' });
+
+      Array.prototype.forEach.call(document.querySelectorAll('a[href^="tel:"]'), function (a) {
+        if (!a.closest('.nav') && !a.closest('.callbar')) ctaObserver.observe(a);
+      });
+    })();
+  </script>
 </body>
 </html>
