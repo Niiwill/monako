@@ -17,6 +17,8 @@
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
   </url>
 
   <url>
@@ -25,6 +27,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/about.html"/>
   </url>
 
   <url>
@@ -201,6 +205,26 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/en/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/en/about.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/about.html"/>
   </url>
 
 </urlset>
