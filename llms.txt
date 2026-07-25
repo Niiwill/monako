@@ -1,4 +1,4 @@
-# Monako Apartmani Igalo
+# Apartmani Igalo Monako
 
 > Family-run apartments in Igalo, Herceg Novi, Montenegro — 100 m from the beach and the Igalo Institute. Seasonal holiday rentals and all-inclusive monthly rentals (Sept–June), rented directly by the owner. Address: Dubrovačka 1, Igalo 85347, Montenegro. Contact: hotel-monako@hotmail.com, +382 67 558 240.
 
@@ -6,7 +6,7 @@ Site content is in Serbian (Latin script) with selected pages available in Engli
 
 ## Main pages
 
-- [Apartmani Igalo — Monako](https://apartmani-igalo.com/): homepage — apartments, amenities, guest reviews, contact (Serbian)
+- [Apartmani Igalo Monako](https://apartmani-igalo.com/): homepage — apartments, amenities, guest reviews, contact (Serbian)
 - [About](https://apartmani-igalo.com/about.html): about the apartments and the hosts
 - [Monthly rental in Igalo](https://apartmani-igalo.com/monthly-rental-igalo.html): long-term apartment rental, €500/month all-inclusive (English)
 - [Mjesečni najam u Igalu](https://apartmani-igalo.com/mesecni-najam-igalo.html): dugoročni najam apartmana (Serbian)
