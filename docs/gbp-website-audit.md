@@ -50,14 +50,36 @@ Three small consistency gaps that the first audit did not cover:
 | R1 | `og:locale` used five values for one business — `sr_RS` ×12, `sr_ME` ×1, `en_US` ×4, `en_GB` ×3, `en_ME` ×1. `sr_ME` and `en_ME` are not valid Open Graph locales | Normalised to `sr_RS` (13 SR pages) and `en_GB` (8 EN pages), including `og:locale:alternate` |
 | R2 | `mesecni-najam-igalo.html` declared `<html lang="sr">` while its 12 SR siblings declared `sr-Latn-ME` | Changed to `sr-Latn-ME` |
 | R3 | `monthly-rental-igalo.html` was the only page without `<meta name="robots">`, so it lost the `max-image-preview:large` / `max-snippet:-1` SERP directives its SR counterpart has | Added the same directive used on the other 20 pages |
+| R4 | **The site advertised WhatsApp, which the business does not operate** — a float button, a hero CTA, a contact card and four copy references across `monthly-rental-igalo.html` and `en/index.html`, all pointing at `wa.me/38267558240` | Removed entirely; Viber is now the only messaging channel the site names. See "WhatsApp removed" below |
+
+### WhatsApp removed (2026-07-26)
+
+The owner confirmed the business runs **Viber only** and has never operated WhatsApp. Every
+WhatsApp reference was removed — it was advertising a channel nobody monitors, which is worse
+than not listing a channel at all:
+
+| File | Was | Now |
+|---|---|---|
+| `monthly-rental-igalo.html` | Floating `wa.me` button (`.wa-float`, WhatsApp green `#25D366`) | Viber deep link, `.viber-float`, Viber purple `#6B57F1` to match the rest of the site |
+| `monthly-rental-igalo.html` | Contact card `wa.me`, labelled "WhatsApp / Viber" | Viber deep link, labelled "Viber" |
+| `monthly-rental-igalo.html` | "video walkthrough via WhatsApp or Facetime" — in the visible FAQ **and** the `FAQPage` JSON-LD | "via Viber or Facetime" in both, kept in sync |
+| `monthly-rental-igalo.html` | Comparison table: "Yes - WhatsApp/Facetime" | "Yes - Viber/Facetime" |
+| `en/index.html` | Hero CTA `wa.me` button beside the Viber button | Removed; Viber CTA remains |
+| `en/index.html` | FAQ: "reachable 24/7 by phone, Viber and WhatsApp" | "reachable 24/7 by phone and Viber" |
+
+Note the FAQ text existed in two places on `monthly-rental-igalo.html` — rendered HTML and
+`FAQPage` structured data. Both were updated; leaving the JSON-LD copy stale would have put a
+mismatch between markup and visible content, which is its own guideline problem.
+
+**Site-wide result:** zero occurrences of `whatsapp` or `wa.me` in any HTML, `llms.txt`,
+`sitemap.xml` or `robots.txt`.
 
 ### Open, needs a decision (no change made)
 
 - **SMS channel asymmetry.** GBP publishes a texting number (`sms:+38267558240`) but the
-  site never surfaces SMS; the site pushes Viber (23 deep links) and WhatsApp (3), and GBP
-  has no Viber field and an empty WhatsApp field. Same number throughout, so this is not a
-  NAP conflict — but the two surfaces advertise different contact channels. Either add an
-  SMS link to the contact block or drop the texting number from GBP.
+  site never surfaces SMS. Same number throughout, so this is not a NAP conflict — but the
+  two surfaces advertise different contact channels. Either add an SMS link to the contact
+  block or drop the texting number from GBP.
 - **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
   alternate. A no-op that Google ignores; harmless, left in place.
 - **`⭐ 4.9/5` in the `index.html` meta/OG descriptions.** Not a structured-data claim and
@@ -82,7 +104,7 @@ repository and are the remaining work.
 | M1 | GBP description empty | **GBP dashboard** — draft copy in the M1 section below |
 | M2 | `VacationRental` schema type | **Fixed** — now `LodgingBusiness` on all 13 nodes |
 | M3 | Contradictory GBP agency categories | **GBP dashboard** |
-| M4 | WhatsApp / chat channels | **GBP dashboard** — site already publishes `wa.me/38267558240` |
+| M4 | WhatsApp / chat channels | **Superseded 2026-07-26** — business is Viber-only; WhatsApp removed from the site and the GBP field stays empty |
 | M5 | No English homepage or About | **Fixed** — added `/en/` and `/en/about.html` |
 | M6 | Inconsistent brand name in titles | **Fixed** — all 19 titles standardised + `alternateName` added |
 | M7 | `hotel-monako@hotmail.com` | **Deferred by decision** — kept, to avoid breaking a live address |
@@ -110,7 +132,8 @@ repository and are the remaining work.
 
 1. **Add the business description** (M1) — draft in the M1 section below.
 2. **Remove the two agency categories** (M3): *Apartment rental agency*, *Vacation home rental agency*.
-3. **Set the WhatsApp field** to `https://wa.me/38267558240` and pick a primary chat (M4).
+3. **Leave the WhatsApp field empty** (M4, revised 2026-07-26 — the business does not use
+   WhatsApp). Nothing to do unless you want a primary chat set.
 4. **Set amenity attributes** matching the eight the site lists, plus store code and labels (G1).
 5. Optionally publish the walkthrough video on the profile / linked YouTube channel (G9).
 
@@ -354,24 +377,36 @@ In the GBP dashboard, keep **Holiday apartment rental** (primary) and **Holiday 
 
 ## M4 — Messaging channels do not line up
 
-**Current situation**
+> **Revised 2026-07-26.** The original recommendation below was to publish the site's
+> WhatsApp link on the profile. The owner has since confirmed **the business does not use
+> WhatsApp at all — Viber only.** The original advice was therefore wrong in its premise:
+> the `wa.me` links were advertising a channel nobody was answering. They have been removed
+> from the site, and the GBP WhatsApp field must stay empty.
+
+**Current situation (after the 2026-07-26 fix)**
 
 | Channel | Website | GBP |
 |---|---|---|
-| Viber | Primary CTA. 150+ mentions, `viber://chat?number=%2B38267558240` deep links, dedicated buttons in the header, hero, call bar and contact block | no field exists |
-| WhatsApp | `https://wa.me/38267558240` (2 pages), "WhatsApp" named 8× | **empty** |
+| Viber | Primary CTA. 150+ mentions, `viber://chat?number=%2B38267558240` deep links, dedicated buttons in the header, hero, call bar, float button and contact block | no field exists |
+| WhatsApp | **removed — not operated by the business** | **empty — correct, leave it so** |
 | SMS | not surfaced | `sms:+38267558240` |
 | Primary chat | — | **empty** |
 
-**Why it matters** The channel the site pushes hardest (Viber) is invisible on the profile, and the WhatsApp link the site does publish is not declared on the profile even though the field exists and the number is already live. A searcher who finds you on Maps sees a different contact surface than one who lands on the site — and Google sees fewer corroborated contact methods than actually exist.
+**Why it matters** The channel the site pushes hardest (Viber) is invisible on the profile
+and GBP has no Viber field, so that gap is not fixable from either side. What *was* fixable
+was the reverse error: the site offering a WhatsApp button that reached nobody. A guest
+messaging it would have gone unanswered — a worse outcome than the channel simply not being
+listed, and the kind of dead contact path that erodes trust in the whole profile.
 
 **Recommended fix**
-- Set the GBP **WhatsApp** field to `https://wa.me/38267558240` — only because that link is already live on the site; do not add channels you don't operate.
-- Set **Primary chat** so the profile has a declared default.
-- GBP has no Viber field; that gap is not fixable. Compensate by keeping the phone number identical across both (it already is), since Viber resolves on that number.
-- Optional: add a `contactPoint` to the `LodgingBusiness` node listing the phone with `contactType: "reservations"` and `availableLanguage`.
+- **Leave the GBP WhatsApp field empty.** Do not add channels you do not operate.
+- Optionally set **Primary chat** so the profile has a declared default.
+- Keep the phone number identical across both surfaces (it already is), since Viber resolves
+  on that number — that is the only Viber corroboration available.
+- Optional: add a `contactPoint` to the `LodgingBusiness` node listing the phone with
+  `contactType: "reservations"` and `availableLanguage`.
 
-**Exact locations:** GBP dashboard for the first two. `wa.me` links: `index.html`, `monthly-rental-igalo.html`.
+**Exact locations:** GBP dashboard. Removed `wa.me` links: `monthly-rental-igalo.html`, `en/index.html`.
 
 ---
 
