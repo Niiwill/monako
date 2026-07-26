@@ -128,6 +128,60 @@ Both rental pages were rendered at 1280px and 390px to confirm the four-card row
 longer nav brand hold; `monthly-rental-igalo.html` needed a mobile `.nav-brand` size
 reduction to keep the business name on one line.
 
+### Schema ↔ GBP field map (machine-checked, 2026-07-26)
+
+Every column the GBP export contains, compared against the `#business` JSON-LD node on all
+13 pages. This check is scripted against the CSV, not eyeballed — re-run it after any change
+to the business node.
+
+| GBP export column | GBP value | Schema property | Match |
+|---|---|---|---|
+| Business name | Apartmani Igalo Monako | `name` | exact |
+| Address line 1 | Dubrovačka 1 | `address.streetAddress` | exact |
+| Locality | Igalo | `address.addressLocality` | exact |
+| Administrative area | *(empty)* | `address.addressRegion` | correctly **absent** |
+| Country / Region | ME | `address.addressCountry` | exact |
+| Postal code | 85347 | `address.postalCode` | exact |
+| Primary phone | 067 558 240 | `telephone` `+38267558240` | same number, E.164 |
+| Additional phones | *(empty)* | — | correctly absent |
+| Website | `…/?utm_source=gbp&utm_medium=organic` | `url` `https://apartmani-igalo.com/` | canonical; UTM correctly stripped |
+| Hours × 7 days | 00:00-24:00 | `openingHoursSpecification` 00:00–23:59 × 7 | Google's documented 24h encoding |
+| Special hours | *(empty)* | — | correctly absent |
+| Opening date | 2000-07-12 | `foundingDate` | exact |
+| Facebook | `facebook.com/apartmanimonako/` | `sameAs[0]` | exact |
+| Instagram | `instagram.com/apartmani.igalo/` | `sameAs[1]` | exact |
+| YouTube | `youtube.com/@monako-apartmaniigalo5135/` | `sameAs[2]` | exact |
+| LinkedIn / Pinterest / TikTok / WhatsApp / X | *(empty)* | — | correctly absent from `sameAs` |
+| From the business | *(empty)* | `description` | absent on both — see below |
+| **Texting number** | `sms:+38267558240` | — | **not expressible** — see below |
+
+**Result: 13/13 nodes match on every exportable field. Zero mismatches.**
+
+Two fields need explanation rather than a fix:
+
+- **Texting number.** schema.org has no vocabulary for "this number accepts SMS".
+  `ContactPoint.contactOption` is a closed enum containing only `HearingImpairedSupported`
+  and `TollFree`, so an "SMS" value would be invalid markup. The number itself is already
+  declared in `telephone`, and the site now links `sms:+38267558240` in its contact blocks,
+  which is the honest way to corroborate the channel. **No schema change should be made here.**
+- **From the business.** Empty on both sides, so they technically agree. To make them agree
+  *positively*, paste the M1 draft into the GBP dashboard and the same text can then be
+  mirrored into a schema `description`. Until the GBP field is filled, adding a schema
+  description would create an asymmetry rather than remove one.
+
+Fields the schema carries that GBP does not export — `alternateName`, `email`, `geo`,
+`hasMap`, `image`, `amenityFeature`, `containsPlace`, `starRating`, `knowsLanguage` — are
+additive, not conflicting. `hasMap` is the strongest binding of the set: its CID resolves to
+the same place ID as the Maps embed.
+
+**Fixed in this pass:** three English pages (`mimosa-festival-herceg-novi.html`,
+`monthly-rental-igalo.html`, `rent-a-bike-herceg-novi-igalo.html`) carried **Serbian**
+`amenityFeature` and `containsPlace` names in their schema while declaring `<html lang="en">`.
+They now use the English wording already present in `en/index.html` ("Free WiFi", "Sea-view
+balcony", "Studio Apartment"…). This does not affect GBP matching — no NAP field changed —
+but it removes a markup/page-language mismatch. Amenity language now matches page language on
+all 11 pages that carry amenities.
+
 ### Open, needs a decision (no change made)
 
 - **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
