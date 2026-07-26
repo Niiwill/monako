@@ -804,7 +804,14 @@
     .callbar__btn:active { transform: scale(0.98); }
     @media (max-width: 760px) {
       .callbar { display: flex; }
-      body { padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)); }
+      /* Reserve the bar's height so it can never cover the footer. It has to be
+         the footer's own padding: body padding sits outside the footer, so the
+         white body background showed as a strip under the dark panel. The
+         `body >` prefix is what makes this outrank the plain `footer` rule,
+         which sets padding-block elsewhere in this stylesheet. */
+      body > footer {
+        padding-bottom: calc(clamp(2.5rem, 6vw, 4rem) + 60px + env(safe-area-inset-bottom, 0px));
+      }
     }
     @media print { .callbar { display: none !important; } }
 
