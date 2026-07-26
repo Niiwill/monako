@@ -182,6 +182,32 @@ balcony", "Studio Apartment"…). This does not affect GBP matching — no NAP f
 but it removes a markup/page-language mismatch. Amenity language now matches page language on
 all 11 pages that carry amenities.
 
+### Sidebar CTA switched to Viber (2026-07-26)
+
+The "Smještaj u blizini" / "Nearby accommodation" sidebar card appears on 14 pages. Its CTA
+was a `mailto:` button; it is now a Viber deep link, matching the hero and call-bar buttons
+on `index.html`:
+
+- `class="btn btn-viber"`, `href="viber://chat?number=%2B38267558240"`, Viber glyph + label.
+- New `.btn-viber` modifier in each file's stylesheet — background `#6B57F1`, which is the
+  Viber brand purple darkened 2% so white text clears the 4.5:1 AA contrast floor (the same
+  value and reasoning already used on `index.html`).
+- Label follows page language: **Viber upit** on the 9 Serbian pages, **Chat on Viber** on
+  the 5 English ones (`mimosa-festival-herceg-novi.html`, `rent-a-bike-herceg-novi-igalo.html`,
+  `vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html`, `vesti/beaches-herceg-novi.html`,
+  `vesti/restaurants-herceg-novi.html`).
+
+Email is unaffected as a contact route — `mailto:hotel-monako@hotmail.com` still appears on
+all 21 pages via the footer and contact sections.
+
+**Wrong brand icon fixed.** `mesecni-najam-igalo.html` was drawing the **WhatsApp** logo on
+three Viber buttons — the hero CTA, the contact card and the floating button all used the
+Font Awesome WhatsApp path (`M17.472 14.382…`) instead of the Viber path (`M11.398.002…`)
+that the other 17 pages use. Given WhatsApp has just been removed from the site as a channel
+the business does not operate, showing its logo on a Viber button was actively misleading.
+All three now use the Viber glyph. No WhatsApp reference — text, link or icon — remains
+anywhere in the repository.
+
 ### Open, needs a decision (no change made)
 
 - **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
