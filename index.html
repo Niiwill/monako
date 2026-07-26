@@ -45,7 +45,15 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/png" href="/images/monako-favicon.png" sizes="48x48">
-  <link rel="preload" as="image" href="images/kuca_spolja.webp" imagesrcset="images/kuca_spolja-640.webp 640w, images/kuca_spolja-700.webp 700w, images/kuca_spolja-1000.webp 1000w, images/kuca_spolja.webp 1403w" imagesizes="(max-width: 900px) 92vw, 700px" fetchpriority="high">
+  <!-- LCP is the hero photograph. It is art-directed, so the two crops are
+       preloaded behind the same media queries the <picture> element uses;
+       exactly one of these ever fires. -->
+  <link rel="preload" as="image" media="(max-width: 63.99em)"
+        imagesrcset="images/igalo-panorama-640.webp 640w, images/igalo-panorama-900.webp 900w, images/igalo-panorama-1280.webp 1280w"
+        imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(min-width: 64em)"
+        imagesrcset="images/igalo-panorama-wide-1200.webp 1200w, images/igalo-panorama-wide-1600.webp 1600w, images/igalo-panorama-wide-2048.webp 2048w"
+        imagesizes="100vw" fetchpriority="high">
 
   <!-- The mobile video's poster and source are both attached by JS, so with
        scripting off there is nothing to show - hide it rather than leave an
@@ -331,82 +339,98 @@
   <style>
     /* ══════════════════════════════════════════════
        DESIGN TOKENS
-       BRAND LOCK. The page has ONE accent: --c-teal (#0E5EA6), unchanged
-       from the previous design. --c-star (#E8A020) stays rationed to exactly
-       two things: review star glyphs and the hero headline underline. The
-       Viber purple is a third-party brand colour and is the single
-       documented exception. --c-ink is not a fourth accent: it is the same
-       marine hue at very low lightness, used for one deliberate full-bleed
-       section (the location block) and nowhere else.
+
+       SURFACE SYSTEM. Two surfaces, applied as a rhythm, not at random:
+         light  - paper (#fff) and shell (warm stone)
+         deep   - sea and sea-deep, the brand blue at low lightness
+       Deep surfaces are used for exactly three blocks, each of which is a
+       moment rather than a section of running text: the booking ask, the
+       place, and the footer. This is one documented colour-block story,
+       not sections inverting at random.
+
+       ACCENT LOCK. --sea (#0E5EA6) is the brand accent, unchanged from the
+       previous site, and it is the only accent. --sun (#E8A020) is the
+       brand's existing secondary, rationed to three jobs: review stars,
+       the hero headline rule, and the section marks. Viber purple is a
+       third-party brand colour and is the single documented exception.
     ══════════════════════════════════════════════ */
     :root {
-      /* Light only, by the owner's decision. This also stops the browser
-         from auto-darkening form controls and scrollbars for visitors whose
-         OS is set to dark. */
+      /* Light only, by the owner's decision. Also stops the browser
+         auto-darkening controls for visitors whose OS is set to dark. */
       color-scheme: light;
 
-      --c-bg:         #FFFFFF;
-      --c-surface:    #EEF4FB;
-      --c-surface-2:  #E4EDF8;
-      --c-divider:    #D0DFF0;
-      --c-teal:       #0E5EA6;
-      --c-teal-dark:  #094880;
-      --c-teal-soft:  rgba(14, 94, 166, .07);
-      --c-on-accent:  #FFFFFF;
-      --c-text:       #0F0F0F;
-      --c-muted:      #5A6475;
-      --c-star:       #E8A020;
-      --c-viber:      #6B57F1;
-      --c-viber-dark: #5D4BD6;
+      --paper:     #FFFFFF;
+      --shell:     #F2EFE9;   /* warm stone, the Adriatic limestone note */
+      --shell-2:   #E9E4DA;
+      --line:      #E2DBCE;   /* warm hairline */
+      --line-soft: #EFEAE1;
 
-      /* Dark full-bleed block. Same hue family as the accent. */
-      --c-ink:        #0A1A2B;
-      --c-ink-text:   #EAF2FA;
-      --c-ink-muted:  #A7BDD2;
-      --c-ink-line:   rgba(234, 242, 250, .18);
-      --c-ink-accent: #7FC0F5;
+      --sea:       #0E5EA6;   /* BRAND ACCENT, unchanged */
+      --sea-dark:  #094880;
+      --sea-deep:  #073A63;   /* deep surface */
+      --sea-night: #052A49;
+      --sea-soft:  rgba(14, 94, 166, .07);
+      --sky:       #9FD1F5;   /* links and icons on deep surfaces */
+
+      --ink:       #0A2540;   /* body text, a coastal navy rather than black */
+      --muted:     #5A656C;
+      --sun:       #E8A020;   /* BRAND SECONDARY, unchanged */
+      /* Same hue at lower lightness, for star glyphs on light surfaces
+         where the brand amber only reaches 1.9:1. */
+      --sun-ink:   #B87500;
+
+      --viber:     #6B57F1;
+      --viber-dark:#5D4BD6;
+
+      --on-sea:    #FFFFFF;
+      --on-deep:   #F2F7FB;
+      --on-deep-mu:#A9C2D6;
+      --on-deep-ln:rgba(242, 247, 251, .16);
 
       --ff-display: 'Fraunces', 'Fraunces-fallback', Georgia, serif;
       --ff-body:    'Inter', 'Inter-fallback', system-ui, -apple-system, sans-serif;
 
       --step--2: clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
-      --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.9rem);
-      --step-0:  clamp(1rem,    0.95rem + 0.22vw, 1.125rem);
+      --step--1: clamp(0.84rem, 0.81rem + 0.14vw, 0.92rem);
+      --step-0:  clamp(1rem,    0.96rem + 0.20vw, 1.125rem);
       --step-1:  clamp(1.2rem,  1.12rem + 0.36vw, 1.45rem);
-      --step-2:  clamp(1.45rem, 1.31rem + 0.62vw, 1.85rem);
-      --step-3:  clamp(1.85rem, 1.62rem + 1.02vw, 2.6rem);
-      --step-4:  clamp(2.3rem,  1.92rem + 1.68vw, 3.5rem);
-      --step-5:  clamp(2.75rem, 2.05rem + 3.1vw,  4.5rem);
+      --step-2:  clamp(1.5rem,  1.35rem + 0.66vw, 1.95rem);
+      --step-3:  clamp(1.95rem, 1.70rem + 1.10vw, 2.75rem);
+      --step-4:  clamp(2.4rem,  1.98rem + 1.85vw, 3.6rem);
+      --step-5:  clamp(2.85rem, 2.10rem + 3.30vw, 4.75rem);
 
       --sp-xs: 0.5rem;
       --sp-sm: 1rem;
-      --sp-md: 2rem;
-      --sp-ml: 3rem;
+      --sp-md: 1.75rem;
+      --sp-ml: 2.75rem;
       --sp-lg: 4rem;
       --sp-xl: 5.5rem;
 
-      /* VISUAL_DENSITY 4. One step airier than the previous build, which is
-         what buys the photography room to work. */
-      --sp-section:       clamp(3.75rem, 7vw, 6.25rem);
-      --sp-section-tight: clamp(2.75rem, 5vw, 4rem);
+      /* VISUAL_DENSITY 3. The photography needs room to be the argument. */
+      --sp-section:       clamp(3.5rem, 9vw, 7rem);
+      --sp-section-tight: clamp(2.5rem, 6vw, 4rem);
 
-      /* SHAPE LOCK, unchanged: three tiers, no exceptions.
-         sm = interactive (buttons, links, inputs, focus rings)
-         md = small containers (icon tiles, chips, thumbs)
-         lg = cards, images, panels, map */
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 16px;
+      /* SHAPE LOCK - four tiers, one documented rule, no exceptions:
+         sm   = interactive (buttons, inputs, focus rings)
+         md   = small containers (icon tiles, thumbs, media controls)
+         lg   = cards, images, panels, map
+         pill = chips only (capacity, trust facts, included items) */
+      --r-sm:   12px;
+      --r-md:   18px;
+      --r-lg:   28px;
+      --r-pill: 999px;
 
-      --max-wide:  1200px;
-      --max-prose: 68ch;
-      --pad: clamp(1.25rem, 5vw, 3rem);
+      --max-wide:  1240px;
+      --max-prose: 62ch;
+      --pad: clamp(1.15rem, 5vw, 3rem);
+      --nav-h: 62px;
 
-      /* Shadows carry the page's blue hue rather than neutral black. */
-      --shadow-card:       0 1px 3px rgba(9, 45, 80, .06), 0 6px 22px rgba(9, 45, 80, .07);
-      --shadow-card-hover: 0 10px 34px rgba(9, 45, 80, .13);
-      --shadow-lift:       0 18px 48px rgba(9, 45, 80, .16);
-      --trans: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+      /* Shadows carry the sea hue rather than neutral black. */
+      --sh-card:  0 1px 2px rgba(7, 58, 99, .05), 0 8px 26px rgba(7, 58, 99, .07);
+      --sh-hover: 0 14px 40px rgba(7, 58, 99, .14);
+      --sh-lift:  0 24px 60px rgba(7, 58, 99, .20);
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+      --trans: 240ms var(--ease);
     }
 
     /* ── RESET ───────────────────────────────────── */
@@ -420,9 +444,8 @@
        Fraunces uses font-display:swap rather than optional: with `optional`
        a first-time visitor on a cold cache frequently never saw the display
        face at all. The metric-override fallback below is tuned closely
-       enough (size-adjust 115%, matched ascent/descent) that the swap costs
-       almost no layout shift. Inter stays on `optional`, where the body
-       fallback is near-identical anyway. */
+       enough that the swap costs almost no layout shift. Inter stays on
+       `optional`, where the body fallback is near-identical anyway. */
     @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
     @font-face{font-family:'Fraunces';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/fraunces-normal-300-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/fraunces-normal-300-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
@@ -433,587 +456,404 @@
     @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
     @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-serbian.woff2') format('woff2');unicode-range:U+0106-0107, U+010C-010D, U+0110-0111, U+0160-0161, U+017D-017E}
     @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:optional;src:url('/fonts/inter-normal-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-    @font-face {
-      font-family: 'Inter-fallback';
-      src: local('Arial');
-      size-adjust: 107%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-    @font-face {
-      font-family: 'Fraunces-fallback';
-      src: local('Georgia');
-      size-adjust: 115%;
-      ascent-override: 88%;
-      descent-override: 20%;
-      line-gap-override: 0%;
-    }
+    @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
+    @font-face{font-family:'Fraunces-fallback';src:local('Georgia');size-adjust:115%;ascent-override:88%;descent-override:20%;line-gap-override:0%}
 
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; font-size: 100%; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      /* Every in-page anchor has to clear the fixed header. */
+      scroll-padding-top: calc(var(--nav-h) + 12px);
+    }
     body {
-      background: var(--c-bg);
-      color: var(--c-text);
+      background: var(--paper);
+      color: var(--ink);
       font-family: var(--ff-body);
       font-size: var(--step-0);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       min-width: 0;
+      overflow-x: clip;
     }
-    img, picture { display: block; max-width: 100%; height: auto; }
+    img, picture, video, iframe { display: block; max-width: 100%; }
+    img { height: auto; }
     a { color: inherit; text-decoration: none; }
     ul, ol { list-style: none; }
     button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
-    iframe { border: 0; display: block; }
-    :focus-visible {
-      outline: 2px solid var(--c-teal);
-      outline-offset: 3px;
-      border-radius: var(--radius-sm);
-    }
+    iframe { border: 0; }
+    :focus-visible { outline: 2px solid var(--sea); outline-offset: 3px; border-radius: var(--r-sm); }
+    .deep :focus-visible, .footer :focus-visible { outline-color: var(--sky); }
 
-    /* ── SKIP LINK ────────────────────────────────── */
     .skip-link {
-      position: absolute;
-      top: -100%;
-      left: var(--sp-sm);
-      background: var(--c-teal);
-      color: var(--c-on-accent);
-      padding: 0.5em 1em;
-      border-radius: var(--radius-sm);
-      font-size: var(--step--1);
-      font-weight: 600;
-      z-index: 9999;
+      position: absolute; top: -100%; left: var(--sp-sm);
+      background: var(--sea); color: var(--on-sea);
+      padding: 0.6em 1.1em; border-radius: var(--r-sm);
+      font-size: var(--step--1); font-weight: 600; z-index: 9999;
       transition: top var(--trans);
     }
     .skip-link:focus { top: var(--sp-sm); }
 
     /* ── LAYOUT ──────────────────────────────────── */
-    .container {
-      width: 100%;
-      max-width: var(--max-wide);
-      margin-inline: auto;
-      padding-inline: var(--pad);
-    }
+    .container { width: 100%; max-width: var(--max-wide); margin-inline: auto; padding-inline: var(--pad); }
+    .container--narrow { max-width: 960px; }
     .section { padding-block: var(--sp-section); }
     .section--tight { padding-block: var(--sp-section-tight); }
-    .section--surface { background: var(--c-surface); }
-    /* Clears the sticky nav when /#cjenovnik is followed from off-page. */
-    #cjenovnik { scroll-margin-top: 70px; }
+    .section--shell { background: var(--shell); }
 
-    /* ── TYPE PRIMITIVES ─────────────────────────── */
-    /* Fraunces carries an optical-size axis. Browsers map it to font-size
-       automatically, which is right for body-adjacent display text but too
-       conservative at headline scale, so the largest type asks for the
-       display cut explicitly (finer serifs, higher stroke contrast) and the
-       small caps-height wordmark asks for a sturdier text cut. */
-    .display {
-      font-family: var(--ff-display);
-      font-weight: 700;
-      line-height: 1.06;
-      letter-spacing: -0.028em;
-      text-wrap: balance;
-      font-variation-settings: 'opsz' 144;
-    }
+    /* Deep surfaces. One rule, three blocks. */
+    /* Scoped deliberately narrowly. A blanket `.deep p` rule leaks into the
+       white price panel that floats on top of the deep block and turns its
+       body copy pale-on-white. Each light element inside a deep block keeps
+       its own colours. */
+    .deep { background: var(--sea-deep); color: var(--on-deep); }
+    .deep > .container .section-title { color: var(--on-deep); }
+    .deep > .container .section-lede { color: var(--on-deep-mu); }
+    .deep > .container .section-lede strong { color: var(--on-deep); }
+
+    /* ── TYPE ────────────────────────────────────── */
     p { text-wrap: pretty; }
-
-    .section-eyebrow {
-      display: block;
-      font-size: var(--step--1);
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--c-teal);
-      margin-bottom: 0.9rem;
+    .section-mark {
+      display: flex; align-items: center; gap: 0.6em;
+      font-size: var(--step--1); font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--sea); margin-bottom: 0.9rem;
     }
+    .section-mark::before {
+      content: ''; width: 26px; height: 2px; border-radius: 2px;
+      background: var(--sun); flex-shrink: 0;
+    }
+    .deep .section-mark { color: var(--sky); }
     .section-title {
-      font-family: var(--ff-display);
-      font-size: var(--step-3);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      text-wrap: balance;
-      max-width: 20ch;
+      font-family: var(--ff-display); font-size: var(--step-3); font-weight: 700;
+      line-height: 1.08; letter-spacing: -0.03em; text-wrap: balance;
+      font-variation-settings: 'opsz' 120; max-width: 18ch;
     }
     .section-lede {
-      margin-top: var(--sp-sm);
-      color: var(--c-muted);
-      max-width: var(--max-prose);
-      line-height: 1.75;
+      margin-top: var(--sp-sm); color: var(--muted);
+      max-width: var(--max-prose); line-height: 1.75;
     }
     .section-header { margin-bottom: var(--sp-ml); }
     .section-footer-link { margin-top: var(--sp-ml); }
 
     /* ── BUTTONS ─────────────────────────────────── */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5em;
-      padding: 0.8em 1.6em;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: var(--step-0);
-      line-height: 1.2;
-      white-space: nowrap;
-      transition: background var(--trans), border-color var(--trans),
-                  color var(--trans), transform var(--trans), box-shadow var(--trans);
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.55em;
+      min-height: 52px; padding: 0.85em 1.75em;
+      border-radius: var(--r-sm); font-weight: 600; font-size: var(--step-0);
+      line-height: 1.2; white-space: nowrap;
+      transition: background var(--trans), color var(--trans),
+                  border-color var(--trans), transform var(--trans), box-shadow var(--trans);
     }
     .btn svg { flex-shrink: 0; }
     .btn:active { transform: scale(0.98); }
-    .btn--primary {
-      background: var(--c-teal);
-      color: var(--c-on-accent);
-      box-shadow: 0 1px 2px rgba(9, 45, 80, .18);
+    .btn--primary { background: var(--sea); color: var(--on-sea); box-shadow: 0 2px 10px rgba(7,58,99,.22); }
+    .btn--primary:hover { background: var(--sea-dark); transform: translateY(-2px); box-shadow: var(--sh-hover); }
+    .btn--light { background: var(--paper); color: var(--sea-deep); }
+    .btn--light:hover { transform: translateY(-2px); box-shadow: var(--sh-hover); }
+    .btn--ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+    .btn--ghost:hover { border-color: var(--sea); color: var(--sea); }
+    .btn--glass {
+      background: rgba(255,255,255,.14); color: #fff;
+      border: 1px solid rgba(255,255,255,.42);
+      -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
     }
-    .btn--primary:hover { background: var(--c-teal-dark); transform: translateY(-1px); box-shadow: var(--shadow-card-hover); }
-    .btn--ghost {
-      background: transparent;
-      color: var(--c-text);
-      border: 1.5px solid var(--c-divider);
+    .btn--glass:hover { background: rgba(255,255,255,.24); transform: translateY(-2px); }
+    .btn--viber { background: var(--viber); color: #fff; }
+    .btn--viber:hover { background: var(--viber-dark); transform: translateY(-2px); }
+    @media (prefers-reduced-transparency: reduce) {
+      .btn--glass { background: var(--sea-deep); border-color: var(--sea-deep); -webkit-backdrop-filter: none; backdrop-filter: none; }
     }
-    .btn--ghost:hover { border-color: var(--c-teal); color: var(--c-teal); }
-    .btn--viber { background: var(--c-viber); color: #fff; }
-    .btn--viber:hover { background: var(--c-viber-dark); transform: translateY(-1px); }
-    .btn--sm { padding: 0.6em 1.15em; font-size: var(--step--1); }
 
     .view-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4em;
-      min-height: 24px;
-      font-size: var(--step--1);
-      font-weight: 600;
-      color: var(--c-teal);
-      white-space: nowrap;
-      transition: gap var(--trans);
+      display: inline-flex; align-items: center; gap: 0.45em; min-height: 28px;
+      font-size: var(--step--1); font-weight: 600; color: var(--sea);
+      white-space: nowrap; transition: gap var(--trans);
     }
-    .view-all:hover { gap: 0.75em; }
+    .view-all:hover { gap: 0.8em; }
+    .deep .view-all { color: var(--sky); }
     .link-inline {
-      color: var(--c-teal);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-thickness: 1px;
-      /* Vertical padding on an inline box grows the hit area without
-         growing the line box, so prose links clear 24px on touch. */
-      padding-block: 4px;
+      color: var(--sea); text-decoration: underline; text-underline-offset: 3px;
+      text-decoration-thickness: 1px; padding-block: 4px;
     }
     .link-inline:hover { text-decoration-thickness: 2px; }
+    .deep .link-inline { color: var(--sky); }
 
-    /* ── NAV ─────────────────────────────────────── */
+    /* ── NAV - fixed and glassy, so the hero image runs under it ────── */
     .nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: color-mix(in srgb, var(--c-bg) 88%, transparent);
-      -webkit-backdrop-filter: saturate(180%) blur(14px);
-      backdrop-filter: saturate(180%) blur(14px);
-      border-bottom: 1px solid var(--c-divider);
-      padding-block: 0.75rem;
-      min-height: 60px;
-      contain: layout style;
+      position: fixed; inset: 0 0 auto 0; z-index: 100;
+      min-height: var(--nav-h);
+      display: flex; align-items: center;
+      background: rgba(255,255,255,.72);
+      -webkit-backdrop-filter: saturate(170%) blur(16px);
+      backdrop-filter: saturate(170%) blur(16px);
+      border-bottom: 1px solid rgba(226,219,206,.7);
     }
-    @supports not (background: color-mix(in srgb, red 50%, transparent)) {
-      .nav { background: var(--c-bg); }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .nav { background: var(--paper); }
     }
-    .nav__inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--sp-sm);
-      min-width: 0;
-    }
+    @media (prefers-reduced-transparency: reduce) { .nav { background: var(--paper); } }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-sm); min-width: 0; }
     .nav__logo {
-      font-family: var(--ff-display);
-      font-size: var(--step-1);
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      color: var(--c-text);
-      white-space: nowrap;
-      flex-shrink: 0;
-      /* Text-grade optical cut: sturdier at wordmark size than the display
-         cut the headline uses. */
+      font-family: var(--ff-display); font-size: var(--step-1); font-weight: 700;
+      letter-spacing: -0.02em; color: var(--ink); white-space: nowrap; flex-shrink: 0;
       font-variation-settings: 'opsz' 18;
     }
-    .nav__logo span { color: var(--c-teal); }
-    .nav__links { display: flex; gap: clamp(1.1rem, 2.2vw, 2rem); align-items: center; }
-    .nav__text-link {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      min-height: 26px;
-      font-size: var(--step--1);
-      font-weight: 500;
-      color: var(--c-muted);
-      transition: color var(--trans);
-    }
-    .nav__text-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -6px;
-      height: 2px;
-      border-radius: 2px;
-      background: var(--c-teal);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform var(--trans);
-    }
-    .nav__text-link:hover,
-    .nav__text-link:focus-visible { color: var(--c-teal); }
-    .nav__text-link:hover::after { transform: scaleX(1); }
+    .nav__logo span { color: var(--sea); }
+    .nav__links { display: none; }
     .nav__actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
     .nav__cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4em;
-      background: var(--c-teal);
-      color: var(--c-on-accent);
-      padding: 0.55em 1.1em;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: var(--step--1);
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: background var(--trans), transform var(--trans);
+      display: inline-flex; align-items: center; gap: 0.4em;
+      min-height: 42px; padding: 0.5em 1.1em;
+      background: var(--sea); color: var(--on-sea);
+      border-radius: var(--r-sm); font-weight: 600; font-size: var(--step--1);
+      white-space: nowrap; transition: background var(--trans), transform var(--trans);
     }
-    .nav__cta:hover { background: var(--c-teal-dark); transform: translateY(-1px); }
+    .nav__cta:hover { background: var(--sea-dark); transform: translateY(-1px); }
     .nav__cta:active { transform: scale(0.97); }
-
     .nav__toggle {
-      display: none;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      border-radius: var(--radius-sm);
-      color: var(--c-text);
-      border: 1px solid var(--c-divider);
+      display: grid; place-items: center; width: 44px; height: 44px;
+      border-radius: var(--r-sm); color: var(--ink);
+      border: 1px solid var(--line);
       transition: background var(--trans), border-color var(--trans);
     }
-    .nav__toggle:hover { background: var(--c-surface); border-color: var(--c-teal); }
+    .nav__toggle:hover { background: var(--shell); border-color: var(--sea); }
     .nav__toggle:active { transform: scale(0.97); }
     .nav__toggle .i-close { display: none; }
     .nav[data-open="true"] .nav__toggle .i-close { display: block; }
-    .nav[data-open="true"] .nav__toggle .i-open  { display: none; }
-
-    @media (max-width: 430px) {
-      .nav__inner { gap: 0.5rem; }
-      .nav__cta { padding: 0.5em 0.7em; }
+    .nav[data-open="true"] .nav__toggle .i-open { display: none; }
+    .nav__links {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--paper); border-bottom: 1px solid var(--line);
+      box-shadow: var(--sh-card);
+      padding-inline: var(--pad); padding-block: var(--sp-xs) var(--sp-sm);
+    }
+    .nav[data-open="true"] .nav__links { display: flex; }
+    .nav__text-link {
+      display: flex; align-items: center; min-height: 52px;
+      font-size: var(--step-0); font-weight: 500; color: var(--ink);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .nav__links li:last-child .nav__text-link { border-bottom: 0; }
+    @media (max-width: 26.875em) {
+      .nav__inner { gap: 0.4rem; }
+      .nav__cta { padding: 0.5em 0.75em; }
       .nav__logo { font-size: var(--step-0); }
     }
-
-    /* 860px: the width at which the five labels plus the logo and the phone
-       CTA stop fitting on one line. */
-    @media (max-width: 860px) {
-      .nav__toggle { display: grid; }
+    /* 64em is the width at which the five labels plus the wordmark and the
+       phone CTA fit on one line. Below it they live behind the button. */
+    @media (min-width: 64em) {
+      .nav__toggle { display: none; }
       .nav__links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        background: var(--c-bg);
-        border-bottom: 1px solid var(--c-divider);
-        box-shadow: var(--shadow-card);
-        padding-inline: var(--pad);
-        padding-block: var(--sp-xs) var(--sp-sm);
+        position: static; display: flex; flex-direction: row; align-items: center;
+        gap: clamp(1.1rem, 2.1vw, 2rem);
+        background: none; border-bottom: 0; box-shadow: none; padding: 0;
       }
-      .nav[data-open="true"] .nav__links { display: flex; }
       .nav__text-link {
-        display: flex;
-        align-items: center;
-        min-height: 48px;
-        font-size: var(--step-0);
-        color: var(--c-text);
-        border-bottom: 1px solid var(--c-divider);
+        position: relative; min-height: 30px; font-size: var(--step--1);
+        color: var(--muted); border-bottom: 0;
       }
-      .nav__text-link::after { display: none; }
-      .nav__links li:last-child .nav__text-link { border-bottom: 0; }
+      .nav__text-link::after {
+        content: ''; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px;
+        border-radius: 2px; background: var(--sun);
+        transform: scaleX(0); transform-origin: left; transition: transform var(--trans);
+      }
+      .nav__text-link:hover, .nav__text-link:focus-visible { color: var(--sea); }
+      .nav__text-link:hover::after { transform: scaleX(1); }
     }
 
     /* ── STICKY CALL BAR (mobile) ─────────────────
-       Unchanged behaviour from the previous build: the entire funnel is one
-       phone number and the hero CTA scrolls away permanently, so this keeps
-       it reachable. It stays hidden while any in-content phone CTA is still
-       on screen, so it never duplicates a visible control. */
+       Unchanged behaviour: the whole funnel is one phone number and the
+       hero CTA scrolls away, so this keeps it in the thumb zone. It stays
+       hidden while any in-content phone CTA is on screen, so it never
+       duplicates a visible control. */
     .callbar {
-      position: fixed;
-      z-index: 90;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      display: none;
-      gap: 0.5rem;
-      padding: 0.6rem clamp(0.75rem, 4vw, 1.25rem);
+      position: fixed; z-index: 90; inset: auto 0 0 0;
+      display: flex; gap: 0.5rem;
+      padding: 0.6rem var(--pad);
       padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
-      background: color-mix(in srgb, var(--c-bg) 92%, transparent);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border-top: 1px solid var(--c-divider);
-      transform: translateY(110%);
-      transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(255,255,255,.9);
+      -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+      border-top: 1px solid var(--line);
+      transform: translateY(115%);
+      transition: transform 300ms var(--ease);
     }
-    @supports not (background: color-mix(in srgb, red 50%, transparent)) {
-      .callbar { background: var(--c-bg); }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .callbar { background: var(--paper); }
     }
     .callbar[data-show="true"] { transform: none; }
     .callbar__btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4em;
-      min-height: 48px;
-      border-radius: var(--radius-sm);
-      font-weight: 600;
-      font-size: var(--step--1);
-      white-space: nowrap;
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+      min-height: 50px; border-radius: var(--r-sm);
+      font-weight: 600; font-size: var(--step--1); white-space: nowrap;
       transition: background var(--trans), transform var(--trans);
     }
-    /* The call is the primary action, so it gets twice the width. */
-    .callbar__btn--call  { flex: 2 1 0; background: var(--c-teal); color: var(--c-on-accent); }
-    .callbar__btn--call:hover { background: var(--c-teal-dark); }
-    .callbar__btn--viber { flex: 1 1 0; background: var(--c-viber); color: #fff; }
-    .callbar__btn--viber:hover { background: var(--c-viber-dark); }
+    .callbar__btn--call { flex: 2 1 0; background: var(--sea); color: var(--on-sea); }
+    .callbar__btn--call:hover { background: var(--sea-dark); }
+    .callbar__btn--viber { flex: 1 1 0; background: var(--viber); color: #fff; }
+    .callbar__btn--viber:hover { background: var(--viber-dark); }
     .callbar__btn:active { transform: scale(0.98); }
-    @media (max-width: 760px) {
-      .callbar { display: flex; }
-      /* Reserve the bar's height inside the footer's own padding, so the
-         page background never shows as a strip under the dark panel. */
-      body > footer {
-        padding-bottom: calc(var(--sp-lg) + 60px + env(safe-area-inset-bottom, 0px));
-      }
-    }
+    @media (min-width: 48em) { .callbar { display: none; } }
     @media print { .callbar { display: none !important; } }
 
     /* ══════════════════════════════════════════════
-       HERO - asymmetric split, image bleeds to the right viewport edge
+       HERO - full-bleed photograph, content anchored low
     ══════════════════════════════════════════════ */
     .hero {
-      padding-block: clamp(2.5rem, 5vw, 5rem) clamp(3rem, 6vw, 5.5rem);
-      /* No .container: the left rail is padded to the container gutter and
-         the right column runs to the viewport edge. That single asymmetry
-         is what stops the page reading as twelve identical boxes. */
-      padding-left: max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
-      padding-right: 0;
+      position: relative; isolation: isolate;
+      min-height: 100svh;
+      display: flex; align-items: flex-end;
+      padding-top: calc(var(--nav-h) + var(--sp-lg));
+      padding-bottom: var(--sp-ml);
       overflow: hidden;
+      /* Sits behind the photograph. It is what the type is really measured
+         against if the image is slow, blocked, or very bright. */
+      background: var(--sea-night);
     }
-    .hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
-      gap: clamp(2rem, 4.5vw, 4.5rem);
-      align-items: center;
+    @supports not (min-height: 100svh) { .hero { min-height: 100vh; } }
+    .hero__media { position: absolute; inset: 0; z-index: -2; }
+    /* <picture> is a real box in the layout: without a height of its own the
+       image's height:100% resolves against auto and the photograph collapses
+       to its intrinsic ratio instead of filling the hero. */
+    .hero__media picture { display: block; width: 100%; height: 100%; }
+    .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
+    /* Scrim. Deep at the foot where the type sits, clear at the top where
+       the sky and the mountain are the point. */
+    .hero::after {
+      content: ''; position: absolute; inset: 0; z-index: -1;
+      background:
+        /* a whisper at the top so the wordmark holds against bright sky */
+        linear-gradient(to bottom, rgba(5,42,73,.30) 0%, transparent 16%),
+        /* and a shaped foot that carries the type. It has to reach roughly
+           half way up on a phone, because that is where the lead block
+           starts; sampled against the rendered pixels, not guessed. */
+        linear-gradient(to top, rgba(5,42,73,.95) 0%, rgba(5,42,73,.89) 26%, rgba(5,42,73,.74) 42%, rgba(5,42,73,.46) 56%, rgba(5,42,73,.12) 74%, transparent 88%);
     }
-    .hero__lead { max-width: 34rem; }
+    .hero__lead { max-width: 40rem; }
     .hero__eyebrow {
-      display: inline-block;
-      font-size: var(--step--1);
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--c-teal);
-      margin-bottom: 1rem;
+      display: inline-flex; align-items: center; gap: 0.6em;
+      font-size: var(--step--1); font-weight: 600;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: #fff; margin-bottom: 1rem;
+    }
+    .hero__eyebrow::before {
+      content: ''; width: 26px; height: 2px; border-radius: 2px; background: var(--sun);
     }
     .hero__title {
-      font-family: var(--ff-display);
-      font-size: var(--step-5);
-      font-weight: 700;
-      line-height: 1.04;
-      letter-spacing: -0.032em;
-      color: var(--c-text);
+      font-family: var(--ff-display); font-size: var(--step-5); font-weight: 700;
+      line-height: 1.02; letter-spacing: -0.035em; color: #fff;
       font-variation-settings: 'opsz' 144;
-      /* overflow-wrap only breaks a word with nowhere else to go; break-word
-         would split Serbian compounds mid-word on narrow screens. */
-      overflow-wrap: break-word;
-      hyphens: none;
-      /* Reserves the space the lowered underline now occupies. */
+      overflow-wrap: break-word; hyphens: none;
       padding-bottom: 0.2em;
+      text-shadow: 0 2px 30px rgba(5,42,73,.45);
     }
     .hero__title .highlight { position: relative; display: inline; }
     .hero__title .highlight::after {
-      content: '';
-      position: absolute;
-      /* Clear of the descender, not on it. Fraunces' "j" in "Samoj" drops
-         well below the baseline at display optical size, so the bar sits
-         below the descender depth rather than crossing it. Anything
-         shallower reads as a strikethrough. */
-      bottom: -0.14em;
-      left: 0;
-      width: 100%;
-      height: 0.07em;
-      background: var(--c-star);
-      border-radius: 2px;
+      content: ''; position: absolute;
+      /* Clear of the descender. Fraunces' "j" in "Samoj" drops well below
+         the baseline at display optical size; anything shallower reads as
+         a strikethrough. */
+      bottom: -0.14em; left: 0; width: 100%; height: 0.07em;
+      background: var(--sun); border-radius: 2px;
     }
     .hero__desc {
-      margin-top: var(--sp-md);
-      font-size: var(--step-1);
-      color: var(--c-muted);
-      max-width: 46ch;
-      line-height: 1.6;
+      margin-top: var(--sp-sm); font-size: var(--step-1);
+      color: rgba(255,255,255,.92); max-width: 34ch; line-height: 1.55;
+      text-shadow: 0 1px 20px rgba(5,42,73,.5);
     }
-    .hero__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--sp-sm);
-      margin-top: var(--sp-md);
-    }
-    .hero__image {
-      position: relative;
-      border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lift);
-    }
-    .hero__image img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      object-position: center 42%;
-    }
+    .hero__desc strong { color: #fff; }
+    .hero__desc .link-inline { color: #fff; text-decoration-color: var(--sun); text-decoration-thickness: 2px; }
+    /* Side by side even on the narrowest phone: both labels are short, and
+       it keeps the photograph from being squeezed by a stacked button pair. */
+    .hero__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: var(--sp-md); }
+    .hero__actions .btn { width: 100%; padding-inline: 0.9em; }
 
-    @media (max-width: 900px) {
-      .hero {
-        padding-left: var(--pad);
-        padding-right: var(--pad);
-        max-width: var(--max-wide);
-        margin-inline: auto;
+    @media (min-width: 40em) {
+      .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+      .hero__actions .btn { width: auto; padding-inline: 1.75em; }
+    }
+    @media (min-width: 64em) {
+      .hero { min-height: min(92svh, 860px); padding-bottom: var(--sp-lg); }
+      .hero__media img { object-position: 50% 58%; }
+      /* On a desk the headline sits high enough to land on bright limestone,
+         so the wash has to come mostly from the left rather than the foot.
+         The right half of the bay stays open. Verified by sampling the
+         rendered pixels behind the type, not by eye. */
+      .hero::after {
+        background:
+          linear-gradient(to bottom, rgba(5,42,73,.34) 0%, transparent 14%),
+          linear-gradient(to top, rgba(5,42,73,.90) 0%, rgba(5,42,73,.66) 32%, rgba(5,42,73,.28) 56%, rgba(5,42,73,.06) 78%, transparent 92%),
+          linear-gradient(to right, rgba(5,42,73,.74) 0%, rgba(5,42,73,.46) 34%, rgba(5,42,73,.10) 62%, transparent 80%);
       }
-      .hero__grid { grid-template-columns: 1fr; }
-      .hero__lead { max-width: none; }
-      .hero__desc { max-width: 60ch; }
-      .hero__image { border-radius: var(--radius-lg); }
-      .hero__image img { aspect-ratio: 16 / 9; }
-    }
-    @media (max-width: 600px) {
-      /* The hero has to clear a 360x780 viewport with both CTAs visible, so
-         the bottom padding tightens and the image takes a shallower crop. */
-      .hero { padding-block: 2rem 2rem; }
-      .hero__desc { margin-top: var(--sp-sm); }
-      .hero__actions { flex-direction: column; align-items: stretch; margin-top: var(--sp-sm); }
-      .hero__actions .btn { width: 100%; }
-      .hero__image img { aspect-ratio: 2 / 1; }
     }
 
     /* ══════════════════════════════════════════════
-       FACT BAND - the previous build ran a four-up benefit row and a
-       four-up ratings row back to back directly under the hero. They are
-       now one asymmetric band: the headline rating carries the left, the
-       four practical facts carry the right.
+       PROOF - the rating as one line, the four practical facts as chips
     ══════════════════════════════════════════════ */
-    .factband { background: var(--c-surface); border-block: 1px solid var(--c-divider); }
-    .factband__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: center;
-      padding-block: var(--sp-ml);
+    .proof { background: var(--shell); border-bottom: 1px solid var(--line); }
+    .proof__inner { padding-block: var(--sp-ml); }
+    .proof__rating { display: flex; align-items: center; gap: 0.85rem; flex-wrap: wrap; }
+    .proof__stars { color: var(--sun-ink); font-size: var(--step-0); letter-spacing: 0.1em; line-height: 1; }
+    .proof__score {
+      font-family: var(--ff-display); font-size: var(--step-2); font-weight: 700;
+      letter-spacing: -0.03em; line-height: 1; color: var(--ink);
+      font-variation-settings: 'opsz' 96;
     }
-    .factband__lead { display: flex; align-items: baseline; gap: 0.6rem; }
-    .factband__score {
-      font-family: var(--ff-display);
-      font-size: clamp(3.25rem, 7vw, 4.75rem);
-      font-weight: 700;
-      line-height: 0.9;
-      letter-spacing: -0.04em;
-      color: var(--c-teal);
-      font-variation-settings: 'opsz' 144;
+    .proof__score span { font-family: var(--ff-body); font-size: 0.5em; font-weight: 600; color: var(--muted); }
+    .proof__source { font-size: var(--step--1); color: var(--muted); }
+    .proof__others {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem;
+      margin-top: 0.85rem; font-size: var(--step--1); color: var(--muted);
     }
-    .factband__score span {
-      font-size: 0.34em;
-      font-family: var(--ff-body);
-      font-weight: 600;
-      color: var(--c-muted);
-      letter-spacing: 0;
+    .proof__others b { font-weight: 600; color: var(--ink); margin-right: 0.35em; }
+    /* Chips scroll on a phone and wrap on a desk, so nothing is ever cut
+       off and nothing is ever cramped. */
+    .proof__facts:focus-visible { outline-offset: 4px; }
+    .proof__facts {
+      display: flex; gap: 0.5rem; margin-top: var(--sp-md);
+      overflow-x: auto; scroll-snap-type: x proximity;
+      padding-inline: var(--pad); margin-inline: calc(-1 * var(--pad));
+      scrollbar-width: none; overscroll-behavior-x: contain;
     }
-    .factband__source {
-      font-size: var(--step--1);
-      font-weight: 600;
-      color: var(--c-text);
-      line-height: 1.35;
+    .proof__facts::-webkit-scrollbar { display: none; }
+    .proof__fact {
+      display: inline-flex; align-items: center; gap: 0.5em; flex: 0 0 auto;
+      scroll-snap-align: start;
+      padding: 0.6em 1.1em; border-radius: var(--r-pill);
+      background: var(--paper); border: 1px solid var(--line);
+      font-size: var(--step--1); font-weight: 500; white-space: nowrap;
     }
-    .factband__source span { display: block; font-weight: 400; color: var(--c-muted); }
-    .factband__others {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.6rem;
-      margin-top: var(--sp-sm);
-      padding-top: var(--sp-sm);
-      border-top: 1px solid var(--c-divider);
-    }
-    .factband__other {
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      white-space: nowrap;
-    }
-    .factband__other b {
-      font-family: var(--ff-display);
-      font-size: var(--step-0);
-      font-weight: 700;
-      color: var(--c-text);
-      margin-right: 0.35em;
-    }
-    .factband__facts {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--sp-sm) var(--sp-md);
-    }
-    .factband__fact {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6em;
-      font-size: var(--step--1);
-      font-weight: 500;
-      line-height: 1.45;
-    }
-    .factband__fact svg { color: var(--c-teal); flex-shrink: 0; margin-top: 0.2em; }
-    @media (max-width: 860px) {
-      .factband__grid { grid-template-columns: 1fr; gap: var(--sp-md); }
-    }
-    @media (max-width: 480px) {
-      .factband__facts { grid-template-columns: 1fr; gap: 0.75rem; }
+    .proof__fact svg { color: var(--sea); flex-shrink: 0; }
+    @media (min-width: 64em) {
+      .proof__inner {
+        display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+        gap: var(--sp-lg); align-items: center;
+      }
+      .proof__facts:focus-visible { outline-offset: 4px; }
+    .proof__facts {
+        flex-wrap: wrap; overflow: visible; margin-top: 0;
+        padding-inline: 0; margin-inline: 0; justify-content: flex-end;
+      }
     }
 
-    /* ══════════════════════════════════════════════
-       VIDEO - mobile only
-    ══════════════════════════════════════════════ */
-    .video-section { display: none; }
-    @media (max-width: 760px) { .video-section { display: block; } }
+    /* ── VIDEO (mobile only) ─────────────────────── */
+    .video-section { display: block; }
+    @media (min-width: 48em) { .video-section { display: none; } }
     .video-wrap {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--c-surface-2);
-      box-shadow: var(--shadow-card);
+      position: relative; aspect-ratio: 16 / 9;
+      border-radius: var(--r-lg); overflow: hidden;
+      background: var(--shell-2); box-shadow: var(--sh-card);
     }
-    .video-wrap video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .video-wrap__controls {
-      position: absolute;
-      right: 0.75rem;
-      bottom: 0.75rem;
-      display: flex;
-      gap: 0.5rem;
-    }
+    .video-wrap video { width: 100%; height: 100%; object-fit: cover; }
+    .video-wrap__controls { position: absolute; right: 0.75rem; bottom: 0.75rem; display: flex; gap: 0.5rem; }
     .video-wrap__btn {
-      display: grid;
-      place-items: center;
-      width: 44px;
-      height: 44px;
-      border-radius: var(--radius-sm);
-      background: rgba(10, 26, 43, 0.6);
-      -webkit-backdrop-filter: blur(6px);
-      backdrop-filter: blur(6px);
-      color: #fff;
-      transition: background var(--trans), transform var(--trans);
+      display: grid; place-items: center; width: 46px; height: 46px;
+      border-radius: var(--r-md); background: rgba(5,42,73,.55);
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+      color: #fff; transition: background var(--trans), transform var(--trans);
     }
-    .video-wrap__btn:hover { background: rgba(10, 26, 43, 0.8); }
-    .video-wrap__btn:active { transform: scale(0.95); }
+    .video-wrap__btn:hover { background: rgba(5,42,73,.78); }
+    .video-wrap__btn:active { transform: scale(0.94); }
     .video-wrap__btn svg { pointer-events: none; }
     .video-wrap[data-playing="true"] .i-play,
     .video-wrap[data-playing="false"] .i-pause,
@@ -1021,719 +861,446 @@
     .video-wrap[data-muted="false"] .i-muted { display: none; }
 
     /* ══════════════════════════════════════════════
-       DIRECT BOOKING - text column plus an offset price panel
+       BOOKING - deep block, price panel floating on it
     ══════════════════════════════════════════════ */
-    .direct {
-      display: grid;
-      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: start;
+    .booking { position: relative; overflow: hidden; }
+    .booking::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(120% 90% at 12% 0%, rgba(14,94,166,.55) 0%, transparent 62%);
+      pointer-events: none;
     }
-    .direct__list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7em;
-      margin-block: var(--sp-md);
-    }
-    .direct__list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6em;
-      font-size: var(--step--1);
-      line-height: 1.5;
-    }
-    .direct__list svg { color: var(--c-teal); flex-shrink: 0; margin-top: 0.25em; }
-    .direct__actions { display: flex; flex-wrap: wrap; gap: var(--sp-sm); }
-
+    .booking > .container { position: relative; }
+    .booking__list { display: flex; flex-direction: column; gap: 0.75em; margin-block: var(--sp-md); }
+    .booking__list li { display: flex; align-items: flex-start; gap: 0.7em; font-size: var(--step--1); line-height: 1.55; color: var(--on-deep); }
+    .booking__list svg { color: var(--sun); flex-shrink: 0; margin-top: 0.3em; }
+    .booking__actions { display: flex; flex-direction: column; gap: 0.75rem; }
     .price-panel {
-      position: relative;
-      background: var(--c-bg);
-      border: 1px solid var(--c-divider);
-      border-radius: var(--radius-lg);
-      padding: clamp(1.5rem, 3vw, 2.25rem);
-      box-shadow: var(--shadow-card);
+      position: relative; margin-top: var(--sp-lg);
+      background: var(--paper); color: var(--ink);
+      border-radius: var(--r-lg); padding: clamp(1.5rem, 6vw, 2.5rem);
+      box-shadow: var(--sh-lift);
     }
-    /* Marine rule along the top edge: the one place the accent is used as a
-       block rather than as text or a button. */
-    .price-panel::before {
-      content: '';
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 4px;
-      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      background: var(--c-teal);
-    }
-    .price-panel__label {
-      font-size: var(--step--1);
-      font-weight: 600;
-      color: var(--c-muted);
-      margin-bottom: 0.5rem;
-    }
+    .price-panel .link-inline { color: var(--sea); }
+    .price-panel__label { font-size: var(--step--1); font-weight: 600; color: var(--muted); }
     .price-panel__headline {
-      font-family: var(--ff-display);
-      font-size: var(--step-3);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      font-variation-settings: 'opsz' 96;
+      margin-top: 0.35rem; font-family: var(--ff-display);
+      font-size: var(--step-3); font-weight: 700; line-height: 1.05;
+      letter-spacing: -0.03em; font-variation-settings: 'opsz' 120;
     }
-    .price-panel__note {
-      margin-top: var(--sp-sm);
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      line-height: 1.65;
-    }
+    .price-panel__note { margin-top: var(--sp-sm); font-size: var(--step--1); color: var(--muted); line-height: 1.7; }
     .price-panel__types {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: var(--sp-md);
-      padding-top: var(--sp-md);
-      border-top: 1px solid var(--c-divider);
+      display: flex; flex-direction: column; gap: 0.6rem;
+      margin-top: var(--sp-md); padding-top: var(--sp-md); border-top: 1px solid var(--line);
     }
     .price-panel__type {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.5em;
-      font-size: var(--step-0);
-      font-weight: 600;
+      display: flex; align-items: baseline; justify-content: space-between; gap: 0.75em;
+      font-size: var(--step-0); font-weight: 600;
     }
-    .price-panel__type span { font-size: var(--step--1); font-weight: 400; color: var(--c-muted); }
-
-    @media (max-width: 860px) {
-      .direct { grid-template-columns: 1fr; }
+    .price-panel__type span { font-size: var(--step--1); font-weight: 400; color: var(--muted); }
+    @media (min-width: 40em) {
+      .booking__actions { flex-direction: row; flex-wrap: wrap; }
     }
-    @media (max-width: 600px) {
-      .direct__actions { flex-direction: column; align-items: stretch; }
-      .direct__actions .btn { width: 100%; }
+    @media (min-width: 64em) {
+      .booking__grid {
+        display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        gap: clamp(2.5rem, 5vw, 5rem); align-items: center;
+      }
+      .price-panel { margin-top: 0; }
     }
 
     /* ══════════════════════════════════════════════
-       APARTMENTS - two alternating media rows. Exactly two, which is the
-       cap for this layout family; nothing else on the page repeats it.
+       APARTMENTS - two generous media rows
     ══════════════════════════════════════════════ */
-    .apt-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: clamp(1.5rem, 4vw, 3.5rem);
-      align-items: center;
+    .apt + .apt { margin-top: var(--sp-lg); }
+    .apt__media {
+      border-radius: var(--r-lg); overflow: hidden; background: var(--shell-2);
+      box-shadow: var(--sh-card);
     }
-    .apt-row + .apt-row { margin-top: var(--sp-lg); }
-    .apt-row:nth-of-type(even) .apt-row__media { order: 2; }
-    .apt-row__media {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--c-surface-2);
+    .apt__media img {
+      width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+      transition: transform 700ms var(--ease);
     }
-    .apt-row__media img {
-      width: 100%;
-      aspect-ratio: 3 / 2;
-      object-fit: cover;
-      transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    .apt:hover .apt__media img { transform: scale(1.04); }
+    .apt__body { padding-top: var(--sp-md); }
+    .apt__title {
+      font-family: var(--ff-display); font-size: var(--step-2); font-weight: 700;
+      line-height: 1.12; letter-spacing: -0.025em; font-variation-settings: 'opsz' 72;
     }
-    .apt-row:hover .apt-row__media img { transform: scale(1.03); }
-    .apt-row__title {
-      font-family: var(--ff-display);
-      font-size: var(--step-2);
-      font-weight: 700;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      font-variation-settings: 'opsz' 72;
+    .apt__capacity {
+      display: inline-flex; align-items: center; gap: 0.45em; margin-top: 0.8rem;
+      padding: 0.45em 1em; border-radius: var(--r-pill);
+      background: var(--sea-soft); color: var(--sea);
+      font-size: var(--step--1); font-weight: 600;
     }
-    .apt-row__capacity {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45em;
-      margin-top: 0.65rem;
-      padding: 0.3em 0.75em;
-      border-radius: var(--radius-md);
-      background: var(--c-teal-soft);
-      color: var(--c-teal);
-      font-size: var(--step--1);
-      font-weight: 600;
+    .apt__text { margin-top: var(--sp-sm); color: var(--muted); line-height: 1.75; max-width: 44ch; }
+    .apt__link {
+      display: inline-flex; align-items: center; gap: 0.45em; min-height: 28px;
+      margin-top: var(--sp-sm); font-size: var(--step--1); font-weight: 600;
+      color: var(--sea); transition: gap var(--trans);
     }
-    .apt-row__text {
-      margin-top: var(--sp-sm);
-      color: var(--c-muted);
-      line-height: 1.7;
-      max-width: 44ch;
-    }
-    .apt-row__link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4em;
-      min-height: 24px;
-      margin-top: var(--sp-sm);
-      font-size: var(--step--1);
-      font-weight: 600;
-      color: var(--c-teal);
-      transition: gap var(--trans);
-    }
-    .apt-row__link:hover { gap: 0.75em; }
-    @media (max-width: 760px) {
-      .apt-row { grid-template-columns: 1fr; gap: var(--sp-md); }
-      .apt-row:nth-of-type(even) .apt-row__media { order: 0; }
-      .apt-row + .apt-row { margin-top: var(--sp-lg); }
+    .apt__link:hover { gap: 0.8em; }
+    @media (min-width: 48em) {
+      .apt { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(2rem,4vw,3.5rem); align-items: center; }
+      .apt:nth-of-type(even) .apt__media { order: 2; }
+      .apt__body { padding-top: 0; }
+      .apt + .apt { margin-top: var(--sp-xl); }
     }
 
-    /* Promo band. Deliberately not card-shaped, so it cannot read as a
-       third apartment. */
     .apt-promo {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: var(--sp-md);
-      align-items: center;
-      margin-top: var(--sp-lg);
-      padding: clamp(1.5rem, 3.5vw, 2.5rem);
-      border-radius: var(--radius-lg);
-      background: var(--c-teal-soft);
-      border: 1px solid var(--c-divider);
+      margin-top: var(--sp-lg); padding: clamp(1.5rem, 5vw, 2.5rem);
+      border-radius: var(--r-lg); background: var(--shell); border: 1px solid var(--line);
     }
     .apt-promo__label {
-      font-size: var(--step--1);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--c-teal);
-      margin-bottom: 0.5rem;
+      display: flex; align-items: center; gap: 0.6em;
+      font-size: var(--step--1); font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--sea); margin-bottom: 0.5rem;
     }
+    .apt-promo__label::before { content:''; width:26px; height:2px; border-radius:2px; background: var(--sun); }
     .apt-promo__title {
-      font-family: var(--ff-display);
-      font-size: var(--step-2);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      font-variation-settings: 'opsz' 72;
+      font-family: var(--ff-display); font-size: var(--step-2); font-weight: 700;
+      letter-spacing: -0.025em; line-height: 1.12; font-variation-settings: 'opsz' 72;
     }
-    .apt-promo__text {
-      margin-top: var(--sp-sm);
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      line-height: 1.7;
-      max-width: 62ch;
-    }
-    @media (max-width: 760px) {
-      .apt-promo { grid-template-columns: 1fr; }
-      .apt-promo .btn { width: 100%; }
+    .apt-promo__text { margin-top: var(--sp-sm); font-size: var(--step--1); color: var(--muted); line-height: 1.75; max-width: 60ch; }
+    .apt-promo .btn { margin-top: var(--sp-md); }
+    @media (min-width: 48em) {
+      .apt-promo { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: var(--sp-md); align-items: center; }
+      .apt-promo .btn { margin-top: 0; }
     }
 
     /* ══════════════════════════════════════════════
-       AMENITIES - bento, six items in six cells. One cell carries a real
-       photograph and one carries a marine tint, so the grid is not six
-       identical text boxes.
+       AMENITIES - bento, six items in six cells
     ══════════════════════════════════════════════ */
-    .amen {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: clamp(0.75rem, 1.6vw, 1.15rem);
-    }
+    .amen { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
     .amen__cell {
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      padding: clamp(1.25rem, 2.4vw, 1.75rem);
-      border-radius: var(--radius-lg);
-      background: var(--c-bg);
-      border: 1px solid var(--c-divider);
+      display: flex; flex-direction: column; gap: 0.85rem;
+      padding: clamp(1.25rem, 5vw, 1.85rem);
+      border-radius: var(--r-lg); background: var(--paper); border: 1px solid var(--line);
     }
-    .amen__cell:nth-child(1) { grid-column: span 2; grid-row: span 2; padding: 0; gap: 0; overflow: hidden; }
-    .amen__cell:nth-child(2) { grid-column: span 2; }
-    .amen__cell:nth-child(3) { grid-column: span 2; }
-    .amen__cell:nth-child(4) { grid-column: span 2; background: var(--c-teal-soft); }
-    .amen__cell:nth-child(5) { grid-column: span 1; }
-    .amen__cell:nth-child(6) { grid-column: span 1; }
-
-    .amen__media { position: relative; flex: 1 1 auto; min-height: 190px; }
-    .amen__media img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
-    .amen__cell--feature .amen__body { padding: clamp(1.25rem, 2.4vw, 1.75rem); }
-
+    .amen__cell--feature { padding: 0; gap: 0; overflow: hidden; }
+    .amen__cell--tint { background: var(--sea-soft); border-color: transparent; }
+    .amen__media { position: relative; min-height: 200px; flex: 1 1 auto; }
+    .amen__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .amen__cell--feature .amen__body { padding: clamp(1.25rem, 5vw, 1.85rem); }
     .amen__icon {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-md);
-      background: var(--c-teal-soft);
-      color: var(--c-teal);
-      flex-shrink: 0;
+      display: grid; place-items: center; width: 44px; height: 44px;
+      border-radius: var(--r-md); background: var(--sea-soft); color: var(--sea); flex-shrink: 0;
     }
     .amen__title {
-      font-family: var(--ff-display);
-      font-size: var(--step-1);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.015em;
-      font-variation-settings: 'opsz' 40;
+      font-family: var(--ff-display); font-size: var(--step-1); font-weight: 700;
+      line-height: 1.2; letter-spacing: -0.02em; font-variation-settings: 'opsz' 40;
     }
-    .amen__desc {
-      margin-top: 0.4rem;
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      line-height: 1.6;
-    }
-    @media (max-width: 900px) {
-      .amen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .amen__cell:nth-child(n) { grid-column: span 2; grid-row: auto; }
-      .amen__cell:nth-child(5),
+    .amen__desc { margin-top: 0.4rem; font-size: var(--step--1); color: var(--muted); line-height: 1.65; }
+    @media (min-width: 48em) {
+      .amen { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 0.85rem; }
+      .amen__cell:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+      .amen__cell:nth-child(2) { grid-column: span 2; }
+      .amen__cell:nth-child(3) { grid-column: span 2; }
+      .amen__cell:nth-child(4) { grid-column: span 2; }
+      .amen__cell:nth-child(5) { grid-column: span 1; }
       .amen__cell:nth-child(6) { grid-column: span 1; }
-    }
-    @media (max-width: 560px) {
-      .amen { grid-template-columns: 1fr; }
-      .amen__cell:nth-child(n) { grid-column: 1 / -1; }
-      .amen__media { min-height: 220px; }
+      .amen__media { min-height: 240px; }
     }
 
-    /* Included list, as chips rather than a hairlined spec table. */
-    .included {
-      margin-top: var(--sp-lg);
-      padding-top: var(--sp-ml);
-      border-top: 1px solid var(--c-divider);
-    }
+    .included { margin-top: var(--sp-lg); padding-top: var(--sp-ml); border-top: 1px solid var(--line); }
     .included__title {
-      font-family: var(--ff-display);
-      font-size: var(--step-2);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: var(--sp-md);
-      font-variation-settings: 'opsz' 72;
+      font-family: var(--ff-display); font-size: var(--step-2); font-weight: 700;
+      letter-spacing: -0.025em; margin-bottom: var(--sp-md); font-variation-settings: 'opsz' 72;
     }
-    .included__grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .included__grid { display: flex; flex-wrap: wrap; gap: 0.55rem; }
     .included__item {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5em;
-      padding: 0.55em 1em;
-      border-radius: var(--radius-md);
-      background: var(--c-bg);
-      border: 1px solid var(--c-divider);
-      font-size: var(--step--1);
-      font-weight: 500;
+      display: inline-flex; align-items: center; gap: 0.5em;
+      padding: 0.55em 1.05em; border-radius: var(--r-pill);
+      background: var(--paper); border: 1px solid var(--line);
+      font-size: var(--step--1); font-weight: 500;
     }
-    .included__item svg { flex-shrink: 0; color: var(--c-teal); }
+    .included__item svg { flex-shrink: 0; color: var(--sea); }
 
     /* ══════════════════════════════════════════════
-       GALLERY - one wide frame over two, at the images' native ratio so
-       nothing is cropped into an awkward tall cell.
+       GALLERY - edge-to-edge rail on a phone, mosaic on a desk
     ══════════════════════════════════════════════ */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(0.75rem, 1.6vw, 1.15rem);
+      display: grid; grid-auto-flow: column; grid-auto-columns: 82%;
+      gap: 0.75rem; overflow-x: auto; scroll-snap-type: x mandatory;
+      padding-inline: var(--pad); margin-inline: calc(-1 * var(--pad));
+      scrollbar-width: none; overscroll-behavior-x: contain;
     }
+    .gallery::-webkit-scrollbar { display: none; }
     .gallery__item {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--c-surface-2);
+      scroll-snap-align: center; border-radius: var(--r-lg);
+      overflow: hidden; background: var(--shell-2);
     }
-    .gallery__item:first-child { grid-column: 1 / -1; }
     .gallery__item img {
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+      transition: transform 700ms var(--ease);
     }
-    .gallery__item:hover img { transform: scale(1.04); }
-    @media (max-width: 560px) {
-      .gallery { grid-template-columns: 1fr; }
+    @media (min-width: 48em) {
+      .gallery {
+        grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0,1fr));
+        overflow: visible; padding-inline: 0; margin-inline: 0; gap: 0.85rem;
+      }
+      .gallery__item:first-child,
+      .gallery__item:last-child { grid-column: 1 / -1; }
+      .gallery__item img { aspect-ratio: 4 / 3; }
+      .gallery__item:first-child img { aspect-ratio: 21 / 9; }
+      .gallery__item:last-child img { aspect-ratio: 21 / 9; }
+      .gallery__item:hover img { transform: scale(1.04); }
     }
 
     /* ══════════════════════════════════════════════
-       REVIEWS - horizontal scroll rail. No card boxes: a marine rule marks
-       each quote instead.
+       REVIEWS - large quotes, marked by a rule not a card
     ══════════════════════════════════════════════ */
     .reviews {
-      display: grid;
-      grid-auto-flow: column;
-      /* Wide enough that the longest of the three guest quotes resolves to
-         three lines at desktop without the words being cut. */
-      grid-auto-columns: min(88vw, 38rem);
-      gap: clamp(1.5rem, 3vw, 2.5rem);
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
+      display: grid; grid-auto-flow: column; grid-auto-columns: 88%;
+      gap: var(--sp-md); overflow-x: auto; scroll-snap-type: x mandatory;
+      padding-inline: var(--pad); margin-inline: calc(-1 * var(--pad));
       padding-bottom: var(--sp-sm);
-      scrollbar-width: thin;
-      overscroll-behavior-x: contain;
+      scrollbar-width: none; overscroll-behavior-x: contain;
     }
+    .reviews::-webkit-scrollbar { display: none; }
     .reviews:focus-visible { outline-offset: 6px; }
-    .review {
-      scroll-snap-align: start;
-      padding-left: clamp(1rem, 2vw, 1.5rem);
-      border-left: 2px solid var(--c-teal);
-    }
-    .review__stars {
-      color: var(--c-star);
-      font-size: var(--step-0);
-      letter-spacing: 0.12em;
-      line-height: 1;
-      margin-bottom: var(--sp-sm);
-    }
+    .review { scroll-snap-align: center; padding-left: 1.15rem; border-left: 2px solid var(--sun); }
+    .review__stars { color: var(--sun-ink); font-size: var(--step-0); letter-spacing: 0.11em; line-height: 1; margin-bottom: var(--sp-sm); }
     .review__quote {
-      font-family: var(--ff-display);
-      font-size: var(--step-0);
-      font-weight: 300;
-      line-height: 1.5;
-      letter-spacing: -0.01em;
-      font-variation-settings: 'opsz' 48;
+      font-family: var(--ff-display); font-size: var(--step-0); font-weight: 300;
+      line-height: 1.55; letter-spacing: -0.01em; font-variation-settings: 'opsz' 48;
     }
-    @media (max-width: 600px) {
-      .reviews { grid-auto-columns: 90vw; }
-      .review__quote { font-size: var(--step--1); line-height: 1.55; }
+    .review__author { margin-top: var(--sp-sm); font-size: var(--step--1); font-weight: 600; color: var(--muted); }
+    /* On a phone the column is narrow, so the quote steps down a size to
+       keep each of the three guest reviews to four lines. Three is the goal
+       and only reachable by cutting the guests' own words, which has not
+       been approved. */
+    @media (max-width: 47.99em) {
+      .review__quote { font-size: var(--step--1); line-height: 1.6; }
     }
-    .review__author {
-      margin-top: var(--sp-sm);
-      font-size: var(--step--1);
-      font-weight: 600;
-      color: var(--c-muted);
+    @media (min-width: 48em) {
+      .reviews { grid-auto-columns: min(72vw, 38rem); padding-inline: 0; margin-inline: 0; }
+      .review { padding-left: 1.5rem; }
     }
 
     /* ══════════════════════════════════════════════
-       FAQ - sticky heading column, accordion column
+       FAQ
     ══════════════════════════════════════════════ */
-    .faq {
-      display: grid;
-      grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
-      gap: clamp(2rem, 5vw, 4.5rem);
-      align-items: start;
-    }
-    .faq__aside { position: sticky; top: calc(60px + var(--sp-md)); }
-    .faq__item { border-bottom: 1px solid var(--c-divider); }
-    .faq__item:first-child { border-top: 1px solid var(--c-divider); }
+    .faq__item { border-bottom: 1px solid var(--line); }
+    .faq__item:first-child { border-top: 1px solid var(--line); }
     .faq__question {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--sp-sm);
-      width: 100%;
-      text-align: left;
-      padding-block: 1.15em;
-      font-family: var(--ff-display);
-      font-size: var(--step-1);
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.015em;
-      color: var(--c-text);
-      transition: color var(--trans);
-      font-variation-settings: 'opsz' 40;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--sp-sm);
+      width: 100%; text-align: left; padding-block: 1.15em; min-height: 60px;
+      font-family: var(--ff-display); font-size: var(--step-1); font-weight: 700;
+      line-height: 1.3; letter-spacing: -0.02em; color: var(--ink);
+      transition: color var(--trans); font-variation-settings: 'opsz' 40;
     }
-    .faq__question:hover { color: var(--c-teal); }
+    .faq__question:hover { color: var(--sea); }
     .faq__icon {
-      display: grid;
-      place-items: center;
-      width: 28px;
-      height: 28px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: var(--c-teal);
-      color: var(--c-on-accent);
-      transition: background var(--trans);
+      display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0;
+      border-radius: 50%; background: var(--sea); color: var(--on-sea);
+      transition: background var(--trans), transform var(--trans);
     }
+    .faq__question[aria-expanded="true"] .faq__icon { background: var(--sun); }
     .faq__icon svg { transition: transform var(--trans); }
     .faq__question[aria-expanded="true"] .faq__icon svg { transform: rotate(45deg); }
-    /* grid-template-rows rather than max-height: no magic pixel ceiling to
-       clip a long answer against, and it still animates. */
+    /* grid-template-rows rather than max-height: no pixel ceiling to clip a
+       long answer against, and it still animates. */
     .faq__answer {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 280ms cubic-bezier(0.16, 1, 0.3, 1);
-      color: var(--c-muted);
-      font-size: var(--step-0);
-      line-height: 1.75;
+      display: grid; grid-template-rows: 0fr;
+      transition: grid-template-rows 320ms var(--ease);
+      color: var(--muted); line-height: 1.75;
     }
     .faq__answer > div { overflow: hidden; }
     .faq__answer.open { grid-template-rows: 1fr; }
     .faq__answer.open > div { padding-bottom: 1.4em; }
-    .faq__answer strong { color: var(--c-text); }
-    @media (max-width: 860px) {
-      .faq { grid-template-columns: 1fr; }
-      .faq__aside { position: static; }
+    .faq__answer strong { color: var(--ink); }
+    @media (min-width: 64em) {
+      .faq { display: grid; grid-template-columns: minmax(0,4fr) minmax(0,8fr); gap: clamp(2rem,5vw,4.5rem); align-items: start; }
+      .faq__aside { position: sticky; top: calc(var(--nav-h) + var(--sp-md)); }
     }
 
     /* ══════════════════════════════════════════════
-       BLOG - one featured story, four in a compact list
+       BLOG - one featured story, four in a list
     ══════════════════════════════════════════════ */
-    .blog {
-      display: grid;
-      grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
-      gap: clamp(2rem, 4vw, 3.5rem);
-      align-items: start;
-    }
     .blog__feature-media {
-      display: block;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--c-surface-2);
-      margin-bottom: var(--sp-md);
+      border-radius: var(--r-lg); overflow: hidden;
+      background: var(--shell-2); margin-bottom: var(--sp-md);
     }
     .blog__feature-media img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+      transition: transform 700ms var(--ease);
     }
     .blog__feature:hover .blog__feature-media img { transform: scale(1.04); }
     .blog__feature-title {
-      font-family: var(--ff-display);
-      font-size: var(--step-2);
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-      font-variation-settings: 'opsz' 72;
+      font-family: var(--ff-display); font-size: var(--step-2); font-weight: 700;
+      line-height: 1.18; letter-spacing: -0.025em; font-variation-settings: 'opsz' 72;
     }
-    .blog__feature-title a { transition: color var(--trans); }
-    .blog__feature-title a:hover { color: var(--c-teal); }
-    .blog__excerpt {
-      margin-top: 0.6rem;
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      line-height: 1.65;
-    }
-    .blog__list { display: flex; flex-direction: column; }
+    .blog__feature-title a, .blog__row-title a { transition: color var(--trans); }
+    .blog__feature-title a:hover, .blog__row-title a:hover { color: var(--sea); }
+    .blog__excerpt { margin-top: 0.6rem; font-size: var(--step--1); color: var(--muted); line-height: 1.7; }
+    .blog__list { display: flex; flex-direction: column; margin-top: var(--sp-lg); }
     .blog__row {
-      display: grid;
-      grid-template-columns: 92px minmax(0, 1fr);
-      gap: var(--sp-sm);
-      align-items: center;
-      padding-block: var(--sp-sm);
-      border-bottom: 1px solid var(--c-divider);
+      display: grid; grid-template-columns: 84px minmax(0,1fr); gap: var(--sp-sm);
+      align-items: center; padding-block: var(--sp-sm); border-bottom: 1px solid var(--line);
     }
-    .blog__row:first-child { border-top: 1px solid var(--c-divider); }
-    .blog__thumb {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      background: var(--c-surface-2);
-    }
-    .blog__thumb img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .blog__row:first-child { border-top: 1px solid var(--line); }
+    .blog__thumb { border-radius: var(--r-md); overflow: hidden; background: var(--shell-2); }
+    .blog__thumb img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
     .blog__row-title {
-      font-family: var(--ff-display);
-      font-size: var(--step-0);
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-      font-variation-settings: 'opsz' 24;
+      font-family: var(--ff-display); font-size: var(--step-0); font-weight: 700;
+      line-height: 1.3; letter-spacing: -0.015em; font-variation-settings: 'opsz' 24;
     }
-    .blog__row-title a { display: inline-block; padding-block: 3px; transition: color var(--trans); }
-    .blog__row-title a:hover { color: var(--c-teal); }
-    .blog__row-excerpt {
-      margin-top: 0.25rem;
-      font-size: var(--step--2);
-      color: var(--c-muted);
-      line-height: 1.55;
-    }
-    @media (max-width: 860px) {
-      .blog { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 420px) {
-      .blog__row { grid-template-columns: 72px minmax(0, 1fr); }
+    .blog__row-title a { display: inline-block; padding-block: 3px; }
+    .blog__row-excerpt { margin-top: 0.25rem; font-size: var(--step--2); color: var(--muted); line-height: 1.55; }
+    @media (min-width: 64em) {
+      .blog { display: grid; grid-template-columns: minmax(0,6fr) minmax(0,6fr); gap: clamp(2rem,4vw,3.5rem); align-items: start; }
+      .blog__list { margin-top: 0; }
+      .blog__row { grid-template-columns: 104px minmax(0,1fr); }
     }
 
     /* ══════════════════════════════════════════════
-       PLACE - the one deliberate full-bleed dark block on the page.
-       Section 4.11 permits a single declared theme moment; this is it, and
-       nothing else on the page inverts.
+       PLACE - deep block over the Boka photograph
     ══════════════════════════════════════════════ */
-    .place {
-      position: relative;
-      isolation: isolate;
-      background: var(--c-ink);
-      color: var(--c-ink-text);
-      overflow: hidden;
-    }
-    .place__bg {
-      position: absolute;
-      inset: 0;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.22;
-    }
+    .place { position: relative; isolation: isolate; overflow: hidden; }
+    .place .section-title { color: var(--on-deep); }
+    .place .section-lede { color: var(--on-deep-mu); }
+    .place__bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
     .place::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background: linear-gradient(105deg, var(--c-ink) 32%, color-mix(in srgb, var(--c-ink) 72%, transparent) 100%);
+      content: ''; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(to top, rgba(5,42,73,.94), rgba(5,42,73,.88) 45%, rgba(5,42,73,.74));
     }
-    @supports not (background: color-mix(in srgb, red 50%, transparent)) {
-      .place::after { background: var(--c-ink); opacity: 0.82; }
+    @media (min-width: 64em) {
+      .place::after { background: linear-gradient(105deg, rgba(5,42,73,.95) 30%, rgba(5,42,73,.72) 100%); }
     }
-    .place .section-title { color: var(--c-ink-text); }
-    .place__lede {
-      margin-top: var(--sp-sm);
-      color: var(--c-ink-muted);
-      max-width: var(--max-prose);
-      line-height: 1.75;
-    }
-    .place__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-      gap: clamp(2rem, 5vw, 4rem);
-      align-items: start;
-      margin-top: var(--sp-ml);
-    }
-    .place__details { display: flex; flex-direction: column; gap: var(--sp-md); }
+    .place__details { display: flex; flex-direction: column; gap: var(--sp-md); margin-top: var(--sp-ml); }
     .place__item { display: flex; gap: 0.9em; align-items: flex-start; }
-    .place__item svg { color: var(--c-ink-accent); flex-shrink: 0; margin-top: 0.35em; }
+    .place__item svg { color: var(--sun); flex-shrink: 0; margin-top: 0.3em; }
     .place__item strong {
-      display: block;
-      font-size: var(--step--1);
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--c-ink-muted);
-      margin-bottom: 0.2rem;
+      display: block; font-size: var(--step--2); font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--on-deep-mu); margin-bottom: 0.25rem;
     }
-    .place__item span { display: block; color: var(--c-ink-text); line-height: 1.6; }
-    .place__item a {
-      color: var(--c-ink-accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-    }
+    .place__item span { display: block; color: var(--on-deep); line-height: 1.6; }
+    .place__item a { color: var(--sky); text-decoration: underline; text-underline-offset: 3px; display: inline-flex; align-items: center; min-height: 26px; }
     .map-wrap {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 1px solid var(--c-ink-line);
-      background: var(--c-surface-2);
-      line-height: 0;
+      margin-top: var(--sp-ml); border-radius: var(--r-lg); overflow: hidden;
+      border: 1px solid var(--on-deep-ln); background: var(--shell-2); line-height: 0;
+      box-shadow: var(--sh-lift);
     }
-    .map-wrap iframe { width: 100%; height: clamp(320px, 42vw, 440px); }
-    @media (max-width: 860px) {
-      .place__grid { grid-template-columns: 1fr; }
+    .map-wrap iframe { width: 100%; height: clamp(280px, 60vw, 420px); }
+    @media (min-width: 64em) {
+      .place__grid { display: grid; grid-template-columns: minmax(0,5fr) minmax(0,7fr); gap: clamp(2rem,5vw,4rem); align-items: center; }
+      .place__details { margin-top: var(--sp-ml); }
+      .map-wrap { margin-top: 0; }
     }
 
     /* ══════════════════════════════════════════════
-       FOOTER
+       FOOTER - the closing moment, not a link dump
     ══════════════════════════════════════════════ */
-    footer {
-      background: var(--c-surface);
-      border-top: 1px solid var(--c-divider);
-      padding-block: var(--sp-lg);
+    .footer { background: var(--sea-night); color: var(--on-deep); padding-block: var(--sp-xl) var(--sp-lg); }
+    .footer__top { padding-bottom: var(--sp-lg); border-bottom: 1px solid var(--on-deep-ln); }
+    .footer__wordmark {
+      font-family: var(--ff-display); font-weight: 700; letter-spacing: -0.035em;
+      font-size: clamp(2.5rem, 13vw, 5.5rem); line-height: 0.95; color: var(--on-deep);
+      font-variation-settings: 'opsz' 144;
     }
-    .footer__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr);
-      gap: var(--sp-md) clamp(2rem, 4vw, 3.5rem);
+    .footer__wordmark span { color: var(--sky); }
+    .footer__call { margin-top: var(--sp-md); }
+    .footer__call-label {
+      display: flex; align-items: center; gap: 0.6em;
+      font-size: var(--step--2); font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--on-deep-mu); margin-bottom: 0.5rem;
     }
-    .footer__brand {
-      font-family: var(--ff-display);
-      font-size: var(--step-1);
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      font-variation-settings: 'opsz' 18;
-    }
-    .footer__brand span { color: var(--c-teal); }
-    .footer__tagline {
-      margin-top: var(--sp-sm);
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      line-height: 1.75;
-      max-width: 40ch;
-    }
-    .footer__heading {
-      font-size: var(--step--1);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--c-muted);
-      margin-bottom: var(--sp-sm);
-    }
-    .footer__links { display: flex; flex-direction: column; gap: 0.35rem; }
-    .footer__links a,
-    .footer__email,
-    .footer__bottom a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-      font-size: var(--step--1);
-      color: var(--c-muted);
-      transition: color var(--trans);
-    }
-    .footer__links a:hover,
-    .footer__email:hover,
-    .footer__bottom a:hover { color: var(--c-teal); }
+    .footer__call-label::before { content:''; width:26px; height:2px; border-radius:2px; background: var(--sun); }
     .footer__tel {
-      display: inline-flex;
-      align-items: center;
-      min-height: 24px;
-      font-family: var(--ff-display);
-      font-size: var(--step-1);
-      font-weight: 700;
-      letter-spacing: -0.015em;
-      color: var(--c-text);
-      font-variation-settings: 'opsz' 24;
+      display: inline-flex; align-items: center; gap: 0.4em;
+      font-family: var(--ff-display); font-size: var(--step-3); font-weight: 700;
+      letter-spacing: -0.03em; color: var(--on-deep);
+      font-variation-settings: 'opsz' 120; transition: color var(--trans);
     }
-    .footer__email { margin-top: 0.3rem; }
+    .footer__tel:hover { color: var(--sky); }
+    .footer__grid { display: grid; gap: var(--sp-ml); padding-top: var(--sp-lg); }
+    .footer__heading {
+      font-size: var(--step--2); font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--on-deep-mu); margin-bottom: var(--sp-sm);
+    }
+    .footer__tagline { font-size: var(--step--1); color: var(--on-deep-mu); line-height: 1.8; max-width: 38ch; }
+    .footer__links { display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer__links a, .footer__email {
+      display: inline-flex; align-items: center; min-height: 28px;
+      font-size: var(--step--1); color: var(--on-deep-mu); transition: color var(--trans);
+    }
+    .footer__links a:hover, .footer__email:hover { color: var(--sky); }
     .footer__social { display: flex; gap: 0.5rem; margin-top: var(--sp-sm); }
     .footer__social a {
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--c-divider);
-      color: var(--c-muted);
+      display: grid; place-items: center; width: 44px; height: 44px;
+      border-radius: var(--r-md); border: 1px solid var(--on-deep-ln);
+      color: var(--on-deep-mu);
       transition: color var(--trans), border-color var(--trans), transform var(--trans);
     }
-    .footer__social a:hover { color: var(--c-teal); border-color: var(--c-teal); transform: translateY(-1px); }
+    .footer__social a:hover { color: var(--sky); border-color: var(--sky); transform: translateY(-2px); }
     .footer__bottom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--sp-sm) var(--sp-md);
-      margin-top: var(--sp-lg);
-      padding-top: var(--sp-md);
-      border-top: 1px solid var(--c-divider);
-      font-size: var(--step--1);
-      color: var(--c-muted);
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem var(--sp-md);
+      margin-top: var(--sp-lg); padding-top: var(--sp-md);
+      border-top: 1px solid var(--on-deep-ln);
+      font-size: var(--step--2); color: var(--on-deep-mu);
     }
-    @media (max-width: 760px) {
-      .footer__grid { grid-template-columns: 1fr; gap: var(--sp-ml); }
+    .footer__bottom a { display: inline-flex; align-items: center; min-height: 26px; color: var(--on-deep-mu); transition: color var(--trans); }
+    .footer__bottom a:hover { color: var(--sky); }
+    /* The call bar covers the foot of the page on a phone, so the footer
+       reserves its height inside its own padding. */
+    @media (max-width: 47.99em) {
+      .footer { padding-bottom: calc(var(--sp-lg) + 62px + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (min-width: 48em) {
+      .footer__top { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: var(--sp-lg); align-items: end; }
+      .footer__call { margin-top: 0; text-align: right; }
+      .footer__call-label { justify-content: flex-end; }
+      .footer__grid { grid-template-columns: minmax(0,5fr) minmax(0,3fr) minmax(0,4fr); gap: var(--sp-md) var(--sp-lg); }
     }
 
     /* ══════════════════════════════════════════════
        MOTION
-       MOTION_INTENSITY 5. Four motivated behaviours, nothing decorative:
-       1. Hero text rises in reading order on load, so the eye is handed the
-          eyebrow, headline, subtext and CTA in sequence (hierarchy).
-       2. Sections arrive as they enter the viewport, so a long page hands
-          over one thing at a time (sequence). Scroll-driven, so there is no
-          scroll listener and no JS.
-       3. Hover and :active states on every interactive control (feedback).
-       4. The FAQ answer opens by resolving its own height (state change).
-       The hero image is deliberately excluded: it is the LCP element and
+       MOTION_INTENSITY 6. Five motivated behaviours, nothing decorative:
+       1. Hero content rises in reading order on load, so the eye is handed
+          the label, headline, promise and CTA in sequence (hierarchy).
+       2. The hero photograph drifts slower than the page as you leave it,
+          which is what gives the opening depth rather than flatness
+          (storytelling). Transform only, scroll-driven, no listener.
+       3. Sections arrive as they enter the viewport, so a long page hands
+          over one thing at a time (sequence).
+       4. Hover and :active on every interactive control (feedback).
+       5. FAQ answers resolve their own height (state change).
+       The hero image itself is never faded in: it is the LCP element and
        must paint immediately.
     ══════════════════════════════════════════════ */
     @media (prefers-reduced-motion: no-preference) {
-      .hero__lead > * {
-        animation: rise 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
-        animation-delay: calc(var(--i, 0) * 80ms);
-      }
+      .hero__lead > * { animation: rise 700ms var(--ease) both; animation-delay: calc(var(--i, 0) * 90ms); }
       .hero__lead > *:nth-child(2) { --i: 1; }
       .hero__lead > *:nth-child(3) { --i: 2; }
       .hero__lead > *:nth-child(4) { --i: 3; }
     }
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: none; }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+    @supports (animation-timeline: scroll()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .hero__media {
+          /* Oversized and hung above the frame, so the image can lag behind
+             the page without ever exposing an edge. */
+          top: -14%; height: 118%;
+          animation: drift linear both;
+          animation-timeline: scroll();
+          animation-range: 0 100svh;
+        }
+      }
     }
+    @keyframes drift { from { transform: translateY(0); } to { transform: translateY(-9%); } }
 
     @supports (animation-timeline: view()) {
       @media (prefers-reduced-motion: no-preference) {
         .reveal {
           animation: reveal-in linear both;
           animation-timeline: view();
-          animation-range: entry 8% cover 26%;
+          animation-range: entry 6% cover 24%;
         }
       }
     }
-    @keyframes reveal-in {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: none; }
-    }
+    @keyframes reveal-in { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -1747,17 +1314,17 @@
     /* ── UTILITIES ────────────────────────────────── */
     .sr-only {
       position: absolute; width: 1px; height: 1px; padding: 0;
-      margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
+      margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
       white-space: nowrap; border: 0;
     }
-    /* Paint deferral for the three sections furthest below the fold. */
-    .defer { content-visibility: auto; contain-intrinsic-size: auto 700px; }
+    .defer { content-visibility: auto; contain-intrinsic-size: auto 760px; }
 
     @media print {
-      .nav, .map-wrap, footer, .callbar { display: none; }
-      body { font-size: 12pt; }
-      .place { background: none; color: #000; }
-      .place__bg { display: none; }
+      .nav, .map-wrap, .footer, .callbar { display: none; }
+      body { font-size: 12pt; color: #000; }
+      .hero, .deep, .place { background: none; color: #000; min-height: 0; }
+      .hero__media, .place__bg, .hero::after, .place::after { display: none; }
+      .hero__title, .hero__desc, .hero__eyebrow { color: #000; text-shadow: none; }
     }
   </style>
 </head>
@@ -1766,7 +1333,7 @@
   <a class="skip-link" href="#main">Preskoči na glavni sadržaj</a>
 
   <!-- ══════════════════════════════════
-       NAVIGATION
+       NAVIGATION - fixed and glassy, so the hero photograph runs under it
   ══════════════════════════════════ -->
   <header>
     <nav class="nav" aria-label="Glavna navigacija">
@@ -1802,13 +1369,35 @@
 
     <!-- ══════════════════════════════════
          HERO
-         Asymmetric split. The left rail stops at the container gutter; the
-         image column runs to the right viewport edge. Four text elements,
-         no more: eyebrow, headline, subtext, two CTAs.
+         Full-bleed photograph of the bay the apartments look onto. Portrait
+         crop on a phone (where most visitors are), wide crop on a desk.
+         Four text elements, no more: label, headline, promise, two CTAs.
     ══════════════════════════════════ -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__grid">
+      <div class="hero__media">
+        <picture>
+          <source media="(min-width: 64em)"
+                  srcset="images/igalo-panorama-wide-1200.webp 1200w,
+                          images/igalo-panorama-wide-1600.webp 1600w,
+                          images/igalo-panorama-wide-2048.webp 2048w"
+                  sizes="100vw">
+          <img
+            src="images/igalo-panorama-900.webp"
+            srcset="images/igalo-panorama-640.webp   640w,
+                    images/igalo-panorama-900.webp   900w,
+                    images/igalo-panorama-1280.webp 1280w"
+            sizes="100vw"
+            alt="Pogled na Igalo, Bokokotorski zaliv i planinu Orjen s mora"
+            width="900"
+            height="822"
+            fetchpriority="high"
+            loading="eager"
+            decoding="sync"
+          >
+        </picture>
+      </div>
 
+      <div class="container">
         <div class="hero__lead">
           <span class="hero__eyebrow">Igalo · Herceg Novi</span>
           <h1 class="hero__title" id="hero-title">
@@ -1821,80 +1410,55 @@
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="tel:+38267558240">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               Pozovite nas
             </a>
-            <a class="btn btn--viber" href="viber://chat?number=%2B38267558240" aria-label="Pišite nam na Viber">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.398.002C9.473.028 5.331.344 3.014 2.467 1.294 4.177.693 6.698.623 9.82c-.06 3.11-.13 8.95 5.5 10.541v2.42s-.038.97.602 1.17c.79.25 1.24-.499 1.99-1.299l1.4-1.58c3.85.32 6.8-.419 7.14-.529.78-.25 5.181-.811 5.901-6.652.74-6.031-.36-9.831-2.34-11.551l-.01-.002c-.6-.55-3-2.3-8.37-2.32 0 0-.396-.025-1.038-.016zm.067 1.697c.545-.003.88.02.88.02 4.542.01 6.719 1.412 7.229 1.871 1.67 1.44 2.53 4.65 1.91 9.68v.001c-.6 4.87-4.17 5.18-4.83 5.39-.28.09-2.88.74-6.153.53 0 0-2.439 2.941-3.199 3.701-.12.12-.26.17-.35.15-.13-.03-.16-.18-.16-.4l.02-4.019c-4.771-1.32-4.491-6.302-4.441-8.902.06-2.6.55-4.732 2-6.172 1.957-1.77 5.475-2.01 7.096-2.06.011 0 .011 0 .011 0v.001c-.045.001-.075.001-.115.001a5.34 5.34 0 0 0 .022-.001zm.256 2.311a.286.286 0 0 0-.278.294.28.28 0 0 0 .294.276c1.5-.02 2.85.485 3.938 1.545 1.09 1.06 1.62 2.512 1.61 4.402a.281.281 0 0 0 .284.283h.002a.28.28 0 0 0 .285-.283c.02-2.02-.586-3.632-1.788-4.792-1.196-1.15-2.696-1.72-4.348-1.7a.144.144 0 0 0-.011 0zm.28 2.31c-.16.001-.28.13-.28.291a.28.28 0 0 0 .28.28c.87-.01 1.61.29 2.22.9.61.61.91 1.36.9 2.24a.28.28 0 0 0 .28.29h.01a.28.28 0 0 0 .28-.28c.01-1.03-.35-1.93-1.07-2.65-.72-.72-1.62-1.08-2.65-1.07zm.29 2.313a.287.287 0 0 0-.276.29.28.28 0 0 0 .29.276c.4-.007.72.12.99.393.26.26.39.59.38.99a.28.28 0 0 0 .28.284h.004a.28.28 0 0 0 .28-.28c.01-.55-.18-1.03-.55-1.4-.37-.37-.85-.55-1.4-.55zm-4.61.702a.945.945 0 0 0-.552.14h-.012c-.386.226-.734.51-1.03.855-.245.29-.378.583-.413.87a.98.98 0 0 0 .008.32l.006.012c.108.4.334 1.055.858 1.868.336.55.735 1.062 1.19 1.53.152.19.325.36.49.53.155.156.315.31.47.46l.02.02c.475.443.987.844 1.53 1.19.813.523 1.47.75 1.868.858l.012.006c.104.03.213.032.32.008.287-.035.582-.168.87-.413.345-.297.628-.645.855-1.03v-.012a.945.945 0 0 0 .14-.552.68.68 0 0 0-.28-.502l-.02-.014c-.235-.156-.478-.3-.727-.435a10.65 10.65 0 0 0-.475-.24l-.03-.014a.85.85 0 0 0-.87.093l-.018.015a4.97 4.97 0 0 0-.18.15c-.06.052-.14.088-.208.087a.44.44 0 0 1-.06-.004l-.017-.003c-.19-.056-.526-.238-1.02-.732-.494-.494-.676-.83-.732-1.02l-.003-.017a.44.44 0 0 1-.004-.06c-.001-.068.035-.148.087-.208.05-.06.1-.12.15-.18l.015-.018a.85.85 0 0 0 .093-.87l-.014-.03c-.08-.16-.16-.318-.24-.475a10.65 10.65 0 0 0-.435-.727l-.014-.02a.68.68 0 0 0-.502-.28.6.6 0 0 0-.05-.002z"/></svg>
+            <a class="btn btn--glass" href="viber://chat?number=%2B38267558240" aria-label="Pišite nam na Viber">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.398.002C9.473.028 5.331.344 3.014 2.467 1.294 4.177.693 6.698.623 9.82c-.06 3.11-.13 8.95 5.5 10.541v2.42s-.038.97.602 1.17c.79.25 1.24-.499 1.99-1.299l1.4-1.58c3.85.32 6.8-.419 7.14-.529.78-.25 5.181-.811 5.901-6.652.74-6.031-.36-9.831-2.34-11.551l-.01-.002c-.6-.55-3-2.3-8.37-2.32 0 0-.396-.025-1.038-.016zm.067 1.697c.545-.003.88.02.88.02 4.542.01 6.719 1.412 7.229 1.871 1.67 1.44 2.53 4.65 1.91 9.68v.001c-.6 4.87-4.17 5.18-4.83 5.39-.28.09-2.88.74-6.153.53 0 0-2.439 2.941-3.199 3.701-.12.12-.26.17-.35.15-.13-.03-.16-.18-.16-.4l.02-4.019c-4.771-1.32-4.491-6.302-4.441-8.902.06-2.6.55-4.732 2-6.172 1.957-1.77 5.475-2.01 7.096-2.06.011 0 .011 0 .011 0v.001c-.045.001-.075.001-.115.001a5.34 5.34 0 0 0 .022-.001zm.256 2.311a.286.286 0 0 0-.278.294.28.28 0 0 0 .294.276c1.5-.02 2.85.485 3.938 1.545 1.09 1.06 1.62 2.512 1.61 4.402a.281.281 0 0 0 .284.283h.002a.28.28 0 0 0 .285-.283c.02-2.02-.586-3.632-1.788-4.792-1.196-1.15-2.696-1.72-4.348-1.7a.144.144 0 0 0-.011 0zm.28 2.31c-.16.001-.28.13-.28.291a.28.28 0 0 0 .28.28c.87-.01 1.61.29 2.22.9.61.61.91 1.36.9 2.24a.28.28 0 0 0 .28.29h.01a.28.28 0 0 0 .28-.28c.01-1.03-.35-1.93-1.07-2.65-.72-.72-1.62-1.08-2.65-1.07zm.29 2.313a.287.287 0 0 0-.276.29.28.28 0 0 0 .29.276c.4-.007.72.12.99.393.26.26.39.59.38.99a.28.28 0 0 0 .28.284h.004a.28.28 0 0 0 .28-.28c.01-.55-.18-1.03-.55-1.4-.37-.37-.85-.55-1.4-.55zm-4.61.702a.945.945 0 0 0-.552.14h-.012c-.386.226-.734.51-1.03.855-.245.29-.378.583-.413.87a.98.98 0 0 0 .008.32l.006.012c.108.4.334 1.055.858 1.868.336.55.735 1.062 1.19 1.53.152.19.325.36.49.53.155.156.315.31.47.46l.02.02c.475.443.987.844 1.53 1.19.813.523 1.47.75 1.868.858l.012.006c.104.03.213.032.32.008.287-.035.582-.168.87-.413.345-.297.628-.645.855-1.03v-.012a.945.945 0 0 0 .14-.552.68.68 0 0 0-.28-.502l-.02-.014c-.235-.156-.478-.3-.727-.435a10.65 10.65 0 0 0-.475-.24l-.03-.014a.85.85 0 0 0-.87.093l-.018.015a4.97 4.97 0 0 0-.18.15c-.06.052-.14.088-.208.087a.44.44 0 0 1-.06-.004l-.017-.003c-.19-.056-.526-.238-1.02-.732-.494-.494-.676-.83-.732-1.02l-.003-.017a.44.44 0 0 1-.004-.06c-.001-.068.035-.148.087-.208.05-.06.1-.12.15-.18l.015-.018a.85.85 0 0 0 .093-.87l-.014-.03c-.08-.16-.16-.318-.24-.475a10.65 10.65 0 0 0-.435-.727l-.014-.02a.68.68 0 0 0-.502-.28.6.6 0 0 0-.05-.002z"/></svg>
               Viber upit
             </a>
           </div>
         </div>
-
-        <!-- LCP image - eagerly loaded, never animated -->
-        <figure class="hero__image">
-          <img
-            src="images/kuca_spolja.webp"
-            srcset="
-              images/kuca_spolja-640.webp  640w,
-              images/kuca_spolja-700.webp  700w,
-              images/kuca_spolja-1000.webp 1000w,
-              images/kuca_spolja.webp      1403w
-            "
-            sizes="(max-width: 900px) 92vw, 700px"
-            alt="Apartmani Igalo Monako - pogled na objekat iz spoljašnjosti"
-            width="1403"
-            height="629"
-            fetchpriority="high"
-            loading="eager"
-            decoding="sync"
-          >
-          <figcaption class="sr-only">Apartmani Igalo Monako, Dubrovačka 1</figcaption>
-        </figure>
-
       </div>
     </section>
 
     <!-- ══════════════════════════════════
-         FACT BAND
-         The previous build ran a four-up benefit row and a four-up ratings
-         row back to back. They are one asymmetric band now: the headline
-         rating on the left, the four practical facts on the right. Every
-         claim here is made again in full further down the page.
+         PROOF
+         The rating stated once, as a line rather than a dashboard, with the
+         four practical facts as chips. Every claim here is made again in
+         full further down the page.
     ══════════════════════════════════ -->
-    <section class="factband" aria-label="Ocjene gostiju i ključne pogodnosti">
+    <section class="proof" aria-label="Ocjene gostiju i ključne pogodnosti">
       <div class="container">
-        <div class="factband__grid">
+        <div class="proof__inner">
 
           <div>
-            <p class="factband__lead">
-              <span class="factband__score">4.9<span>/5</span></span>
-              <span class="factband__source">
-                Google
-                <span>71 ocjena</span>
-              </span>
+            <p class="proof__rating">
+              <span class="proof__stars" aria-hidden="true">★★★★★</span>
+              <span class="proof__score">4.9 <span>/5</span></span>
+              <span class="proof__source">71 recenzija na Google-u</span>
             </p>
-            <ul class="factband__others" role="list">
-              <li class="factband__other"><b>10/10</b>Booking.com, 35 ocjena</li>
-              <li class="factband__other"><b>5/5</b>Airbnb, 15 ocjena</li>
-              <li class="factband__other"><b>1250+</b>Facebook lajkova</li>
+            <ul class="proof__others" role="list">
+              <li><b>10/10</b>Booking.com, 35 ocjena</li>
+              <li><b>5/5</b>Airbnb, 15 ocjena</li>
+              <li><b>1250+</b>Facebook lajkova</li>
             </ul>
           </div>
 
-          <ul class="factband__facts" role="list">
-            <li class="factband__fact">
+          <ul class="proof__facts" role="list" tabindex="0" aria-label="Ključne pogodnosti, pomjerajte vodoravno">
+            <li class="proof__fact">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               100 m od Blatne plaže
             </li>
-            <li class="factband__fact">
+            <li class="proof__fact">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               Besplatan parking i WiFi
             </li>
-            <li class="factband__fact">
+            <li class="proof__fact">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               Sobarica svaki dan
             </li>
-            <li class="factband__fact">
+            <li class="proof__fact">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
               25+ godina iskustva
             </li>
@@ -1906,9 +1470,8 @@
 
     <!-- ══════════════════════════════════
          VIDEO - mobile only
-         Placed below the initial mobile viewport (so it can never become
-         the LCP element) and directly before the booking ask, where social
-         proof hands off to conversion.
+         Sits below the opening viewport, so it can never become the LCP
+         element, and directly before the booking ask.
 
          Performance notes:
          - No src/<source> in the markup - the file is in data-src, so the
@@ -1958,12 +1521,13 @@
 
     <!-- ══════════════════════════════════
          DIREKTNA REZERVACIJA
+         The money section, on the first of three deep-sea blocks.
     ══════════════════════════════════ -->
-    <section class="section section--surface reveal" id="cjenovnik" aria-labelledby="direktno-heading">
+    <section class="section deep booking reveal" id="cjenovnik" aria-labelledby="direktno-heading">
       <div class="container">
-        <div class="direct">
+        <div class="booking__grid">
           <div>
-            <span class="section-eyebrow">Privatni smještaj Igalo · Cijene</span>
+            <span class="section-mark">Privatni smještaj Igalo · Cijene</span>
             <h2 class="section-title" id="direktno-heading">
               Zašto rezervisati direktno kod nas?
             </h2>
@@ -1972,30 +1536,30 @@
               a mi dobijamo manje. Direktnom rezervacijom kod nas <strong>cijene su iste</strong>,
               a kontakt je direktan: bez posrednika, bez naknade.
             </p>
-            <ul class="direct__list" role="list">
+            <ul class="booking__list" role="list">
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 Iste cijene kao na Booking.com, bez naknade
               </li>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 Direktna komunikacija, odgovaramo odmah
               </li>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 Fleksibilnost pri dolasku i odlasku
               </li>
               <li>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
                 Posebne cijene van sezone: do 1. jula i od 1. septembra
               </li>
             </ul>
-            <div class="direct__actions">
-              <a class="btn btn--primary" href="tel:+38267558240">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            <div class="booking__actions">
+              <a class="btn btn--light" href="tel:+38267558240">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                 Pozovite nas
               </a>
-              <a class="btn btn--ghost" href="mailto:hotel-monako@hotmail.com">
+              <a class="btn btn--glass" href="mailto:hotel-monako@hotmail.com">
                 Pošaljite upit
               </a>
             </div>
@@ -2034,10 +1598,10 @@
         </div>
 
         <!-- Studio -->
-        <article class="apt-row" itemscope itemtype="https://schema.org/Accommodation">
+        <article class="apt" itemscope itemtype="https://schema.org/Accommodation">
           <meta itemprop="accommodationCategory" content="Studio Apartman">
           <meta itemprop="numberOfRooms" content="1">
-          <div class="apt-row__media">
+          <div class="apt__media">
             <img
               src="images/img_2.webp"
               alt="Studio apartman Monako Igalo - unutrašnjost"
@@ -2048,9 +1612,9 @@
               itemprop="image"
             >
           </div>
-          <div>
-            <h3 class="apt-row__title" itemprop="name">Studio Apartman</h3>
-            <p class="apt-row__capacity">
+          <div class="apt__body">
+            <h3 class="apt__title" itemprop="name">Studio Apartman</h3>
+            <p class="apt__capacity">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
               <span itemprop="occupancy" itemscope itemtype="https://schema.org/QuantitativeValue">
                 <meta itemprop="minValue" content="2">
@@ -2058,10 +1622,10 @@
                 2 - 4 osobe
               </span>
             </p>
-            <p class="apt-row__text">
+            <p class="apt__text">
               Kompletno opremljena jedna prostorija sa čajnom kuhinjom, balkonom i klima uređajem.
             </p>
-            <a class="apt-row__link" href="/about.html">
+            <a class="apt__link" href="/about.html">
               Saznajte više
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -2069,10 +1633,10 @@
         </article>
 
         <!-- Jednosoban -->
-        <article class="apt-row" itemscope itemtype="https://schema.org/Accommodation">
+        <article class="apt" itemscope itemtype="https://schema.org/Accommodation">
           <meta itemprop="accommodationCategory" content="Apartman sa odvojenom sobom">
           <meta itemprop="numberOfRooms" content="2">
-          <div class="apt-row__media">
+          <div class="apt__media">
             <img
               src="images/img_1.webp"
               alt="Apartman sa odvojenom spavaćom sobom - Monako Igalo"
@@ -2083,9 +1647,9 @@
               itemprop="image"
             >
           </div>
-          <div>
-            <h3 class="apt-row__title" itemprop="name">Apartman sa Odvojenom Sobom</h3>
-            <p class="apt-row__capacity">
+          <div class="apt__body">
+            <h3 class="apt__title" itemprop="name">Apartman sa Odvojenom Sobom</h3>
+            <p class="apt__capacity">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
               <span itemprop="occupancy" itemscope itemtype="https://schema.org/QuantitativeValue">
                 <meta itemprop="minValue" content="4">
@@ -2093,10 +1657,10 @@
                 4 - 5 osoba
               </span>
             </p>
-            <p class="apt-row__text">
+            <p class="apt__text">
               Idealno za porodice: zasebna spavaća soba, dnevni boravak, kuhinja i balkon.
             </p>
-            <a class="apt-row__link" href="/about.html">
+            <a class="apt__link" href="/about.html">
               Saznajte više
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
             </a>
@@ -2122,7 +1686,7 @@
           </div>
           <div>
             <a class="btn btn--primary" href="tel:+38267558240">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
               Pozovite nas
             </a>
           </div>
@@ -2133,7 +1697,7 @@
     <!-- ══════════════════════════════════
          AMENITIES - bento, six items in six cells
     ══════════════════════════════════ -->
-    <section class="section section--surface reveal" aria-labelledby="amenities-heading">
+    <section class="section section--shell reveal" aria-labelledby="amenities-heading">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" id="amenities-heading">Sve što vam treba za odmor</h2>
@@ -2144,10 +1708,12 @@
           <div class="amen__cell amen__cell--feature">
             <div class="amen__media">
               <img
-                src="images/blatna-plaza-700.webp"
-                alt="Blatna plaža u Igalu, 100 metara od apartmana Monako"
-                width="700"
-                height="359"
+                src="images/zanjice-plaza-1100.webp"
+                srcset="images/zanjice-plaza-700.webp 700w, images/zanjice-plaza-1100.webp 1100w"
+                sizes="(min-width: 48em) 40vw, 90vw"
+                alt="Plaža na Bokokotorskom zalivu nadomak Igala"
+                width="1100"
+                height="619"
                 loading="lazy"
                 decoding="async"
               >
@@ -2160,7 +1726,7 @@
 
           <div class="amen__cell">
             <div class="amen__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
             </div>
             <div>
               <h3 class="amen__title">Besplatan WiFi</h3>
@@ -2170,7 +1736,7 @@
 
           <div class="amen__cell">
             <div class="amen__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-6 11h6m0 0l3-3m-3 3l3 3M21 10H9a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3m-6 11h6m0 0l3-3m-3 3l3 3M21 10H9a2 2 0 00-2 2v7a2 2 0 002 2h12a2 2 0 002-2v-7a2 2 0 00-2-2z"/></svg>
             </div>
             <div>
               <h3 class="amen__title">Besplatan parking</h3>
@@ -2178,9 +1744,9 @@
             </div>
           </div>
 
-          <div class="amen__cell">
+          <div class="amen__cell amen__cell--tint">
             <div class="amen__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </div>
             <div>
               <h3 class="amen__title">Transfer od/do aerodroma</h3>
@@ -2190,7 +1756,7 @@
 
           <div class="amen__cell">
             <div class="amen__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             </div>
             <div>
               <h3 class="amen__title">IDEA market u prizemlju</h3>
@@ -2200,7 +1766,7 @@
 
           <div class="amen__cell">
             <div class="amen__icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             </div>
             <div>
               <h3 class="amen__title">Sobarica svaki dan</h3>
@@ -2253,7 +1819,7 @@
     </section>
 
     <!-- ══════════════════════════════════
-         GALLERY
+         GALLERY - swipeable on a phone, mosaic on a desk
     ══════════════════════════════════ -->
     <section class="section reveal" aria-labelledby="gallery-heading">
       <div class="container">
@@ -2261,7 +1827,19 @@
           <h2 class="section-title" id="gallery-heading">Slike naših apartmana</h2>
         </div>
 
-        <div class="gallery">
+        <div class="gallery" tabindex="0" role="group" aria-label="Galerija slika, pomjerajte vodoravno">
+          <figure class="gallery__item">
+            <img
+              src="images/kuca_spolja.webp"
+              srcset="images/kuca_spolja-640.webp 640w, images/kuca_spolja-700.webp 700w, images/kuca_spolja-1000.webp 1000w, images/kuca_spolja.webp 1403w"
+              sizes="(min-width: 48em) 90vw, 82vw"
+              alt="Apartmani Igalo Monako - pogled na objekat iz spoljašnjosti"
+              width="1403"
+              height="629"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
           <figure class="gallery__item">
             <img
               src="images/apartmani-igalo-1.webp"
@@ -2306,12 +1884,12 @@
     </section>
 
     <!-- ══════════════════════════════════
-         REVIEWS - horizontal rail
+         REVIEWS
     ══════════════════════════════════ -->
-    <section class="section section--surface reveal" aria-labelledby="reviews-heading">
+    <section class="section section--shell reveal" aria-labelledby="reviews-heading">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">Recenzije</span>
+          <span class="section-mark">Recenzije</span>
           <h2 class="section-title" id="reviews-heading">Šta naši gosti kažu</h2>
         </div>
 
@@ -2370,7 +1948,7 @@
       <div class="container">
         <div class="faq">
           <div class="faq__aside">
-            <h2 class="section-title" id="faq-heading">Često postavljana pitanja</h2>
+              <h2 class="section-title" id="faq-heading">Često postavljana pitanja</h2>
           </div>
 
           <div class="faq__list" role="list">
@@ -2379,7 +1957,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq1">
                 Koliko su apartmani udaljeni od plaže?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq1" role="region">
@@ -2394,7 +1972,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq2">
                 Da li je parking besplatan?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq2" role="region">
@@ -2408,7 +1986,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq3">
                 Koje tipove smještaja nudite?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq3" role="region">
@@ -2424,7 +2002,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq8">
                 Koliko koštaju apartmani u Igalu?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq8" role="region">
@@ -2441,7 +2019,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq4">
                 Da li su cijene niže van sezone?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq4" role="region">
@@ -2457,7 +2035,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq5">
                 Možete li organizovati transfer od aerodroma?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq5" role="region">
@@ -2472,7 +2050,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq6">
                 Šta je uključeno u cijenu?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq6" role="region">
@@ -2488,7 +2066,7 @@
               <button class="faq__question" aria-expanded="false" aria-controls="faq7">
                 Koliko je Igalo udaljeno od Herceg Novog?
                 <span class="faq__icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
                 </span>
               </button>
               <div class="faq__answer" id="faq7" role="region">
@@ -2508,7 +2086,7 @@
     <!-- ══════════════════════════════════
          BLOG / VIJESTI - one featured story, four in a list
     ══════════════════════════════════ -->
-    <section class="section section--surface reveal defer" aria-labelledby="blog-heading">
+    <section class="section section--shell reveal defer" aria-labelledby="blog-heading">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" id="blog-heading">Vijesti i priče iz Igala</h2>
@@ -2640,56 +2218,58 @@
 
     <!-- ══════════════════════════════════
          LOCATION & CONTACT
-         The one deliberate full-bleed dark block on the page. Nothing else
-         inverts; see the theme note in the stylesheet.
     ══════════════════════════════════ -->
-    <section class="section place reveal defer" aria-labelledby="location-heading">
-      <img class="place__bg" src="images/pet-danica.webp" alt="" aria-hidden="true"
-           width="697" height="465" loading="lazy" decoding="async">
+    <section class="section deep place reveal defer" aria-labelledby="location-heading">
+      <img class="place__bg" src="images/boka-verige-1600.webp"
+           srcset="images/boka-verige-900.webp 900w, images/boka-verige-1600.webp 1600w"
+           sizes="100vw" alt="" aria-hidden="true"
+           width="1600" height="898" loading="lazy" decoding="async">
       <div class="container">
-        <h2 class="section-title" id="location-heading">Lokacija i kontakt</h2>
-
-        <p class="place__lede">
-          Nalazimo se u Igalu, na zapadnom kraju Herceg Novog. Ako tražite
-          smještaj u Herceg Novom uz samu obalu, od nas se do Starog grada stiže
-          za desetak minuta autom ili šetalištem Pet Danica.
-        </p>
-
         <div class="place__grid">
-          <div class="place__details">
+          <div>
+              <h2 class="section-title" id="location-heading">Lokacija i kontakt</h2>
 
-            <div class="place__item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <div>
-                <strong>Adresa</strong>
-                <span>Dubrovačka 1, Igalo 85347, Crna Gora</span>
+            <p class="section-lede">
+              Nalazimo se u Igalu, na zapadnom kraju Herceg Novog. Ako tražite
+              smještaj u Herceg Novom uz samu obalu, od nas se do Starog grada stiže
+              za desetak minuta autom ili šetalištem Pet Danica.
+            </p>
+
+            <div class="place__details">
+
+              <div class="place__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <div>
+                  <strong>Adresa</strong>
+                  <span>Dubrovačka 1, Igalo 85347, Crna Gora</span>
+                </div>
               </div>
-            </div>
 
-            <div class="place__item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              <div>
-                <strong>Telefon / Viber / SMS</strong>
-                <span><a href="tel:+38267558240">+382 67 558 240</a> · <a href="sms:+38267558240">pošaljite SMS</a></span>
+              <div class="place__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                <div>
+                  <strong>Telefon / Viber / SMS</strong>
+                  <span><a href="tel:+38267558240">+382 67 558 240</a> · <a href="sms:+38267558240">pošaljite SMS</a></span>
+                </div>
               </div>
-            </div>
 
-            <div class="place__item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <div>
-                <strong>Email</strong>
-                <span><a href="mailto:hotel-monako@hotmail.com">hotel-monako@hotmail.com</a></span>
+              <div class="place__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <div>
+                  <strong>Email</strong>
+                  <span><a href="mailto:hotel-monako@hotmail.com">hotel-monako@hotmail.com</a></span>
+                </div>
               </div>
-            </div>
 
-            <div class="place__item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              <div>
-                <strong>Radno vrijeme</strong>
-                <span>Ponedjeljak - Nedjelja, 24/7</span>
+              <div class="place__item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <div>
+                  <strong>Radno vrijeme</strong>
+                  <span>Ponedjeljak - Nedjelja, 24/7</span>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
 
           <div class="map-wrap">
@@ -2728,12 +2308,21 @@
   <!-- ══════════════════════════════════
        FOOTER
   ══════════════════════════════════ -->
-  <footer>
+  <footer class="footer">
     <div class="container">
+
+      <div class="footer__top">
+        <p class="footer__wordmark">MONAKO <span>IGALO</span></p>
+        <div class="footer__call">
+          <p class="footer__call-label">Rezervacije 24/7</p>
+          <a class="footer__tel" href="tel:+38267558240">+382 67 558 240</a>
+        </div>
+      </div>
+
       <div class="footer__grid">
 
         <div>
-          <p class="footer__brand">MONAKO <span>IGALO</span></p>
+          <p class="footer__heading">Apartmani Igalo Monako</p>
           <p class="footer__tagline">
             Privatni apartmani 100 m od Blatne plaže.<br>
             Dubrovačka 1, Igalo 85347, Crna Gora.<br>
@@ -2755,25 +2344,25 @@
 
         <div>
           <p class="footer__heading">Kontakt</p>
-          <a class="footer__tel" href="tel:+38267558240">+382 67 558 240</a>
           <a class="footer__email" href="mailto:hotel-monako@hotmail.com">hotel-monako@hotmail.com</a>
           <div class="footer__social">
             <a href="https://www.instagram.com/apartmani.igalo/"
                aria-label="Instagram" rel="noopener noreferrer" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             </a>
             <a href="https://www.facebook.com/apartmanimonako/"
                aria-label="Facebook" rel="noopener noreferrer" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
             <a href="https://www.youtube.com/@monako-apartmaniigalo5135/"
                aria-label="YouTube" rel="noopener noreferrer" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
             </a>
           </div>
         </div>
 
       </div>
+
       <div class="footer__bottom">
         <span>© <span id="yr"></span> Apartmani Igalo Monako. Sva prava zadržana.</span>
         <a href="/about.html">O nama</a>
@@ -2789,7 +2378,7 @@
     document.getElementById('yr').textContent = new Date().getFullYear();
 
     /* ── Mobile menu ────────────────────────────────────────────────
-       Below 860px the five text destinations live behind this button. */
+       The five text destinations live behind this button below 64em. */
     (function () {
       const nav = document.querySelector('.nav');
       const btn = nav && nav.querySelector('.nav__toggle');
@@ -2822,13 +2411,6 @@
       document.addEventListener('click', function (e) {
         if (nav.dataset.open === 'true' && !nav.contains(e.target)) setOpen(false);
       });
-
-      // Leaving the mobile breakpoint with the panel open would otherwise
-      // leave aria-expanded lying about a menu that is now inline.
-      const mq = window.matchMedia('(min-width: 861px)');
-      const onChange = function (e) { if (e.matches) setOpen(false); };
-      if (mq.addEventListener) mq.addEventListener('change', onChange);
-      else mq.addListener(onChange);
     })();
 
     /* ── Sticky call bar ────────────────────────────────────────────
@@ -2849,13 +2431,14 @@
 
       const sentinel = document.createElement('div');
       sentinel.setAttribute('aria-hidden', 'true');
-      sentinel.style.cssText = 'position:absolute;top:70vh;left:0;width:1px;height:1px;pointer-events:none';
+      sentinel.style.cssText = 'position:absolute;top:80vh;left:0;width:1px;height:1px;pointer-events:none';
       document.body.appendChild(sentinel);
       new IntersectionObserver(e => { passedFold = e[0].boundingClientRect.top < 0; sync(); })
         .observe(sentinel);
 
       // Every in-content phone CTA, not just the first: the page repeats the
-      // number in the pricing panel, the promo band and the contact block.
+      // number in the pricing panel, the promo band, the contact block and
+      // the footer.
       const ctaObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           const was = entry.target.dataset.cbVisible === '1';
