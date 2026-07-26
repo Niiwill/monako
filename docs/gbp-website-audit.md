@@ -1,14 +1,220 @@
 # Google Business Profile ↔ Website Consistency Audit
 
 **Business:** Apartmani Igalo Monako
-**Site:** https://apartmani-igalo.com/ (static HTML, 19 pages, GitHub Pages)
-**GBP export:** `Ungrouped_locations` (single location, 2026-07-25)
-**Audit date:** 2026-07-25
+**Site:** https://apartmani-igalo.com/ (static HTML, 21 pages, GitHub Pages)
+**GBP export:** `Ungrouped_locations` (single location, 2026-07-26)
+**Audit date:** 2026-07-25 · **Re-verified:** 2026-07-26
 
 The goal of this audit is **entity consistency** — helping Google confirm that
 apartmani-igalo.com and the "Apartmani Igalo Monako" Google Business Profile are
 the same real-world business. Ranking tactics are secondary and are only listed
 in the Green section.
+
+---
+
+## Re-verification against the 2026-07-26 export
+
+The 2026-07-26 export was diffed against the 2026-07-25 one used for the original
+audit. **Every field is identical** — no GBP-side edits have landed, so all five
+dashboard actions listed under "Remaining work" below are still open.
+
+Site side, re-checked from scratch rather than from the previous report:
+
+| Check | Result |
+|---|---|
+| `#business` JSON-LD nodes | 13 nodes across 13 pages, **1 distinct fingerprint** — `@type`, `name`, `alternateName`, `telephone`, `email`, `address`, `foundingDate`, `sameAs`, `openingHoursSpecification`, `starRating`, `knowsLanguage`, `url`, `hasMap`, `geo` are byte-identical everywhere |
+| Street address | `Dubrovačka 1` × 50, zero variants; `streetAddress` × 15, all identical |
+| City / postal / country | `Igalo` / `85347` / `ME` on all 15 business `PostalAddress` nodes — matches GBP, `addressRegion` still correctly omitted to match GBP's empty Administrative area |
+| Phone | `+38267558240` (118), `+382 67 558 240` (68), `38267558240` (26). One number, three renderings, zero conflicts. `+382 69 530 869` remains correctly attributed to the third-party bike rental |
+| Geo | `42.4538, 18.503` × 15, no variance |
+| Maps binding | `hasMap` CID `3697180737008791124` × 13 + 3 embed references — still the strongest site↔GBP link |
+| Social profiles | 19 pages × 3 links, exact character match to the GBP Facebook / Instagram / YouTube URLs; `sameAs` agrees |
+| Hours | `00:00`–`23:59` × 7 days on every node (Google's encoding for 24h) + visible "24/7" copy — matches GBP `00:00-24:00` |
+| Founding date | `foundingDate: 2000-07-12` everywhere; visible copy now reads "25+ godina" / "25+ years". **Zero** remaining "15 godina" or "od 2010" claims |
+| `aggregateRating` / `Review` | **Zero occurrences** site-wide, in JSON-LD *and* microdata. C2/C2b/C3 hold |
+| `VacationRental` | **Zero occurrences**. All nodes are `LodgingBusiness` |
+| Titles | All 21 end in `\| Apartmani Igalo Monako`, 54–68 chars |
+| Canonical / `og:url` | Present and self-referential on all 21 pages |
+| hreflang | Reciprocal and x-default-complete across all 8 EN/SR pairs |
+| Sitemap | 21 `<loc>` entries, parses as XML, exact 1:1 with the HTML files on disk — no orphans, no 404s |
+| JSON-LD validity | Every block in all 21 files parses |
+| H1 / image alt | Exactly one `<h1>` per page; no `<img>` missing `alt` |
+| Internal links | No broken targets; `/#cjenovnik` resolves |
+
+### Fixed in this pass
+
+Three small consistency gaps that the first audit did not cover:
+
+| # | Issue | Fix |
+|---|---|---|
+| R1 | `og:locale` used five values for one business — `sr_RS` ×12, `sr_ME` ×1, `en_US` ×4, `en_GB` ×3, `en_ME` ×1. `sr_ME` and `en_ME` are not valid Open Graph locales | Normalised to `sr_RS` (13 SR pages) and `en_GB` (8 EN pages), including `og:locale:alternate` |
+| R2 | `mesecni-najam-igalo.html` declared `<html lang="sr">` while its 12 SR siblings declared `sr-Latn-ME` | Changed to `sr-Latn-ME` |
+| R3 | `monthly-rental-igalo.html` was the only page without `<meta name="robots">`, so it lost the `max-image-preview:large` / `max-snippet:-1` SERP directives its SR counterpart has | Added the same directive used on the other 20 pages |
+| R4 | **The site advertised WhatsApp, which the business does not operate** — a float button, a hero CTA, a contact card and four copy references across `monthly-rental-igalo.html` and `en/index.html`, all pointing at `wa.me/38267558240` | Removed entirely; Viber is now the only messaging channel the site names. See "WhatsApp removed" below |
+
+### WhatsApp removed (2026-07-26)
+
+The owner confirmed the business runs **Viber only** and has never operated WhatsApp. Every
+WhatsApp reference was removed — it was advertising a channel nobody monitors, which is worse
+than not listing a channel at all:
+
+| File | Was | Now |
+|---|---|---|
+| `monthly-rental-igalo.html` | Floating `wa.me` button (`.wa-float`, WhatsApp green `#25D366`) | Viber deep link, `.viber-float`, Viber purple `#6B57F1` to match the rest of the site |
+| `monthly-rental-igalo.html` | Contact card `wa.me`, labelled "WhatsApp / Viber" | Viber deep link, labelled "Viber" |
+| `monthly-rental-igalo.html` | "video walkthrough via WhatsApp or Facetime" — in the visible FAQ **and** the `FAQPage` JSON-LD | "via Viber or Facetime" in both, kept in sync |
+| `monthly-rental-igalo.html` | Comparison table: "Yes - WhatsApp/Facetime" | "Yes - Viber/Facetime" |
+| `en/index.html` | Hero CTA `wa.me` button beside the Viber button | Removed; Viber CTA remains |
+| `en/index.html` | FAQ: "reachable 24/7 by phone, Viber and WhatsApp" | "reachable 24/7 by phone and Viber" |
+
+Note the FAQ text existed in two places on `monthly-rental-igalo.html` — rendered HTML and
+`FAQPage` structured data. Both were updated; leaving the JSON-LD copy stale would have put a
+mismatch between markup and visible content, which is its own guideline problem.
+
+**Site-wide result:** zero occurrences of `whatsapp` or `wa.me` in any HTML, `llms.txt`,
+`sitemap.xml` or `robots.txt`.
+
+### Business-name consistency (checked 2026-07-26)
+
+**Machine-readable name — 100% consistent.** Every field Google parses for entity matching
+says exactly `Apartmani Igalo Monako`: schema `name` (38 nodes), `og:site_name` (21/21), and
+all 21 `<title>` tags.
+
+**Visible copy — variants exist, and that is fine where declared:**
+
+| Variant | Count | Declared in `alternateName`? |
+|---|---|---|
+| Apartmani Igalo Monako | 162 | — (the canonical name) |
+| Apartmani Monako | 39 | yes |
+| Monako Apartments | 30 | yes |
+| Monako Igalo | 19 | yes |
+| Monako Apartmani | 18 | **no** — word-order swap of a declared variant, low risk |
+
+The header logo wordmark reads **MONAKO IGALO** on 20 of 21 pages. It is not the GBP name,
+but `Monako Igalo` is declared in `alternateName`, so Google can reconcile it. Left as-is —
+it is the site's logo, and changing it is a branding decision, not a consistency fix.
+
+**Two undeclared sub-brands were found and removed (owner confirmed they were not intentional):**
+
+| File | Was | Now |
+|---|---|---|
+| `monthly-rental-igalo.html` | `Igalo Sea Apartment` in the nav brand, footer brand and copyright | `Apartmani Igalo Monako` |
+| `monthly-rental-igalo.html` | Contact NAP line `Igalo Sea View Apartment · Igalo, Herceg Novi 85347` | `Apartmani Igalo Monako · Dubrovačka 1, Igalo 85347` — street address added |
+| `mesecni-najam-igalo.html` | `Apartman Igalo` in `<meta name="author">`, the contact NAP line and the copyright | `Apartmani Igalo Monako`; street address added to the NAP line |
+
+These were the only real name conflicts on the site: both pages' JSON-LD already claimed
+`Apartmani Igalo Monako` while the visible brand said something else entirely, and neither
+sub-brand appeared in GBP or in `alternateName`.
+
+**Deliberately kept:** the `#apartment` node names — `Igalo Sea View Apartment - Monthly
+Rental` (EN) and `Apartman uz More - Mesečni Najam Igalo` (SR). These name the *rental unit*,
+not the business, which is what an `Apartment` node is for. The `#business` node on the same
+pages carries the GBP name.
+
+### SMS added to the site (2026-07-26)
+
+The owner confirmed SMS and calls are both answered on +382 67 558 240, so the GBP texting
+number is legitimate and stays. The site now advertises the same channel, closing the
+asymmetry:
+
+| File | Change |
+|---|---|
+| `index.html` | Contact block label `Telefon / Viber` → `Telefon / Viber / SMS`, with an `sms:` link |
+| `en/index.html` | Same, `Phone / Viber / SMS` |
+| `monthly-rental-igalo.html` | Fourth contact card: SMS. Grid `max-width` 620px → 820px so four cards fit one row |
+| `mesecni-najam-igalo.html` | Fourth contact card: SMS. Grid `max-width` 720px → 880px for the same reason |
+
+Both rental pages were rendered at 1280px and 390px to confirm the four-card rows and the
+longer nav brand hold; `monthly-rental-igalo.html` needed a mobile `.nav-brand` size
+reduction to keep the business name on one line.
+
+### Schema ↔ GBP field map (machine-checked, 2026-07-26)
+
+Every column the GBP export contains, compared against the `#business` JSON-LD node on all
+13 pages. This check is scripted against the CSV, not eyeballed — re-run it after any change
+to the business node.
+
+| GBP export column | GBP value | Schema property | Match |
+|---|---|---|---|
+| Business name | Apartmani Igalo Monako | `name` | exact |
+| Address line 1 | Dubrovačka 1 | `address.streetAddress` | exact |
+| Locality | Igalo | `address.addressLocality` | exact |
+| Administrative area | *(empty)* | `address.addressRegion` | correctly **absent** |
+| Country / Region | ME | `address.addressCountry` | exact |
+| Postal code | 85347 | `address.postalCode` | exact |
+| Primary phone | 067 558 240 | `telephone` `+38267558240` | same number, E.164 |
+| Additional phones | *(empty)* | — | correctly absent |
+| Website | `…/?utm_source=gbp&utm_medium=organic` | `url` `https://apartmani-igalo.com/` | canonical; UTM correctly stripped |
+| Hours × 7 days | 00:00-24:00 | `openingHoursSpecification` 00:00–23:59 × 7 | Google's documented 24h encoding |
+| Special hours | *(empty)* | — | correctly absent |
+| Opening date | 2000-07-12 | `foundingDate` | exact |
+| Facebook | `facebook.com/apartmanimonako/` | `sameAs[0]` | exact |
+| Instagram | `instagram.com/apartmani.igalo/` | `sameAs[1]` | exact |
+| YouTube | `youtube.com/@monako-apartmaniigalo5135/` | `sameAs[2]` | exact |
+| LinkedIn / Pinterest / TikTok / WhatsApp / X | *(empty)* | — | correctly absent from `sameAs` |
+| From the business | *(empty)* | `description` | absent on both — see below |
+| **Texting number** | `sms:+38267558240` | — | **not expressible** — see below |
+
+**Result: 13/13 nodes match on every exportable field. Zero mismatches.**
+
+Two fields need explanation rather than a fix:
+
+- **Texting number.** schema.org has no vocabulary for "this number accepts SMS".
+  `ContactPoint.contactOption` is a closed enum containing only `HearingImpairedSupported`
+  and `TollFree`, so an "SMS" value would be invalid markup. The number itself is already
+  declared in `telephone`, and the site now links `sms:+38267558240` in its contact blocks,
+  which is the honest way to corroborate the channel. **No schema change should be made here.**
+- **From the business.** Empty on both sides, so they technically agree. To make them agree
+  *positively*, paste the M1 draft into the GBP dashboard and the same text can then be
+  mirrored into a schema `description`. Until the GBP field is filled, adding a schema
+  description would create an asymmetry rather than remove one.
+
+Fields the schema carries that GBP does not export — `alternateName`, `email`, `geo`,
+`hasMap`, `image`, `amenityFeature`, `containsPlace`, `starRating`, `knowsLanguage` — are
+additive, not conflicting. `hasMap` is the strongest binding of the set: its CID resolves to
+the same place ID as the Maps embed.
+
+**Fixed in this pass:** three English pages (`mimosa-festival-herceg-novi.html`,
+`monthly-rental-igalo.html`, `rent-a-bike-herceg-novi-igalo.html`) carried **Serbian**
+`amenityFeature` and `containsPlace` names in their schema while declaring `<html lang="en">`.
+They now use the English wording already present in `en/index.html` ("Free WiFi", "Sea-view
+balcony", "Studio Apartment"…). This does not affect GBP matching — no NAP field changed —
+but it removes a markup/page-language mismatch. Amenity language now matches page language on
+all 11 pages that carry amenities.
+
+### Sidebar CTA switched to Viber (2026-07-26)
+
+The "Smještaj u blizini" / "Nearby accommodation" sidebar card appears on 14 pages. Its CTA
+was a `mailto:` button; it is now a Viber deep link, matching the hero and call-bar buttons
+on `index.html`:
+
+- `class="btn btn-viber"`, `href="viber://chat?number=%2B38267558240"`, Viber glyph + label.
+- New `.btn-viber` modifier in each file's stylesheet — background `#6B57F1`, which is the
+  Viber brand purple darkened 2% so white text clears the 4.5:1 AA contrast floor (the same
+  value and reasoning already used on `index.html`).
+- Label follows page language: **Viber upit** on the 9 Serbian pages, **Chat on Viber** on
+  the 5 English ones (`mimosa-festival-herceg-novi.html`, `rent-a-bike-herceg-novi-igalo.html`,
+  `vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html`, `vesti/beaches-herceg-novi.html`,
+  `vesti/restaurants-herceg-novi.html`).
+
+Email is unaffected as a contact route — `mailto:hotel-monako@hotmail.com` still appears on
+all 21 pages via the footer and contact sections.
+
+**Wrong brand icon fixed.** `mesecni-najam-igalo.html` was drawing the **WhatsApp** logo on
+three Viber buttons — the hero CTA, the contact card and the floating button all used the
+Font Awesome WhatsApp path (`M17.472 14.382…`) instead of the Viber path (`M11.398.002…`)
+that the other 17 pages use. Given WhatsApp has just been removed from the site as a channel
+the business does not operate, showing its logo on a Viber button was actively misleading.
+All three now use the Viber glyph. No WhatsApp reference — text, link or icon — remains
+anywhere in the repository.
+
+### Open, needs a decision (no change made)
+
+- **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
+  alternate. A no-op that Google ignores; harmless, left in place.
+- **`⭐ 4.9/5` in the `index.html` meta/OG descriptions.** Not a structured-data claim and
+  not a policy violation — the figure matches the real GBP rating — but noted so it is not
+  mistaken for a C2 regression in a future audit.
 
 ---
 
@@ -28,7 +234,7 @@ repository and are the remaining work.
 | M1 | GBP description empty | **GBP dashboard** — draft copy in the M1 section below |
 | M2 | `VacationRental` schema type | **Fixed** — now `LodgingBusiness` on all 13 nodes |
 | M3 | Contradictory GBP agency categories | **GBP dashboard** |
-| M4 | WhatsApp / chat channels | **GBP dashboard** — site already publishes `wa.me/38267558240` |
+| M4 | WhatsApp / chat channels | **Superseded 2026-07-26** — business is Viber-only; WhatsApp removed from the site and the GBP field stays empty |
 | M5 | No English homepage or About | **Fixed** — added `/en/` and `/en/about.html` |
 | M6 | Inconsistent brand name in titles | **Fixed** — all 19 titles standardised + `alternateName` added |
 | M7 | `hotel-monako@hotmail.com` | **Deferred by decision** — kept, to avoid breaking a live address |
@@ -56,7 +262,8 @@ repository and are the remaining work.
 
 1. **Add the business description** (M1) — draft in the M1 section below.
 2. **Remove the two agency categories** (M3): *Apartment rental agency*, *Vacation home rental agency*.
-3. **Set the WhatsApp field** to `https://wa.me/38267558240` and pick a primary chat (M4).
+3. **Leave the WhatsApp field empty** (M4, revised 2026-07-26 — the business does not use
+   WhatsApp). Nothing to do unless you want a primary chat set.
 4. **Set amenity attributes** matching the eight the site lists, plus store code and labels (G1).
 5. Optionally publish the walkthrough video on the profile / linked YouTube channel (G9).
 
@@ -300,24 +507,36 @@ In the GBP dashboard, keep **Holiday apartment rental** (primary) and **Holiday 
 
 ## M4 — Messaging channels do not line up
 
-**Current situation**
+> **Revised 2026-07-26.** The original recommendation below was to publish the site's
+> WhatsApp link on the profile. The owner has since confirmed **the business does not use
+> WhatsApp at all — Viber only.** The original advice was therefore wrong in its premise:
+> the `wa.me` links were advertising a channel nobody was answering. They have been removed
+> from the site, and the GBP WhatsApp field must stay empty.
+
+**Current situation (after the 2026-07-26 fix)**
 
 | Channel | Website | GBP |
 |---|---|---|
-| Viber | Primary CTA. 150+ mentions, `viber://chat?number=%2B38267558240` deep links, dedicated buttons in the header, hero, call bar and contact block | no field exists |
-| WhatsApp | `https://wa.me/38267558240` (2 pages), "WhatsApp" named 8× | **empty** |
+| Viber | Primary CTA. 150+ mentions, `viber://chat?number=%2B38267558240` deep links, dedicated buttons in the header, hero, call bar, float button and contact block | no field exists |
+| WhatsApp | **removed — not operated by the business** | **empty — correct, leave it so** |
 | SMS | not surfaced | `sms:+38267558240` |
 | Primary chat | — | **empty** |
 
-**Why it matters** The channel the site pushes hardest (Viber) is invisible on the profile, and the WhatsApp link the site does publish is not declared on the profile even though the field exists and the number is already live. A searcher who finds you on Maps sees a different contact surface than one who lands on the site — and Google sees fewer corroborated contact methods than actually exist.
+**Why it matters** The channel the site pushes hardest (Viber) is invisible on the profile
+and GBP has no Viber field, so that gap is not fixable from either side. What *was* fixable
+was the reverse error: the site offering a WhatsApp button that reached nobody. A guest
+messaging it would have gone unanswered — a worse outcome than the channel simply not being
+listed, and the kind of dead contact path that erodes trust in the whole profile.
 
 **Recommended fix**
-- Set the GBP **WhatsApp** field to `https://wa.me/38267558240` — only because that link is already live on the site; do not add channels you don't operate.
-- Set **Primary chat** so the profile has a declared default.
-- GBP has no Viber field; that gap is not fixable. Compensate by keeping the phone number identical across both (it already is), since Viber resolves on that number.
-- Optional: add a `contactPoint` to the `LodgingBusiness` node listing the phone with `contactType: "reservations"` and `availableLanguage`.
+- **Leave the GBP WhatsApp field empty.** Do not add channels you do not operate.
+- Optionally set **Primary chat** so the profile has a declared default.
+- Keep the phone number identical across both surfaces (it already is), since Viber resolves
+  on that number — that is the only Viber corroboration available.
+- Optional: add a `contactPoint` to the `LodgingBusiness` node listing the phone with
+  `contactType: "reservations"` and `availableLanguage`.
 
-**Exact locations:** GBP dashboard for the first two. `wa.me` links: `index.html`, `monthly-rental-igalo.html`.
+**Exact locations:** GBP dashboard. Removed `wa.me` links: `monthly-rental-igalo.html`, `en/index.html`.
 
 ---
 
