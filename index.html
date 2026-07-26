@@ -1263,11 +1263,13 @@
       grid-template-columns: 1fr;
       gap: var(--sp-md);
     }
-    /* Four posts, four cells. auto-fill resolved to three columns and left
-       two dead cells on the second row; an exact 2x2 also gives this section
-       a different rhythm from the three-column gallery and reviews above. */
+    /* Two columns. auto-fill resolved to three and left dead cells on the last
+       row; two also gives this section a different rhythm from the three-column
+       gallery and reviews above. With an odd number of posts the final card
+       spans the row instead of sitting beside an empty cell. */
     @media (min-width: 600px) {
       .blog__grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
     }
     .blog-card {
       border-radius: var(--radius-lg);
@@ -2407,6 +2409,33 @@
                 datumi 58. izdanja, program, tradicije i savjeti za smještaj…
               </p>
               <a class="blog-card__link" href="/praznik-mimoze-program.html">
+                Pročitajte više
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__img-wrap">
+              <img
+                class="blog-card__img"
+                src="images/pet-danica-650.webp"
+                alt="Šetalište Pet Danica - biciklistička trasa između Igala i Herceg Novog"
+                width="380"
+                height="214"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                <a href="/iznajmljivanje-bicikla-herceg-novi-igalo.html">Iznajmljivanje Bicikla - Herceg Novi i Igalo</a>
+              </h3>
+              <p class="blog-card__excerpt">
+                Gdje iznajmiti bicikl, koliko košta, pravila vožnje šetalištem Pet Danica
+                (ljeti bez bicikala od 19 do 01 h) i četiri provjerene rute iz Igala…
+              </p>
+              <a class="blog-card__link" href="/iznajmljivanje-bicikla-herceg-novi-igalo.html">
                 Pročitajte više
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
               </a>
