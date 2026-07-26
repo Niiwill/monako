@@ -340,7 +340,10 @@
        section (the location block) and nowhere else.
     ══════════════════════════════════════════════ */
     :root {
-      color-scheme: light dark;
+      /* Light only, by the owner's decision. This also stops the browser
+         from auto-darkening form controls and scrollbars for visitors whose
+         OS is set to dark. */
+      color-scheme: light;
 
       --c-bg:         #FFFFFF;
       --c-surface:    #EEF4FB;
@@ -404,35 +407,6 @@
       --shadow-card-hover: 0 10px 34px rgba(9, 45, 80, .13);
       --shadow-lift:       0 18px 48px rgba(9, 45, 80, .16);
       --trans: 200ms cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* ── DARK MODE ────────────────────────────────
-       Token swap only. Same accent hue, lifted in lightness far enough to
-       hold WCAG AA on a dark surface, so the brand stays recognisable
-       rather than being desaturated into the background. */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --c-bg:        #0B1520;
-        --c-surface:   #111E2C;
-        --c-surface-2: #17273A;
-        --c-divider:   #23394F;
-        --c-teal:      #6BB3EE;
-        --c-teal-dark: #93CAF7;
-        --c-teal-soft: rgba(107, 179, 238, .10);
-        --c-on-accent: #08131D;
-        --c-text:      #EDF3F9;
-        --c-muted:     #9DB0C4;
-        --c-star:      #F0B44A;
-
-        /* Lighter than the page in dark mode, so the one deliberate
-           full-bleed block still separates from what surrounds it. */
-        --c-ink:       #16293C;
-        --c-ink-line:  rgba(234, 242, 250, .14);
-
-        --shadow-card:       0 1px 3px rgba(0, 0, 0, .5), 0 6px 22px rgba(0, 0, 0, .38);
-        --shadow-card-hover: 0 10px 34px rgba(0, 0, 0, .5);
-        --shadow-lift:       0 18px 48px rgba(0, 0, 0, .55);
-      }
     }
 
     /* ── RESET ───────────────────────────────────── */
