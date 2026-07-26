@@ -1222,7 +1222,7 @@ strong { font-weight: 600; color: var(--slate); }
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 14px;
-  max-width: 620px;
+  max-width: 820px;
   margin: 0 auto 32px;
 }
 .contact-card {
@@ -1350,6 +1350,9 @@ strong { font-weight: 600; color: var(--slate); }
   :root { --sp-2xl: 64px; }
   .nav-links { display: none; }
   .site-nav { padding: 0 var(--sp-md); }
+  /* Keep the full business name on one line next to the CTA */
+  .nav-brand { font-size: 15px; letter-spacing: 0; white-space: nowrap; }
+  .nav-cta { padding: 8px 14px; font-size: 13px; white-space: nowrap; }
   .hero { padding: 72px var(--sp-md) 100px; }
   .hero-trust { gap: var(--sp-md); }
   .sticky-bar-text { display: none; }
@@ -1393,7 +1396,7 @@ strong { font-weight: 600; color: var(--slate); }
      ═══════════════════════════════════════════ -->
 <header>
   <nav class="site-nav" aria-label="Main navigation">
-    <a href="/" class="nav-brand" aria-label="Igalo Sea Apartment home">Igalo Sea Apartment</a>
+    <a href="/" class="nav-brand" aria-label="Apartmani Igalo Monako home">Apartmani Igalo Monako</a>
     <ul class="nav-links" role="list">
       <li><a href="#about">Apartment</a></li>
       <li><a href="#price">Pricing</a></li>
@@ -1951,6 +1954,11 @@ strong { font-weight: 600; color: var(--slate); }
         <div class="cc-label">Phone</div>
         <div class="cc-val">+382 67 558 240</div>
       </a>
+      <a href="sms:+38267558240" class="contact-card" role="listitem" aria-label="Send us an SMS">
+        <div class="cc-icon" aria-hidden="true">📱</div>
+        <div class="cc-label">SMS</div>
+        <div class="cc-val">Text us anytime</div>
+      </a>
       <a href="mailto:hotel-monako@hotmail.com" class="contact-card" role="listitem" aria-label="Send an email inquiry">
         <div class="cc-icon" aria-hidden="true">✉️</div>
         <div class="cc-label">Email</div>
@@ -1959,7 +1967,7 @@ strong { font-weight: 600; color: var(--slate); }
     </div>
 
     <p style="margin-top: 28px; font-size: 13px; color: rgba(255,255,255,0.35);">
-      Igalo Sea View Apartment · Igalo, Herceg Novi 85347 · Montenegro · Available September-June
+      Apartmani Igalo Monako · Dubrovačka 1, Igalo 85347 · Montenegro · Available September-June
     </p>
   </div>
 </section>
@@ -1972,7 +1980,7 @@ strong { font-weight: 600; color: var(--slate); }
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div>
-      <div class="footer-brand">Igalo Sea Apartment</div>
+      <div class="footer-brand">Apartmani Igalo Monako</div>
       <address class="footer-nap" style="font-style: normal;">
         Igalo, Herceg Novi 85347<br>
         Bay of Kotor, Montenegro<br>
@@ -2009,7 +2017,7 @@ strong { font-weight: 600; color: var(--slate); }
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Igalo Sea Apartment. Monthly rental by the sea, Herceg Novi, Montenegro.</span>
+    <span>© 2026 Apartmani Igalo Monako. Monthly rental by the sea, Herceg Novi, Montenegro.</span>
     <span>
       <a href="/">Home</a> ·
       <a href="/mesecni-najam-igalo.html" lang="sr">Srpska verzija</a> ·

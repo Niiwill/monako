@@ -74,12 +74,62 @@ mismatch between markup and visible content, which is its own guideline problem.
 **Site-wide result:** zero occurrences of `whatsapp` or `wa.me` in any HTML, `llms.txt`,
 `sitemap.xml` or `robots.txt`.
 
+### Business-name consistency (checked 2026-07-26)
+
+**Machine-readable name — 100% consistent.** Every field Google parses for entity matching
+says exactly `Apartmani Igalo Monako`: schema `name` (38 nodes), `og:site_name` (21/21), and
+all 21 `<title>` tags.
+
+**Visible copy — variants exist, and that is fine where declared:**
+
+| Variant | Count | Declared in `alternateName`? |
+|---|---|---|
+| Apartmani Igalo Monako | 162 | — (the canonical name) |
+| Apartmani Monako | 39 | yes |
+| Monako Apartments | 30 | yes |
+| Monako Igalo | 19 | yes |
+| Monako Apartmani | 18 | **no** — word-order swap of a declared variant, low risk |
+
+The header logo wordmark reads **MONAKO IGALO** on 20 of 21 pages. It is not the GBP name,
+but `Monako Igalo` is declared in `alternateName`, so Google can reconcile it. Left as-is —
+it is the site's logo, and changing it is a branding decision, not a consistency fix.
+
+**Two undeclared sub-brands were found and removed (owner confirmed they were not intentional):**
+
+| File | Was | Now |
+|---|---|---|
+| `monthly-rental-igalo.html` | `Igalo Sea Apartment` in the nav brand, footer brand and copyright | `Apartmani Igalo Monako` |
+| `monthly-rental-igalo.html` | Contact NAP line `Igalo Sea View Apartment · Igalo, Herceg Novi 85347` | `Apartmani Igalo Monako · Dubrovačka 1, Igalo 85347` — street address added |
+| `mesecni-najam-igalo.html` | `Apartman Igalo` in `<meta name="author">`, the contact NAP line and the copyright | `Apartmani Igalo Monako`; street address added to the NAP line |
+
+These were the only real name conflicts on the site: both pages' JSON-LD already claimed
+`Apartmani Igalo Monako` while the visible brand said something else entirely, and neither
+sub-brand appeared in GBP or in `alternateName`.
+
+**Deliberately kept:** the `#apartment` node names — `Igalo Sea View Apartment - Monthly
+Rental` (EN) and `Apartman uz More - Mesečni Najam Igalo` (SR). These name the *rental unit*,
+not the business, which is what an `Apartment` node is for. The `#business` node on the same
+pages carries the GBP name.
+
+### SMS added to the site (2026-07-26)
+
+The owner confirmed SMS and calls are both answered on +382 67 558 240, so the GBP texting
+number is legitimate and stays. The site now advertises the same channel, closing the
+asymmetry:
+
+| File | Change |
+|---|---|
+| `index.html` | Contact block label `Telefon / Viber` → `Telefon / Viber / SMS`, with an `sms:` link |
+| `en/index.html` | Same, `Phone / Viber / SMS` |
+| `monthly-rental-igalo.html` | Fourth contact card: SMS. Grid `max-width` 620px → 820px so four cards fit one row |
+| `mesecni-najam-igalo.html` | Fourth contact card: SMS. Grid `max-width` 720px → 880px for the same reason |
+
+Both rental pages were rendered at 1280px and 390px to confirm the four-card rows and the
+longer nav brand hold; `monthly-rental-igalo.html` needed a mobile `.nav-brand` size
+reduction to keep the business name on one line.
+
 ### Open, needs a decision (no change made)
 
-- **SMS channel asymmetry.** GBP publishes a texting number (`sms:+38267558240`) but the
-  site never surfaces SMS. Same number throughout, so this is not a NAP conflict — but the
-  two surfaces advertise different contact channels. Either add an SMS link to the contact
-  block or drop the texting number from GBP.
 - **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
   alternate. A no-op that Google ignores; harmless, left in place.
 - **`⭐ 4.9/5` in the `index.html` meta/OG descriptions.** Not a structured-data claim and
