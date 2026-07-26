@@ -1,14 +1,68 @@
 # Google Business Profile ↔ Website Consistency Audit
 
 **Business:** Apartmani Igalo Monako
-**Site:** https://apartmani-igalo.com/ (static HTML, 19 pages, GitHub Pages)
-**GBP export:** `Ungrouped_locations` (single location, 2026-07-25)
-**Audit date:** 2026-07-25
+**Site:** https://apartmani-igalo.com/ (static HTML, 21 pages, GitHub Pages)
+**GBP export:** `Ungrouped_locations` (single location, 2026-07-26)
+**Audit date:** 2026-07-25 · **Re-verified:** 2026-07-26
 
 The goal of this audit is **entity consistency** — helping Google confirm that
 apartmani-igalo.com and the "Apartmani Igalo Monako" Google Business Profile are
 the same real-world business. Ranking tactics are secondary and are only listed
 in the Green section.
+
+---
+
+## Re-verification against the 2026-07-26 export
+
+The 2026-07-26 export was diffed against the 2026-07-25 one used for the original
+audit. **Every field is identical** — no GBP-side edits have landed, so all five
+dashboard actions listed under "Remaining work" below are still open.
+
+Site side, re-checked from scratch rather than from the previous report:
+
+| Check | Result |
+|---|---|
+| `#business` JSON-LD nodes | 13 nodes across 13 pages, **1 distinct fingerprint** — `@type`, `name`, `alternateName`, `telephone`, `email`, `address`, `foundingDate`, `sameAs`, `openingHoursSpecification`, `starRating`, `knowsLanguage`, `url`, `hasMap`, `geo` are byte-identical everywhere |
+| Street address | `Dubrovačka 1` × 50, zero variants; `streetAddress` × 15, all identical |
+| City / postal / country | `Igalo` / `85347` / `ME` on all 15 business `PostalAddress` nodes — matches GBP, `addressRegion` still correctly omitted to match GBP's empty Administrative area |
+| Phone | `+38267558240` (118), `+382 67 558 240` (68), `38267558240` (26). One number, three renderings, zero conflicts. `+382 69 530 869` remains correctly attributed to the third-party bike rental |
+| Geo | `42.4538, 18.503` × 15, no variance |
+| Maps binding | `hasMap` CID `3697180737008791124` × 13 + 3 embed references — still the strongest site↔GBP link |
+| Social profiles | 19 pages × 3 links, exact character match to the GBP Facebook / Instagram / YouTube URLs; `sameAs` agrees |
+| Hours | `00:00`–`23:59` × 7 days on every node (Google's encoding for 24h) + visible "24/7" copy — matches GBP `00:00-24:00` |
+| Founding date | `foundingDate: 2000-07-12` everywhere; visible copy now reads "25+ godina" / "25+ years". **Zero** remaining "15 godina" or "od 2010" claims |
+| `aggregateRating` / `Review` | **Zero occurrences** site-wide, in JSON-LD *and* microdata. C2/C2b/C3 hold |
+| `VacationRental` | **Zero occurrences**. All nodes are `LodgingBusiness` |
+| Titles | All 21 end in `\| Apartmani Igalo Monako`, 54–68 chars |
+| Canonical / `og:url` | Present and self-referential on all 21 pages |
+| hreflang | Reciprocal and x-default-complete across all 8 EN/SR pairs |
+| Sitemap | 21 `<loc>` entries, parses as XML, exact 1:1 with the HTML files on disk — no orphans, no 404s |
+| JSON-LD validity | Every block in all 21 files parses |
+| H1 / image alt | Exactly one `<h1>` per page; no `<img>` missing `alt` |
+| Internal links | No broken targets; `/#cjenovnik` resolves |
+
+### Fixed in this pass
+
+Three small consistency gaps that the first audit did not cover:
+
+| # | Issue | Fix |
+|---|---|---|
+| R1 | `og:locale` used five values for one business — `sr_RS` ×12, `sr_ME` ×1, `en_US` ×4, `en_GB` ×3, `en_ME` ×1. `sr_ME` and `en_ME` are not valid Open Graph locales | Normalised to `sr_RS` (13 SR pages) and `en_GB` (8 EN pages), including `og:locale:alternate` |
+| R2 | `mesecni-najam-igalo.html` declared `<html lang="sr">` while its 12 SR siblings declared `sr-Latn-ME` | Changed to `sr-Latn-ME` |
+| R3 | `monthly-rental-igalo.html` was the only page without `<meta name="robots">`, so it lost the `max-image-preview:large` / `max-snippet:-1` SERP directives its SR counterpart has | Added the same directive used on the other 20 pages |
+
+### Open, needs a decision (no change made)
+
+- **SMS channel asymmetry.** GBP publishes a texting number (`sms:+38267558240`) but the
+  site never surfaces SMS; the site pushes Viber (23 deep links) and WhatsApp (3), and GBP
+  has no Viber field and an empty WhatsApp field. Same number throughout, so this is not a
+  NAP conflict — but the two surfaces advertise different contact channels. Either add an
+  SMS link to the contact block or drop the texting number from GBP.
+- **`vesti/restorani-igalo.html`** carries a single self-referencing `hreflang="sr"` with no
+  alternate. A no-op that Google ignores; harmless, left in place.
+- **`⭐ 4.9/5` in the `index.html` meta/OG descriptions.** Not a structured-data claim and
+  not a policy violation — the figure matches the real GBP rating — but noted so it is not
+  mistaken for a C2 regression in a future audit.
 
 ---
 
