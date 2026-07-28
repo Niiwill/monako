@@ -43,15 +43,9 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" type="image/png" href="/images/monako-favicon.png" sizes="48x48">
-  <!-- LCP is the hero photograph. It is art-directed, so the two crops are
-       preloaded behind the same media queries the <picture> element uses;
-       exactly one of these ever fires. -->
-  <link rel="preload" as="image" media="(max-width: 47.99em)"
-        imagesrcset="images/hero-more-720.webp 720w, images/hero-more-1080.webp 1080w"
-        imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" as="image" media="(min-width: 48em)"
-        imagesrcset="images/hero-more-wide-1280.webp 1280w, images/hero-more-wide-1920.webp 1920w"
-        imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" href="images/kuca_spolja.webp"
+        imagesrcset="images/kuca_spolja-640.webp 640w, images/kuca_spolja-700.webp 700w, images/kuca_spolja-1000.webp 1000w, images/kuca_spolja.webp 1403w"
+        imagesizes="(min-width: 64em) 700px, 92vw" fetchpriority="high">
 
   <!-- The mobile video's poster and source are both attached by JS, so with
        scripting off there is nothing to show - hide it rather than leave an
@@ -565,14 +559,18 @@
     @media (prefers-reduced-transparency: reduce) { .nav { background: var(--paper); } }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-sm); min-width: 0; }
 
-    /* BRAND. When /images/logo.png lands, drop an <img class="nav__logo-img">
-       inside this link and delete the wordmark span; the sizing is already
-       here. Until then the existing wordmark holds the slot. */
-    .nav__logo { display: inline-flex; align-items: center; flex-shrink: 0; }
-    /* The mark alone on a phone, the full lockup once there is room for it. */
-    .nav__logo-img { height: 34px; width: auto; display: block; }
-    @media (min-width: 30em) { .nav__logo-img { height: 36px; } }
+    /* BRAND. The header carries the whole lockup at every width; the mark
+       is never shown on its own. */
+    .nav__logo { display: inline-flex; align-items: center; flex-shrink: 0; min-width: 0; }
+    /* The full lockup at every width, never the mark alone. */
+    .nav__logo-img { height: 26px; width: auto; display: block; }
+    @media (min-width: 30em) { .nav__logo-img { height: 30px; } }
     @media (min-width: 48em) { .nav__logo-img { height: 34px; } }
+    @media (min-width: 64em) { .nav__logo-img { height: 38px; } }
+    /* Below 30em the CTA is its icon; the label returns as soon as the bar
+       can hold the lockup and a 19px label together. */
+    .nav__cta-label { display: none; }
+    @media (min-width: 30em) { .nav__cta-label { display: inline; } }
     .nav__links { display: none; }
     .nav__actions { display: flex; align-items: center; gap: 0.5rem; flex-shrink: 0; }
     .nav__cta {
@@ -608,10 +606,9 @@
       border-bottom: 1px solid var(--line-soft);
     }
     .nav__links li:last-child .nav__text-link { border-bottom: 0; }
-    @media (max-width: 26.875em) {
-      .nav__inner { gap: 0.4rem; }
-      .nav__cta { padding: 0.5em 0.75em; }
-      .nav__logo-img { height: 30px; }
+    @media (max-width: 29.99em) {
+      .nav__inner { gap: 0.45rem; }
+      .nav__cta { padding: 0; width: 46px; justify-content: center; }
     }
     @media (min-width: 64em) {
       .nav__toggle { display: none; }
@@ -667,70 +664,77 @@
     @media print { .callbar { display: none !important; } }
 
     /* ══════════════════════════════════════════════
-       HERO - bright, airy. A blue wash over the sky at the top fading to
-       transparent, and a paper foot the dark type sits on. No dark scrim:
-       the point is the summer light.
+       HERO - asymmetric split on a white ground, the image column bleeding
+       to the right viewport edge. Reverted to this at the owner's request
+       after a full-bleed photographic version.
     ══════════════════════════════════════════════ */
     .hero {
-      position: relative; isolation: isolate;
-      min-height: 92svh;
-      display: flex; align-items: flex-end;
-      padding-top: calc(var(--nav-h) + var(--sp-lg));
-      padding-bottom: var(--sp-ml);
+      background: var(--paper);
+      padding-top: calc(var(--nav-h) + clamp(1.75rem, 6vw, 3.25rem));
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+      padding-inline: var(--pad);
+      max-width: var(--max-wide);
+      margin-inline: auto;
       overflow: hidden;
-      background: var(--mist);
     }
-    @supports not (min-height: 92svh) { .hero { min-height: 92vh; } }
-    .hero__media { position: absolute; inset: 0; z-index: -2; }
-    /* <picture> is a real box: without its own height the image's
-       height:100% resolves against auto and collapses to its ratio. */
-    .hero__media picture { display: block; width: 100%; height: 100%; }
-    .hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 58% 42%; }
-    .hero::after {
-      content: ''; position: absolute; inset: 0; z-index: -1;
-      background:
-        /* blue over the sky, gone by the horizon */
-        linear-gradient(to bottom, rgb(0 127 255 / .22) 0%, rgb(0 127 255 / .07) 26%, transparent 46%),
-        /* paper foot: what makes dark type legible without dimming the sea */
-        linear-gradient(to top, var(--paper) 0%, rgb(255 255 255 / .97) 26%, rgb(255 255 255 / .86) 44%, rgb(255 255 255 / .56) 58%, rgb(255 255 255 / .18) 70%, transparent 82%);
-    }
-    .hero__lead { max-width: 40rem; }
+    .hero__grid { display: grid; gap: var(--sp-md); }
+    .hero__lead { max-width: 60ch; }
     .hero__title {
       font-family: var(--ff-display); font-size: var(--step-5); font-weight: 700;
-      line-height: 1.03; letter-spacing: -0.035em; color: var(--ink);
-      overflow-wrap: break-word; hyphens: none; padding-bottom: 0.18em;
+      line-height: 1.04; letter-spacing: -0.035em; color: var(--ink);
+      overflow-wrap: break-word; hyphens: none;
+      padding-bottom: 0.18em;
     }
     .hero__title .highlight { position: relative; display: inline; }
     .hero__title .highlight::after {
       content: ''; position: absolute;
-      /* Clear of the "j" descender in "Samoj". Verified against the
-         rendered glyph, not guessed. */
+      /* Clear of the "j" descender in "Samoj", verified against the
+         rendered glyph rather than guessed. */
       bottom: -0.11em; left: 0; width: 100%; height: 0.07em;
       background: var(--sun); border-radius: 3px;
     }
     .hero__desc {
       margin-top: var(--sp-sm); font-size: var(--step-1);
-      color: var(--ink-80); max-width: 34ch; line-height: 1.55;
+      color: var(--ink-72); max-width: 46ch; line-height: 1.6;
     }
     .hero__desc strong { color: var(--ink); }
-    /* Two 19px labels will not sit side by side on a small phone, and the
-       label size is fixed by the contrast rule above, so they stack until
-       there is genuinely room. Full-width targets in the thumb zone. */
+    /* Two 19px labels will not sit side by side on a phone, and that size is
+       fixed by the white-on-#007FFF contrast rule, so they stack until there
+       is genuinely room. Full-width targets in the thumb zone. */
     .hero__actions { display: grid; gap: 0.6rem; margin-top: var(--sp-md); }
     .hero__actions .btn { width: 100%; }
+    .hero__image {
+      border-radius: var(--r-lg); overflow: hidden;
+      box-shadow: var(--sh-2); background: var(--mist);
+    }
+    .hero__image img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 45%; }
+
     @media (min-width: 30em) {
       .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
       .hero__actions .btn { width: auto; padding-inline: 1.5em; }
     }
+    /* Tablet still stacks, so the image takes a wider band and the whole
+       opening clears a 900px viewport instead of running past it. */
+    @media (min-width: 48em) and (max-width: 63.99em) {
+      .hero__image img { aspect-ratio: 21 / 9; }
+    }
     @media (min-width: 64em) {
-      .hero { min-height: min(88svh, 820px); padding-bottom: var(--sp-lg); }
-      .hero__media img { object-position: 50% 46%; }
-      .hero::after {
-        background:
-          linear-gradient(to bottom, rgb(0 127 255 / .20) 0%, rgb(0 127 255 / .06) 24%, transparent 44%),
-          linear-gradient(to top, var(--paper) 0%, rgb(255 255 255 / .95) 22%, rgb(255 255 255 / .60) 40%, rgb(255 255 255 / .12) 58%, transparent 70%),
-          linear-gradient(to right, rgb(255 255 255 / .88) 0%, rgb(255 255 255 / .58) 34%, rgb(255 255 255 / .10) 62%, transparent 78%);
+      /* The left rail stops at the container gutter and the image column
+         runs to the viewport edge. That single asymmetry is what keeps the
+         opening from reading as one more centred box. */
+      .hero {
+        max-width: none; margin-inline: 0;
+        padding-left: max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+        padding-right: 0;
+        padding-top: calc(var(--nav-h) + clamp(2rem, 4vw, 4rem));
       }
+      .hero__grid {
+        grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+        gap: clamp(2rem, 4.5vw, 4.5rem);
+        align-items: center;
+      }
+      .hero__lead { max-width: 34rem; }
+      .hero__image { border-radius: var(--r-lg) 0 0 var(--r-lg); }
     }
 
     /* ══════════════════════════════════════════════
@@ -946,8 +950,8 @@
         grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0,1fr));
         overflow: visible; padding-inline: 0; margin-inline: 0; gap: 0.85rem;
       }
-      .gallery__item:first-child, .gallery__item:last-child { grid-column: 1 / -1; }
-      .gallery__item:first-child img, .gallery__item:last-child img { aspect-ratio: 21 / 9; }
+      .gallery__item:first-child { grid-column: 1 / -1; }
+      .gallery__item:first-child img { aspect-ratio: 21 / 9; }
       .gallery__item:hover img { transform: scale(1.04); }
     }
 
@@ -1174,8 +1178,7 @@
     @media print {
       .nav, .map-wrap, .footer, .callbar { display: none; }
       body { font-size: 12pt; }
-      .hero { min-height: 0; background: none; }
-      .hero__media, .hero::after { display: none; }
+      .hero { background: none; }
     }
   </style>
 </head>
@@ -1194,11 +1197,9 @@
       <div class="container">
         <div class="nav__inner">
           <a class="nav__logo" href="/" aria-label="Apartmani Igalo Monako - Početna">
-            <picture>
-              <source media="(min-width: 30em)" srcset="images/logo-lockup.webp" width="760" height="119">
-              <img class="nav__logo-img" src="images/logo-mark.webp" alt=""
-                   width="260" height="145" fetchpriority="high" decoding="sync">
-            </picture>
+            <img class="nav__logo-img" src="images/logo-lockup.webp"
+                 alt="Apartmani Igalo Monako"
+                 width="900" height="141" fetchpriority="high" decoding="sync">
           </a>
           <ul class="nav__links" id="nav-menu" role="list">
             <li><a href="/about.html" class="nav__text-link">O nama</a></li>
@@ -1209,8 +1210,8 @@
           </ul>
           <div class="nav__actions">
             <a class="nav__cta" href="tel:+38267558240" aria-label="Pozovite nas za rezervaciju">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              Rezervišite
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span class="nav__cta-label">Rezervišite</span>
             </a>
             <button class="nav__toggle" type="button"
                     aria-expanded="false" aria-controls="nav-menu" aria-label="Otvori meni">
@@ -1231,28 +1232,8 @@
          paper foot the dark type sits on. Four text elements, no more.
     ══════════════════════════════════ -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media">
-        <picture>
-          <source media="(min-width: 48em)"
-                  srcset="images/hero-more-wide-1280.webp 1280w,
-                          images/hero-more-wide-1920.webp 1920w"
-                  sizes="100vw">
-          <img
-            src="images/hero-more-1080.webp"
-            srcset="images/hero-more-720.webp   720w,
-                    images/hero-more-1080.webp 1080w"
-            sizes="100vw"
-            alt="More i plaža u Bokokotorskom zalivu nadomak Igala, ljetni dan"
-            width="1080"
-            height="1080"
-            fetchpriority="high"
-            loading="eager"
-            decoding="sync"
-          >
-        </picture>
-      </div>
+      <div class="hero__grid">
 
-      <div class="container">
         <div class="hero__lead">
           <span class="eyebrow">Igalo · Herceg Novi</span>
           <h1 class="hero__title" id="hero-title">
@@ -1274,6 +1255,28 @@
             </a>
           </div>
         </div>
+
+        <!-- LCP image - eagerly loaded, never animated -->
+        <figure class="hero__image">
+          <img
+            src="images/kuca_spolja.webp"
+            srcset="
+              images/kuca_spolja-640.webp  640w,
+              images/kuca_spolja-700.webp  700w,
+              images/kuca_spolja-1000.webp 1000w,
+              images/kuca_spolja.webp      1403w
+            "
+            sizes="(min-width: 64em) 700px, 92vw"
+            alt="Apartmani Igalo Monako - pogled na objekat iz spoljašnjosti"
+            width="1403"
+            height="629"
+            fetchpriority="high"
+            loading="eager"
+            decoding="sync"
+          >
+          <figcaption class="sr-only">Apartmani Igalo Monako, Dubrovačka 1</figcaption>
+        </figure>
+
       </div>
     </section>
 
@@ -1567,10 +1570,10 @@
           <div class="amen__cell amen__cell--feature">
             <div class="amen__media">
               <img
-                src="images/igalo-panorama-wide-1200.webp"
-                alt="Igalo i Bokokotorski zaliv, pogled s mora"
-                width="1200"
-                height="675"
+                src="images/hero-more-wide-1280.webp"
+                alt="More i plaža u Bokokotorskom zalivu nadomak Igala, ljetni dan"
+                width="1280"
+                height="720"
                 loading="lazy"
                 decoding="async"
               >
@@ -1685,18 +1688,6 @@
         </div>
 
         <div class="gallery" tabindex="0" role="group" aria-label="Galerija slika, pomjerajte vodoravno">
-          <figure class="gallery__item">
-            <img
-              src="images/kuca_spolja.webp"
-              srcset="images/kuca_spolja-640.webp 640w, images/kuca_spolja-700.webp 700w, images/kuca_spolja-1000.webp 1000w, images/kuca_spolja.webp 1403w"
-              sizes="(min-width: 48em) 90vw, 82vw"
-              alt="Apartmani Igalo Monako - pogled na objekat iz spoljašnjosti"
-              width="1403"
-              height="629"
-              loading="lazy"
-              decoding="async"
-            >
-          </figure>
           <figure class="gallery__item">
             <img
               src="images/apartmani-igalo-1.webp"
@@ -2174,7 +2165,7 @@
 
       <div class="footer__top">
         <img class="footer__logo-img" src="images/logo-lockup.webp"
-             alt="Apartmani Igalo Monako" width="760" height="119"
+             alt="Apartmani Igalo Monako" width="900" height="141"
              loading="lazy" decoding="async">
         <div class="footer__call">
           <p class="footer__call-label">Rezervacije 24/7</p>
