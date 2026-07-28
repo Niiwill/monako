@@ -707,17 +707,16 @@
       border-radius: var(--r-lg); overflow: hidden;
       box-shadow: var(--sh-2); background: var(--mist);
     }
-    .hero__image img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 45%; }
+    /* No forced ratio and no cover crop: the photograph is 1403x629 and is
+       shown whole, at its own proportions. The width/height attributes on
+       the <img> already reserve the right box, so nothing shifts on load. */
+    .hero__image img { width: 100%; height: auto; display: block; }
 
     @media (min-width: 30em) {
       .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
       .hero__actions .btn { width: auto; padding-inline: 1.5em; }
     }
-    /* Tablet still stacks, so the image takes a wider band and the whole
-       opening clears a 900px viewport instead of running past it. */
-    @media (min-width: 48em) and (max-width: 63.99em) {
-      .hero__image img { aspect-ratio: 21 / 9; }
-    }
+
     @media (min-width: 64em) {
       /* The left rail stops at the container gutter and the image column
          runs to the viewport edge. That single asymmetry is what keeps the
