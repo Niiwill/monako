@@ -8,7 +8,7 @@
        PRIMARY META - SEO
   ═══════════════════════════════════════════════ -->
   <title>Šta Videti u Herceg Novom – Top 17 | Apartmani Igalo Monako</title>
-  <meta name="description" content="Šta videti i obići u Herceg Novom? Od Starog grada i Plave špilje do Gospe od Škrpjela i poluostrva Luštica — 17 nezaobilaznih atrakcija sa savjetima lokalaca za 2026.">
+  <meta name="description" content="Šta videti u Herceg Novom? 17 atrakcija, kako doći, vrijeme i najbolje vrijeme za posjetu — vodič lokalca za 2026.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html">
 
@@ -292,6 +292,22 @@
 
     /* ARTICLE INTRO */
     .article__intro { font-size: var(--step-1); color: var(--c-muted); line-height: 1.65; border-left: 3px solid var(--c-teal); padding-left: var(--sp-md); margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+    /* ── ORIENTATION BLOCKS (osnovno / kako doći / vrijeme) ── */
+    .orient { margin-bottom: clamp(2rem, 4vw, 3rem); }
+    .orient > p { margin-top: 0.75em; line-height: 1.7; }
+    .orient__facts { margin: 1.25em 0 0; display: grid; gap: 0; }
+    .orient__row {
+      display: grid; grid-template-columns: minmax(9rem, 15rem) 1fr;
+      gap: 0.35em 1.25em;
+      padding: 0.7em 0; border-top: 1px solid var(--c-divider);
+    }
+    .orient__row:last-child { border-bottom: 1px solid var(--c-divider); }
+    .orient__row dt { font-weight: 600; color: var(--c-teal); }
+    .orient__row dd { margin: 0; line-height: 1.65; }
+    @media (max-width: 640px) {
+      .orient__row { grid-template-columns: 1fr; gap: 0.15em; }
+    }
 
     /* ATTRACTION ENTRIES */
     .attraction {
@@ -637,6 +653,127 @@
               šta videti i obići u Herceg Novom, evo
               <strong>17 atrakcija i znamenitosti koje ne smijete propustiti</strong>.
             </p>
+
+            <!-- ── ORIENTATION / QUICK FACTS ── -->
+            <section class="orient" aria-labelledby="osnovno">
+              <h2 class="attraction__title" id="osnovno">Herceg Novi na prvi pogled</h2>
+              <p>
+                Herceg Novi je najzapadniji grad u Crnoj Gori, na samom ulazu u
+                <strong>Bokokotorski zaliv</strong>, stisnut između mora i planine Orjen.
+                Grad je poznat po <strong>2.700 godina istorije</strong>, mimozi koja mu je
+                simbol, i po tome što se cijeli spušta ka obali strmim kamenim stepenicama.
+                Uz obalu se nižu <strong>62 plaže</strong> - od gradskih do skrivenih uvala
+                dostupnih samo brodom.
+              </p>
+              <dl class="orient__facts">
+                <div class="orient__row">
+                  <dt>Gdje se nalazi</dt>
+                  <dd>Ulaz u Bokokotorski zaliv, uz granicu s Hrvatskom, između Jadrana i planine Orjen.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Klima</dt>
+                  <dd>Mediteranska - oko <strong>240 sunčanih dana godišnje</strong>, blage zime (10-18 °C).</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>More</dt>
+                  <dd>Ljeti <strong>22-26 °C</strong>; u junu i septembru 22-25 °C uz znatno manje gužve.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Igalo</dt>
+                  <dd>
+                    Banjski dio grada, <strong>3 km od centra</strong> i 4 km od Starog grada -
+                    povezan <a href="#pet-danica">šetalištem Pet Danica</a>.
+                    Tu se nalaze i <a href="/">apartmani u Igalu</a> te
+                    <a href="/blatna-plaza.html">Blatna plaža s lekovitim blatom</a>.
+                  </dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Simbol grada</dt>
+                  <dd>Mimoza - u februaru joj je posvećen <a href="/praznik-mimoze-program.html">Praznik mimoze</a>.</dd>
+                </div>
+              </dl>
+            </section>
+
+            <!-- ── HOW TO GET THERE ── -->
+            <section class="orient" aria-labelledby="kako-doci">
+              <h2 class="attraction__title" id="kako-doci">Kako doći do Herceg Novog</h2>
+              <p>
+                Herceg Novi je najlakše dostupan grad u Crnoj Gori ako dolazite sa zapada -
+                do njega se stiže obalnom magistralom, bez skretanja u unutrašnjost.
+              </p>
+              <dl class="orient__facts">
+                <div class="orient__row">
+                  <dt>Aerodrom Dubrovnik (DBV)</dt>
+                  <dd>Oko <strong>35 km</strong>, vožnja 45 minuta - najbliži aerodrom, zavisno od čekanja na granici.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Aerodrom Tivat (TIV)</dt>
+                  <dd>
+                    Oko <strong>40 minuta</strong> preko trajekta <strong>Kamenari-Lepetane</strong>;
+                    zaobilaznim putem oko zaliva vožnja je duža.
+                  </dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Aerodrom Podgorica (TGD)</dt>
+                  <dd>Oko <strong>90 km</strong>, vožnja približno 90 minuta.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Autobusom</dt>
+                  <dd>
+                    Grad je na obalnoj liniji Herceg Novi-Kotor-Budva. Lokalna linija
+                    Herceg Novi-Igalo vozi <strong>svakih 15-20 minuta</strong> tokom dana.
+                  </dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Iz Igala pješke</dt>
+                  <dd>
+                    Ravnim šetalištem Pet Danica uz more do centra je oko 45 minuta hoda -
+                    ili nekoliko minuta
+                    <a href="/iznajmljivanje-bicikla-herceg-novi-igalo.html">biciklom</a>.
+                  </dd>
+                </div>
+              </dl>
+            </section>
+
+            <!-- ── WEATHER / WHEN TO VISIT ── -->
+            <section class="orient" aria-labelledby="vrijeme">
+              <h2 class="attraction__title" id="vrijeme">Vrijeme i najbolje vrijeme za posjetu</h2>
+              <p>
+                Zahvaljujući zaklonu planine Orjen i otvorenosti prema Jadranu, Herceg Novi
+                ima jednu od najblažih klima na crnogorskoj obali - oko
+                <strong>240 sunčanih dana godišnje</strong>, a sezona kupanja traje duže
+                nego u većini susjednih destinacija.
+              </p>
+              <dl class="orient__facts">
+                <div class="orient__row">
+                  <dt>Jun i septembar</dt>
+                  <dd>
+                    <strong>Najbolji balans</strong> - more 22-25 °C, dugi sunčani dani,
+                    znatno manje gužve i niže cijene smještaja nego u julu i avgustu.
+                  </dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Jul i avgust</dt>
+                  <dd>Najtoplije i najživlje - more do 26 °C, ali i najveća gužva na plažama.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>April, maj i oktobar</dt>
+                  <dd>Idealno za razgledanje, planinarenje na Orjenu i obilazak tvrđava bez vrućine.</dd>
+                </div>
+                <div class="orient__row">
+                  <dt>Zima</dt>
+                  <dd>
+                    Blago, 10-18 °C i sunčano - grad ostaje aktivan, a februar donosi
+                    <a href="/praznik-mimoze-program.html">Praznik mimoze</a>.
+                  </dd>
+                </div>
+              </dl>
+              <p>
+                Ako planirate boravak, pogledajte i
+                <a href="/vesti/plaze-herceg-novi.html">plaže u Herceg Novom i Igalu</a> te
+                <a href="/vesti/restorani-herceg-novi.html">gdje jesti u gradu</a>.
+              </p>
+            </section>
 
             <!-- 1 -->
             <article class="attraction" id="skver" aria-labelledby="a1">
