@@ -367,6 +367,10 @@
       --on-blue:   #FFFFFF;
       --viber:     #7360F2;
       --viber-dark:#5B4FD1;
+      /* Footer ground and the link tint that carries on it. Both are
+         deeper/lighter relatives of --blue rather than new directions. */
+      --navy:      #001F5B;
+      --navy-link: #8FB5FF;
 
       /* alphas of the seven, no new hues */
       --ink-80:    rgb(16 24 32 / .80);
@@ -1157,50 +1161,60 @@
     /* ══════════════════════════════════════════════
        FOOTER - light, airy, the brand and the phone number first
     ══════════════════════════════════════════════ */
-    .footer { background: var(--mist); border-top: 3px solid var(--blue); padding-block: var(--sp-xl) var(--sp-lg); }
+    /* Dark navy ground. Copy is white, links carry --navy-link and resolve
+       to white on hover, and the hairlines switch from ink alphas to white
+       ones so they stay visible. */
+    .footer {
+      background: var(--navy); color: var(--on-blue);
+      border-top: 3px solid var(--blue);
+      padding-block: var(--sp-xl) var(--sp-lg);
+      --line: rgb(255 255 255 / .20);
+      --line-soft: rgb(255 255 255 / .12);
+    }
+    .footer :focus-visible { outline-color: var(--on-blue); }
     .footer__top { padding-bottom: var(--sp-lg); border-bottom: 1px solid var(--line); }
     .footer__logo-img { width: min(100%, 420px); height: auto; display: block; }
     .footer__call { margin-top: var(--sp-md); }
     .footer__call-label {
       display: flex; align-items: center; gap: 0.6em;
       font-size: var(--step--2); font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--ink-72); margin-bottom: 0.5rem;
+      text-transform: uppercase; color: var(--on-blue); margin-bottom: 0.5rem;
     }
     .footer__call-label::before { content:''; width:26px; height:3px; border-radius:3px; background: var(--blue); }
     .footer__tel {
       display: inline-flex; align-items: center; gap: 0.4em;
       font-family: var(--ff-display); font-size: var(--step-3); font-weight: 700;
-      letter-spacing: -0.03em; color: var(--ink); transition: color var(--trans);
+      letter-spacing: -0.03em; color: var(--navy-link); transition: color var(--trans);
     }
-    .footer__tel:hover { color: var(--blue-deep); }
+    .footer__tel:hover { color: var(--on-blue); }
     .footer__grid { display: grid; gap: var(--sp-ml); padding-top: var(--sp-lg); }
     .footer__heading {
       font-size: var(--step--2); font-weight: 600; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--ink-72); margin-bottom: var(--sp-sm);
+      text-transform: uppercase; color: var(--on-blue); margin-bottom: var(--sp-sm);
     }
-    .footer__tagline { font-size: var(--step--1); color: var(--ink-72); line-height: 1.8; max-width: 38ch; }
+    .footer__tagline { font-size: var(--step--1); color: var(--on-blue); line-height: 1.8; max-width: 38ch; }
     .footer__links { display: flex; flex-direction: column; gap: 0.4rem; }
     .footer__links a, .footer__email {
       display: inline-flex; align-items: center; min-height: 28px;
-      font-size: var(--step--1); color: var(--ink-72); transition: color var(--trans);
+      font-size: var(--step--1); color: var(--navy-link); transition: color var(--trans);
     }
-    .footer__links a:hover, .footer__email:hover { color: var(--ink); }
+    .footer__links a:hover, .footer__email:hover { color: var(--on-blue); }
     .footer__social { display: flex; gap: 0.5rem; margin-top: var(--sp-sm); }
     .footer__social a {
       display: grid; place-items: center; width: 46px; height: 46px;
-      border-radius: var(--r-md); border: 1px solid var(--line); background: var(--paper);
-      color: var(--ink-72);
+      border-radius: var(--r-md); border: 1px solid var(--line); background: transparent;
+      color: var(--navy-link);
       transition: color var(--trans), border-color var(--trans), transform var(--trans), box-shadow var(--trans);
     }
-    .footer__social a:hover { color: var(--ink); border-color: var(--blue); transform: translateY(-2px); box-shadow: var(--sh-1); }
+    .footer__social a:hover { color: var(--on-blue); border-color: var(--on-blue); transform: translateY(-2px); }
     .footer__bottom {
       display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem var(--sp-md);
       margin-top: var(--sp-lg); padding-top: var(--sp-md);
       border-top: 1px solid var(--line);
-      font-size: var(--step--2); color: var(--ink-72);
+      font-size: var(--step--2); color: var(--on-blue);
     }
-    .footer__bottom a { display: inline-flex; align-items: center; min-height: 26px; color: var(--ink-72); transition: color var(--trans); }
-    .footer__bottom a:hover { color: var(--ink); }
+    .footer__bottom a { display: inline-flex; align-items: center; min-height: 26px; color: var(--navy-link); transition: color var(--trans); }
+    .footer__bottom a:hover { color: var(--on-blue); }
     @media (max-width: 47.99em) {
       .footer { padding-bottom: calc(var(--sp-lg) + 62px + env(safe-area-inset-bottom, 0px)); }
     }
@@ -2234,7 +2248,7 @@
     <div class="container">
 
       <div class="footer__top">
-        <img class="footer__logo-img" src="images/logo-lockup.webp"
+        <img class="footer__logo-img" src="images/logo-lockup-light.webp"
              alt="Apartmani Igalo Monako" width="900" height="141"
              loading="lazy" decoding="async">
         <div class="footer__call">
