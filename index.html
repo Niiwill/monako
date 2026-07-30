@@ -550,13 +550,31 @@
     .btn--viber { background: var(--viber); color: var(--on-blue); box-shadow: 0 2px 12px rgb(115 96 242 / .30); }
     .btn--viber:hover { background: var(--viber-dark); transform: translateY(-2px); box-shadow: var(--sh-2); }
 
+    /* On phones this is a full-width button, sharing the .btn metrics so the
+       two read as one family. From 40em it goes back to an inline link,
+       where a full-width bar would be a very wide target for a small label. */
     .view-all {
-      display: inline-flex; align-items: center; gap: 0.45em; min-height: 28px;
-      font-size: var(--step--1); font-weight: 600; color: var(--ink);
-      white-space: nowrap; transition: gap var(--trans);
-      border-bottom: 2px solid var(--blue); padding-bottom: 2px;
+      display: flex; align-items: center; justify-content: center; gap: 0.45em;
+      width: 100%; min-height: 54px; padding: 0.8em 1.25em;
+      background: var(--paper); color: var(--ink);
+      border: 1.5px solid var(--line); border-radius: var(--r-sm);
+      font-weight: 700; font-size: 1.1875rem; line-height: 1.2;
+      white-space: nowrap;
+      transition: border-color var(--trans), box-shadow var(--trans),
+                  transform var(--trans), gap var(--trans);
     }
-    .view-all:hover { gap: 0.8em; border-bottom-color: var(--blue-deep); }
+    .view-all:hover { border-color: var(--blue); box-shadow: var(--sh-1); transform: translateY(-2px); }
+    .view-all:active { transform: scale(0.98); }
+    @media (min-width: 40em) {
+      .view-all {
+        display: inline-flex; width: auto; min-height: 28px;
+        padding: 0 0 2px; background: none;
+        border: 0; border-bottom: 2px solid var(--blue); border-radius: 0;
+        font-size: var(--step--1); font-weight: 600;
+      }
+      .view-all:hover { gap: 0.8em; border-bottom-color: var(--blue-deep);
+                        box-shadow: none; transform: none; }
+    }
     /* Inline links: --blue cannot carry text on white at 4.5:1, so the ink
        carries the word and the blue carries the underline. */
     .link-inline {
@@ -960,10 +978,6 @@
     ══════════════════════════════════════════════ */
     .amen { display: grid; grid-template-columns: 1fr; gap: 0.85rem; }
     .amen__cell { background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--r-lg); box-shadow: var(--sh-1); overflow: hidden; display: flex; flex-direction: column; gap: 0.9rem; padding: clamp(1.25rem, 5vw, 1.75rem); }
-    .amen__cell--feature { padding: 0; gap: 0; }
-    .amen__media { position: relative; min-height: 200px; flex: 1 1 auto; }
-    .amen__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    .amen__cell--feature .amen__body { padding: clamp(1.25rem, 5vw, 1.75rem); }
     .amen__icon {
       display: grid; place-items: center; width: 46px; height: 46px;
       border-radius: var(--r-md); background: var(--blue-16); color: var(--ink-72); flex-shrink: 0;
@@ -973,16 +987,10 @@
       line-height: 1.2; letter-spacing: -0.02em;
     }
     .amen__desc { margin-top: 0.4rem; font-size: var(--step--1); color: var(--ink-72); line-height: 1.65; }
-    @media (min-width: 48em) {
-      .amen { grid-template-columns: repeat(4, minmax(0,1fr)); }
-      .amen__cell:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-      .amen__cell:nth-child(2) { grid-column: span 2; }
-      .amen__cell:nth-child(3) { grid-column: span 2; }
-      .amen__cell:nth-child(4) { grid-column: span 2; }
-      .amen__cell:nth-child(5) { grid-column: span 1; }
-      .amen__cell:nth-child(6) { grid-column: span 1; }
-      .amen__media { min-height: 250px; }
-    }
+    /* Six equal cells now the first one has no photograph to anchor a bento
+       span, so the column counts are the ones that divide six evenly. */
+    @media (min-width: 48em) { .amen { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (min-width: 64em) { .amen { grid-template-columns: repeat(3, minmax(0,1fr)); } }
 
     .included { margin-top: var(--sp-lg); padding-top: var(--sp-ml); border-top: 1px solid var(--line); }
     .included__title {
@@ -1034,7 +1042,10 @@
     .reviews::-webkit-scrollbar { display: none; }
     .reviews:focus-visible { outline-offset: 6px; }
     .review { background: var(--paper); border: 1px solid var(--line-soft); border-radius: var(--r-lg); box-shadow: var(--sh-1); scroll-snap-align: center; padding: clamp(1.25rem, 5vw, 1.85rem); }
-    .review__stars { color: var(--ink); font-size: var(--step-0); letter-spacing: 0.11em; line-height: 1; margin-bottom: var(--sp-sm); }
+    /* Gold glyphs sit at 1.66:1 on paper, far under 4.5:1. They carry no
+       information: the group is role="img" with the rating in its
+       aria-label, so the glyphs are decorative and 1.4.3 does not apply. */
+    .review__stars { color: var(--sun); font-size: var(--step-0); letter-spacing: 0.11em; line-height: 1; margin-bottom: var(--sp-sm); }
     .review__quote {
       font-family: var(--ff-display); font-size: var(--step--1); font-weight: 300;
       line-height: 1.65; letter-spacing: -0.005em;
@@ -1633,18 +1644,11 @@
 
         <div class="amen">
 
-          <div class="amen__cell amen__cell--feature">
-            <div class="amen__media">
-              <img
-                src="images/hero-more-wide-1280.webp"
-                alt="More i plaža u Bokokotorskom zalivu nadomak Igala, ljetni dan"
-                width="1280"
-                height="720"
-                loading="lazy"
-                decoding="async"
-              >
+          <div class="amen__cell">
+            <div class="amen__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5l2.708 5.487 6.056.881-4.382 4.271 1.035 6.032L12 17.313l-5.417 2.858 1.035-6.032L3.236 9.868l6.056-.881z"/></svg>
             </div>
-            <div class="amen__body">
+            <div>
               <h3 class="amen__title">Kategorisani apartmani</h3>
               <p class="amen__desc">Apartmani sa tri zvjezdice, smješteni 100 m od Blatne plaže i nasuprot Instituta Dr Simo Milošević.</p>
             </div>
@@ -1810,7 +1814,7 @@
         <div class="reviews" tabindex="0" role="group" aria-label="Recenzije gostiju, pomjerajte vodoravno">
 
           <article class="review">
-            <div class="review__stars" aria-label="5 od 5 zvjezdica">
+            <div class="review__stars" role="img" aria-label="5 od 5 zvjezdica">
               ★★★★★
             </div>
             <blockquote class="review__quote">
@@ -1823,7 +1827,7 @@
           </article>
 
           <article class="review">
-            <div class="review__stars" aria-label="5 od 5 zvjezdica">
+            <div class="review__stars" role="img" aria-label="5 od 5 zvjezdica">
               ★★★★★
             </div>
             <blockquote class="review__quote">
@@ -1837,7 +1841,7 @@
           </article>
 
           <article class="review">
-            <div class="review__stars" aria-label="5 od 5 zvjezdica">
+            <div class="review__stars" role="img" aria-label="5 od 5 zvjezdica">
               ★★★★★
             </div>
             <blockquote class="review__quote">
