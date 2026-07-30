@@ -12,7 +12,7 @@
   "ctr": 0.0641,
   "position": 5.43
  },
- "notes": "HOMEPAGE POSITION REGRESSION isolated: / went pos 5.62 (Jul 20-24) -> 7.73 (Jul 25-28) while every other page held or improved (plaze 4.69->4.37, atrakcije 7.20->7.15, blatna 3.80->3.87, restorani-hn 6.37->6.42). Homepage-specific, starting exactly when PRs 62-65 (UI overhaul + NAP/entity audit) landed Jul 25-26. DEPLOY #3 EARLY READ IS POSITIVE: homepage CTR 3.82% -> 4.56% DESPITE the 2-position drop; vs expected-for-position it moved from underperforming to over-performing. Query-level noisy (apartmani igalo 2.09%->0.61% on 4 clicks). Week WoW -0.9% (plateau). herceg novi plaze pos 2.2 / 12.2% / 369 clicks - new best. PRs 75+76 merged Jul 30.",
+ "notes": "CORRECTED 2026-08-01: the 'homepage position regression' flagged here was a REPORTING ARTIFACT, not a ranking loss. The GBP URL /?utm_source=gbp&utm_medium=organic began reporting Jul 25 and absorbed the high-position impressions: 'apartmani igalo' before = / alone 521 impr @ pos 4.12; after = / 190 impr @ pos 7.69 PLUS GBP-URL 186 impr @ pos 1.61. Combined homepage+GBP impressions rose 656/day -> 732/day (+12%). No schema diff needed; Aug 5 decision point cancelled. Original note follows: HOMEPAGE POSITION REGRESSION isolated: / went pos 5.62 (Jul 20-24) -> 7.73 (Jul 25-28) while every other page held or improved (plaze 4.69->4.37, atrakcije 7.20->7.15, blatna 3.80->3.87, restorani-hn 6.37->6.42). Homepage-specific, starting exactly when PRs 62-65 (UI overhaul + NAP/entity audit) landed Jul 25-26. DEPLOY #3 EARLY READ IS POSITIVE: homepage CTR 3.82% -> 4.56% DESPITE the 2-position drop; vs expected-for-position it moved from underperforming to over-performing. Query-level noisy (apartmani igalo 2.09%->0.61% on 4 clicks). Week WoW -0.9% (plateau). herceg novi plaze pos 2.2 / 12.2% / 369 clicks - new best. PRs 75+76 merged Jul 30.",
  "deploys": [
   {
    "date": "2026-07-20",
@@ -1975,5 +1975,23 @@
    "ctr": 0.0065,
    "position": 8.3
   }
- ]
+ ],
+ "gbp_url_baseline": {
+  "url": "https://apartmani-igalo.com/?utm_source=gbp&utm_medium=organic",
+  "window": "2026-07-22..2026-07-28 (data only from Jul 25)",
+  "impressions": 1151,
+  "clicks": 6,
+  "ctr": 0.0052,
+  "position": 2.8,
+  "position_trend": [
+   3.1,
+   3.57,
+   2.8,
+   2.3
+  ],
+  "mobile_share": 0.89,
+  "brand_query_share": 0.036,
+  "combined_homepage_plus_gbp_impr_per_day": 732,
+  "prior_7d_impressions": 0
+ }
 }
