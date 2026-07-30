@@ -478,69 +478,26 @@
     .section--mist { background: var(--mist); }
 
     /* ── SEA-WAVE BAND ───────────────────────────────
-       .section.reveal matches every content section, so the page reads as
-       alternating bands: wave-blue where the section is plain, mist where
-       it carries --mist. The :not() keeps the mist sections light without
-       relying on source order, and stops these rules reaching into the
-       panels they hold (.apt-promo's coral eyebrow lives in one).
+       The pricing section only. Same recipe as the reference: a blue
+       gradient on the section, the wave tile repeated over it by an
+       absolutely positioned ::before at low opacity so the gradient
+       still reads through.
 
-       The gradient deepens rather than drifting to cyan. White body copy
-       needs 4.5:1 and #007FFF gives only 3.83:1, while #0066CC gives
-       5.56:1 and every stop below it is darker still, so the whole band
-       is safe for normal-size text, not just headings.
+       Both of this section's columns are white panels, so no text sits
+       on the band itself. That is what lets the gradient stay bright:
+       there is no body copy here needing 4.5:1 against it.
     ══════════════════════════════════════════════════ */
-    .section.reveal:not(.section--mist) {
+    #cjenovnik {
       position: relative;
       isolation: isolate;
-      background-color: var(--blue-deep);
-      /* An ink wash, not a new hue: keeps the palette closed. */
-      background-image: linear-gradient(175deg, rgb(16 24 32 / 0) 30%, rgb(16 24 32 / .30));
-      color: var(--on-blue);
-      /* Flip the ink scale once; every descendant token follows. The
-         secondary steps sit higher than their ink counterparts because
-         white at .82 over #0066CC is only 4.26:1; .90 gives 4.83:1. */
-      --ink: #FFFFFF;
-      --ink-80: rgb(255 255 255 / .94);
-      --ink-72: rgb(255 255 255 / .90);
-      --line: rgb(255 255 255 / .28);
-      --line-soft: rgb(255 255 255 / .18);
+      background-image: linear-gradient(175deg, var(--blue) 30%, var(--blue-deep));
     }
-    .section.reveal:not(.section--mist)::before {
+    #cjenovnik::before {
       content: '';
       position: absolute; inset: 0; z-index: -1;
       background: url('images/wave-pattern.png') repeat 0 0;
       opacity: .14;
       pointer-events: none;
-    }
-    /* --blue is invisible against the band, so accents that carried it
-       switch to the band's own white. */
-    .section.reveal:not(.section--mist) .eyebrow::before,
-    .section.reveal:not(.section--mist) .eyebrow::after { background: var(--on-blue); }
-    .section.reveal:not(.section--mist) .view-all { border-bottom-color: var(--on-blue); }
-    .section.reveal:not(.section--mist) .view-all:hover { border-bottom-color: rgb(255 255 255 / .70); }
-    .section.reveal:not(.section--mist) .link-inline { text-decoration-color: var(--on-blue); }
-    .section.reveal:not(.section--mist) .link-inline:hover { text-decoration-color: rgb(255 255 255 / .70); }
-    .section.reveal:not(.section--mist) :is(.blog__feature-title, .blog__row-title) a:hover { color: rgb(255 255 255 / .78); }
-    .section.reveal:not(.section--mist) :focus-visible { outline-color: var(--on-blue); }
-    /* #007FFF on #0066CC is a 1.45:1 edge, under the 3:1 that WCAG 1.4.11
-       wants for a control's boundary. The fill and label stay as specified;
-       a white ring carries the edge instead (5.57:1 against the band). */
-    .section.reveal:not(.section--mist) .btn--primary {
-      box-shadow: 0 0 0 1.5px rgb(255 255 255 / .90), 0 4px 16px rgb(16 24 32 / .22);
-    }
-    .section.reveal:not(.section--mist) .btn--primary:hover {
-      box-shadow: 0 0 0 1.5px var(--on-blue), 0 8px 24px rgb(16 24 32 / .28);
-    }
-
-    /* Panels keep their own light surface, so they keep the dark ink scale. */
-    .section.reveal:not(.section--mist) :is(.card, .review, .amen__cell, .included__item,
-                                            .btn--ghost, .video-wrap__btn) {
-      --ink: #101820;
-      --ink-80: rgb(16 24 32 / .80);
-      --ink-72: rgb(16 24 32 / .72);
-      --line: rgb(16 24 32 / .10);
-      --line-soft: rgb(16 24 32 / .06);
-      color: var(--ink);
     }
 
     /* ── TYPE ────────────────────────────────────── */
@@ -898,13 +855,19 @@
       font-size: var(--step-0); font-weight: 600;
     }
     .price-panel__type span { font-size: var(--step--1); font-weight: 400; color: var(--ink-72); }
+    /* Both columns are panels floating on the wave band, so they share the
+       price panel's padding and sit at equal height. */
+    .booking__intro { padding: clamp(1.5rem, 6vw, 2.25rem); }
     @media (min-width: 40em) { .booking__actions { flex-direction: row; flex-wrap: wrap; } }
     @media (min-width: 64em) {
       .booking__grid {
         display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-        gap: clamp(2.5rem, 5vw, 5rem); align-items: center;
+        gap: clamp(1.25rem, 2.5vw, 2rem); align-items: stretch;
       }
-      .price-panel { margin-top: 0; }
+      /* Equal-height panels leave slack in the shorter one, so the closing
+         contact note is anchored to its foot rather than left floating. */
+      .price-panel { margin-top: 0; display: flex; flex-direction: column; }
+      .price-panel__note:last-child { margin-top: auto; padding-top: var(--sp-md); }
     }
 
     /* ══════════════════════════════════════════════
@@ -1489,7 +1452,7 @@
     <section class="section reveal" id="cjenovnik" aria-labelledby="direktno-heading">
       <div class="container">
         <div class="booking__grid">
-          <div>
+          <div class="card booking__intro">
             <span class="eyebrow">Privatni smještaj Igalo · Cijene</span>
             <h2 class="section-title" id="direktno-heading">
               Zašto rezervisati direktno kod nas?
