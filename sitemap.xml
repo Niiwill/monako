@@ -122,6 +122,13 @@
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-igalo.html"/>
   </url>
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/banja-igalo-institut.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/banja-igalo-institut.html"/>
+  </url>
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html</loc>
