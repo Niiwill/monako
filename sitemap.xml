@@ -129,6 +129,34 @@
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/banja-igalo-institut.html"/>
   </url>
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/kafici-barovi-herceg-novi-igalo.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/kafici-barovi-herceg-novi-igalo.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/temperatura-mora-igalo.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/temperatura-mora-igalo.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/titova-vila-galeb-igalo.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/titova-vila-galeb-igalo.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/vesti/zanjice-plaza-izlet.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/zanjice-plaza-izlet.html"/>
+  </url>
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html</loc>
