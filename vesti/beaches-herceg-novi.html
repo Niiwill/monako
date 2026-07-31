@@ -398,6 +398,27 @@
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: none; }
     }
+
+    /* ── ADSENSE GUARD - auto-ads inject fixed-width <ins> units at runtime;
+         cap them (and the columns they land in) so the article can never
+         stretch past the viewport on mobile ── */
+    .content-grid > * { min-width: 0; }
+    ins.adsbygoogle {
+      display: block !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    /* Google wraps each auto-injected unit in this container - cap it too, or a
+       fixed-width ad iframe inside it pushes the layout past the viewport. */
+    .google-auto-placed {
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      overflow: hidden;
+    }
+    ins.adsbygoogle iframe,
+    .google-auto-placed iframe { max-width: 100% !important; }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
