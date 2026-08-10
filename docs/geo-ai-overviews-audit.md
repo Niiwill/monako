@@ -517,7 +517,7 @@ decision and was deliberately left alone.
 | 2 | Entity linkage on the orphaned pages | **Done.** All 19 article-like nodes point `author`/`publisher` at `#business`; all 27 pages define the entity (was 13). |
 | 3 | Offers and payment fields | **Partly done.** `paymentAccepted`, `currenciesAccepted` and the €500 monthly `Offer` are in. `priceRange` and the nightly `Offer`s are **blocked on item 1** — adding them without published prices would mean inventing numbers. |
 | 4 | Check-in/out, pets, lift, laundry | **Done** on all 27 business nodes. Supersedes the old G5 "no fixed times exist" decision. |
-| 5 | `sameAs` and linked rating figures | **Partly done.** Google Maps added to `sameAs`; the visible Google and Facebook figures are now links. **Booking.com and Airbnb profile URLs are not in the repo — send them and it is a two-minute change.** |
+| 5 | `sameAs` and linked rating figures | **Mostly done.** `sameAs` now carries Facebook, Instagram, YouTube, the Google Maps profile and the Airbnb listing. The visible Google and Facebook figures are links. **Outstanding: the Booking.com listing URL** — the owner could not locate it and will supply it later. It is a one-line addition to `sameAs` on all 31 business nodes when it arrives. |
 | 6 | Site spine: `WebSite`, `logo`, `AboutPage`, `founder` | **Mostly done.** `WebSite` moved to the homepages and stopped describing the site as one product page; `logo` and the Serbian `AboutPage` added. **`founder` skipped deliberately:** no host is named anywhere on the site, and the only name available is from a guest review. Asserting it as structured data would be inventing a fact. Tell me the name and it goes in. |
 | 7 | Dates on the commercial pages | **Done.** Dates taken from each file's last real content commit, not stamped as today. Visible "updated" line added to the FAQ. |
 | 8 | English FAQ and Blatna Plaža | **Done** — `en/faq.html`, `en/blatna-plaza.html`, wired into hreflang, sitemap and llms.txt. |
@@ -532,8 +532,17 @@ it is the exact pattern §3.11 warns about: a wide table needs `overflow-x: auto
 container. One line of CSS whenever you want it. That page also loads a different font pair
 (Cormorant Garamond + DM Sans) from the rest of the site.
 
-**Three things I could not do without a fact from you:** the Booking.com and Airbnb profile URLs,
-the host's name for `founder`, and the authority behind the three-star rating.
+**Still waiting on a fact from the owner:** the Booking.com listing URL, the host's name for
+`founder`, and the authority behind the three-star rating.
+
+### A note on the visible rating figures
+
+The Google and Facebook figures on the homepage are links. The **Booking.com and Airbnb figures are
+deliberately left as plain text**, even though the Airbnb URL is now known. The reason is
+commercial, not technical: linking them would put a click-through to the channels that charge you
+15–20% commission directly beside the section arguing guests should book direct. The `sameAs` entry
+does the entity-corroboration job on its own — it is invisible to visitors and sends nobody
+anywhere. Reverse this only if you decide OTA traffic is worth more than the direct booking.
 
 ---
 
