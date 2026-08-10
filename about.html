@@ -537,6 +537,15 @@
     .about-grid strong { font-weight: 600; }
 
     /* ── STATS STRIP ───────────────────────────── */
+    /* ── FACTS TABLE ───────────────────────────── */
+    .facts { width: 100%; border-collapse: collapse; margin-top: var(--sp-md); font-size: var(--step--1); }
+    .facts caption { text-align: left; font-weight: 600; color: var(--c-text); font-size: var(--step-0); margin-bottom: 0.6em; }
+    .facts th, .facts td { text-align: left; padding: 0.7em 0.9em; border-bottom: 1px solid var(--c-divider); vertical-align: top; }
+    .facts th { width: 38%; font-weight: 600; color: var(--c-muted); white-space: nowrap; }
+    .facts td { color: var(--c-text); }
+    .facts tr:last-child th, .facts tr:last-child td { border-bottom: 0; }
+    @media (max-width: 520px) { .facts th { width: 45%; white-space: normal; } }
+
     .stats-strip {
       background: var(--c-teal); color: #fff;
       padding-block: clamp(1.5rem, 4vw, 2.5rem);
@@ -1132,6 +1141,38 @@
         </dl>
       </div>
     </div>
+
+    <!-- ══════════════════════════════════
+         KEY FACTS - table-formatted so the values are extractable
+         as discrete labelled pairs rather than sentences.
+    ══════════════════════════════════ -->
+    <section class="section" aria-labelledby="facts-heading">
+      <div class="container">
+        <span class="section-eyebrow">Ukratko</span>
+        <h2 class="section-title" id="facts-heading">Osnovni podaci</h2>
+        <table class="facts">
+          <caption class="sr-only">Kontakt, lokacija i uslovi boravka</caption>
+          <tbody>
+            <tr><th scope="row">Naziv</th><td>Apartmani Igalo Monako</td></tr>
+            <tr><th scope="row">Adresa</th><td>Dubrovačka 1, Igalo 85347, Crna Gora</td></tr>
+            <tr><th scope="row">Telefon i Viber</th><td><a href="tel:+38267558240">+382 67 558 240</a></td></tr>
+            <tr><th scope="row">E-pošta</th><td><a href="mailto:hotel-monako@hotmail.com">hotel-monako@hotmail.com</a></td></tr>
+            <tr><th scope="row">Dostupnost</th><td>Ponedjeljak - nedjelja, 24/7</td></tr>
+            <tr><th scope="row">Prijava / odjava</th><td>Od 12:00 / do 10:00</td></tr>
+            <tr><th scope="row">Kategorija</th><td>Tri zvjezdice - kategorizacija Opštine Herceg Novi</td></tr>
+            <tr><th scope="row">Tipovi apartmana</th><td>Studio (2-4 osobe) i apartman sa odvojenom sobom (4-5 osoba)</td></tr>
+            <tr><th scope="row">Do Blatne plaže</th><td>100 m, oko 2 minute hoda</td></tr>
+            <tr><th scope="row">Do Instituta Dr Simo Milošević</th><td>300 m</td></tr>
+            <tr><th scope="row">Jezici</th><td>Srpski, engleski, ruski, njemački</td></tr>
+            <tr><th scope="row">Plaćanje</th><td>Gotovinom, na licu mjesta - bez depozita i avansa</td></tr>
+            <tr><th scope="row">Kućni ljubimci</th><td>Dozvoljeni</td></tr>
+            <tr><th scope="row">Lift</th><td>Objekat nema lift</td></tr>
+            <tr><th scope="row">Uključeno u cijenu</th><td>WiFi, klima, parking, peškiri, posteljina, sobarica</td></tr>
+            <tr><th scope="row">Cijene</th><td>Na upit - zavise od termina, dužine boravka i broja osoba</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <!-- ══════════════════════════════════
          APARTMENT TYPES

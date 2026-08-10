@@ -962,6 +962,14 @@
     }
     ins.adsbygoogle iframe,
     .google-auto-placed iframe { max-width: 100% !important; }
+
+    /* ── SEA TEMPERATURE TABLE ─────────────────── */
+    .sea-table-wrap { overflow-x: auto; margin-top: var(--sp-sm); }
+    .sea-table { width: 100%; border-collapse: collapse; font-size: var(--step--1); min-width: 520px; }
+    .sea-table th, .sea-table td { padding: 0.7em 0.9em; text-align: left; border-bottom: 1px solid var(--c-divider); vertical-align: top; }
+    .sea-table thead th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: var(--c-muted); background: var(--c-sand); white-space: nowrap; }
+    .sea-table tbody th { font-weight: 600; color: var(--c-text); white-space: nowrap; }
+    .sea-table tbody tr:last-child th, .sea-table tbody tr:last-child td { border-bottom: none; }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -1008,7 +1016,7 @@
       <ol class="breadcrumb__list" role="list">
         <li><a href="/">Početna</a></li>
         <li><a href="/blog.html">Vesti</a></li>
-        <li><span aria-current="page">Restorani u Igalu</span></li>
+        <li><span aria-current="page">Temperatura mora u Igalu</span></li>
       </ol>
     </div>
   </nav>
@@ -1067,36 +1075,40 @@
 
             <section class="orient" aria-labelledby="po-sezonama">
               <h2 class="attraction__title" id="po-sezonama">More po sezonama</h2>
-              <dl class="orient__facts">
-                <div class="orient__row">
-                  <dt>Ljeto (jun - avgust)</dt>
-                  <dd>
-                    Uglavnom <strong>22-26 °C</strong>, s prosjekom ljetnih mjeseci oko
-                    25 °C. Najtopliji mjesec je avgust.
-                  </dd>
-                </div>
-                <div class="orient__row">
-                  <dt>Jesen (septembar - novembar)</dt>
-                  <dd>
-                    Prosjek oko <strong>21 °C</strong>. Septembar je i dalje pun ljetnog
-                    mora, a zatim temperatura postupno pada.
-                  </dd>
-                </div>
-                <div class="orient__row">
-                  <dt>Proljeće (mart - maj)</dt>
-                  <dd>
-                    Prosjek oko <strong>16 °C</strong>. More se budi sporije od vazduha -
-                    maj je već prijatan za kratko kupanje, ali ne za cijeli dan na plaži.
-                  </dd>
-                </div>
-                <div class="orient__row">
-                  <dt>Zima (decembar - februar)</dt>
-                  <dd>
-                    Oko <strong>13-15 °C</strong>. Prehladno za kupanje, ali more nikad
-                    ne postane ledeno kao na otvorenom moru.
-                  </dd>
-                </div>
-              </dl>
+              <div class="sea-table-wrap">
+          <table class="sea-table">
+            <caption class="sr-only">Prosječna temperatura mora u Igalu po sezonama i sezona kupanja</caption>
+            <thead>
+              <tr><th scope="col">Period</th><th scope="col">Temperatura mora</th><th scope="col">Kupanje</th><th scope="col">Napomena</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Ljeto (jun - avgust)</th>
+                <td>22-26 °C, prosjek oko 25 °C</td>
+                <td>Da</td>
+                <td>Najtopliji mjesec je avgust, ujedno i najposjećeniji.</td>
+              </tr>
+              <tr>
+                <th scope="row">Jesen (septembar - novembar)</th>
+                <td>Prosjek oko 21 °C</td>
+                <td>Septembar da, kasnije ne</td>
+                <td>Septembar je i dalje ljeto - voda topla, šetalište mirnije.</td>
+              </tr>
+              <tr>
+                <th scope="row">Proljeće (mart - maj)</th>
+                <td>Prosjek oko 16 °C</td>
+                <td>Maj, kratko</td>
+                <td>More se budi sporije od vazduha.</td>
+              </tr>
+              <tr>
+                <th scope="row">Zima (decembar - februar)</th>
+                <td>13-15 °C</td>
+                <td>Ne</td>
+                <td>Prehladno za kupanje, ali more ne postane ledeno kao na otvorenom.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
               <p>
                 Napomena o brojkama: ovo su <strong>višegodišnji prosjeci</strong>, a ne
                 prognoza. Pojedina godina zna odstupiti - u vrelim ljetima more u Boki
@@ -1253,15 +1265,14 @@
             </div>
 
             <div class="sidebar__card" style="margin-top:var(--sp-md)">
-              <p class="toc__title">Restorani u ovom vodiču</p>
+              <p class="toc__title">Sadržaj</p>
               <nav aria-label="Sadržaj članka">
                 <ol class="toc__list" role="list">
-                  <li><a class="toc__item" href="#promenada"><span class="toc__num">1</span>Restoran Promenada</a></li>
-                  <li><a class="toc__item" href="#ilijada"><span class="toc__num">2</span>Konoba Ilijada</a></li>
-                  <li><a class="toc__item" href="#jedrenjak"><span class="toc__num">3</span>Jedrenjak</a></li>
-                  <li><a class="toc__item" href="#seki-nautilus"><span class="toc__num">4</span>Šeki Nautilus</a></li>
-                  <li><a class="toc__item" href="#stara-hercegovina"><span class="toc__num">5</span>Stara Hercegovina</a></li>
-                  <li><a class="toc__item" href="#la-bamba"><span class="toc__num">6</span>La Bamba (beach bar)</a></li>
+                  <li><a class="toc__item" href="#po-sezonama"><span class="toc__num">1</span>More po sezonama</a></li>
+                  <li><a class="toc__item" href="#sezona"><span class="toc__num">2</span>Kada traje sezona kupanja</a></li>
+                  <li><a class="toc__item" href="#koji-mjesec"><span class="toc__num">3</span>Koji mjesec izabrati</a></li>
+                  <li><a class="toc__item" href="#vazduh"><span class="toc__num">4</span>A vazduh i vrijeme?</a></li>
+                  <li><a class="toc__item" href="#faq-heading"><span class="toc__num">5</span>Česta pitanja</a></li>
                 </ol>
               </nav>
             </div>
