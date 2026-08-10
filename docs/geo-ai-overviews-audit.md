@@ -518,7 +518,7 @@ decision and was deliberately left alone.
 | 3 | Offers and payment fields | **Partly done.** `paymentAccepted`, `currenciesAccepted` and the €500 monthly `Offer` are in. `priceRange` and the nightly `Offer`s are **blocked on item 1** — adding them without published prices would mean inventing numbers. |
 | 4 | Check-in/out, pets, lift, laundry | **Done** on all 27 business nodes. Supersedes the old G5 "no fixed times exist" decision. |
 | 5 | `sameAs` and linked rating figures | **Mostly done.** `sameAs` now carries Facebook, Instagram, YouTube, the Google Maps profile and the Airbnb listing. The visible Google and Facebook figures are links. **Outstanding: the Booking.com listing URL** — the owner could not locate it and will supply it later. It is a one-line addition to `sameAs` on all 31 business nodes when it arrives. |
-| 6 | Site spine: `WebSite`, `logo`, `AboutPage`, `founder` | **Mostly done.** `WebSite` moved to the homepages and stopped describing the site as one product page; `logo` and the Serbian `AboutPage` added. **`founder` skipped deliberately:** no host is named anywhere on the site, and the only name available is from a guest review. Asserting it as structured data would be inventing a fact. Tell me the name and it goes in. |
+| 6 | Site spine: `WebSite`, `logo`, `AboutPage`, `founder` | **Done.** `WebSite` moved to the homepages and stopped describing the site as one product page; `logo` and the Serbian `AboutPage` added. `founder` now names **Pero and Tatjana Vidović**, with the owner's explicit permission, both as visible copy on the two About pages and as `Person` nodes on all 31 business nodes. |
 | 7 | Dates on the commercial pages | **Done.** Dates taken from each file's last real content commit, not stamped as today. Visible "updated" line added to the FAQ. |
 | 8 | English FAQ and Blatna Plaža | **Done** — `en/faq.html`, `en/blatna-plaza.html`, wired into hreflang, sitemap and llms.txt. |
 | 9 | English homepage parity | **Done** — 10 FAQ entries and `amenityFeature` on both `Accommodation` nodes. |
@@ -532,8 +532,8 @@ it is the exact pattern §3.11 warns about: a wide table needs `overflow-x: auto
 container. One line of CSS whenever you want it. That page also loads a different font pair
 (Cormorant Garamond + DM Sans) from the rest of the site.
 
-**Still waiting on a fact from the owner:** the Booking.com listing URL, and a decision on whether
-to name the owner publicly for `founder` (see below).
+**Still waiting on a fact from the owner:** the Booking.com listing URL. Everything else on the
+list that did not need a pricing decision is now in.
 
 ### A note on the visible rating figures
 
