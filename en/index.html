@@ -170,7 +170,24 @@
               "minValue": 2,
               "maxValue": 4
             },
-            "numberOfRooms": 1
+            "numberOfRooms": 1,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balcony",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air conditioning",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
           },
           {
             "@type": "Accommodation",
@@ -181,7 +198,24 @@
               "minValue": 4,
               "maxValue": 5
             },
-            "numberOfRooms": 2
+            "numberOfRooms": 2,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balcony",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air conditioning",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
           }
         ]
       },
@@ -227,6 +261,46 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "We speak Serbian, English, Russian and German, and we are reachable 24/7 by phone and Viber."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is parking free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Parking in front of the building is free for every guest, with no need to book a space in advance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of apartment do you have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Studio apartments for 2-4 guests and apartments with a separate bedroom for 4-5. Every one has a balcony, kitchenette, air conditioning and free parking. The price is per apartment, not per person."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you arrange an airport transfer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For guests arriving by air we can arrange transfer to and from the airport for a surcharge. We can also arrange excursions and car hire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why book direct instead of through Booking.com?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Booking.com and Airbnb charge a commission of 15-20%. Book directly with us by phone or Viber on +382 67 558 240 and nobody pays that commission - so you get our best price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far is Igalo from Herceg Novi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The centre of Igalo is about 3-4 km from the Old Town of Herceg Novi. The Pet Danica seafront promenade links the two - a pleasant walk of around 40 minutes, or 5-10 minutes by car or taxi."
             }
           }
         ]
@@ -1776,6 +1850,66 @@
             <div class="faq__answer" id="faq5" role="region">
               We speak <strong>Serbian, English, Russian and German</strong>, and we are
               reachable 24/7 by phone and Viber.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq6">
+              Is parking free?
+              <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+            </button>
+            <div class="faq__answer" id="faq6" role="region">
+              Yes. Parking in front of the building is <strong>free for every guest</strong>,
+              with no need to book a space in advance.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq7">
+              What types of apartment do you have?
+              <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+            </button>
+            <div class="faq__answer" id="faq7" role="region">
+              <strong>Studio apartments for 2-4 guests</strong> and
+              <strong>apartments with a separate bedroom for 4-5</strong>. Every one has a
+              balcony, kitchenette, air conditioning and free parking. The price is per
+              apartment, not per person.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq8">
+              Can you arrange an airport transfer?
+              <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+            </button>
+            <div class="faq__answer" id="faq8" role="region">
+              Yes. For guests arriving by air we can arrange transfer to and from the airport
+              <strong>for a surcharge</strong>. We can also arrange excursions and car hire.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq9">
+              Why book direct instead of through Booking.com?
+              <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+            </button>
+            <div class="faq__answer" id="faq9" role="region">
+              Booking.com and Airbnb charge a commission of <strong>15-20%</strong>. Book
+              directly with us by phone or Viber on
+              <a href="tel:+38267558240">+382 67 558 240</a> and nobody pays that commission -
+              so you get our best price.
+            </div>
+          </div>
+
+          <div class="faq__item" role="listitem">
+            <button class="faq__question" aria-expanded="false" aria-controls="faq10">
+              How far is Igalo from Herceg Novi?
+              <span class="faq__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></span>
+            </button>
+            <div class="faq__answer" id="faq10" role="region">
+              The centre of Igalo is about <strong>3-4 km</strong> from the Old Town of Herceg
+              Novi. The Pet Danica seafront promenade links the two - a pleasant walk of
+              around 40 minutes, or 5-10 minutes by car or taxi.
             </div>
           </div>
 
