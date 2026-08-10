@@ -9,6 +9,7 @@ Site content is in Serbian (Latin script) with selected pages available in Engli
 - [Apartmani Igalo Monako](https://apartmani-igalo.com/): homepage — apartments, amenities, guest reviews, contact (Serbian)
 - [Apartments in Igalo](https://apartmani-igalo.com/en/): homepage (English)
 - [About](https://apartmani-igalo.com/about.html): about the apartments and the hosts (Serbian)
+- [Česta pitanja](https://apartmani-igalo.com/cesta-pitanja.html): practical guest FAQ — check-in from 12:00 and check-out by 10:00, price is per apartment not per person, pets welcome, cash only with no deposit, free cancellation by phone, no lift in the building, shared washing machine, air conditioning included (Serbian)
 - [About us](https://apartmani-igalo.com/en/about.html): about the apartments and the hosts (English)
 - [Monthly rental in Igalo](https://apartmani-igalo.com/monthly-rental-igalo.html): long-term apartment rental, €500/month all-inclusive (English)
 - [Mjesečni najam u Igalu](https://apartmani-igalo.com/mesecni-najam-igalo.html): dugoročni najam apartmana (Serbian)

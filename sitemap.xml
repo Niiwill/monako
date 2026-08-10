@@ -14,7 +14,7 @@
 
   <url>
     <loc>https://apartmani-igalo.com/</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
@@ -130,6 +130,14 @@
       <image:loc>https://apartmani-igalo.com/images/mimoza.jpg</image:loc>
       <image:title>Praznik mimoze u Herceg Novom - žuti cvjetovi mimoze duž rivijere</image:title>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://apartmani-igalo.com/cesta-pitanja.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
   </url>
 
   <!-- ═══════════════════════════════════════
