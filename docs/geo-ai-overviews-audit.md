@@ -14,7 +14,8 @@ deliberate decision, this one either confirms it or explains what changed since.
 
 I was asked to start from the Search Engine Journal piece *"AI Overviews Now Answer Most Local
 Searches: How To Get Your Business Cited."* **The SEJ domain is blocked by this environment's
-network egress proxy, so I could not open the article itself.** Rather than guess at its contents,
+network egress proxy, so the first pass could not open the article itself.** The owner supplied the
+full text afterwards; §9 records what that changed. Rather than guess at its contents,
 I reconstructed its claims from the primary research it reports on — the
 [Whitespark study on AI Overview prevalence in local search](https://whitespark.ca/blog/case-study-the-prevalence-of-ai-overviews-in-local-search/) —
 plus secondary reporting and BrightLocal's consumer survey data. Everything I attribute to the
@@ -546,7 +547,79 @@ anywhere. Reverse this only if you decide OTA traffic is worth more than the dir
 
 ---
 
-## 9. Bottom line
+## 9. Second pass — against the article itself (2026-08-10)
+
+The first pass reconstructed the SEJ article from the Whitespark study because the domain was
+blocked. The owner later supplied the full text. Re-reading it against the site turned up one
+correction and five recommendations the first pass never tested.
+
+### The correction: the site *was* publishing a nightly price
+
+§3.1 said no currency figure described the product except the €500 monthly rate. That was measured
+on `index.html`, `about.html` and `cesta-pitanja.html` and wrongly generalised to the whole domain.
+**"od 35 € za noć" appeared on four guide pages**, twice in body copy — and in three of the five
+placements it carried no "van sezone" qualifier, so a guest planning August read an off-season rate
+as the general starting price.
+
+**Owner's decision: seasonal prices stay off the website.** The nightly figure is off-season only
+and in-season differs substantially, so publishing a single "from" number misleads more than it
+helps. All five mentions have been removed and the CTAs now lead with distance to the beach.
+
+This is a deliberate, informed trade-off, not an oversight, and it should be recorded as such: it
+forfeits the cost-intent query class, which the article puts at >80% AI Overview density and
+Whitespark at 97% for hybrid intent. The €500 monthly rate is unaffected — it is fixed,
+all-inclusive, and remains published on its two dedicated pages and in `Offer` markup.
+
+### The five recommendations the first pass missed
+
+| Article recommendation | Site as found | Action |
+|---|---|---|
+| **Fact density — NAP, hours, pricing in tables** | 21 of 31 pages had no table. The guide pages' tables are genuinely good (bike routes, monthly cost breakdown); every *commercial* page had none. | **Done** — 16-row facts table on both About pages. |
+| **Answer capsules in the first 30%** (Indig: 44.2% of citations come from there) | Homepage FAQ sat at 52%, reviews at 44%, contact at 89%. The most extractable block was in the bottom half. | **Done** — FAQ moved to 24–25% (EN/RU) and 33% (SR, which carries an extra video section). |
+| **Landmark images for geographic legitimacy** | Mostly a pass, better than the article's baseline: 70 of 72 filenames descriptive, alt text naming Portonovi, Gospa od Škrpjela, Verige 65. | **Not changed.** The two generic names (`img_1`, `img_2`) sit in the entity `image` array; renaming them would 404 URLs that may already rank in Google Images. Not worth it for two files among 72. |
+| **Proprietary local data** | `temperatura-mora-igalo.html` is the one asset here that exists nowhere else — multi-year sea temperatures for Igalo — and it was the thinnest guide on the site, in a definition list. | **Partly done** — converted to a table strictly from published seasonal figures. **No month-level numbers were invented.** See below. |
+| **Off-page is 77% of citations** (Omniscient, 23,000+ citations) | Nothing in this repository touches it. | **Cannot be done here.** Plan in §10. |
+
+### Found while working: a copy-paste defect across five guide pages
+
+`banja-igalo-institut`, `kafici-barovi`, `titova-vila-galeb`, `zanjice-plaza-izlet` and
+`temperatura-mora-igalo` each showed a visible breadcrumb reading **"Restorani u Igalu"** that
+contradicted their own (correct) `BreadcrumbList` markup, and each carried a sidebar listing six
+restaurants whose anchors do not exist on those pages — **30 dead links**. A page about the Igalo
+Institute told readers and crawlers it was a restaurant guide. All five are fixed.
+
+This is precisely the entity-consistency failure the article's third pillar describes, and it was
+invisible from the schema alone: the structured data was right and the visible page was wrong.
+
+---
+
+## 10. The off-site half — what only you can do
+
+The article's most uncomfortable number is Omniscient's: **owned content is about 23% of citations;
+77% comes from off-page sources.** Everything in this repository is the 23%. In rough order of
+return:
+
+1. **Google Business Profile.** Still the highest-leverage surface for a business like this, and
+   still where the "From the business" description, amenity attributes and the walkthrough video are
+   unfinished. Review volume *and recency* both count — a steady trickle beats a burst.
+2. **YouTube (18.8% of AI Overview citations).** You have a channel, and it is in `sameAs`, but the
+   site's video is a self-hosted MP4 — the channel gets no reinforcement. Upload the walkthrough,
+   write descriptions naming Igalo, Blatna plaža and the Institute, and embed it on the homepage.
+3. **Directory consistency.** The article says audit quarterly. Your NAP is now identical everywhere
+   on-site; the same needs checking on Booking, Airbnb, TripAdvisor, Apple Maps and the Montenegrin
+   tourism directories.
+4. **Reddit (21% of citations).** Do not spam it. r/Montenegro and r/balkans get genuine "where to
+   stay near the Igalo institute" questions a few times a season; answering them as the person who
+   lives there is both useful and exactly what the citation data rewards.
+5. **Proprietary data — the biggest untapped asset you have.** You have watched that sea for
+   twenty-five years. Month-by-month temperature figures, first swim date and last swim date per
+   year, would make `temperatura-mora-igalo.html` a source models have to cite because the data
+   exists nowhere else. Send rough monthly numbers and the page becomes genuinely unique rather than
+   merely well-formatted.
+
+---
+
+## 11. Bottom line
 
 The code is not the problem. It is clean, static, consistent, honestly written and already carries
 more correct structured data than most properties of this size. Two things are holding it back, and
