@@ -65,6 +65,10 @@
       <image:loc>https://apartmani-igalo.com/images/pet-danica-650.webp</image:loc>
       <image:title>Šetalište Pet Danica - biciklistička trasa između Igala i Herceg Novog</image:title>
     </image:image>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
   </url>
 
   <url>
@@ -141,6 +145,7 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
   </url>
   <url>
@@ -150,6 +155,17 @@
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/ru/faq.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
   </url>
 
@@ -796,6 +812,20 @@
       <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-2.webp</image:loc>
       <image:title>One-bedroom apartment in Igalo with separate bedroom and living room</image:title>
     </image:image>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/ru/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
   </url>
 
   <url>

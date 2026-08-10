@@ -2,15 +2,17 @@
 
 > Family-run apartments in Igalo, Herceg Novi, Montenegro, welcoming guests since 2000 — 100 m from the beach and the Igalo Institute. Seasonal holiday rentals and all-inclusive monthly rentals (Sept–June), rented directly by the owner. Address: Dubrovačka 1, Igalo 85347, Montenegro. Contact: hotel-monako@hotmail.com, +382 67 558 240.
 
-Site content is in Serbian (Latin script) with selected pages available in English.
+Site content is in Serbian (Latin script), with selected pages available in English and Russian.
 
 ## Main pages
 
 - [Apartmani Igalo Monako](https://apartmani-igalo.com/): homepage — apartments, amenities, guest reviews, contact (Serbian)
 - [Apartments in Igalo](https://apartmani-igalo.com/en/): homepage (English)
+- [Апартаменты в Игало](https://apartmani-igalo.com/ru/): homepage (Russian) — written for guests coming to the Institut Dr Simo Milošević for therapy
 - [About](https://apartmani-igalo.com/about.html): about the apartments and the hosts (Serbian)
 - [Česta pitanja](https://apartmani-igalo.com/cesta-pitanja.html): practical guest FAQ — check-in from 12:00 and check-out by 10:00, price is per apartment not per person, pets welcome, cash only with no deposit, free cancellation by phone, no lift in the building, shared washing machine, air conditioning included (Serbian)
 - [About us](https://apartmani-igalo.com/en/about.html): about the apartments and the hosts (English)
+- [Частые вопросы](https://apartmani-igalo.com/ru/faq.html): practical guest FAQ in Russian — same ten answers as the Serbian and English versions (Russian)
 - [Frequently asked questions](https://apartmani-igalo.com/en/faq.html): practical guest FAQ in English — check-in from 12:00 and check-out by 10:00, price is per apartment not per person, pets welcome, cash only with no deposit, free cancellation by phone, no lift in the building, shared washing machine, air conditioning included (English)
 - [Monthly rental in Igalo](https://apartmani-igalo.com/monthly-rental-igalo.html): long-term apartment rental, €500/month all-inclusive (English)
 - [Mjesečni najam u Igalu](https://apartmani-igalo.com/mesecni-najam-igalo.html): dugoročni najam apartmana (Serbian)
