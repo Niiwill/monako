@@ -53,115 +53,88 @@
        SCHEMA MARKUP - JSON-LD
   ═══════════════════════════════════════════════ -->
   <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "@id": "https://apartmani-igalo.com/#business",
-    "name": "Apartmani Igalo Monako",
-    "alternateName": [
-      "Apartmani Monako",
-      "Monako Igalo",
-      "Monako Apartments"
-    ],
-    "url": "https://apartmani-igalo.com/",
-    "telephone": "+38267558240",
-    "email": "hotel-monako@hotmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Dubrovačka 1",
-      "addressLocality": "Igalo",
-      "postalCode": "85347",
-      "addressCountry": "ME"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 42.4538,
-      "longitude": 18.503
-    },
-    "hasMap": "https://www.google.com/maps?cid=3697180737008791124",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    },
-    "foundingDate": "2000-07-12",
-    "sameAs": [
-      "https://www.facebook.com/apartmanimonako/",
-      "https://www.instagram.com/apartmani.igalo/",
-      "https://www.youtube.com/@monako-apartmaniigalo5135/"
-    ],
-    "image": [
-      "https://apartmani-igalo.com/images/kuca_spolja.webp",
-      "https://apartmani-igalo.com/images/img_1.webp",
-      "https://apartmani-igalo.com/images/img_2.webp"
-    ],
-    "amenityFeature": [
+    [
       {
-        "@type": "LocationFeatureSpecification",
-        "name": "Free WiFi",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Free parking",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Daily housekeeping",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Air conditioning",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Sea-view balcony",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Kitchenette",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "Airport transfer",
-        "value": true
-      },
-      {
-        "@type": "LocationFeatureSpecification",
-        "name": "IDEA supermarket in the building",
-        "value": true
-      }
-    ],
-    "containsPlace": [
-      {
-        "@type": "Accommodation",
-        "name": "Studio Apartment",
-        "description": "Studio apartment for 2-4 guests with a kitchenette, balcony and air conditioning.",
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "minValue": 2,
-          "maxValue": 4
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "@id": "https://apartmani-igalo.com/#business",
+        "name": "Apartmani Igalo Monako",
+        "alternateName": [
+          "Apartmani Monako",
+          "Monako Igalo",
+          "Monako Apartments"
+        ],
+        "url": "https://apartmani-igalo.com/",
+        "telephone": "+38267558240",
+        "email": "hotel-monako@hotmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dubrovačka 1",
+          "addressLocality": "Igalo",
+          "postalCode": "85347",
+          "addressCountry": "ME"
         },
-        "numberOfRooms": 1,
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.4538,
+          "longitude": 18.503
+        },
+        "hasMap": "https://www.google.com/maps?cid=3697180737008791124",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "foundingDate": "2000-07-12",
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "3"
+        },
+        "knowsLanguage": [
+          "sr",
+          "en",
+          "ru",
+          "de"
+        ],
+        "sameAs": [
+          "https://www.facebook.com/apartmanimonako/",
+          "https://www.instagram.com/apartmani.igalo/",
+          "https://www.youtube.com/@monako-apartmaniigalo5135/"
+        ],
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://apartmani-igalo.com/images/monako-favicon.png",
+          "width": 192,
+          "height": 192
+        },
+        "image": [
+          "https://apartmani-igalo.com/images/kuca_spolja.webp",
+          "https://apartmani-igalo.com/images/img_1.webp",
+          "https://apartmani-igalo.com/images/img_2.webp"
+        ],
         "amenityFeature": [
           {
             "@type": "LocationFeatureSpecification",
-            "name": "Balcony",
+            "name": "Free WiFi",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Free parking",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Daily housekeeping",
             "value": true
           },
           {
@@ -171,262 +144,290 @@
           },
           {
             "@type": "LocationFeatureSpecification",
-            "name": "WiFi",
+            "name": "Sea-view balcony",
             "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Kitchenette",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Airport transfer",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "IDEA supermarket in the building",
+            "value": true
+          }
+        ],
+        "containsPlace": [
+          {
+            "@type": "Accommodation",
+            "name": "Studio Apartment",
+            "description": "Studio apartment for 2-4 guests with a kitchenette, balcony and air conditioning.",
+            "occupancy": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4
+            },
+            "numberOfRooms": 1,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balcony",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air conditioning",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
+          },
+          {
+            "@type": "Accommodation",
+            "name": "Apartment with Separate Bedroom",
+            "description": "Apartment with a separate bedroom for 4-5 guests. Ideal for families.",
+            "occupancy": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 5
+            },
+            "numberOfRooms": 2,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balcony",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Air conditioning",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
           }
         ]
       },
       {
-        "@type": "Accommodation",
-        "name": "Apartment with Separate Bedroom",
-        "description": "Apartment with a separate bedroom for 4-5 guests. Ideal for families.",
-        "occupancy": {
-          "@type": "QuantitativeValue",
-          "minValue": 4,
-          "maxValue": 5
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html#article",
+        "headline": "Rent a Bike in Herceg Novi and Igalo - Where to Rent, Rules and the Best Cycling Routes",
+        "description": "Local guide: where to rent a bicycle or e-bike in Herceg Novi and Igalo, Pet Danica promenade cycling rules, prices, best cycling routes and tips.",
+        "image": "https://apartmani-igalo.com/images/pet-danica.webp",
+        "datePublished": "2026-07-13",
+        "dateModified": "2026-07-13",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://apartmani-igalo.com/#business"
         },
-        "numberOfRooms": 2,
-        "amenityFeature": [
+        "publisher": {
+          "@id": "https://apartmani-igalo.com/#business"
+        },
+        "isPartOf": {
+          "@id": "https://apartmani-igalo.com/#website"
+        },
+        "mainEntityOfPage": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Bike rentals in Herceg Novi and Igalo - providers",
+        "itemListElement": [
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Balcony",
-            "value": true
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "LocalBusiness",
+              "name": "Rent a Bike Herceg Novi",
+              "telephone": "+38269530869",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Herceg Novi",
+                "addressCountry": "ME"
+              },
+              "sameAs": "https://www.facebook.com/rentabikehercegnovi/"
+            }
           },
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "Air conditioning",
-            "value": true
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "LocalBusiness",
+              "name": "Boka Outdoor Adventure",
+              "url": "https://bokaoutdooradventure.me/rentals/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Herceg Novi",
+                "addressCountry": "ME"
+              }
+            }
           },
           {
-            "@type": "LocationFeatureSpecification",
-            "name": "WiFi",
-            "value": true
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "LocalBusiness",
+              "name": "Fiore Tours",
+              "url": "https://fiore-tours.com/en/rent-a-bike/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Herceg Novi",
+                "addressCountry": "ME"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "LocalBusiness",
+              "name": "iNTravel Montenegro",
+              "url": "https://www.intravelmontenegro.net/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Herceg Novi",
+                "addressCountry": "ME"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where can I rent a bike in Igalo and Herceg Novi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bikes in Herceg Novi are rented by Rent a Bike Herceg Novi (+382 69 530 869), Boka Outdoor Adventure (e-bikes), and the local agencies Fiore Tours and iNTravel Montenegro. The Herceg Novi Tourist Board also publishes an up-to-date list of rentals. If you are staying at Monako apartments in Igalo, we are happy to help you arrange a rental."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Monako Apartments rent bikes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not at the moment - this page is an independent local guide for guests and visitors. As hosts who live in Igalo all year round, we help our guests find and book a bike with trusted local rental providers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does bike rental cost in Herceg Novi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prices vary between providers and by season. They depend on the bike type (an e-bike costs more than a city bike), rental length (multi-day rentals usually get a per-day discount) and demand. Before picking up, check what is included - helmet, lock, servicing - and whether a deposit is required. Always confirm the exact price directly with the rental provider."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I cycle on the Pet Danica promenade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, during the day - with a seasonal restriction: from 1 June to 30 September, cycling on the promenade is banned between 7:00 pm and 1:00 am. The fine is €100, and the communal police regularly patrol the promenade, especially in Igalo, Topla and Škver. Pedestrians always have priority."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are electric scooters allowed on the promenade?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No - from 1 June to 30 September electric scooters are banned on the Pet Danica promenade for the whole day, with a €100 fine. That is why a bicycle is by far the more practical choice for exploring the promenade in summer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best cycling route for beginners and families?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Pet Danica promenade from Igalo via Topla and Škver through Herceg Novi to Meljine and Zelenika - a flat coastal path of 7-8 km one way, entirely along the sea, with cafés and beaches the whole way (until 7 pm in summer). For an even quieter ride, take the flat route from Igalo to Njivice beach, about 5 km."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Herceg Novi hilly - do I need an e-bike?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The coastline (Igalo-Meljine) is flat and easy on a regular bike. The town itself and the neighbourhoods above the coastal road (Topla, Savina) climb steeply, so an e-bike makes exploring the hills and longer routes far more comfortable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do I usually need to rent a bike?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With most providers an ID card or passport shown at pickup is enough; sometimes a deposit is required depending on the bike type. Before signing, check whether a helmet and lock are included in the price and inspect the brakes and tyres."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When is the best time to cycle in Herceg Novi in summer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Early morning, between 6 and 9 am - temperatures are kinder and the promenade is almost empty. In summer the morning is practically the only quiet slot on the promenade: the cycling ban starts at 7 pm, and during the day it's crowded, so you ride very slowly. In the evening choose the coastal route towards Bijela or the quiet Sutorina valley instead. Outside the season, a late-evening ride after 10 pm on the empty promenade is lovely too."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I explore the Old Town of Herceg Novi by bike?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Not really - the Old Town is reached by many flights of stairs, so a bike is impractical there. The best approach: leave the bike at the Škver marina and explore on foot - Nikola Đurković Square, the Clock Tower, Kanli Kula and Forte Mare fortresses and the old lanes take 30-60 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long is the bike ride from Igalo to Portonovi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "About 40-45 minutes at an easy pace - Portonovi in Kumbor is roughly 10 km from Igalo along the coastal road via Meljine and Zelenika. You can stop at several beaches on the way, and the route is mostly flat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Should I book a bike in advance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In peak season (July and August) we recommend booking a day or two ahead, especially for e-bikes and kids' bikes, which are fewer in number. Off-season you can usually get a bike the same day."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://apartmani-igalo.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Rent a Bike Herceg Novi & Igalo",
+            "item": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"
           }
         ]
       }
-    ],
-    "starRating": {
-      "@type": "Rating",
-      "ratingValue": "3"
-    },
-    "knowsLanguage": [
-      "sr",
-      "en",
-      "ru",
-      "de"
     ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html#article",
-    "headline": "Rent a Bike in Herceg Novi and Igalo - Where to Rent, Rules and the Best Cycling Routes",
-    "description": "Local guide: where to rent a bicycle or e-bike in Herceg Novi and Igalo, Pet Danica promenade cycling rules, prices, best cycling routes and tips.",
-    "image": "https://apartmani-igalo.com/images/pet-danica.webp",
-    "inLanguage": "en",
-    "author": {
-      "@type": "Organization",
-      "name": "Apartmani Igalo Monako",
-      "url": "https://apartmani-igalo.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Apartmani Igalo Monako",
-      "url": "https://apartmani-igalo.com/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://apartmani-igalo.com/images/monako-favicon.png"
-      }
-    },
-    "datePublished": "2026-07-13",
-    "dateModified": "2026-07-13",
-    "mainEntityOfPage": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Bike rentals in Herceg Novi and Igalo - providers",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "LocalBusiness",
-          "name": "Rent a Bike Herceg Novi",
-          "telephone": "+38269530869",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Herceg Novi",
-            "addressCountry": "ME"
-          },
-          "sameAs": "https://www.facebook.com/rentabikehercegnovi/"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "LocalBusiness",
-          "name": "Boka Outdoor Adventure",
-          "url": "https://bokaoutdooradventure.me/rentals/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Herceg Novi",
-            "addressCountry": "ME"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "LocalBusiness",
-          "name": "Fiore Tours",
-          "url": "https://fiore-tours.com/en/rent-a-bike/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Herceg Novi",
-            "addressCountry": "ME"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "LocalBusiness",
-          "name": "iNTravel Montenegro",
-          "url": "https://www.intravelmontenegro.net/",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Herceg Novi",
-            "addressCountry": "ME"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Where can I rent a bike in Igalo and Herceg Novi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bikes in Herceg Novi are rented by Rent a Bike Herceg Novi (+382 69 530 869), Boka Outdoor Adventure (e-bikes), and the local agencies Fiore Tours and iNTravel Montenegro. The Herceg Novi Tourist Board also publishes an up-to-date list of rentals. If you are staying at Monako apartments in Igalo, we are happy to help you arrange a rental."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Monako Apartments rent bikes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not at the moment - this page is an independent local guide for guests and visitors. As hosts who live in Igalo all year round, we help our guests find and book a bike with trusted local rental providers."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does bike rental cost in Herceg Novi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Prices vary between providers and by season. They depend on the bike type (an e-bike costs more than a city bike), rental length (multi-day rentals usually get a per-day discount) and demand. Before picking up, check what is included - helmet, lock, servicing - and whether a deposit is required. Always confirm the exact price directly with the rental provider."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I cycle on the Pet Danica promenade?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, during the day - with a seasonal restriction: from 1 June to 30 September, cycling on the promenade is banned between 7:00 pm and 1:00 am. The fine is €100, and the communal police regularly patrol the promenade, especially in Igalo, Topla and Škver. Pedestrians always have priority."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are electric scooters allowed on the promenade?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No - from 1 June to 30 September electric scooters are banned on the Pet Danica promenade for the whole day, with a €100 fine. That is why a bicycle is by far the more practical choice for exploring the promenade in summer."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the best cycling route for beginners and families?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Pet Danica promenade from Igalo via Topla and Škver through Herceg Novi to Meljine and Zelenika - a flat coastal path of 7-8 km one way, entirely along the sea, with cafés and beaches the whole way (until 7 pm in summer). For an even quieter ride, take the flat route from Igalo to Njivice beach, about 5 km."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is Herceg Novi hilly - do I need an e-bike?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The coastline (Igalo-Meljine) is flat and easy on a regular bike. The town itself and the neighbourhoods above the coastal road (Topla, Savina) climb steeply, so an e-bike makes exploring the hills and longer routes far more comfortable."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What do I usually need to rent a bike?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "With most providers an ID card or passport shown at pickup is enough; sometimes a deposit is required depending on the bike type. Before signing, check whether a helmet and lock are included in the price and inspect the brakes and tyres."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When is the best time to cycle in Herceg Novi in summer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Early morning, between 6 and 9 am - temperatures are kinder and the promenade is almost empty. In summer the morning is practically the only quiet slot on the promenade: the cycling ban starts at 7 pm, and during the day it's crowded, so you ride very slowly. In the evening choose the coastal route towards Bijela or the quiet Sutorina valley instead. Outside the season, a late-evening ride after 10 pm on the empty promenade is lovely too."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I explore the Old Town of Herceg Novi by bike?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not really - the Old Town is reached by many flights of stairs, so a bike is impractical there. The best approach: leave the bike at the Škver marina and explore on foot - Nikola Đurković Square, the Clock Tower, Kanli Kula and Forte Mare fortresses and the old lanes take 30-60 minutes."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long is the bike ride from Igalo to Portonovi?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "About 40-45 minutes at an easy pace - Portonovi in Kumbor is roughly 10 km from Igalo along the coastal road via Meljine and Zelenika. You can stop at several beaches on the way, and the route is mostly flat."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I book a bike in advance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "In peak season (July and August) we recommend booking a day or two ahead, especially for e-bikes and kids' bikes, which are fewer in number. Off-season you can usually get a bike the same day."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://apartmani-igalo.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Rent a Bike Herceg Novi & Igalo",
-        "item": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"
-      }
-    ]
-  }
-]
 </script>
 <!-- ═══════════════════════════════════════════════
        STYLES - SINGLE EMBEDDED STYLESHEET
