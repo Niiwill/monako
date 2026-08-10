@@ -159,10 +159,11 @@ and give the two `Accommodation` nodes real offers:
 }
 ```
 
-Do the same for `monthly-rental-igalo.html` / `mesecni-najam-igalo.html`, where the €500 figure is
-already published in prose but appears **nowhere in structured data** — the `Apartment` node has no
-`offers` at all. That is the one price you already committed to publicly; there is no reason for it
-to be invisible to machines.
+Do the same on the monthly-rental pages. **Correction, found while implementing:** the Serbian
+`mesecni-najam-igalo.html` already carried a complete `Offer` on its `Apartment` node — a proper
+`UnitPriceSpecification` with `referenceQuantity`, `validFrom` and `validThrough`. Only the English
+`monthly-rental-igalo.html` was missing one. The gap was half as wide as this section originally
+claimed, and the fix was to mirror the existing Serbian shape rather than invent a second one.
 
 > **This is a business decision, not a code decision.** If you have a deliberate commercial reason
 > to keep seasonal prices off the web — negotiating room, undercutting OTA rate parity, avoiding
@@ -353,12 +354,14 @@ entries against the Serbian page's 9, and its two `Accommodation` nodes have no 
 arrays while the Serbian ones do. Same property, two different levels of machine-readable detail.
 Bring EN to parity — the English page serves the AI-heavier audience.
 
-**3.9 A second phone number appears on two pages.**
+**3.9 A second phone number appears on two pages. ~~Fix this.~~ Withdrawn — it is already correct.**
 `+382 69 530 869` appears on `rent-a-bike-herceg-novi-igalo.html` and
 `iznajmljivanje-bicikla-herceg-novi-igalo.html` (against 221 occurrences of the primary
-`+382 67 558 240`). If it is a bike-rental partner's number, mark it as that partner's, not as an
-undifferentiated contact number on your domain. Otherwise it is a small NAP inconsistency on the
-one signal — phone — where consistency is load-bearing.
+`+382 67 558 240`). I flagged it as a possible NAP inconsistency. **On inspection it is not one:**
+the number is already attributed to a third party — *Rent a Bike Herceg Novi* — as its own
+`LocalBusiness` node inside an `ItemList`, with its own name, locality and Facebook page, and the
+visible copy names that company too. This is exactly the treatment the finding asked for. No change
+needed; noted here so a future audit does not re-raise it.
 
 **3.10 `starRating: 3` is self-asserted.** The page says *"Kategorisani apartmani"* — officially
 categorised — which implies a real Montenegrin tourism categorisation. If so, add
@@ -503,7 +506,38 @@ Baseline all eight prompts **before** starting item 1, or you will not be able t
 
 ---
 
-## 8. Bottom line
+## 8. Implementation status — 2026-08-10
+
+Items 2–11 are implemented on branch `claude/local-seo-ai-overviews-laulpb`. Item 1 is a business
+decision and was deliberately left alone.
+
+| # | Item | Status |
+|:--:|---|---|
+| 1 | Publish seasonal price ranges | **Not done — your call.** Everything in §3.1 still stands. Nothing else on this list substitutes for it. |
+| 2 | Entity linkage on the orphaned pages | **Done.** All 19 article-like nodes point `author`/`publisher` at `#business`; all 27 pages define the entity (was 13). |
+| 3 | Offers and payment fields | **Partly done.** `paymentAccepted`, `currenciesAccepted` and the €500 monthly `Offer` are in. `priceRange` and the nightly `Offer`s are **blocked on item 1** — adding them without published prices would mean inventing numbers. |
+| 4 | Check-in/out, pets, lift, laundry | **Done** on all 27 business nodes. Supersedes the old G5 "no fixed times exist" decision. |
+| 5 | `sameAs` and linked rating figures | **Partly done.** Google Maps added to `sameAs`; the visible Google and Facebook figures are now links. **Booking.com and Airbnb profile URLs are not in the repo — send them and it is a two-minute change.** |
+| 6 | Site spine: `WebSite`, `logo`, `AboutPage`, `founder` | **Mostly done.** `WebSite` moved to the homepages and stopped describing the site as one product page; `logo` and the Serbian `AboutPage` added. **`founder` skipped deliberately:** no host is named anywhere on the site, and the only name available is from a guest review. Asserting it as structured data would be inventing a fact. Tell me the name and it goes in. |
+| 7 | Dates on the commercial pages | **Done.** Dates taken from each file's last real content commit, not stamped as today. Visible "updated" line added to the FAQ. |
+| 8 | English FAQ and Blatna Plaža | **Done** — `en/faq.html`, `en/blatna-plaza.html`, wired into hreflang, sitemap and llms.txt. |
+| 9 | English homepage parity | **Done** — 10 FAQ entries and `amenityFeature` on both `Accommodation` nodes. |
+| 10 | Russian homepage and FAQ | **Done** — `ru/index.html`, `ru/faq.html`, three-way hreflang. |
+| 11 | Second phone; `ratingExplanation` | **Phone: withdrawn**, already correct (see §3.9). **`ratingExplanation` skipped:** it needs the name of the body that issued the three-star categorisation, which is not published anywhere. Give me the authority and it goes in. |
+
+**Found during verification, not fixed (pre-existing, outside the approved scope):**
+`monthly-rental-igalo.html` scrolls horizontally at 390px — its `.booking-compare` table is wider
+than the viewport. It behaves identically before and after this work, so it is not a regression, but
+it is the exact pattern §3.11 warns about: a wide table needs `overflow-x: auto` on its own
+container. One line of CSS whenever you want it. That page also loads a different font pair
+(Cormorant Garamond + DM Sans) from the rest of the site.
+
+**Three things I could not do without a fact from you:** the Booking.com and Airbnb profile URLs,
+the host's name for `founder`, and the authority behind the three-star rating.
+
+---
+
+## 9. Bottom line
 
 The code is not the problem. It is clean, static, consistent, honestly written and already carries
 more correct structured data than most properties of this size. Two things are holding it back, and
