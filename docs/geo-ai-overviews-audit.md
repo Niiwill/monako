@@ -523,7 +523,7 @@ decision and was deliberately left alone.
 | 8 | English FAQ and Blatna Plaža | **Done** — `en/faq.html`, `en/blatna-plaza.html`, wired into hreflang, sitemap and llms.txt. |
 | 9 | English homepage parity | **Done** — 10 FAQ entries and `amenityFeature` on both `Accommodation` nodes. |
 | 10 | Russian homepage and FAQ | **Done** — `ru/index.html`, `ru/faq.html`, three-way hreflang. |
-| 11 | Second phone; `ratingExplanation` | **Phone: withdrawn**, already correct (see §3.9). **`ratingExplanation` skipped:** it needs the name of the body that issued the three-star categorisation, which is not published anywhere. Give me the authority and it goes in. |
+| 11 | Second phone; `ratingExplanation` | **Done.** Phone finding **withdrawn** — already correct (see §3.9). `starRating` now names **Herceg Novi Municipality** as the issuing `GovernmentOrganization`, with a localised `ratingExplanation` and an explicit 1–5 scale. |
 
 **Found during verification, not fixed (pre-existing, outside the approved scope):**
 `monthly-rental-igalo.html` scrolls horizontally at 390px — its `.booking-compare` table is wider
@@ -532,8 +532,8 @@ it is the exact pattern §3.11 warns about: a wide table needs `overflow-x: auto
 container. One line of CSS whenever you want it. That page also loads a different font pair
 (Cormorant Garamond + DM Sans) from the rest of the site.
 
-**Still waiting on a fact from the owner:** the Booking.com listing URL, the host's name for
-`founder`, and the authority behind the three-star rating.
+**Still waiting on a fact from the owner:** the Booking.com listing URL, and a decision on whether
+to name the owner publicly for `founder` (see below).
 
 ### A note on the visible rating figures
 
