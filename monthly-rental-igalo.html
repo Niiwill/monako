@@ -134,6 +134,28 @@
     ],
     "provider": {
       "@id": "https://apartmani-igalo.com/#business"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "500",
+      "priceCurrency": "EUR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "500",
+        "priceCurrency": "EUR",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": "1",
+          "unitCode": "MON"
+        }
+      },
+      "description": "Monthly rental - electricity, water, fibre internet, utilities, heating, parking and a bicycle included",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-09-01",
+      "validThrough": "2027-06-30",
+      "seller": {
+        "@id": "https://apartmani-igalo.com/#business"
+      }
     }
   }
 </script>
@@ -190,10 +212,16 @@
       "ru",
       "de"
     ],
+    "checkinTime": "12:00:00",
+    "checkoutTime": "10:00:00",
+    "petsAllowed": true,
+    "paymentAccepted": "Cash",
+    "currenciesAccepted": "EUR",
     "sameAs": [
       "https://www.facebook.com/apartmanimonako/",
       "https://www.instagram.com/apartmani.igalo/",
-      "https://www.youtube.com/@monako-apartmaniigalo5135/"
+      "https://www.youtube.com/@monako-apartmaniigalo5135/",
+      "https://www.google.com/maps?cid=3697180737008791124"
     ],
     "logo": {
       "@type": "ImageObject",
@@ -239,12 +267,22 @@
       },
       {
         "@type": "LocationFeatureSpecification",
-        "name": "Airport transfer",
+        "name": "Airport transfer (surcharge)",
         "value": true
       },
       {
         "@type": "LocationFeatureSpecification",
         "name": "IDEA supermarket in the building",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Lift",
+        "value": false
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Shared washing machine",
         "value": true
       }
     ],
