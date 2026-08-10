@@ -3,6 +3,7 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
   xsi:schemaLocation="
     http://www.sitemaps.org/schemas/sitemap/0.9
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -19,6 +20,51 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kuca_spolja.webp</image:loc>
+      <image:title>Apartmani Igalo Monako - pogled na objekat iz spoljašnjosti</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/img_2.webp</image:loc>
+      <image:title>Studio apartman Monako Igalo - unutrašnjost</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/img_1.webp</image:loc>
+      <image:title>Apartman sa odvojenom spavaćom sobom - Monako Igalo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-1.webp</image:loc>
+      <image:title>Apartmani Igalo Monako - slika 1</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-2.webp</image:loc>
+      <image:title>Apartmani Igalo Monako - slika 2</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-3.webp</image:loc>
+      <image:title>Apartmani Igalo Monako - slika 3</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/docek.webp</image:loc>
+      <image:title>Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/mob-plaza-herceg-novi.webp</image:loc>
+      <image:title>TOP 9 plaža u Herceg Novom i Igalu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
+      <image:title>Blatna plaža Igalo - lekovito blato</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/mob-mimoza.webp</image:loc>
+      <image:title>Praznik mimoze Herceg Novi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/pet-danica-650.webp</image:loc>
+      <image:title>Šetalište Pet Danica - biciklistička trasa između Igala i Herceg Novog</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -29,14 +75,44 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/about.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/about.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/about.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/img_2.webp</image:loc>
+      <image:title>Studio apartman Monako Igalo - unutrašnjost sa balkonom i pogledom na more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/img_1.webp</image:loc>
+      <image:title>Jednosoban apartman Monako Igalo - dnevna soba sa odvojenom spavaćom sobom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/person_3.webp</image:loc>
+      <image:title>Boban Šundić</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/person_2.webp</image:loc>
+      <image:title>Jovana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/person_1.webp</image:loc>
+      <image:title>Elizabeth Charles</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://apartmani-igalo.com/blatna-plaza.html</loc>
-    <lastmod>2026-07-31</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blatna-plaza.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
+      <image:title>Panoramski pogled na Blatnu plažu u Igalu sa lekovitim muljem i Jadranskim morem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-2.jpg</image:loc>
+      <image:title>Blatna plaža u Igalu - pogled prema moru sa lekovitim muljem u prvom planu</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -45,6 +121,15 @@
     <changefreq>weekly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blog.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/docek.jpg</image:loc>
+      <image:title>Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/mimoza.jpg</image:loc>
+      <image:title>Praznik mimoze u Herceg Novom - žuti cvjetovi mimoze duž rivijere</image:title>
+    </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -59,6 +144,19 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/pet-danica-650.webp</image:loc>
+      <image:title>Šetalište Pet Danica između Igala i Herceg Novog - ravna obalna promenada idealna za vožnju biciklom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi-650.webp</image:loc>
+      <image:title>Obala Herceg Novog uz šetalište Pet Danica - biciklistička ruta pored plaža i kupališta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-topla-700.webp</image:loc>
+      <image:title>Plaža Topla uz obalnu biciklističku rutu između Igala i centra Herceg Novog</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -69,6 +167,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/pet-danica-650.webp</image:loc>
+      <image:title>Pet Danica seaside promenade between Igalo and Herceg Novi - a flat coastal path perfect for daytime</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi-650.webp</image:loc>
+      <image:title>Herceg Novi coastline along the Pet Danica promenade - cycling route past beaches and swimming spots</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-topla-700.webp</image:loc>
+      <image:title>Topla Beach on the coastal cycling route between Igalo and the centre of Herceg Novi</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -79,6 +190,11 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/mesecni-najam-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/monthly-rental-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kuca_spolja.webp</image:loc>
+      <image:title>Zgrada Apartmana Monako u Igalu, 100 metara od mora - mesečni najam apartmana, Herceg Novi, Crna Gor</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -97,12 +213,41 @@
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/plaze-herceg-novi.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi-650.webp</image:loc>
+      <image:title>Panoramski pogled na plaže u Herceg Novom sa kristalno plavim Jadranskim morem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-650.webp</image:loc>
+      <image:title>Blatna plaža Igalo - lekoviti morski mulj i Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kruso-650.webp</image:loc>
+      <image:title>Plaža Raffaello (Topla) u Herceg Novom - pješčana plaža sa suncobranima</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/zanjice.jpg</image:loc>
+      <image:title>Plaža Žanjice na poluostrvu Luštica - šljunčana plaža sa kristalno bistrom vodom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-topla.jpg</image:loc>
+      <image:title>Plaža Topla u Herceg Novom - gradska plaža sa kompletnom infrastrukturom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-tunel.jpg</image:loc>
+      <image:title>Plaža kod Tunela u Herceg Novom - mala intimna kamena plaža omiljenalokalaca</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/zalo.jpg</image:loc>
+      <image:title>Plaža Žalo u Herceg Novom - ispred tvrđave Forte Mare i istorskog centra</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -113,6 +258,75 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday1.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - panoramski pogled na Bokokotorski zaliv sa restorana ugrađenog u stijensku liti</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday3.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - noćni pogled na Herceg Novi i Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday2.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - enterijer restorana ugrađenog u stijensku liticu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-1.jpg</image:loc>
+      <image:title>Ribarsko Selo na Luštici - uvala i drvene terase restorana uz more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-2.jpg</image:loc>
+      <image:title>Ribarsko Selo - svježa riba i morski plodovi u restoranu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-3.jpg</image:loc>
+      <image:title>Ribarsko Selo - ambijent i pogled na more sa terase</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-1.jpg</image:loc>
+      <image:title>Verige 65 - stakleni restoran u najužem dijelu Bokokotorskog zaliva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-2.jpg</image:loc>
+      <image:title>Verige 65 - pogled na Perast i krstareće brodove iz restorana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-3.jpg</image:loc>
+      <image:title>Verige 65 - enterijer elegantnog restorana od stakla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/konoba-kruso.jpg</image:loc>
+      <image:title>Konoba Krušo - terasa na obali hercegnovske rivijere</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-1.jpg</image:loc>
+      <image:title>Konoba Ilijada - enterijer s ribarskim mrežama i drvenim detaljima uz šetalište u Igalu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-2.jpg</image:loc>
+      <image:title>Konoba Ilijada - terasa i pogled prema Blatnoj plaži</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/adriatica-1.jpg</image:loc>
+      <image:title>Restoran Adriatica Kamenari - terasa u sjeni maslina s pogledom na Boku</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/adriatica-2.jpg</image:loc>
+      <image:title>Restoran Adriatica - otvorena kuhinja s roštiljem i tandur pećnicom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/perla-portonovi-2.jpg</image:loc>
+      <image:title>Perla Square Portonovi - restoran na centralnom trgu okružen maslinama</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/perla-portonovi-1.jpg</image:loc>
+      <image:title>Perla Square Portonovi - letnja terasa uz fontanu u Portonovi resortu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/nautilus-1.jpg</image:loc>
+      <image:title>Šeki Nautilus - terasa kafić-picerije u centru Igala s pogledom na Bokokotorski zaliv</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -121,6 +335,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-1.jpg</image:loc>
+      <image:title>Konoba uz šetalište u Igalu - ribarske mreže i mediteranski ambijent pored Blatne plaže</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-2.jpg</image:loc>
+      <image:title>Konoba Ilijada Igalo - terasa i pogled prema Blatnoj plaži</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/nautilus-1.jpg</image:loc>
+      <image:title>Šeki Nautilus - terasa kafić-picerije u centru Igala s pogledom na Bokokotorski zaliv</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://apartmani-igalo.com/vesti/banja-igalo-institut.html</loc>
@@ -128,6 +355,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/banja-igalo-institut.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
+      <image:title>Blatna plaža - Stara Banja u Igalu, izvorište lekovitog blata uz Bokokotorski zaliv</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://apartmani-igalo.com/vesti/kafici-barovi-herceg-novi-igalo.html</loc>
@@ -135,6 +367,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/kafici-barovi-herceg-novi-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-700.webp</image:loc>
+      <image:title>Šetalište uz more u Igalu - terase kafića i barova uz Bokokotorski zaliv</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://apartmani-igalo.com/vesti/temperatura-mora-igalo.html</loc>
@@ -142,6 +379,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/temperatura-mora-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-700.webp</image:loc>
+      <image:title>Mirno i bistro more u Igalu - Bokokotorski zaliv tokom sezone kupanja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://apartmani-igalo.com/vesti/titova-vila-galeb-igalo.html</loc>
@@ -149,6 +391,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/titova-vila-galeb-igalo.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
+      <image:title>Obala Igala kod Instituta - dio Igala u kojem se nalazi Titova vila Galeb</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://apartmani-igalo.com/vesti/zanjice-plaza-izlet.html</loc>
@@ -156,6 +403,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/zanjice-plaza-izlet.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-700.webp</image:loc>
+      <image:title>Bistro more Bokokotorskog zaliva - polazak brodom prema plaži Žanjice na Luštici</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -164,6 +416,103 @@
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/stari-grad-1.jpg</image:loc>
+      <image:title>Stari grad Herceg Novi - pogled na kamene fasade, tvrđavu i Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/skver.jpg</image:loc>
+      <image:title>Gradska luka Škver u Herceg Novom - promenada uz more sa šarenim brodicama</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/portonovi-marina.jpg</image:loc>
+      <image:title>Portonovi marina - luksuzna jahte marina na ulazu u Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/portonovi2.jpg</image:loc>
+      <image:title>Portonovi resort - One&amp;Only hotel i šetalište pored mora</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/gospa-od-skrpjela.jpg</image:loc>
+      <image:title>Gospa od Škrpjela - ostrvo stvoreno od čovjeka sa crkvom usred Bokokotorskog zaliva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/gospa-od-skrpjela-slika2.jpg</image:loc>
+      <image:title>Crkva Gospa od Škrpjela iznutra - mozaici i ikone iz 17. vijeka</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/lustica.jpg</image:loc>
+      <image:title>Poluostrvo Luštica - zelena obala s kristalno čistim uvalama Jadranskog mora</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/orjen.jpg</image:loc>
+      <image:title>Planina Orjen iznad Herceg Novog - kameniti vrh s pogledom na Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/forte-mare.jpg</image:loc>
+      <image:title>Forte Mare - morska tvrđava Herceg Novog sa zidinama koje se spuštaju direktno u Jadransko more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/herceg-novi-stari-grad.jpg</image:loc>
+      <image:title>Pogled na Stari grad Herceg Novi iz zraka - tvrđave i Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/pet-danica.webp</image:loc>
+      <image:title>Šetalište Pet Danica u Herceg Novom - promenada uz more sa palmama i kafićima</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plava_spilja.webp</image:loc>
+      <image:title>Plava špilja kod Herceg Novog - kobaltno plavo svjetlo unutar morske pećine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plava-spilja-monako.jpg</image:loc>
+      <image:title>Brodovi ispred Plave špilje - turisti ulaze u morsku pećinu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/rose.jpg</image:loc>
+      <image:title>Rose - historijsko primorsko naselje na poluostrvu Luštica sa starim kamenim kućama uz more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/perast-slika.jpg</image:loc>
+      <image:title>Perast - stari grad u Bokokotorskom zalivu sa crkvenim tornjevima i Gospom od Škrpjela u pozadini</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/ribarsko-selo-1.jpg</image:loc>
+      <image:title>Ribarsko Selo na Luštici - drvene terase restorana uz uvalu s kristalno čistim morem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/ribarsko-selo-2.jpg</image:loc>
+      <image:title>Ribarsko Selo - tanjir svježe ribe i morskih plodova na stolu uz more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/verige65.jpg</image:loc>
+      <image:title>Verige 65 - stakleni restoran u najužem dijelu Bokokotorskog zaliva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/verige65-2.jpg</image:loc>
+      <image:title>Verige 65 - pogled na Perast i ostrva iz restorana</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/gradska-kafana-slika1.jpg</image:loc>
+      <image:title>Gradska kafana Herceg Novi - terasa restorana uz more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/gradska-kafana-2.jpg</image:loc>
+      <image:title>Gradska kafana - enterijer restorana s pogledom na Bokokotorski zaliv</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kantula.webp</image:loc>
+      <image:title>Restoran Kantula na Šetalištu Pet Danica - terasa s pogledom na more</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/admiral-herceg-novi-1.jpg</image:loc>
+      <image:title>Admiral restoran u Herceg Novom - terasa uz gradsku luku</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/admiral-herceg-novi-restaurant.jpg</image:loc>
+      <image:title>Admiral restoran Herceg Novi - svježi plodovi mora na stolu</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -174,6 +523,19 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi-650.webp</image:loc>
+      <image:title>Panoramski pogled na obalu Herceg Novog sa kristalno plavim Jadranskim morem i zelenim brdima</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/stari-grad-1.jpg</image:loc>
+      <image:title>Stari grad Herceg Novi - srednjovjekovne tvrđave i terakota krovovi iznad Bokokotorskog zaliva</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plava_spilja.webp</image:loc>
+      <image:title>Plava špilja (Plava spilja) u blizini Herceg Novog - jarko plavo svjetlo na kristalnoj vodi Jadrana</image:title>
+    </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -188,16 +550,58 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi.jpg</image:loc>
+      <image:title>Panoramic view of the Herceg Novi coastline with clear blue Adriatic water and green hills</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/stari-grad-1.jpg</image:loc>
+      <image:title>The Old Town of Herceg Novi, founded in 1382, with stone streets and sea views</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plava_spilja.webp</image:loc>
+      <image:title>The Blue Cave near Herceg Novi, reachable by boat from the bay</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://apartmani-igalo.com/vesti/beaches-herceg-novi.html</loc>
-    <lastmod>2026-07-26</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/plaze-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/beaches-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi.jpg</image:loc>
+      <image:title>Panoramic view of beaches in Herceg Novi with crystal-clear Adriatic water</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza.jpg</image:loc>
+      <image:title>Blatna Plaža Igalo - therapeutic sea mud beach on the Bay of Kotor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kruso.jpg</image:loc>
+      <image:title>Raffaello Beach (Topla) in Herceg Novi - sandy beach with sun umbrellas</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/zanjice.jpg</image:loc>
+      <image:title>Žanjice Beach on the Luštica peninsula - pebble beach with crystal-clear water</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-topla.jpg</image:loc>
+      <image:title>Topla Beach in Herceg Novi - city beach with full infrastructure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-tunel.jpg</image:loc>
+      <image:title>Beach Near the Tunnel in Herceg Novi - small intimate rocky beach favoured by locals</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/zalo.jpg</image:loc>
+      <image:title>Žalo Beach in Herceg Novi - in front of Forte Mare fortress and the historic centre</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -208,6 +612,75 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/vesti/restorani-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday1.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - panoramic view over the Bay of Kotor from a restaurant built into the cliffside</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday3.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - night view of Herceg Novi and the Bay of Kotor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/holiday2.jpg</image:loc>
+      <image:title>Holiday Lounge Bar - interior carved into the cliff face</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-1.jpg</image:loc>
+      <image:title>Ribarsko Selo - wooden terrace and cove on the Luštica peninsula</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-2.jpg</image:loc>
+      <image:title>Ribarsko Selo - fresh fish and seafood on ice</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ribarsko-selo-3.jpg</image:loc>
+      <image:title>Ribarsko Selo - view of the sea from the restaurant terrace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-1.jpg</image:loc>
+      <image:title>Verige 65 - glass restaurant at the narrowest point of the Bay of Kotor</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-2.jpg</image:loc>
+      <image:title>Verige 65 - view of Perast and cruise ships from the restaurant</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/verige-3.jpg</image:loc>
+      <image:title>Verige 65 - elegant glass interior dining room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/konoba-kruso.jpg</image:loc>
+      <image:title>Konoba Krušo - waterfront terrace on the Herceg Novi riviera</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-1.jpg</image:loc>
+      <image:title>Konoba Ilijada - interior with fishing nets and wooden décor on the Igalo promenade</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/ilijada-2.jpg</image:loc>
+      <image:title>Konoba Ilijada - terrace view towards Blatna Plaža (Mud Beach)</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/adriatica-1.jpg</image:loc>
+      <image:title>Restoran Adriatica Kamenari - terrace under olive trees overlooking the bay</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/adriatica-2.jpg</image:loc>
+      <image:title>Restoran Adriatica - open kitchen with grill and tandoor oven</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/perla-portonovi-2.jpg</image:loc>
+      <image:title>Perla Square Portonovi - restaurant on the central piazza surrounded by olive trees</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/perla-portonovi-1.jpg</image:loc>
+      <image:title>Perla Square Portonovi - summer terrace by the fountain at Portonovi resort</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/restorani/nautilus-1.jpg</image:loc>
+      <image:title>Šeki Nautilus - café-pizzeria terrace in central Igalo with Bay of Kotor views</image:title>
+    </image:image>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -222,6 +695,27 @@
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/praznik-mimoze-program.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/mimoza.jpg</image:loc>
+      <image:title>Praznik mimoze (Dani mimoze) u Herceg Novom - žuti cvjetovi mimoze duž hercegnovske rivijere</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/praznik-mimoze-2024-program-prvi-vikend.jpg</image:loc>
+      <image:title>Zvanični program 55. Praznika mimoze 2024 - prvi vikend: otvaranje, povorka, koncert Halida Bešlića </image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/praznik-mimoze-2024-program-zavrsnica.jpg</image:loc>
+      <image:title>Program završnice Praznika mimoze 2024 - međunarodni karneval, spaljivanje karnevala i koncert grupe</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/park-mimoze-program-za-djecu.jpg</image:loc>
+      <image:title>Park mimoze - dječiji program Praznika mimoze u parku Boka: radionice, klizalište i zabava za najmla</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/praznik-mimoze-2024-program-druga-sedmica.jpg</image:loc>
+      <image:title>Program druge sedmice Praznika mimoze - cvjetna povorka, gastro ponuda Boke, dječiji maskenbal i kon</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -232,6 +726,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/praznik-mimoze-program.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/mimosa-festival-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/mimoza.jpg</image:loc>
+      <image:title>Mimosa Festival in Herceg Novi, Montenegro - yellow mimosa blossoms along the riviera</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -240,6 +739,19 @@
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/nova-godina-herceg-novi.html"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/docek.jpg</image:loc>
+      <image:title>Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom - mnoštvo posjetilaca uz muziku i vatromet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/plaza-herceg-novi.jpg</image:loc>
+      <image:title>Plaže u Herceg Novom i Igalu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
+      <image:title>Blatna plaža Igalo - lekovito blato</image:title>
+    </image:image>
   </url>
 
   <url>
@@ -250,6 +762,19 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
+  
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/kuca_spolja.webp</image:loc>
+      <image:title>Apartmani Igalo Monako, Dubrovačka 1 - the building seen from the seafront</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-1.webp</image:loc>
+      <image:title>Studio apartment in Igalo with kitchenette and sea-view balcony</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-2.webp</image:loc>
+      <image:title>One-bedroom apartment in Igalo with separate bedroom and living room</image:title>
+    </image:image>
   </url>
 
   <url>
