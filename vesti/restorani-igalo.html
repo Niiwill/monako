@@ -54,142 +54,385 @@
        SCHEMA - JSON-LD
   ═══════════════════════════════════════════════ -->
   <script type="application/ld+json">
-  [
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "@id": "https://apartmani-igalo.com/vesti/restorani-igalo.html",
-      "headline": "Restorani u Igalu - Vodič lokalca (2026)",
-      "description": "Gdje jesti u Igalu? Vodič lokalca kroz restorane i konobe uz igalsko šetalište - restoran Promenada, konoba Ilijada, Jedrenjak, Šeki Nautilus i Stara Hercegovina.",
-      "image": "https://apartmani-igalo.com/images/restorani/ilijada-1.jpg",
-      "datePublished": "2026-07-11T08:00:00+02:00",
-      "dateModified": "2026-07-20T08:00:00+02:00",
-      "inLanguage": "sr",
-      "author": {
-        "@type": "Organization",
-        "name": "Apartmani Igalo Monako",
-        "url": "https://apartmani-igalo.com/"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://apartmani-igalo.com/vesti/restorani-igalo.html",
+        "headline": "Restorani u Igalu - Vodič lokalca (2026)",
+        "description": "Gdje jesti u Igalu? Vodič lokalca kroz restorane i konobe uz igalsko šetalište - restoran Promenada, konoba Ilijada, Jedrenjak, Šeki Nautilus i Stara Hercegovina.",
+        "image": "https://apartmani-igalo.com/images/restorani/ilijada-1.jpg",
+        "datePublished": "2026-07-11T08:00:00+02:00",
+        "dateModified": "2026-07-20T08:00:00+02:00",
+        "inLanguage": "sr-Latn-ME",
+        "author": {
+          "@id": "https://apartmani-igalo.com/#business"
+        },
+        "publisher": {
+          "@id": "https://apartmani-igalo.com/#business"
+        },
+        "isPartOf": {
+          "@id": "https://apartmani-igalo.com/#website"
+        },
+        "mainEntityOfPage": "https://apartmani-igalo.com/vesti/restorani-igalo.html"
       },
-      "publisher": {
-        "@type": "Organization",
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Restorani u Igalu - vodič lokalca",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Restaurant",
+              "name": "Restoran Promenada Igalo",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo",
+                "addressCountry": "ME"
+              },
+              "servesCuisine": "Mediterranean, Montenegrin, Seafood"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Restaurant",
+              "name": "Konoba Ilijada",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo",
+                "addressCountry": "ME"
+              },
+              "servesCuisine": "Montenegrin, Mediterranean, Seafood"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Restaurant",
+              "name": "Restoran Jedrenjak",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo",
+                "addressCountry": "ME"
+              },
+              "servesCuisine": "Seafood, International"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Restaurant",
+              "name": "Šeki Nautilus",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo",
+                "addressCountry": "ME"
+              },
+              "servesCuisine": "Pizza, International"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Restaurant",
+              "name": "Konoba Stara Hercegovina",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo",
+                "addressCountry": "ME"
+              },
+              "servesCuisine": "Montenegrin, Barbecue"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "BarOrPub",
+              "name": "La Bamba",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Igalo"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Gdje jesti u Igalu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Najviše restorana nalazi se duž igalskog šetališta uz more: Restoran Promenada i Jedrenjak su na samom šetalištu, Konoba Ilijada je odmah pored Blatne plaže, a Šeki Nautilus je u centru Igala pored hotela Tamaris. Za tradicionalni roštilj i domaću kuhinju tu je Konoba Stara Hercegovina."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gdje se nalazi restoran Promenada u Igalu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Restoran Promenada nalazi se na šetalištu u Igalu, uz samo more - po toj lokaciji na promenadi je i dobio ime. Od Blatne plaže i Instituta Dr Simo Milošević udaljen je nekoliko minuta hoda šetalištem. Služi mediteransku i domaću kuhinju s naglaskom na riblje specijalitete."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Koji restoran u Igalu radi cijelu godinu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Šeki Nautilus u centru Igala radi tokom cijele godine i pruža i usluge kućne dostave. Većina restorana na šetalištu radi punim kapacitetom od aprila do oktobra."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Koliko košta obrok u restoranima u Igalu?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Igalo je povoljnije od većine jadranskih destinacija. Glavna jela u konobama i picerijama su umjerene cijene, dok riblji specijaliteti i plodovi mora spadaju u srednji cjenovni rang. Za tačne cijene provjerite aktuelni jelovnik na licu mjesta - mijenjaju se iz sezone u sezonu."
+            }
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Početna",
+            "item": "https://apartmani-igalo.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Vesti",
+            "item": "https://apartmani-igalo.com/blog.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Restorani u Igalu",
+            "item": "https://apartmani-igalo.com/vesti/restorani-igalo.html"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "@id": "https://apartmani-igalo.com/#business",
         "name": "Apartmani Igalo Monako",
+        "alternateName": [
+          "Apartmani Monako",
+          "Monako Igalo",
+          "Monako Apartments"
+        ],
         "url": "https://apartmani-igalo.com/",
+        "telephone": "+38267558240",
+        "email": "hotel-monako@hotmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dubrovačka 1",
+          "addressLocality": "Igalo",
+          "postalCode": "85347",
+          "addressCountry": "ME"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.4538,
+          "longitude": 18.503
+        },
+        "hasMap": "https://www.google.com/maps?cid=3697180737008791124",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "foundingDate": "2000-07-12",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Pero Vidović",
+            "jobTitle": "Domaćin"
+          },
+          {
+            "@type": "Person",
+            "name": "Tatjana Vidović",
+            "jobTitle": "Domaćica"
+          }
+        ],
+        "starRating": {
+          "@type": "Rating",
+          "ratingValue": "3",
+          "bestRating": "5",
+          "worstRating": "1",
+          "author": {
+            "@type": "GovernmentOrganization",
+            "name": "Opština Herceg Novi"
+          },
+          "ratingExplanation": "Zvanična kategorizacija Opštine Herceg Novi - tri zvjezdice."
+        },
+        "knowsLanguage": [
+          "sr",
+          "en",
+          "ru",
+          "de"
+        ],
+        "checkinTime": "12:00:00",
+        "checkoutTime": "10:00:00",
+        "petsAllowed": true,
+        "paymentAccepted": "Cash",
+        "currenciesAccepted": "EUR",
+        "sameAs": [
+          "https://www.facebook.com/apartmanimonako/",
+          "https://www.instagram.com/apartmani.igalo/",
+          "https://www.youtube.com/@monako-apartmaniigalo5135/",
+          "https://www.google.com/maps?cid=3697180737008791124",
+          "https://www.airbnb.com/rooms/36166472"
+        ],
         "logo": {
           "@type": "ImageObject",
-          "url": "https://apartmani-igalo.com/images/monako-favicon.png"
-        }
-      },
-      "mainEntityOfPage": "https://apartmani-igalo.com/vesti/restorani-igalo.html"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Restorani u Igalu - vodič lokalca",
-      "numberOfItems": 6,
-      "itemListElement": [
-        {
-          "@type": "ListItem", "position": 1,
-          "item": {
-            "@type": "Restaurant",
-            "name": "Restoran Promenada Igalo",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressCountry": "ME"},
-            "servesCuisine": "Mediterranean, Montenegrin, Seafood"
-          }
+          "url": "https://apartmani-igalo.com/images/monako-favicon.png",
+          "width": 192,
+          "height": 192
         },
-        {
-          "@type": "ListItem", "position": 2,
-          "item": {
-            "@type": "Restaurant",
-            "name": "Konoba Ilijada",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressCountry": "ME"},
-            "servesCuisine": "Montenegrin, Mediterranean, Seafood"
+        "image": [
+          "https://apartmani-igalo.com/images/kuca_spolja.webp",
+          "https://apartmani-igalo.com/images/img_1.webp",
+          "https://apartmani-igalo.com/images/img_2.webp"
+        ],
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Besplatan WiFi",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Besplatan parking",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Sobarica",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Klima uređaj",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Balkon s pogledom na more",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Čajna kuhinja",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Transfer od/do aerodroma (uz doplatu)",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "IDEA market u objektu",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Lift",
+            "value": false
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Zajednička mašina za veš",
+            "value": true
           }
-        },
-        {
-          "@type": "ListItem", "position": 3,
-          "item": {
-            "@type": "Restaurant",
-            "name": "Restoran Jedrenjak",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressCountry": "ME"},
-            "servesCuisine": "Seafood, International"
+        ],
+        "containsPlace": [
+          {
+            "@type": "Accommodation",
+            "name": "Studio Apartman",
+            "description": "Studio apartman za 2-4 osobe sa čajnom kuhinjom, balkonom i klima uređajem.",
+            "occupancy": {
+              "@type": "QuantitativeValue",
+              "minValue": 2,
+              "maxValue": 4
+            },
+            "numberOfRooms": 1,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balkon",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Klima uređaj",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
+          },
+          {
+            "@type": "Accommodation",
+            "name": "Apartman sa Odvojenom Sobom",
+            "description": "Apartman sa odvojenom spavaćom sobom za 4-5 osoba. Idealno za porodice.",
+            "occupancy": {
+              "@type": "QuantitativeValue",
+              "minValue": 4,
+              "maxValue": 5
+            },
+            "numberOfRooms": 2,
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Balkon",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Klima uređaj",
+                "value": true
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "WiFi",
+                "value": true
+              }
+            ]
           }
-        },
-        {
-          "@type": "ListItem", "position": 4,
-          "item": {
-            "@type": "Restaurant",
-            "name": "Šeki Nautilus",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressCountry": "ME"},
-            "servesCuisine": "Pizza, International"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 5,
-          "item": {
-            "@type": "Restaurant",
-            "name": "Konoba Stara Hercegovina",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo", "addressCountry": "ME"},
-            "servesCuisine": "Montenegrin, Barbecue"
-          }
-        },
-        {
-          "@type": "ListItem", "position": 6,
-          "item": {
-            "@type": "BarOrPub",
-            "name": "La Bamba",
-            "address": {"@type": "PostalAddress", "addressLocality": "Igalo"}
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Gdje jesti u Igalu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Najviše restorana nalazi se duž igalskog šetališta uz more: Restoran Promenada i Jedrenjak su na samom šetalištu, Konoba Ilijada je odmah pored Blatne plaže, a Šeki Nautilus je u centru Igala pored hotela Tamaris. Za tradicionalni roštilj i domaću kuhinju tu je Konoba Stara Hercegovina."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Gdje se nalazi restoran Promenada u Igalu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Restoran Promenada nalazi se na šetalištu u Igalu, uz samo more - po toj lokaciji na promenadi je i dobio ime. Od Blatne plaže i Instituta Dr Simo Milošević udaljen je nekoliko minuta hoda šetalištem. Služi mediteransku i domaću kuhinju s naglaskom na riblje specijalitete."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Koji restoran u Igalu radi cijelu godinu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Šeki Nautilus u centru Igala radi tokom cijele godine i pruža i usluge kućne dostave. Većina restorana na šetalištu radi punim kapacitetom od aprila do oktobra."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Koliko košta obrok u restoranima u Igalu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Igalo je povoljnije od većine jadranskih destinacija. Glavna jela u konobama i picerijama su umjerene cijene, dok riblji specijaliteti i plodovi mora spadaju u srednji cjenovni rang. Za tačne cijene provjerite aktuelni jelovnik na licu mjesta - mijenjaju se iz sezone u sezonu."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Početna", "item": "https://apartmani-igalo.com/"},
-        {"@type": "ListItem", "position": 2, "name": "Vesti", "item": "https://apartmani-igalo.com/blog.html"},
-        {"@type": "ListItem", "position": 3, "name": "Restorani u Igalu", "item": "https://apartmani-igalo.com/vesti/restorani-igalo.html"}
-      ]
-    }
-  ]
+        ]
+      }
+    ]
   </script>
 
   <style>

@@ -65,6 +65,10 @@
       <image:loc>https://apartmani-igalo.com/images/pet-danica-650.webp</image:loc>
       <image:title>Šetalište Pet Danica - biciklistička trasa između Igala i Herceg Novog</image:title>
     </image:image>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
   </url>
 
   <url>
@@ -104,15 +108,17 @@
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blatna-plaza.html"/>
-  
-    <image:image>
-      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-1.webp</image:loc>
-      <image:title>Panoramski pogled na Blatnu plažu u Igalu sa lekovitim muljem i Jadranskim morem</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://apartmani-igalo.com/images/blatna-plaza-igalo-2.jpg</image:loc>
-      <image:title>Blatna plaža u Igalu - pogled prema moru sa lekovitim muljem u prvom planu</image:title>
-    </image:image>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/blatna-plaza.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/blatna-plaza.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/en/blatna-plaza.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/blatna-plaza.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/blatna-plaza.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/blatna-plaza.html"/>
   </url>
 
   <url>
@@ -138,6 +144,29 @@
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/en/faq.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/ru/faq.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/cesta-pitanja.html"/>
   </url>
 
   <!-- ═══════════════════════════════════════
@@ -783,6 +812,20 @@
       <image:loc>https://apartmani-igalo.com/images/apartmani-igalo-2.webp</image:loc>
       <image:title>One-bedroom apartment in Igalo with separate bedroom and living room</image:title>
     </image:image>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
+  </url>
+  <url>
+    <loc>https://apartmani-igalo.com/ru/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="sr" href="https://apartmani-igalo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apartmani-igalo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://apartmani-igalo.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apartmani-igalo.com/"/>
   </url>
 
   <url>
