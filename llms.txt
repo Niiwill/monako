@@ -11,9 +11,11 @@ Site content is in Serbian (Latin script) with selected pages available in Engli
 - [About](https://apartmani-igalo.com/about.html): about the apartments and the hosts (Serbian)
 - [Česta pitanja](https://apartmani-igalo.com/cesta-pitanja.html): practical guest FAQ — check-in from 12:00 and check-out by 10:00, price is per apartment not per person, pets welcome, cash only with no deposit, free cancellation by phone, no lift in the building, shared washing machine, air conditioning included (Serbian)
 - [About us](https://apartmani-igalo.com/en/about.html): about the apartments and the hosts (English)
+- [Frequently asked questions](https://apartmani-igalo.com/en/faq.html): practical guest FAQ in English — check-in from 12:00 and check-out by 10:00, price is per apartment not per person, pets welcome, cash only with no deposit, free cancellation by phone, no lift in the building, shared washing machine, air conditioning included (English)
 - [Monthly rental in Igalo](https://apartmani-igalo.com/monthly-rental-igalo.html): long-term apartment rental, €500/month all-inclusive (English)
 - [Mjesečni najam u Igalu](https://apartmani-igalo.com/mesecni-najam-igalo.html): dugoročni najam apartmana (Serbian)
-- [Blatna plaža Igalo](https://apartmani-igalo.com/blatna-plaza.html): the therapeutic mud beach in Igalo
+- [Blatna plaža Igalo](https://apartmani-igalo.com/blatna-plaza.html): the therapeutic mud beach in Igalo (Serbian)
+- [Blatna Plaža Igalo](https://apartmani-igalo.com/en/blatna-plaza.html): the therapeutic mud beach in Igalo — 9,000 m² of healing sea mud, free to use, confirmed by the Vichy laboratory in 1930 (English)
 - [Rent a bike Herceg Novi & Igalo](https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html): bicycle rental (English)
 - [Iznajmljivanje bicikla](https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html): iznajmljivanje bicikla (Serbian)
 
