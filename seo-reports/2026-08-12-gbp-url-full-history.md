@@ -14,7 +14,9 @@ Three things, in order of importance:
 1. **This is the best-positioned commercial surface the business has.**
    Position **2.71** overall, **73.7% of its impressions sit at position
    1.0–1.9**, and the query mix is almost purely accommodation intent. The
-   organic homepage sits at 8.09 on the same queries.
+   organic homepage sits at 8.09 on the same queries. It reached that
+   position within two days and has held it flat since — strong, but not
+   improving.
 
 2. **It is not a duplicate page and there is nothing to fix technically.**
    URL Inspection returns *"URL is unknown to Google"* for it while `/` is
@@ -50,15 +52,42 @@ Three things, in order of importance:
 | Aug 8 | 259 | 3 | 1.16% | 3.01 |
 | **Total** | **4,638** | **44** | **0.95%** | **2.71** |
 
-**Trend is up:**
+**Trend: flat on both ranking and impressions.**
+
+> **Correction.** An earlier version of this section compared an 8-day block
+> against a 7-day one, and the 8-day block included Jul 25's partial
+> ramp-up day (155 impressions). That depressed the baseline and manufactured
+> growth that is not there. It also stated position was improving; it was
+> not. Corrected below with matched windows.
 
 | | Impr/day | Clicks/day | CTR | Position |
 |---|---|---|---|---|
-| Jul 25 – Aug 1 (8d) | 296 | 2.50 | 0.84% | 2.66 |
-| Aug 2 – 8 (7d) | **324** | **3.43** | **1.06%** | 2.76 |
+| Jul 26 – Aug 1 (7d) | 316.3 | 2.86 | 0.90% | **2.63** |
+| Aug 2 – 8 (7d) | 324.1 | 3.43 | 1.06% | **2.76** |
+| Change | +2.5% | +4 clicks | — | **+0.13 (worse)** |
 
-Impressions +9%/day, clicks **+37%/day**, CTR +26%. It arrived cold on Jul 25
-(155 impressions, 0 clicks) and has been building since.
+Regression over all 15 days confirms it:
+
+| Metric | Slope/day | R² | Verdict |
+|---|---|---|---|
+| Impressions | +1.19 | **0.007** | no trend |
+| Position | −0.010 | **0.013** | no trend |
+
+R² near zero means the fitted line explains almost none of the movement.
+Impressions have a standard deviation of 62 against a mean of 309, so ±20%
+daily swings are normal and a +2.5% shift sits well inside noise. Clicks
+20 → 24 is likewise within the ±4.5 expected random swing on counts that
+small. Excluding day 1 the impression slope is **−3.62/day** — if anything
+mildly negative.
+
+**The URL did not ramp. It arrived at full strength and plateaued.** Position
+reached ~2.7 within two days of appearing and has not moved. Impressions
+settled at 300–320/day in the first week and stayed there. Last three days
+are 264 / 245 / 259 against a peak of 401 on Aug 4.
+
+The practical consequence: Google granted a stable slot, and it is not
+climbing on its own. Further gain has to come from the Business Profile side
+— reviews, photos, the empty booking link — not from waiting.
 
 ---
 
@@ -266,4 +295,6 @@ every axis and the sample is still small; the 15-day verdict is provisional.
 | Mobile share | 91% |
 | Serbia + Bosnia share | 72% |
 | Latest week clicks/day | 3.43 |
+| Impression trend over 15d | **flat** (slope +1.19/day, R² 0.007) |
+| Position trend over 15d | **flat** (slope −0.010/day, R² 0.013) |
 | Organic homepage position, same window | 8.09 |
