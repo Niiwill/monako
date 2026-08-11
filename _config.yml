@@ -1,0 +1,15 @@
+# GitHub Pages (Jekyll) configuration.
+#
+# This site is plain static HTML with no build step; Jekyll only copies files
+# through. The sole purpose of this file is `exclude` — repository files that
+# must NOT be published to apartmani-igalo.com.
+#
+# Anything listed here stays in the repo but is left out of the built site.
+# Add to this list rather than committing agent or SEO working notes that
+# would otherwise be served and indexed.
+
+exclude:
+  - CLAUDE.md
+  - .claude
+  - README.md
+  - LICENSE
