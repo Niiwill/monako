@@ -13,3 +13,6 @@ exclude:
   - .claude
   - README.md
   - LICENSE
+  # SEO radne bilješke: GSC podaci, analiza konkurencije, poslovna strategija.
+  # Ostaju u repozitorijumu, ali se NE objavljuju na apartmani-igalo.com.
+  - seo-reports
