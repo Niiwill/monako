@@ -1371,6 +1371,11 @@
     @media (min-width: 480px) {
       .blog-card__img-wrap { aspect-ratio: 16/9; overflow: hidden; }
       .blog-card__img { height: 100%; object-fit: cover; }
+      /* Plakat je 1.42:1, pa ga 16/9 kadar siječe po naslovu i po trećoj
+         liniji programa. Ta kartica prikazuje sliku cijelu; red u gridu
+         se izravna sam. */
+      .blog-card__img-wrap--poster { aspect-ratio: auto; }
+      .blog-card__img-wrap--poster .blog-card__img { height: auto; object-fit: initial; }
     }
     .blog-card__body {
       padding: var(--sp-md);
@@ -2410,11 +2415,11 @@
         <div class="blog__grid">
 
           <article class="blog-card">
-            <div class="blog-card__img-wrap">
+            <div class="blog-card__img-wrap blog-card__img-wrap--poster">
               <img
                 class="blog-card__img"
-                src="images/docek.webp"
-                alt="Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom"
+                src="images/docek-2027-plakat-760.webp"
+                alt="Plakat dočeka Nove 2027. godine u Herceg Novom - Trg Nikole Đurkovića"
                 width="380"
                 height="214"
                 loading="lazy"

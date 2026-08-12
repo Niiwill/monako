@@ -38,9 +38,9 @@
        PERFORMANCE - PRECONNECT / PRELOAD
   ═══════════════════════════════════════════════ -->
   <!-- LCP image preload FIRST - so it wins bandwidth over fonts (matches <picture> WebP source) -->
-  <link rel="preload" as="image" href="images/docek.webp" type="image/webp" fetchpriority="high"
+  <link rel="preload" as="image" href="images/docek-2027-plakat.webp" type="image/webp" fetchpriority="high"
         media="(min-width: 640px)">
-  <link rel="preload" as="image" href="images/docek-mobile.webp" type="image/webp" fetchpriority="high"
+  <link rel="preload" as="image" href="images/docek-2027-plakat-760.webp" type="image/webp" fetchpriority="high"
         media="(max-width: 639px)">
 
   <!-- Fonts: preconnect + load at LOW priority (media=print swap) so they don't compete with the LCP image.
@@ -1180,6 +1180,15 @@
         }
       }
     }
+    /* Hero je od 12.08.2026. zvanični plakat, ne fotografija trga. Bazno
+       pravilo kadrira hero na 16/7 sa object-fit:cover - to bi plakatu
+       odsjeklo i naslov gore i datume s imenima dolje, pa se ovdje prikazuje
+       cio. width/height na <img> i dalje rezervišu prostor, tako da nema CLS. */
+    @media (min-width: 640px) {
+      .article-hero__image--poster { aspect-ratio: auto; }
+      .article-hero__image--poster img { height: auto; object-fit: initial; }
+    }
+
     @keyframes reveal-in {
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: none; }
@@ -1261,26 +1270,28 @@
         </div>
 
         <!-- LCP hero image - responsive, eagerly loaded -->
-        <figure class="article-hero__image">
+        <figure class="article-hero__image article-hero__image--poster">
           <picture>
             <source
               media="(max-width: 639px)"
-              srcset="images/docek-mobile.webp" type="image/webp"
-              width="680" height="850">
+              srcset="images/docek-2027-plakat-760.webp" type="image/webp"
+              width="760" height="536">
             <source
               media="(min-width: 640px)"
-              srcset="images/docek.webp" type="image/webp"
-              width="1080" height="1350">
+              srcset="images/docek-2027-plakat.webp" type="image/webp"
+              width="1540" height="1086">
             <img
-              src="images/docek.jpg"
-              alt="Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom - mnoštvo posjetilaca uz muziku i vatromet"
-              width="1080" height="1350"
+              src="images/docek-2027-plakat.jpg"
+              alt="Zvanični plakat - Nova u Herceg Novom 2027, Trg Nikole Đurkovića: 31.12. Saša Matić i Dženan Lončarević, 1.1. Nataša Bekvalac i Adi Šoše, 2.1. Orkestar Aleksandra Sofronijevića"
+              width="1540" height="1086"
               fetchpriority="high"
               loading="eager"
               decoding="sync"
             >
           </picture>
-          <figcaption class="sr-only">Doček Nove godine na Trgu Nikole Đurkovića, Herceg Novi</figcaption>
+          <figcaption class="sr-only">
+            Zvanični plakat dočeka Nove 2027. godine u Herceg Novom - Opština Herceg Novi i JUK Herceg Fest
+          </figcaption>
         </figure>
       </div>
     </div>
@@ -1384,25 +1395,6 @@
                 </article>
 
               </div>
-
-              <!-- Zvanični plakat. Ispod prevoja, pa lazy; mobilna varijanta je
-                   760w jer je sadržajna kolona na telefonu ~350 CSS px. -->
-              <figure style="margin-top:clamp(2rem,4vw,3rem)">
-                <picture>
-                  <source type="image/webp"
-                          srcset="images/docek-2027-plakat-760.webp 760w,
-                                  images/docek-2027-plakat.webp 1540w"
-                          sizes="(min-width: 901px) 700px, calc(100vw - 2.5rem)">
-                  <img src="images/docek-2027-plakat.jpg"
-                       alt="Zvanični plakat - Nova u Herceg Novom 2027, Trg Nikole Đurkovića: 31.12. Saša Matić i Dženan Lončarević, 1.1. Nataša Bekvalac i Adi Šoše, 2.1. Orkestar Aleksandra Sofronijevića"
-                       width="1540" height="1086"
-                       style="width:100%;height:auto;border-radius:var(--radius-lg)"
-                       loading="lazy" decoding="async">
-                </picture>
-                <figcaption style="font-size:var(--step--1);color:var(--c-muted);margin-top:0.6em">
-                  Zvanični plakat dočeka - Opština Herceg Novi i JUK Herceg Fest.
-                </figcaption>
-              </figure>
 
               <blockquote style="margin-top:clamp(2rem,4vw,3rem);background:var(--c-sand);border-left:3px solid var(--c-teal);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--sp-md)">
                 <p style="margin-bottom:0.75em;font-size:var(--step-0);line-height:1.7">
@@ -1535,6 +1527,22 @@
                   daleko od najveće gužve, uz more.
                 </p>
               </div>
+              <!-- Fotografija trga. Bila je hero dok plakat nije objavljen; ovdje
+                   ilustruje atmosferu, pa je lazy i uža jer je portretna. -->
+              <figure style="margin-top:var(--sp-md);max-width:460px">
+                <picture>
+                  <source media="(max-width: 639px)" srcset="images/docek-mobile.webp" type="image/webp">
+                  <source media="(min-width: 640px)" srcset="images/docek.webp" type="image/webp">
+                  <img src="images/docek.jpg"
+                       alt="Doček Nove godine na Trgu Nikole Đurkovića u Herceg Novom - mnoštvo posjetilaca uz muziku i vatromet"
+                       width="1080" height="1350"
+                       style="width:100%;height:auto;border-radius:var(--radius-lg)"
+                       loading="lazy" decoding="async">
+                </picture>
+                <figcaption style="font-size:var(--step--1);color:var(--c-muted);margin-top:0.6em">
+                  Novogodišnja noć na Trgu Nikole Đurkovića.
+                </figcaption>
+              </figure>
             </section>
 
             <!-- DOČEK U RESTORANIMA -->
