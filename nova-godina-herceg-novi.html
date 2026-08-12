@@ -18,9 +18,12 @@
   <meta property="og:description" content="Doček Nove 2027. u Herceg Novom: Saša Matić i Dženan Lončarević 31.12, Nataša Bekvalac i Adi Šoše 1.1, orkestar Aleksandra Sofronijevića 2.1. Trg Nikole Đurkovića, besplatan ulaz, vatromet nad Bokom i smještaj 100 m od plaže.">
   <meta property="og:url" content="https://apartmani-igalo.com/nova-godina-herceg-novi.html">
   <meta property="og:site_name" content="Apartmani Igalo Monako">
-  <meta property="og:image" content="https://apartmani-igalo.com/images/docek.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <!-- Plakat nosi cijeli lineup kao tekst, pa je bolji share asset od fotografije trga.
+       Dimenzije su stvarne - ranije je ovdje pisalo 1200x630, a docek.jpg je 1080x1350. -->
+  <meta property="og:image" content="https://apartmani-igalo.com/images/docek-2027-plakat.jpg">
+  <meta property="og:image:width" content="1540">
+  <meta property="og:image:height" content="1086">
+  <meta property="og:image:alt" content="Zvanični plakat dočeka Nove 2027. godine u Herceg Novom na Trgu Nikole Đurkovića">
   <meta property="og:locale" content="sr_RS">
   <meta property="article:published_time" content="2025-10-01T08:00:00+02:00">
   <meta property="article:modified_time" content="2026-08-12T09:00:00+02:00">
@@ -29,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nova Godina u Herceg Novom 2027 — Program, Izvođači i Smještaj">
   <meta name="twitter:description" content="Trodnevni doček 2027. na Trgu Nikole Đurkovića: Saša Matić i Dženan Lončarević, Nataša Bekvalac i Adi Šoše, orkestar Aleksandra Sofronijevića. Smještaj 100 m od plaže.">
-  <meta name="twitter:image" content="https://apartmani-igalo.com/images/docek.jpg">
+  <meta name="twitter:image" content="https://apartmani-igalo.com/images/docek-2027-plakat.jpg">
 
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE - PRECONNECT / PRELOAD
@@ -66,7 +69,10 @@
         "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#article",
         "headline": "Nova Godina u Herceg Novom 2027 - Program, Izvođači i Smještaj",
         "description": "Zvanični program dočeka Nove 2027. godine u Herceg Novom: trodnevni koncerti na Trgu Nikole Đurkovića - Saša Matić i Dženan Lončarević 31. decembra, Nataša Bekvalac i Adi Šoše 1. januara, orkestar Aleksandra Sofronijevića 2. januara. Vatromet, Dječija Nova godina, doček u restoranima i smještaj.",
-        "image": "https://apartmani-igalo.com/images/docek.jpg",
+        "image": [
+          "https://apartmani-igalo.com/images/docek-2027-plakat.jpg",
+          "https://apartmani-igalo.com/images/docek.jpg"
+        ],
         "datePublished": "2025-10-01T08:00:00+02:00",
         "dateModified": "2026-08-12T09:00:00+02:00",
         "inLanguage": "sr-Latn-ME",
@@ -390,7 +396,7 @@
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "isAccessibleForFree": true,
         "inLanguage": "sr-Latn-ME",
-        "image": "https://apartmani-igalo.com/images/docek.jpg",
+        "image": "https://apartmani-igalo.com/images/docek-2027-plakat.jpg",
         "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#program",
         "location": {
           "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#trg"
@@ -423,7 +429,7 @@
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "isAccessibleForFree": true,
         "inLanguage": "sr-Latn-ME",
-        "image": "https://apartmani-igalo.com/images/docek.jpg",
+        "image": "https://apartmani-igalo.com/images/docek-2027-plakat.jpg",
         "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#program",
         "location": {
           "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#trg"
@@ -456,7 +462,7 @@
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "isAccessibleForFree": true,
         "inLanguage": "sr-Latn-ME",
-        "image": "https://apartmani-igalo.com/images/docek.jpg",
+        "image": "https://apartmani-igalo.com/images/docek-2027-plakat.jpg",
         "url": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#program",
         "location": {
           "@id": "https://apartmani-igalo.com/nova-godina-herceg-novi.html#trg"
@@ -1379,19 +1385,24 @@
 
               </div>
 
-              <!-- Zvanični plakat "Nova u Herceg Novom 2027" - blok je spreman;
-                   otkomentarisati čim slika bude u images/docek-2027-plakat.webp
+              <!-- Zvanični plakat. Ispod prevoja, pa lazy; mobilna varijanta je
+                   760w jer je sadržajna kolona na telefonu ~350 CSS px. -->
               <figure style="margin-top:clamp(2rem,4vw,3rem)">
-                <img src="images/docek-2027-plakat.webp"
-                     alt="Zvanični plakat - Nova u Herceg Novom 2027, Trg Nikole Đurkovića: 31.12. Saša Matić i Dženan Lončarević, 1.1. Nataša Bekvalac i Adi Šoše, 2.1. Orkestar Aleksandra Sofronijevića"
-                     width="1516" height="1080"
-                     style="width:100%;height:auto;border-radius:var(--radius-lg)"
-                     loading="lazy" decoding="async">
+                <picture>
+                  <source type="image/webp"
+                          srcset="images/docek-2027-plakat-760.webp 760w,
+                                  images/docek-2027-plakat.webp 1540w"
+                          sizes="(min-width: 901px) 700px, calc(100vw - 2.5rem)">
+                  <img src="images/docek-2027-plakat.jpg"
+                       alt="Zvanični plakat - Nova u Herceg Novom 2027, Trg Nikole Đurkovića: 31.12. Saša Matić i Dženan Lončarević, 1.1. Nataša Bekvalac i Adi Šoše, 2.1. Orkestar Aleksandra Sofronijevića"
+                       width="1540" height="1086"
+                       style="width:100%;height:auto;border-radius:var(--radius-lg)"
+                       loading="lazy" decoding="async">
+                </picture>
                 <figcaption style="font-size:var(--step--1);color:var(--c-muted);margin-top:0.6em">
                   Zvanični plakat dočeka - Opština Herceg Novi i JUK Herceg Fest.
                 </figcaption>
               </figure>
-              -->
 
               <blockquote style="margin-top:clamp(2rem,4vw,3rem);background:var(--c-sand);border-left:3px solid var(--c-teal);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--sp-md)">
                 <p style="margin-bottom:0.75em;font-size:var(--step-0);line-height:1.7">
