@@ -1,0 +1,636 @@
+{
+ "report": "YoY 1-14 August 2025 vs 2026",
+ "note": "GSC data ends 2026-08-14; 15-16 August not yet available",
+ "totals": {
+  "web": {
+   "2025": {
+    "clicks": 6460,
+    "impressions": 103363,
+    "ctr": 6.25,
+    "position": 11.361
+   },
+   "2026": {
+    "clicks": 3776,
+    "impressions": 60785,
+    "ctr": 6.212,
+    "position": 5.362
+   }
+  },
+  "image": {
+   "2025": {
+    "clicks": 749,
+    "impressions": 27803,
+    "ctr": 2.694,
+    "position": 8.158
+   },
+   "2026": {
+    "clicks": 391,
+    "impressions": 20601,
+    "ctr": 1.898,
+    "position": 14.353
+   }
+  }
+ },
+ "headline": "web clicks 6460 -> 3776 (-41.5%), position 11.36 -> 5.36",
+ "monthly_yoy": [
+  {
+   "month": "Apr",
+   "y2025": 2561,
+   "y2026": 908,
+   "pct": -64.5,
+   "pos2025": 8.18,
+   "pos2026": 6.67
+  },
+  {
+   "month": "May",
+   "y2025": 4495,
+   "y2026": 1461,
+   "pct": -67.5,
+   "pos2025": 8.0,
+   "pos2026": 7.68
+  },
+  {
+   "month": "Jun",
+   "y2025": 11360,
+   "y2026": 3160,
+   "pct": -72.2,
+   "pos2025": 10.15,
+   "pos2026": 6.45
+  },
+  {
+   "month": "Jul",
+   "y2025": 14906,
+   "y2026": 7822,
+   "pct": -47.5,
+   "pos2025": 10.44,
+   "pos2026": 5.5
+  },
+  {
+   "month": "Aug1-14",
+   "y2025": 6460,
+   "y2026": 3776,
+   "pct": -41.5,
+   "pos2025": 11.36,
+   "pos2026": 5.36
+  }
+ ],
+ "trend": "gap narrowing: -72% (Jun) -> -47.5% (Jul) -> -41.5% (Aug)",
+ "decomposition": {
+  "total_click_loss": -2684,
+  "a_herceg_novi_head_term": {
+   "clicks": -123,
+   "impressions": -21692
+  },
+  "b_position1_ctr_collapse": {
+   "clicks": -917,
+   "impressions": -154
+  },
+  "c_long_tail_remainder": {
+   "clicks": -1644,
+   "impressions": -20732
+  }
+ },
+ "position1_cluster": {
+  "queries": 26,
+  "2025": {
+   "clicks": 2059,
+   "impressions": 5763,
+   "ctr": 35.73,
+   "position": 1.13
+  },
+  "2026": {
+   "clicks": 1142,
+   "impressions": 5609,
+   "ctr": 20.36,
+   "position": 1.35
+  },
+  "verdict": "impressions flat, position flat, CTR -43% -> SERP features above organic #1",
+  "worst": {
+   "igalo plaze": {
+    "ctr2025": 35.4,
+    "ctr2026": 9.0,
+    "pos2025": 1.04,
+    "pos2026": 1.15
+   },
+   "plaze igalo": {
+    "ctr2025": 52.1,
+    "ctr2026": 17.6
+   },
+   "igalo plaza": {
+    "ctr2025": 28.2,
+    "ctr2026": 11.1,
+    "pos2025": 1.27,
+    "pos2026": 1.08
+   }
+  }
+ },
+ "herceg_novi_head_term_monthly": {
+  "2025-04": 11714,
+  "2025-06": 35067,
+  "2025-07": 54161,
+  "2025-08": 34757,
+  "2025-10": 6519,
+  "2025-12": 1314,
+  "2026-01": 867,
+  "2026-02": 8,
+  "2026-03": 0,
+  "2026-07": 1737,
+  "2026-08": 195
+ },
+ "herceg_novi_note": "held position ~11 Apr 2025 - Jan 2026, vanished Feb 2026, before this engagement began",
+ "pages_yoy": [
+  {
+   "page": "https://apartmani-igalo.com/vesti/plaze-herceg-novi.html",
+   "y2025": {
+    "clicks": 4140,
+    "impressions": 42976,
+    "position": 15.79
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html",
+   "y2025": {
+    "clicks": 995,
+    "impressions": 32933,
+    "position": 10.21
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restorani-herceg-novi.html",
+   "y2025": {
+    "clicks": 423,
+    "impressions": 11445,
+    "position": 6.59
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/blatna-plaza.html",
+   "y2025": {
+    "clicks": 350,
+    "impressions": 4167,
+    "position": 5.1
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html",
+   "y2025": {
+    "clicks": 283,
+    "impressions": 10487,
+    "position": 8.01
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/",
+   "y2025": {
+    "clicks": 225,
+    "impressions": 7159,
+    "position": 7.72
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/beaches-herceg-novi.html",
+   "y2025": {
+    "clicks": 72,
+    "impressions": 3650,
+    "position": 6.74
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
+   "y2025": {
+    "clicks": 26,
+    "impressions": 529,
+    "position": 9.04
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html",
+   "y2025": {
+    "clicks": 20,
+    "impressions": 1672,
+    "position": 8.21
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/about.html",
+   "y2025": {
+    "clicks": 10,
+    "impressions": 635,
+    "position": 9.69
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html",
+   "y2025": {
+    "clicks": 4,
+    "impressions": 677,
+    "position": 13.92
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/praznik-mimoze-program.html",
+   "y2025": {
+    "clicks": 3,
+    "impressions": 655,
+    "position": 9.72
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/blog.html",
+   "y2025": {
+    "clicks": 0,
+    "impressions": 20,
+    "position": 23.95
+   }
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/covid-herceg-novi.html",
+   "y2025": {
+    "clicks": 0,
+    "impressions": 25,
+    "position": 4.56
+   }
+  }
+ ],
+ "pages_2026": [
+  {
+   "page": "https://apartmani-igalo.com/vesti/plaze-herceg-novi.html",
+   "clicks": 2423,
+   "impressions": 22801,
+   "position": 4.4
+  },
+  {
+   "page": "https://apartmani-igalo.com/blatna-plaza.html",
+   "clicks": 335,
+   "impressions": 8040,
+   "position": 3.62
+  },
+  {
+   "page": "https://apartmani-igalo.com/",
+   "clicks": 249,
+   "impressions": 5594,
+   "position": 8.11
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-razloga-da-posetite-igalo.html",
+   "clicks": 229,
+   "impressions": 10389,
+   "position": 6.55
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restorani-herceg-novi.html",
+   "clicks": 171,
+   "impressions": 8420,
+   "position": 6.81
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/atrakcije-herceg-novi.html",
+   "clicks": 118,
+   "impressions": 3484,
+   "position": 7.19
+  },
+  {
+   "page": "https://apartmani-igalo.com/nova-godina-herceg-novi.html",
+   "clicks": 80,
+   "impressions": 758,
+   "position": 5.56
+  },
+  {
+   "page": "https://apartmani-igalo.com/?utm_source=gbp&utm_medium=organic",
+   "clicks": 51,
+   "impressions": 4217,
+   "position": 2.76
+  },
+  {
+   "page": "https://apartmani-igalo.com/praznik-mimoze-program.html",
+   "clicks": 45,
+   "impressions": 699,
+   "position": 6.55
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restorani-igalo.html",
+   "clicks": 20,
+   "impressions": 853,
+   "position": 7.63
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/beaches-herceg-novi.html",
+   "clicks": 17,
+   "impressions": 1134,
+   "position": 6.79
+  },
+  {
+   "page": "https://apartmani-igalo.com/iznajmljivanje-bicikla-herceg-novi-igalo.html",
+   "clicks": 14,
+   "impressions": 194,
+   "position": 5.93
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/titova-vila-galeb-igalo.html",
+   "clicks": 10,
+   "impressions": 590,
+   "position": 8.46
+  },
+  {
+   "page": "https://apartmani-igalo.com/en/",
+   "clicks": 7,
+   "impressions": 203,
+   "position": 8.4
+  },
+  {
+   "page": "https://apartmani-igalo.com/mesecni-najam-igalo.html",
+   "clicks": 7,
+   "impressions": 196,
+   "position": 8.03
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/restaurants-herceg-novi.html",
+   "clicks": 7,
+   "impressions": 997,
+   "position": 8.55
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/banja-igalo-institut.html",
+   "clicks": 6,
+   "impressions": 481,
+   "position": 8.65
+  },
+  {
+   "page": "https://apartmani-igalo.com/mimosa-festival-herceg-novi.html",
+   "clicks": 4,
+   "impressions": 96,
+   "position": 6.75
+  },
+  {
+   "page": "https://apartmani-igalo.com/about.html",
+   "clicks": 3,
+   "impressions": 176,
+   "position": 9.89
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html",
+   "clicks": 3,
+   "impressions": 614,
+   "position": 8.76
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/zanjice-plaza-izlet.html",
+   "clicks": 3,
+   "impressions": 91,
+   "position": 6.4
+  },
+  {
+   "page": "https://apartmani-igalo.com/blog.html",
+   "clicks": 1,
+   "impressions": 62,
+   "position": 8.61
+  },
+  {
+   "page": "https://apartmani-igalo.com/cesta-pitanja.html",
+   "clicks": 0,
+   "impressions": 1,
+   "position": 4
+  },
+  {
+   "page": "https://apartmani-igalo.com/en/about.html",
+   "clicks": 0,
+   "impressions": 27,
+   "position": 10.78
+  },
+  {
+   "page": "https://apartmani-igalo.com/en/blatna-plaza.html",
+   "clicks": 0,
+   "impressions": 16,
+   "position": 5.62
+  },
+  {
+   "page": "https://apartmani-igalo.com/monthly-rental-igalo.html",
+   "clicks": 0,
+   "impressions": 8,
+   "position": 5.38
+  },
+  {
+   "page": "https://apartmani-igalo.com/rent-a-bike-herceg-novi-igalo.html",
+   "clicks": 0,
+   "impressions": 28,
+   "position": 7.43
+  },
+  {
+   "page": "https://apartmani-igalo.com/ru/",
+   "clicks": 0,
+   "impressions": 5,
+   "position": 8.4
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/kafici-barovi-herceg-novi-igalo.html",
+   "clicks": 0,
+   "impressions": 3,
+   "position": 8.67
+  },
+  {
+   "page": "https://apartmani-igalo.com/vesti/temperatura-mora-igalo.html",
+   "clicks": 0,
+   "impressions": 1,
+   "position": 6
+  },
+  {
+   "page": "https://www.apartmani-igalo.com/",
+   "clicks": 0,
+   "impressions": 1,
+   "position": 1
+  }
+ ],
+ "devices": {
+  "2025": [
+   {
+    "d": "MOBILE",
+    "clicks": 6056,
+    "impressions": 86803,
+    "position": 8.69
+   },
+   {
+    "d": "DESKTOP",
+    "clicks": 378,
+    "impressions": 16193,
+    "position": 25.78
+   },
+   {
+    "d": "TABLET",
+    "clicks": 26,
+    "impressions": 367,
+    "position": 7.25
+   }
+  ],
+  "2026": [
+   {
+    "d": "MOBILE",
+    "clicks": 3520,
+    "impressions": 55902,
+    "position": 5.21
+   },
+   {
+    "d": "DESKTOP",
+    "clicks": 247,
+    "impressions": 4711,
+    "position": 7.09
+   },
+   {
+    "d": "TABLET",
+    "clicks": 9,
+    "impressions": 172,
+    "position": 5.9
+   }
+  ]
+ },
+ "countries": {
+  "2025": [
+   {
+    "c": "mne",
+    "clicks": 2607,
+    "impressions": 38167,
+    "position": 7.92
+   },
+   {
+    "c": "srb",
+    "clicks": 2365,
+    "impressions": 36186,
+    "position": 9.53
+   },
+   {
+    "c": "bih",
+    "clicks": 1078,
+    "impressions": 16562,
+    "position": 10.56
+   },
+   {
+    "c": "hrv",
+    "clicks": 148,
+    "impressions": 2274,
+    "position": 21.93
+   },
+   {
+    "c": "deu",
+    "clicks": 57,
+    "impressions": 1432,
+    "position": 26.65
+   },
+   {
+    "c": "mkd",
+    "clicks": 36,
+    "impressions": 328,
+    "position": 8.36
+   },
+   {
+    "c": "aut",
+    "clicks": 35,
+    "impressions": 659,
+    "position": 17.76
+   },
+   {
+    "c": "xkk",
+    "clicks": 17,
+    "impressions": 217,
+    "position": 6.35
+   },
+   {
+    "c": "svn",
+    "clicks": 13,
+    "impressions": 364,
+    "position": 27.7
+   },
+   {
+    "c": "swe",
+    "clicks": 11,
+    "impressions": 245,
+    "position": 19.0
+   },
+   {
+    "c": "nld",
+    "clicks": 10,
+    "impressions": 272,
+    "position": 34.61
+   },
+   {
+    "c": "nor",
+    "clicks": 10,
+    "impressions": 135,
+    "position": 24.36
+   }
+  ],
+  "2026": [
+   {
+    "c": "mne",
+    "clicks": 1475,
+    "impressions": 22789,
+    "position": 5.57
+   },
+   {
+    "c": "srb",
+    "clicks": 1363,
+    "impressions": 18737,
+    "position": 4.45
+   },
+   {
+    "c": "bih",
+    "clicks": 751,
+    "impressions": 13120,
+    "position": 5.88
+   },
+   {
+    "c": "hrv",
+    "clicks": 51,
+    "impressions": 1252,
+    "position": 5.72
+   },
+   {
+    "c": "aut",
+    "clicks": 26,
+    "impressions": 457,
+    "position": 4.53
+   },
+   {
+    "c": "mkd",
+    "clicks": 22,
+    "impressions": 227,
+    "position": 5.08
+   },
+   {
+    "c": "deu",
+    "clicks": 18,
+    "impressions": 919,
+    "position": 5.1
+   },
+   {
+    "c": "che",
+    "clicks": 15,
+    "impressions": 158,
+    "position": 6.77
+   },
+   {
+    "c": "svn",
+    "clicks": 10,
+    "impressions": 218,
+    "position": 5.14
+   },
+   {
+    "c": "xkk",
+    "clicks": 7,
+    "impressions": 126,
+    "position": 5.2
+   },
+   {
+    "c": "swe",
+    "clicks": 5,
+    "impressions": 184,
+    "position": 8.17
+   },
+   {
+    "c": "gbr",
+    "clicks": 4,
+    "impressions": 290,
+    "position": 8.1
+   }
+  ]
+ },
+ "methodology_failure": "every daily report compared current 28d vs prior 28d (month over month), never year over year; the +53% to +96% figures were within-2026 seasonal ramp"
+}
