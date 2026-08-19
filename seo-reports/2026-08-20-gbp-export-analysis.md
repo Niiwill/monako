@@ -97,11 +97,12 @@ mjerim u GSC-u o GBP URL-u pokriva **manje od petine** onoga što taj profil
 zapravo radi. Kada u dnevnom izvještaju napišem „GBP URL: 22 klika ove
 sedmice", stvarni obim te iste površine je oko 115 kontakata.
 
-Za proporciju, na poravnatom prozoru: GSC bilježi **5.813 impresija** na GBP
-URL-u, prosječna pozicija **2,77**. Od toga 68 klikova na sajt (CTR 1,07%) —
-ali 346 interakcija sa profilom. Interakcije dolaze i sa Mapa i sa direktnih
-pregleda profila, pa ovo nije čista stopa konverzije; ali red veličine je
-jasan: **ljudi mnogo češće djeluju unutar profila nego što odu na sajt.**
+Za proporciju, na prozoru gdje obje mjere postoje (25.7 – 12.8.): GSC bilježi
+**5.813 impresija** na GBP URL-u, prosječna pozicija **2,77**, iz toga **62
+klika** na sajt (CTR 1,07%) — a profil je u istom periodu imao **318
+interakcija**. Interakcije dolaze i sa Mapa i sa direktnih pregleda profila,
+pa ovo nije čista stopa konverzije (vidi §5); ali red veličine je jasan:
+**ljudi mnogo češće djeluju unutar profila nego što odu na sajt.**
 
 To je argument protiv svakog budućeg rada čiji je cilj „povećati CTR ka
 sajtu" sa ove površine. Nije to gdje je novac.
@@ -110,16 +111,24 @@ sajtu" sa ove površine. Nije to gdje je novac.
 
 ## 4. Unakrsna provjera: GSC i GBP mjere istu stvar
 
-| Prozor | GBP „website clicks" | GSC klikovi na `utm_source=gbp` | Razlika |
-|---|---|---|---|
-| 23.7 – 12.8. (obračunato) | 68 | 62 | +9,7% |
-| 23.7 – 16.8. (sa repom) | 72 | 72 | 0,0% |
+Poređenje ima smisla tek **od 25.7.**, jer prije toga utm oznaka nije
+postojala: 23. i 24.7. GBP bilježi 11 klikova na sajt, a GSC na tom URL-u ima
+**nula impresija.** Ti klikovi su išli na neoznačenu naslovnu i nevidljivi su
+kao GBP klikovi.
 
-Dnevno se razilaze zbog vremenske zone i atribucije. Poklapanje na 72:72 je
-slučajno — GBP blago pretiče kroz cijeli prozor, a nedovršeni rep to poništi.
-**Ali dvije nezavisne mjere se slažu unutar 10%,** što potvrđuje ono što sam
-dosad izvodio posredno: red `?utm_source=gbp&utm_medium=organic` u GSC-u
-**jeste** površina klikova sa Business Profila, a ne neki artefakt.
+| Prozor | GBP „website clicks" | GSC klikovi na `utm_source=gbp` | Odnos |
+|---|---|---|---|
+| **25.7 – 12.8.** (oznaka postoji, rep isključen) | **57** | **62** | **0,92** |
+| 23.7 – 16.8. (kako je izgledalo na prvi pogled) | 72 | 72 | 1,00 |
+
+Poklapanje 72:72 je bilo slučajno — sastavljeno od 11 neoznačenih klikova na
+početku i nedovršenog repa na kraju, koji su se poništili. **Pravi odnos je
+0,92**: GBP prijavljuje 8% manje, što je očekivano jer GBP dedupira ponovljene
+klikove istog korisnika.
+
+Dvije nezavisne mjere se slažu unutar 8%. To potvrđuje ono što sam dosad
+izvodio posredno: red `?utm_source=gbp&utm_medium=organic` u GSC-u **jeste**
+površina klikova sa Business Profila, a ne artefakt.
 
 Uz to, tri dana preklapanja sa prošlim exportom (25–27.7.) poklapaju se
 **tačno na svih pet kanala** (pozivi 16, sajt 5, rute 21, poruke 3,
@@ -127,7 +136,64 @@ interakcije 42). Podaci su konzistentni između izvoza.
 
 ---
 
-## 5. ⭐ Uklanjanje call bara sa `/vesti` — hipoteza o šteti odbačena
+## 5. ⭐ Impresije: šta ovaj export **nema**, i zašto to nije sitnica
+
+Export sadrži isključivo **akcije** — pet kanala interakcija. Nema:
+
+- **pregleda profila** (koliko je ljudi uopšte vidjelo profil),
+- **podjele Search / Maps**,
+- **podjele mobilni / desktop**,
+- **upita koji su prikazali profil** („searches breakdown").
+
+Bez pregleda nema imenioca, pa nijedan broj iz tabela iznad nije stopa
+konverzije — svi su apsolutni obim.
+
+### Koliko daleko nosi GSC kao zamjena
+
+GSC ima impresije za **jednu** od te dvije površine — Google Search. Ako te
+impresije uzmem kao imenilac:
+
+| Blok | GSC impresije | Interakcije | **Inter./1000** | Pozivi/1000 |
+|---|---|---|---|---|
+| 25–29.7. | 1.458 | 70 | **48,0** | 21,9 |
+| 30.7–5.8. | 2.412 | 116 | **48,1** | 23,6 |
+| 6–12.8. | 1.943 | 132 | 67,9 | 40,7 |
+| 6–12.8. bez 8.8. | 1.684 | 94 | **55,8** | 30,9 |
+
+Prva dva bloka su praktično identična (48,0 i 48,1), treći je oko 16% viši.
+Stabilno — dok se ne pogleda smjer.
+
+### Ovdje je pravi nalaz
+
+**Od drugog do trećeg bloka GSC impresije su pale 19% (2.412 → 1.943, jer
+sezona pada), a interakcije sa profilom su porasle 14% (116 → 132.)**
+
+Da sve interakcije dolaze sa Search površine, kretale bi se zajedno. Ne
+kreću se. To znači da **značajan i rastući dio kontakata dolazi sa Mapa**, gdje
+nemamo nikakav uvid — ni impresije, ni pozicije, ni upite.
+
+Drugim riječima: nedostajući dio nije kozmetički. To je površina koja
+najvjerovatnije raste dok ova koju mjerim pada, a cijela moja dnevna analiza
+je slijepa za nju.
+
+### Šta tražiti u sljedećem exportu
+
+Sa iste „Performance" stranice GBP-a, pored „Business profile interactions",
+treba preuzeti i:
+
+1. **Pregledi profila sa podjelom po platformi i uređaju** — Google Search
+   mobilni/desktop i Google Maps mobilni/desktop. Ovo daje imenilac i, prvi
+   put, veličinu Maps kanala.
+2. **Searches breakdown** — upiti po kojima se profil prikazao. Ovo je
+   najvrednije od svega: pokazuje da li ljudi dolaze po imenu (brend) ili po
+   kategoriji („apartmani igalo"), što je odluka koju sadržajna strategija
+   pravi naslijepo već dva mjeseca.
+
+Isti prozor kao ovaj (od 13.8. unazad) da se mogu spojiti.
+
+---
+
+## 6. ⭐ Uklanjanje call bara sa `/vesti` — hipoteza o šteti odbačena
 
 Ovo je otvorena stavka od 26. jula. Call bar je uklonjen sa članaka, a rizik
 je bio da će pozivi pasti. Do sada se nije moglo izmjeriti bez exporta.
@@ -146,7 +212,7 @@ Stavka se zatvara sa ishodom: **nema mjerljive štete.**
 
 ---
 
-## 6. Rezervacije: nula, osma sedmica zaredom
+## 7. Rezervacije: nula, osma sedmica zaredom
 
 Jedini kanal koji je i dalje prazan. Dolazna namjera je eksplicitno o cijeni i
 raspoloživosti — GBP URL drži poziciju 1,20 na `apartmani igalo cijene` i 2,50
@@ -162,7 +228,7 @@ vodi na kontakt i uslove, ne na cjenovnik po noćenju.
 
 ---
 
-## 7. Šta se iz ovih podataka **ne** može zaključiti
+## 8. Šta se iz ovih podataka **ne** može zaključiti
 
 - **Dan u sedmici.** Poravnati prozor daje samo 3 opažanja po danu (srijeda
   12,0 poziva/dan, petak 4,3). Sa n=3 i jednim danom od 27 poziva u uzorku, to
@@ -173,10 +239,14 @@ vodi na kontakt i uslove, ne na cjenovnik po noćenju.
 - **Poređenje sa prošlom godinom.** GBP export ne ide unazad; nemamo lanjske
   brojke za profil. U GSC-u je sezona −42,5% YoY, pa je rast poziva u opadajućoj
   sezoni utoliko zanimljiviji — ali to je nagovještaj, ne nalaz.
+- **Bilo koja stopa konverzije profila.** Nema pregleda profila u exportu
+  (§5). Sve brojke ovdje su obim, ne stope.
+- **Koliko posla dolazi sa Mapa.** Znam da nije zanemarljivo i da vjerovatno
+  raste, ali ne znam koliko. To je najveća rupa u cijelom mjerenju.
 
 ---
 
-## 8. Nove osnove za sljedeći export
+## 9. Nove osnove za sljedeći export
 
 | Metrika | Osnova (/dan, 23.7 – 12.8.) |
 |---|---|
@@ -193,12 +263,15 @@ tako da pokrije i dane koje sam ovdje morao odbaciti. I dalje ostaviti zadnjih
 
 ---
 
-## 9. Šta slijedi
+## 10. Šta slijedi
 
-1. **Rezervaciono dugme na profilu → `/#cjenovnik`.** Jedini prazan kanal,
+1. **Export pregleda profila i „searches breakdown" (§5).** Sada je ovo prva
+   stavka, ispred rezervacionog dugmeta — jer bez nje ne znam koliko je Maps
+   kanal velik, a podaci nagovještavaju da raste dok Search pada.
+2. **Rezervaciono dugme na profilu → `/#cjenovnik`.** Jedini prazan kanal,
    osma sedmica. Najjeftinija izmjena u cijelom spisku.
-2. **Odgovor na pitanje o 8. avgustu.** Ako je bio jednokratan događaj,
+3. **Odgovor na pitanje o 8. avgustu.** Ako je bio jednokratan događaj,
    osnova za pozive je 7,70, ne 8,62.
-3. **Ništa na sajtu.** Ovi podaci ne traže nijednu izmjenu koda. Odnos
+4. **Ništa na sajtu.** Ovi podaci ne traže nijednu izmjenu koda. Odnos
    2,66 : 1 u korist telefona potvrđuje postojeće pravilo — ne dodavati korake
    prije `tel:` dodira.
