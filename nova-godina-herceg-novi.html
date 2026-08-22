@@ -1224,7 +1224,37 @@
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: none; }
     }
+    /* ── ADSENSE ─────────────────────────────────
+         Jedna ručna in-article jedinica u sredini teksta (vidi #ad-inarticle).
+         Guard pravila drže fiksno široke <ins> jedinice unutar viewporta -
+         bez njih oglas može razvući layout na telefonu. ── */
+    .content-grid > * { min-width: 0; }
+    .article-ad { margin: clamp(2rem, 4vw, 3rem) 0; }
+    .article-ad__label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--c-muted);
+      margin-bottom: 0.4em;
+    }
+    ins.adsbygoogle {
+      display: block !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    .google-auto-placed {
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      overflow: hidden;
+    }
+    ins.adsbygoogle iframe,
+    .google-auto-placed iframe { max-width: 100% !important; }
   </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -1560,6 +1590,25 @@
                 </p>
               </div>
             </section>
+
+            <!-- ══ ADSENSE: JEDINI OGLAS NA STRANICI ═══════════════
+                 ZAMIJENI XXXXXXXXXX brojem jedinice iz AdSense naloga:
+                 Oglasi → Po jedinici oglasa → U članku (In-article) →
+                 kopiraj vrijednost data-ad-slot iz generisanog koda.
+                 Dok stoji XXXXXXXXXX oglas se NE prikazuje.
+                 Ne dodavati druge jedinice na ovu stranicu. ── -->
+            <aside class="article-ad" id="ad-inarticle" aria-label="Oglas">
+              <span class="article-ad__label">Oglas</span>
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-5503948606321438"
+                   data-ad-slot="XXXXXXXXXX"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </aside>
 
             <!-- DOČEK U RESTORANIMA -->
             <section id="restorani" style="margin-top:clamp(2rem,4vw,3rem)"
