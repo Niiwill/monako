@@ -174,4 +174,51 @@ kojem su srpske danas. Ako je razlika naša greška u signalima, to je nekoliko
 stotina klikova godišnje na engleskom tržištu, koje je jedino tržište gdje
 `apartmani-igalo.com` nema domaću konkurenciju u pretrazi.
 
-**Ne šaljem ništa danas.** Izbor između A i B je vaš, a razlika je materijalna.
+---
+
+## 8. Urađeno: opcija A, samo na test-paru
+
+Primijenjeno 23.8. na grani `claude/daily-search-console-analysis-u1l1rq`.
+
+**Deklarisani skupovi slika su sada potpuno disjunktni** — presjek 0, gdje su
+prije bile 4 zajedničke:
+
+| | Slike u sitemapu |
+|---|---|
+| **SR `plaze`** | `plaza-herceg-novi-650.webp`, `blatna-plaza-650.webp`, `kruso-650.webp`, `zanjice.jpg`, `plaza-topla.jpg`, `plaza-tunel.jpg`, `zalo.jpg` |
+| **EN `beaches`** | `plaza-herceg-novi.jpg`, `blatna-plaza.jpg`, `kruso.jpg`, `zanjice-700.webp`, `plaza-topla-700.webp`, `plaza-tunel-700.webp`, `zalo-700.webp` |
+
+Konkretno:
+
+1. **SR schema više ne tvrdi dvije slike koje ne prikazuje.**
+   `plaza-herceg-novi.jpg` → `plaza-herceg-novi-650.webp`,
+   `kruso.jpg` → `kruso-650.webp` (uz tačne dimenzije). To su bile jedine dvije
+   neistinite tvrdnje na paru.
+2. **EN sitemap uzima WebP varijante koje samo on servira** umjesto četiri JPG-a
+   koje dijeli sa srpskom stranicom.
+3. **EN schema** `zanjice.jpg` → `zanjice-700.webp`.
+
+**Nijedan fajl nije dodat ni obrisan, nijedan `<img>` ni `<source>` nije
+diran.** Stranice se renderuju identično; promijenjeni su samo signali. Sve
+deklarisane slike su provjereno one koje stranica zaista servira, JSON-LD je
+validan, XML validan, 31 URL.
+
+`lastmod` obje stranice pomjeren na 2026-08-23.
+
+### Šta ovo namjerno **ne** radi
+
+- **Ne dira `restaurants-herceg-novi`** — to je kontrola i mora ostati sa
+  svojih 19/19 dijeljenih slika. Bez toga test ništa ne mjeri.
+- **Ne dira ostalih 33 slike** koje su širom sajta prijavljene pod više
+  URL-ova. Tek ako test prođe.
+- **Ne rješava dijeljenje u samom HTML-u.** Obje stranice i dalje imaju
+  `<img src="zanjice.jpg">`. Ovo je razdvajanje na nivou signala, ne u
+  korijenu — to je opcija B.
+
+### Kalendar
+
+Promjena mora biti na `master`-u da bi je Google vidio. Obje stranice su
+kravlovane 22.8., pa je sljedeći kravl vjerovatno u prvoj sedmici septembra.
+
+**Prvo čitanje: 4 sedmice od rekravla.** Pragovi iz §6 ostaju nepromijenjeni —
+zapisani prije podataka i ne diraju se.
