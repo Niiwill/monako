@@ -39,11 +39,10 @@
   <!-- Fonts are self-hosted at font-display:optional: a webfont that arrives after
        first paint is simply not used, so text never reflows once painted. That is
        what keeps CLS at zero here - the previous remote load used display=swap,
-       which reflowed the whole page when Fraunces/Inter finally arrived. -->
-  <link rel="preload" href="/fonts/fraunces-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/fraunces-normal-300-serbian.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-normal-400-serbian.woff2" as="font" type="font/woff2" crossorigin>
+       which reflowed the whole page when Fraunces/Inter finally arrived.
+       Deliberately NOT preloaded: preloading these cost 120-580 ms of LCP in
+       testing (they compete with the hero image) and buys nothing for CLS, since
+       the metric-matched fallback below renders at exactly the same size. -->
 
   <link rel="icon" type="image/png" href="/images/monako-favicon.png" sizes="192x192">
   <link rel="icon" href="/favicon.ico" sizes="48x48 32x32 16x16">

@@ -47,9 +47,10 @@
 <!-- Fonts are self-hosted at font-display:optional: a webfont that arrives after
      first paint is simply not used, so text never reflows once painted. The remote
      Google Fonts load this replaces used display=swap, which reflowed the page
-     when Cormorant/DM Sans finally arrived. Latin+Latin-Ext for ME/HR/RS chars. -->
-<link rel="preload" href="/fonts/cormorant-garamond-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/dm-sans-normal-300-latin.woff2" as="font" type="font/woff2" crossorigin>
+     when Cormorant/DM Sans finally arrived. Latin+Latin-Ext for ME/HR/RS chars.
+     Deliberately NOT preloaded: preloading these cost 120-580 ms of LCP in
+     testing (they compete with the hero image) and buys nothing for CLS, since
+     the metric-matched fallback below renders at exactly the same size. -->
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/images/monako-favicon.png" sizes="192x192">
