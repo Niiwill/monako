@@ -1253,8 +1253,11 @@
       margin-inline: 0 !important;
       box-sizing: border-box !important;
       overflow: hidden;
+      /* Rezervacija ide na samu jedinicu, ne samo na .google-auto-placed
+         omotač: auto-ads ponekad ubaci <ins> bez tog omotača, a tada
+         rezervacija na omotaču ne vrijedi ništa - mjereno CLS 0.132. */
+      min-height: 280px;
     }
-    .article-ad ins.adsbygoogle { min-height: 280px; }
     .google-auto-placed {
       max-width: 100% !important;
       margin-inline: 0 !important;
