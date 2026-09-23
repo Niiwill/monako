@@ -1441,6 +1441,18 @@
     .breadcrumb__list li + li::before { content: "/"; margin-right: 0.5em; }
     .breadcrumb__list a { color: var(--c-teal); }
     .trust-band + .trust-band { margin-top: 0; }
+  
+    /* Linkovi u tekstu: vidljivi i gdje komponenta nema pravilo za <a> (23.9.2026).
+       :where() drži specifičnost na nivou selektora `a`, pa postojeća pravila
+       komponenti i inline stilovi i dalje imaju prednost. */
+    :where(main p, main li, main dd, main td, main .faq__answer) a:where(:not([class], nav *, .ratings *)) {
+      color: var(--c-teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    :where(main p, main li, main dd, main td, main .faq__answer) a:where(:not([class], nav *, .ratings *)):hover {
+      color: var(--c-teal-dark);
+    }
   </style>
 </head>
 <body>

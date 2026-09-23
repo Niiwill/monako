@@ -1491,6 +1491,18 @@
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: none; }
     }
+  
+    /* Linkovi u tekstu: vidljivi i gdje komponenta nema pravilo za <a> (23.9.2026).
+       :where() drži specifičnost na nivou selektora `a`, pa postojeća pravila
+       komponenti i inline stilovi i dalje imaju prednost. */
+    :where(main p, main li, main dd, main td, main .faq__answer) a:where(:not([class], nav *, .ratings *)) {
+      color: var(--c-teal);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    :where(main p, main li, main dd, main td, main .faq__answer) a:where(:not([class], nav *, .ratings *)):hover {
+      color: var(--c-teal-dark);
+    }
   </style>
 </head>
 <body>
