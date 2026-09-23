@@ -982,6 +982,15 @@
     .sea-table thead th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: var(--c-muted); background: var(--c-sand); white-space: nowrap; }
     .sea-table tbody th { font-weight: 600; color: var(--c-text); white-space: nowrap; }
     .sea-table tbody tr:last-child th, .sea-table tbody tr:last-child td { border-bottom: none; }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>

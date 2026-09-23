@@ -951,6 +951,15 @@
       .faq__answer { max-height: none !important; padding-bottom: 1.2em; }
       .faq__icon { display: none; }
     }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
 </head>
 
