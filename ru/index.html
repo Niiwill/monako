@@ -1605,6 +1605,15 @@
     .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
       display: inline-flex; align-items: center; min-height: 24px;
     }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <style>
     /* Supplementary rules for the English pages: the homepage stylesheet
@@ -1862,6 +1871,13 @@
           </div>
 
         </div>
+
+        <div class="section-footer-link">
+          <a class="view-all" href="/ru/faq.html">
+            Все вопросы и ответы
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1997,15 +2013,20 @@
         </div>
 
         <div>
-          <p class="footer__heading">Быстрые ссылки</p>
+          <p class="footer__heading">Проживание</p>
           <ul class="footer__links" role="list">
-            <li><a href="/ru/">Главная</a></li>
-            <li><a href="/about.html">О нас</a></li>
-            <li><a href="/ru/faq.html">Частые вопросы</a></li>
-            <li><a href="/en/blatna-plaza.html">Blatna Plaža</a></li>
-            <li><a href="/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html">Почему стоит поехать в Игало</a></li>
-            <li><a href="/vesti/beaches-herceg-novi.html">Путеводитель по пляжам</a></li>
+            <li><a href="/ru/">Апартаменты в Игало</a></li>
             <li><a href="/monthly-rental-igalo.html">Помесячная аренда в Игало</a></li>
+            <li><a href="/ru/faq.html">Частые вопросы</a></li>
+            <li><a href="/about.html">О нас</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Путеводители</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/beaches-herceg-novi.html">Путеводитель по пляжам</a></li>
+            <li><a href="/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html">Почему стоит поехать в Игало</a></li>
+            <li><a href="/en/blatna-plaza.html">Блатна пляжа</a></li>
             <li><a href="/vesti/restaurants-herceg-novi.html">Путеводитель по ресторанам</a></li>
           </ul>
         </div>

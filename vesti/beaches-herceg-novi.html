@@ -756,6 +756,15 @@
     }
     ins.adsbygoogle iframe,
     .google-auto-placed iframe { max-width: 100% !important; }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -767,11 +776,11 @@
     <nav class="nav" aria-label="Main navigation">
       <div class="container">
         <div class="nav__inner">
-          <a class="nav__logo" href="/" aria-label="Apartmani Igalo Monako - Home">MONAKO <span>IGALO</span></a>
+          <a class="nav__logo" href="/en/" aria-label="Apartmani Igalo Monako - Home">MONAKO <span>IGALO</span></a>
           <ul class="nav__links" id="nav-menu" role="list">
-            <li><a href="/about.html" class="nav__text-link">About</a></li>
+            <li><a href="/en/about.html" class="nav__text-link">About</a></li>
             <li><a href="/blog.html" class="nav__text-link">Blog</a></li>
-            <li><a href="/blatna-plaza.html" class="nav__text-link">Mud Beach</a></li>
+            <li><a href="/en/blatna-plaza.html" class="nav__text-link">Blatna Plaža</a></li>
           </ul>
           <div class="nav__actions">
             <a class="nav__cta" href="tel:+38267558240" aria-label="Call us to book">
@@ -802,7 +811,7 @@
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
       <ol class="breadcrumb__list" role="list">
-        <li><a href="/">Home</a></li>
+        <li><a href="/en/">Home</a></li>
         <li><a href="/blog.html">Blog</a></li>
         <li><span aria-current="page">Beaches Herceg Novi</span></li>
       </ol>
@@ -915,8 +924,8 @@
                 </picture>
               </figure>
               <p style="margin-top:1em;font-size:var(--step--1);color:var(--c-muted)">
-                Monako Apartments are <strong>100 metres</strong> from this beach.
-                <a href="/blatna-plaza.html">Learn more about Blatna Plaža →</a>
+                <a href="/en/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Monako Apartments</a> are <strong>100 metres</strong> from this beach.
+                <a href="/en/blatna-plaza.html">Learn more about Blatna Plaža →</a>
               </p>
             </article>
 
@@ -1298,9 +1307,9 @@
           <article class="related-card">
             <div class="related-card__img-wrap"><img class="related-card__img" src="../images/blatna-plaza-igalo-1.webp" alt="Blatna Plaža Igalo - therapeutic mud beach" width="560" height="315" loading="lazy" decoding="async"></div>
             <div class="related-card__body">
-              <h3 class="related-card__title"><a href="/blatna-plaza.html">Blatna Plaža - The Healing Mud Beach</a></h3>
+              <h3 class="related-card__title"><a href="/en/blatna-plaza.html">Blatna Plaža - The Healing Mud Beach</a></h3>
               <p class="related-card__excerpt">Montenegro's most famous therapeutic beach, known for its radioactive mud that relieves rheumatism. Free to use and 100 m from our apartments.</p>
-              <a class="related-card__link" href="/blatna-plaza.html">Read more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
+              <a class="related-card__link" href="/en/blatna-plaza.html">Read more <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a>
             </div>
           </article>
         </div>
@@ -1317,14 +1326,22 @@
           <p class="footer__tagline">Private apartments 100 m from Blatna Plaža.<br>Dubrovačka 1, Igalo 85347, Montenegro.</p>
         </div>
         <div>
-          <p class="footer__heading">Quick Links</p>
+          <p class="footer__heading">Stay</p>
           <ul class="footer__links" role="list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/blatna-plaza.html">Mud Beach</a></li>
-            <li><a href="/vesti/beaches-herceg-novi.html">Beaches Guide</a></li>
-            <li><a href="/vesti/restaurants-herceg-novi.html">Restaurants Guide</a></li>
+            <li><a href="/en/">Apartments in Igalo</a></li>
+            <li><a href="/monthly-rental-igalo.html">Monthly rental</a></li>
+            <li><a href="/en/faq.html">FAQ</a></li>
+            <li><a href="/en/about.html">About us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Guides</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/beaches-herceg-novi.html">Beaches of Herceg Novi</a></li>
+            <li><a href="/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html">10 reasons to visit Igalo</a></li>
+            <li><a href="/en/blatna-plaza.html">Blatna Plaža mud beach</a></li>
+            <li><a href="/vesti/restaurants-herceg-novi.html">Restaurants in Herceg Novi</a></li>
+            <li><a href="/mimosa-festival-herceg-novi.html">Mimosa Festival</a></li>
           </ul>
         </div>
         <div>
@@ -1340,7 +1357,7 @@
       </div>
       <div class="footer__bottom">
         <span>© <span id="yr"></span> Apartmani Igalo Monako. All rights reserved.</span>
-        <a href="/">Home</a>
+        <a href="/en/">Home</a>
       </div>
     </div>
   </footer>

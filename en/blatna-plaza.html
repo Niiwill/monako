@@ -1088,6 +1088,15 @@
     .article-card__link, .apt-card__link, .view-all, a.article-hero__meta-item {
       display: inline-flex; align-items: center; min-height: 24px;
     }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
 </head>
 
@@ -1107,7 +1116,7 @@
           </a>
           <ul class="nav__links" id="nav-menu" role="list">
             <li><a href="/en/about.html" class="nav__text-link">About</a></li>
-            <li><a href="/#cjenovnik" class="nav__text-link">Prices</a></li>
+            <li><a href="/en/#prices" class="nav__text-link">Prices</a></li>
             <li><a href="/vesti/beaches-herceg-novi.html" class="nav__text-link">Guides</a></li>
           </ul>
           <div class="nav__actions">
@@ -1548,6 +1557,25 @@
         <div>
           <p class="footer__brand">MONAKO <span>IGALO</span></p>
           <p class="footer__tagline">Apartments 100 m from Blatna Plaža.<br>Dubrovačka 1, Igalo 85347, Montenegro.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Stay</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/en/">Apartments in Igalo</a></li>
+            <li><a href="/monthly-rental-igalo.html">Monthly rental</a></li>
+            <li><a href="/en/faq.html">FAQ</a></li>
+            <li><a href="/en/about.html">About us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Guides</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/beaches-herceg-novi.html">Beaches of Herceg Novi</a></li>
+            <li><a href="/vesti/10-reasons-why-to-travel-to-herceg-novi-montenegro.html">10 reasons to visit Igalo</a></li>
+            <li><a href="/en/blatna-plaza.html">Blatna Plaža mud beach</a></li>
+            <li><a href="/vesti/restaurants-herceg-novi.html">Restaurants in Herceg Novi</a></li>
+            <li><a href="/mimosa-festival-herceg-novi.html">Mimosa Festival</a></li>
+          </ul>
         </div>
 
         <div>

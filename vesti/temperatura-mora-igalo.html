@@ -982,6 +982,15 @@
     .sea-table thead th { font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: var(--c-muted); background: var(--c-sand); white-space: nowrap; }
     .sea-table tbody th { font-weight: 600; color: var(--c-text); white-space: nowrap; }
     .sea-table tbody tr:last-child th, .sea-table tbody tr:last-child td { border-bottom: none; }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -1249,7 +1258,7 @@
                   <div class="faq__answer" id="mfaq4" role="region">
                     Zimi more pada na oko <strong>13-15 °C</strong>, što je prehladno za
                     većinu. Vazduh je blag (10-18 °C, oko 240 sunčanih dana godišnje),
-                    pa je Igalo van sezone prijatno za boravak i šetnju - ali ne i za
+                    pa je <a href="/mesecni-najam-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">Igalo van sezone prijatno za boravak</a> i šetnju - ali ne i za
                     kupanje.
                   </div>
                 </div>
@@ -1365,13 +1374,22 @@
           </p>
         </div>
         <div>
-          <p class="footer__heading">Brze veze</p>
+          <p class="footer__heading">Smještaj</p>
           <ul class="footer__links" role="list">
-            <li><a href="/">Početna</a></li>
+            <li><a href="/">Apartmani u Igalu</a></li>
+            <li><a href="/mesecni-najam-igalo.html">Mesečni najam</a></li>
+            <li><a href="/cesta-pitanja.html">Česta pitanja</a></li>
             <li><a href="/about.html">O nama</a></li>
-            <li><a href="/blog.html">Vesti</a></li>
-            <li><a href="/blatna-plaza.html">Blatna plaža</a></li>
-            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novi</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Vodiči</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novog</a></li>
+            <li><a href="/vesti/atrakcije-herceg-novi.html">Šta videti u Herceg Novom</a></li>
+            <li><a href="/blatna-plaza.html">Blatna plaža i lekovito blato</a></li>
+            <li><a href="/nova-godina-herceg-novi.html">Doček Nove godine u Herceg Novom</a></li>
+            <li><a href="/blog.html">Svi vodiči i vesti</a></li>
           </ul>
         </div>
         <div>

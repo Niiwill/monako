@@ -966,6 +966,15 @@
     }
     ins.adsbygoogle iframe,
     .google-auto-placed iframe { max-width: 100% !important; }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -1146,13 +1155,13 @@
                 Žanjice su ljetni izlet: brodske linije rade u sezoni, a van nje uvala je
                 prazna i teže dostupna. U <strong>julu i avgustu</strong> plaža zna biti
                 puna do podneva, pa se isplati krenuti ranijim polaskom.
-                <strong>Jun i septembar</strong> daju isto more uz upola manje ljudi -
+                <a href="/vesti/temperatura-mora-igalo.html" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px"><strong>Jun i septembar</strong> daju isto more</a> uz upola manje ljudi -
                 to je period koji sami preporučujemo gostima.
               </p>
               <p>
                 Ako tražite plažu na koju se ide bez organizacije, ostanite u Igalu:
                 <a href="/blatna-plaza.html">Blatna plaža</a> je najveća u opštini i
-                udaljena stotinjak metara od naših apartmana. Za pregled cijele rivijere
+                udaljena stotinjak metara od <a href="/" style="color:var(--c-teal);text-decoration:underline;text-underline-offset:3px">naših apartmana</a>. Za pregled cijele rivijere
                 tu je vodič kroz
                 <a href="/vesti/plaze-herceg-novi.html">plaže u Herceg Novom i Igalu</a>.
               </p>
@@ -1316,13 +1325,22 @@
           </p>
         </div>
         <div>
-          <p class="footer__heading">Brze veze</p>
+          <p class="footer__heading">Smještaj</p>
           <ul class="footer__links" role="list">
-            <li><a href="/">Početna</a></li>
+            <li><a href="/">Apartmani u Igalu</a></li>
+            <li><a href="/mesecni-najam-igalo.html">Mesečni najam</a></li>
+            <li><a href="/cesta-pitanja.html">Česta pitanja</a></li>
             <li><a href="/about.html">O nama</a></li>
-            <li><a href="/blog.html">Vesti</a></li>
-            <li><a href="/blatna-plaza.html">Blatna plaža</a></li>
-            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novi</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Vodiči</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novog</a></li>
+            <li><a href="/vesti/atrakcije-herceg-novi.html">Šta videti u Herceg Novom</a></li>
+            <li><a href="/blatna-plaza.html">Blatna plaža i lekovito blato</a></li>
+            <li><a href="/nova-godina-herceg-novi.html">Doček Nove godine u Herceg Novom</a></li>
+            <li><a href="/blog.html">Svi vodiči i vesti</a></li>
           </ul>
         </div>
         <div>

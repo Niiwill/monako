@@ -1273,6 +1273,15 @@
     }
     ins.adsbygoogle iframe,
     .google-auto-placed iframe { max-width: 100% !important; }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -1570,8 +1579,8 @@
                   svake godine privlači desetine hiljada posjetilaca iz cijele regije.
                 </p>
                 <p>
-                  Centar dešavanja je <strong>Trg Nikole Đurkovića</strong> - srce starog
-                  grada, okruženo istorijskim zidinama i fontanom. Atmosfera na trgu u
+                  Centar dešavanja je <strong>Trg Nikole Đurkovića</strong> - <a href="/vesti/atrakcije-herceg-novi.html#stari-grad">srce starog
+                  grada</a>, okruženo istorijskim zidinama i fontanom. Atmosfera na trgu u
                   novogodišnjoj noći je jedinstvena: vatromet iznad Bokokotorskog zaliva,
                   muzika i more - sve na istom mjestu.
                 </p>
@@ -2056,13 +2065,22 @@
           </p>
         </div>
         <div>
-          <p class="footer__heading">Brze veze</p>
+          <p class="footer__heading">Smještaj</p>
           <ul class="footer__links" role="list">
-            <li><a href="/">Početna</a></li>
+            <li><a href="/">Apartmani u Igalu</a></li>
+            <li><a href="/mesecni-najam-igalo.html">Mesečni najam</a></li>
+            <li><a href="/cesta-pitanja.html">Česta pitanja</a></li>
             <li><a href="/about.html">O nama</a></li>
-            <li><a href="/blog.html">Vesti</a></li>
-            <li><a href="/blatna-plaza.html">Blatna plaža</a></li>
-            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novi</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Vodiči</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novog</a></li>
+            <li><a href="/vesti/atrakcije-herceg-novi.html">Šta videti u Herceg Novom</a></li>
+            <li><a href="/blatna-plaza.html">Blatna plaža i lekovito blato</a></li>
+            <li><a href="/nova-godina-herceg-novi.html">Doček Nove godine u Herceg Novom</a></li>
+            <li><a href="/blog.html">Svi vodiči i vesti</a></li>
           </ul>
         </div>
         <div>

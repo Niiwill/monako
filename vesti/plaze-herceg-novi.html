@@ -1211,6 +1211,15 @@
       from { opacity: 0; transform: translateY(18px); }
       to   { opacity: 1; transform: none; }
     }
+  
+    /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
+    .footer__brand { white-space: nowrap; }
+    @media (min-width: 600px) and (max-width: 1023.98px) {
+      .footer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .footer__grid { grid-template-columns: minmax(16rem, 1.3fr) repeat(3, minmax(0, 1fr)); }
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5503948606321438"
      crossorigin="anonymous"></script>
@@ -1331,7 +1340,7 @@
               <p>
                 U ljetnjim mjesecima (jul, avgust) grad bilježi oko
                 <strong>10,7 sunčanih sati dnevno</strong>.
-                Temperatura mora iznosi <strong>22-26 °C</strong>, a kupališna sezona
+                <a href="/vesti/temperatura-mora-igalo.html">Temperatura mora</a> iznosi <strong>22-26 °C</strong>, a kupališna sezona
                 može trajati i do <strong>5 mjeseci</strong>.
               </p>
               <p>
@@ -1549,7 +1558,7 @@
                   djelimično betonska.
                 </p>
                 <p>
-                  Najlakše se dolazi <strong>brodom iz Herceg Novog</strong> (oko 4 nautičke
+                  Najlakše se dolazi <strong><a href="/vesti/zanjice-plaza-izlet.html">brodom iz Herceg Novog</a></strong> (oko 4 nautičke
                   milje, povratna karta ~10 €). Kopnenim putem treba ići kroz Tivat, Krašić
                   i Radoviće, što je znatno duže.
                 </p>
@@ -1742,7 +1751,7 @@
                   kupače.
                 </p>
                 <p>
-                  U neposrednoj blizini nalazi se i <strong>Titova vila „Galeb"</strong> -
+                  U neposrednoj blizini nalazi se i <strong><a href="/vesti/titova-vila-galeb-igalo.html">Titova vila „Galeb"</a></strong> -
                   nekadašnja ljetnja rezidencija Josipa Broza Tita, jedna od znamenitosti
                   Igala. Plaža je udaljena svega nekoliko minuta hoda od Blatne plaže, pa se
                   ove dvije lokacije lako kombinuju u istom danu.
@@ -2088,12 +2097,22 @@
           </p>
         </div>
         <div>
-          <p class="footer__heading">Brze veze</p>
+          <p class="footer__heading">Smještaj</p>
           <ul class="footer__links" role="list">
-            <li><a href="/">Početna</a></li>
+            <li><a href="/">Apartmani u Igalu</a></li>
+            <li><a href="/mesecni-najam-igalo.html">Mesečni najam</a></li>
+            <li><a href="/cesta-pitanja.html">Česta pitanja</a></li>
             <li><a href="/about.html">O nama</a></li>
-            <li><a href="/blog.html">Vesti</a></li>
-            <li><a href="/blatna-plaza.html">Blatna plaža</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__heading">Vodiči</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/vesti/plaze-herceg-novi.html">Plaže Herceg Novog</a></li>
+            <li><a href="/vesti/atrakcije-herceg-novi.html">Šta videti u Herceg Novom</a></li>
+            <li><a href="/blatna-plaza.html">Blatna plaža i lekovito blato</a></li>
+            <li><a href="/nova-godina-herceg-novi.html">Doček Nove godine u Herceg Novom</a></li>
+            <li><a href="/blog.html">Svi vodiči i vesti</a></li>
           </ul>
         </div>
         <div>
