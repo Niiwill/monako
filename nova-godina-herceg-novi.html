@@ -1233,13 +1233,34 @@
          Guard pravila drže fiksno široke <ins> jedinice unutar viewporta -
          bez njih oglas može razvući layout na telefonu.
 
-         Rezervisana visina: responsive jedinica se učitava prazna (0 px) pa
-         naraste kad oglas stigne - to gura ostatak teksta nadolje i mjeri se
-         kao CLS. Zato joj unaprijed dajemo visinu koju AdSense i inače servira
-         na telefonu (280 px), tako da popunjavanje ne pomjera ništa. ── */
+         Rezervisana visina: vidi .ad-slot ispod. ── */
     .content-grid > * { min-width: 0; }
-    .article-ad { margin: clamp(2rem, 4vw, 3rem) 0; }
-    .article-ad__label {
+    ins.adsbygoogle {
+      display: block !important;
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      box-sizing: border-box !important;
+      overflow: hidden;
+    }
+    /* Google wraps each auto-injected unit in this container - cap it too, or a
+       fixed-width ad iframe inside it pushes the layout past the viewport. */
+    .google-auto-placed {
+      max-width: 100% !important;
+      margin-inline: 0 !important;
+      overflow: hidden;
+    }
+    ins.adsbygoogle iframe,
+    .google-auto-placed iframe { max-width: 100% !important; }
+    /* Ručne jedinice na fiksnim mjestima ispod prvog ekrana (24.9.2026).
+       Rezervacija visine važi samo za njih: omotač postoji u HTML-u od prvog
+       iscrtavanja, pa popunjavanje oglasa ne pomjera tekst. Ne važi za ostale
+       <ins> koje Google ubacuje (anchor, vignette), jer bi ih razvukla. */
+    .ad-slot {
+      min-height: 280px;
+      contain: layout;
+      margin: clamp(2rem, 4vw, 3rem) 0;
+    }
+    .ad-slot__label {
       display: block;
       font-size: 0.68rem;
       letter-spacing: 0.08em;
@@ -1247,32 +1268,7 @@
       color: var(--c-muted);
       margin-bottom: 0.4em;
     }
-    ins.adsbygoogle {
-      display: block !important;
-      max-width: 100% !important;
-      margin-inline: 0 !important;
-      box-sizing: border-box !important;
-      overflow: hidden;
-      /* Rezervacija ide na samu jedinicu, ne samo na .google-auto-placed
-         omotač: auto-ads ponekad ubaci <ins> bez tog omotača, a tada
-         rezervacija na omotaču ne vrijedi ništa - mjereno CLS 0.132. */
-      min-height: 280px;
-    }
-    .google-auto-placed {
-      max-width: 100% !important;
-      margin-inline: 0 !important;
-      overflow: hidden;
-      /* Rezervisana visina. Auto-ads ubacuje ovaj kontejner rano, dok je još
-         ispod ekrana (tada pomjeranje ne košta ništa), ali oglas stigne tek
-         kasnije - obično baš kad čitalac doscrolla do njega - i tada jedinica
-         naraste sa 0 na ~280 px i gurne tekst nadolje. Mjereno je kao CLS
-         0.09-0.35 na ovim stranicama. Sa unaprijed rezervisanih 280 px
-         popunjavanje ne pomjera ništa. Ako oglasa nema, AdSense ne pravi ovaj
-         element, pa nema ni praznog prostora. */
-      min-height: 280px;
-    }
-    ins.adsbygoogle iframe,
-    .google-auto-placed iframe { max-width: 100% !important; }
+    .ad-slot ins.adsbygoogle { min-height: 280px; }
   
     /* Footer: naziv "MONAKO IGALO" u jednom redu (4 kolone od 23.9.2026) */
     .footer__brand { white-space: nowrap; }
@@ -1636,8 +1632,8 @@
             <!-- ══ ADSENSE: JEDINI OGLAS NA STRANICI ═══════════════
                  Jedinica "Nova godina" (display, responsive) iz AdSense naloga.
                  Ne dodavati druge jedinice na ovu stranicu. ── -->
-            <aside class="article-ad" id="ad-inarticle" aria-label="Oglas">
-              <span class="article-ad__label">Oglas</span>
+            <aside class="ad-slot" id="ad-inarticle" aria-label="Oglas">
+              <span class="ad-slot__label">Oglas</span>
               <ins class="adsbygoogle"
                    style="display:block"
                    data-ad-client="ca-pub-5503948606321438"
